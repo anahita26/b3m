@@ -1,0 +1,100 @@
+---
+title: "design_doc"
+format: html
+editor: visual
+---
+
+## Design Intervention
+
+### Fixed Exterior Shading
+
+E+ objects (Thermal Zones and Surfaces)
+
+-   Shading:Overhang
+
+-   Shading:Overhang:Projection (best for parametric analysis)
+
+-   Shading:Fin
+
+-   Shading:Fin:Projection
+
+What to vary
+
+-   Overhang depth: 0 (none) / 0.8 / 1.5 (deep) m
+
+    -   Find source to backup numbers
+
+-   Fin depth and spacing (optional second step)
+
+Best facades to shade for highest payoff
+
+-   west
+
+-   south
+
+## Engineering Intervention
+
+### Cool coating (exterior walls)
+
+E+ objects (surface construction elements)
+
+-   Material
+
+-   Material:NoMass
+
+What to vary
+
+-   Solar absorptance: 0.7 (dark) / 0.4 (med) / 0.2 (cool)
+
+## Nature Intervention
+
+### Green roof
+
+E+ objects (surface construction elements)
+
+-   Material:RoofVegetation
+
+What to vary
+
+-   Leaf area index: 0 (none) / 2.5 / 5 (lush)
+
+-   Soil/ substrate thickeness
+
+```{r}
+library(gt)
+
+#Assign values to variables
+shading <- c(0, 0.8, 1.5)
+absorptance <- c(0.7, 0.4, 0.2)
+lai <- c(0, 2.5, 5)
+assign <- c("Baseline", "Medium", "High")
+
+#Create dataframe
+df <- data.frame(
+  "Scenario" = assign,
+  "Overhang Depth" = shading,
+  "Solar Absorptance" = absorptance,
+  "Leaf Area Index" = lai,
+  check.names = FALSE
+)
+
+#Create table
+df |> 
+  gt() |> 
+  tab_header(title = "Building Retrofit Scenarios") |> 
+  fmt_number(columns = 2:4, decimals = 2) |> 
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  )
+
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
