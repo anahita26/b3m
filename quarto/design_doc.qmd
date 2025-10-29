@@ -4,6 +4,48 @@ format: html
 editor: visual
 ---
 
+# Introduction
+
+Building retrofit has gained lots of traction in recent years due to its potential to increase building energy performance, provide cost savings, and lower environmental emissions. While the design of new, efficient buildings is also a research area of interest, these projects require immense amounts of resources and energy. Retrofit measures provide an effective, sustainable solution to increase building energy performance while avoiding issues related to land-use and deforestation. Facades are a key focus in retrofit designs as they are the facilitator between the indoor and outdoor worlds. Passive-design strategies, in particular, provide easy to implement and simple interventions that can have a large impact on the building's total energy consumption. This report aims to investigate the interactions and effectiveness of three different facade retrofit measures including design, engineering, and nature based solutions.
+
+-   Discuss specifics about Singapore so audience knows where this research is focused on
+
+    -   Cooling dominated society
+
+-   More about why facades are such a key research area, what is so interesting about them in terms of saving energy?
+
+-   I want to use the phrase "built environment" somewhere bc I think it sounds really good
+
+-   Mention the structure of the report, what the reader will find in each section etc.
+
+# Background
+
+-   Discuss the UCDL paper
+
+-   Discuss BEM using EnergyPlus
+
+-   Discuss some papers that looked at facade retrofit optimizations
+
+-   What is the novelty of this work: looking at three different design approaches and doing a comparative analysis
+
+# Methods
+
+-   Study area and target building - explain why (similar to UCDL paper)
+
+    -   Why choose only the central building - what is the significance
+
+-   Energy simulation in energyplus
+
+    -   I think I can leave out all the details about the previous model since that is all available in the other paper and I can just mention that all the settings are the same
+
+    -   Weather data, using their developed one that proved to be the "best"
+
+-   Intervention measures
+
+    -   Numbers and justification with sources
+
+    -   Discuss why these in particular were chosen, why do a three way study?
+
 ## Design Intervention
 
 ### Fixed Exterior Shading
@@ -90,11 +132,10 @@ df |>
 
 ```
 
-You can add options to executable code like this
-
 ```{r}
-#| echo: false
-2 * 2
+
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+# Results
+
+# Conclusion

@@ -1,0 +1,8 @@
+ ReadVarsESO
+ processing:eplusout.inp
+ input file:eplusout.eso
+ output file:Dark.csv
+ getting all vars from:eplusout.eso
+  number variables requested for output=          58
+ ReadVars Run Time=00hr 00min  0.19sec
+ ReadVarsESO program completed successfully.

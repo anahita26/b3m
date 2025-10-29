@@ -95,23 +95,23 @@ RunPeriod,
     No,                      !- Apply Weekend Holiday Rule
     Yes,                     !- Use Weather File Rain Indicators
     No;                      !- Use Weather File Snow Indicators
-
-
+! 
+! 
 !-   ===========  ALL OBJECTS IN CLASS: SITE:GROUNDTEMPERATURE:BUILDINGSURFACE ===========
-
-Site:GroundTemperature:BuildingSurface,
-    18,                      !- January Ground Temperature {C}
-    18,                      !- February Ground Temperature {C}
-    18,                      !- March Ground Temperature {C}
-    18,                      !- April Ground Temperature {C}
-    24,                      !- May Ground Temperature {C}
-    24.3,                    !- June Ground Temperature {C}
-    24,                      !- July Ground Temperature {C}
-    18,                      !- August Ground Temperature {C}
-    18,                      !- September Ground Temperature {C}
-    18,                      !- October Ground Temperature {C}
-    18,                      !- November Ground Temperature {C}
-    18;                      !- December Ground Temperature {C}
+! 
+! Site:GroundTemperature:BuildingSurface,
+!     18,                      !- January Ground Temperature {C}
+!     18,                      !- February Ground Temperature {C}
+!     18,                      !- March Ground Temperature {C}
+!     18,                      !- April Ground Temperature {C}
+!     24,                      !- May Ground Temperature {C}
+!     24.3,                    !- June Ground Temperature {C}
+!     24,                      !- July Ground Temperature {C}
+!     18,                      !- August Ground Temperature {C}
+!     18,                      !- September Ground Temperature {C}
+!     18,                      !- October Ground Temperature {C}
+!     18,                      !- November Ground Temperature {C}
+!     18;                      !- December Ground Temperature {C}
 
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULETYPELIMITS ===========
@@ -10709,282 +10709,282 @@ ZoneVentilation:DesignFlowRate,
     34,                      !- Maximum Outdoor Temperature {C}
     ,                        !- Maximum Outdoor Temperature Schedule Name
     9;                       !- Maximum Wind Speed {m/s}
-
-
+! 
+! 
 !-   ===========  ALL OBJECTS IN CLASS: HVACTEMPLATE:THERMOSTAT ===========
-
-HVACTemplate:Thermostat,
-    AC zones,                !- Name
-    ,                        !- Heating Setpoint Schedule Name
-    0,                       !- Constant Heating Setpoint {C}
-    Cooling Setpoint Schedule,  !- Cooling Setpoint Schedule Name
-    ;                        !- Constant Cooling Setpoint {C}
-
-HVACTemplate:Thermostat,
-    Non-AC zones,            !- Name
-    ,                        !- Heating Setpoint Schedule Name
-    0,                       !- Constant Heating Setpoint {C}
-    ,                        !- Cooling Setpoint Schedule Name
-    50;                      !- Constant Cooling Setpoint {C}
-
-
+! 
+! HVACTemplate:Thermostat,
+!     AC zones,                !- Name
+!     ,                        !- Heating Setpoint Schedule Name
+!     0,                       !- Constant Heating Setpoint {C}
+!     Cooling Setpoint Schedule,  !- Cooling Setpoint Schedule Name
+!     ;                        !- Constant Cooling Setpoint {C}
+! 
+! HVACTemplate:Thermostat,
+!     Non-AC zones,            !- Name
+!     ,                        !- Heating Setpoint Schedule Name
+!     0,                       !- Constant Heating Setpoint {C}
+!     ,                        !- Cooling Setpoint Schedule Name
+!     50;                      !- Constant Cooling Setpoint {C}
+! 
+! 
 !-   ===========  ALL OBJECTS IN CLASS: HVACTEMPLATE:ZONE:IDEALLOADSAIRSYSTEM ===========
-
-HVACTemplate:Zone:IdealLoadsAirSystem,
-    Top_3R_AC_Mid2,          !- Zone Name
-    AC zones,                !- Template Thermostat Name
-    ,                        !- System Availability Schedule Name
-    50,                      !- Maximum Heating Supply Air Temperature {C}
-    13,                      !- Minimum Cooling Supply Air Temperature {C}
-    0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
-    0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
-    NoLimit,                 !- Heating Limit
-    ,                        !- Maximum Heating Air Flow Rate {m3/s}
-    ,                        !- Maximum Sensible Heating Capacity {W}
-    NoLimit,                 !- Cooling Limit
-    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
-    ,                        !- Maximum Total Cooling Capacity {W}
-    ,                        !- Heating Availability Schedule Name
-    ,                        !- Cooling Availability Schedule Name
-    ConstantSensibleHeatRatio,  !- Dehumidification Control Type
-    0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
-    ,                        !- Dehumidification Setpoint {percent}
-    None,                    !- Humidification Control Type
-    30,                      !- Humidification Setpoint {percent}
-    None,                    !- Outdoor Air Method
-    0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
-    ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
-    ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
-    ,                        !- Design Specification Outdoor Air Object Name
-    None,                    !- Demand Controlled Ventilation Type
-    NoEconomizer,            !- Outdoor Air Economizer Type
-    None,                    !- Heat Recovery Type
-    0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
-    0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
-
-HVACTemplate:Zone:IdealLoadsAirSystem,
-    Top_3R_AC_Lft,           !- Zone Name
-    AC zones,                !- Template Thermostat Name
-    ,                        !- System Availability Schedule Name
-    50,                      !- Maximum Heating Supply Air Temperature {C}
-    13,                      !- Minimum Cooling Supply Air Temperature {C}
-    0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
-    0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
-    NoLimit,                 !- Heating Limit
-    ,                        !- Maximum Heating Air Flow Rate {m3/s}
-    ,                        !- Maximum Sensible Heating Capacity {W}
-    NoLimit,                 !- Cooling Limit
-    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
-    ,                        !- Maximum Total Cooling Capacity {W}
-    ,                        !- Heating Availability Schedule Name
-    ,                        !- Cooling Availability Schedule Name
-    ConstantSensibleHeatRatio,  !- Dehumidification Control Type
-    0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
-    ,                        !- Dehumidification Setpoint {percent}
-    None,                    !- Humidification Control Type
-    30,                      !- Humidification Setpoint {percent}
-    None,                    !- Outdoor Air Method
-    0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
-    ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
-    ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
-    ,                        !- Design Specification Outdoor Air Object Name
-    None,                    !- Demand Controlled Ventilation Type
-    NoEconomizer,            !- Outdoor Air Economizer Type
-    None,                    !- Heat Recovery Type
-    0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
-    0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
-
-HVACTemplate:Zone:IdealLoadsAirSystem,
-    Top_3R_AC_Mid,           !- Zone Name
-    AC zones,                !- Template Thermostat Name
-    ,                        !- System Availability Schedule Name
-    50,                      !- Maximum Heating Supply Air Temperature {C}
-    13,                      !- Minimum Cooling Supply Air Temperature {C}
-    0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
-    0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
-    NoLimit,                 !- Heating Limit
-    ,                        !- Maximum Heating Air Flow Rate {m3/s}
-    ,                        !- Maximum Sensible Heating Capacity {W}
-    NoLimit,                 !- Cooling Limit
-    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
-    ,                        !- Maximum Total Cooling Capacity {W}
-    ,                        !- Heating Availability Schedule Name
-    ,                        !- Cooling Availability Schedule Name
-    ConstantSensibleHeatRatio,  !- Dehumidification Control Type
-    0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
-    ,                        !- Dehumidification Setpoint {percent}
-    None,                    !- Humidification Control Type
-    30,                      !- Humidification Setpoint {percent}
-    None,                    !- Outdoor Air Method
-    0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
-    ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
-    ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
-    ,                        !- Design Specification Outdoor Air Object Name
-    None,                    !- Demand Controlled Ventilation Type
-    NoEconomizer,            !- Outdoor Air Economizer Type
-    None,                    !- Heat Recovery Type
-    0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
-    0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
-
-HVACTemplate:Zone:IdealLoadsAirSystem,
-    Top_3R_AC_Rht,           !- Zone Name
-    AC zones,                !- Template Thermostat Name
-    ,                        !- System Availability Schedule Name
-    50,                      !- Maximum Heating Supply Air Temperature {C}
-    13,                      !- Minimum Cooling Supply Air Temperature {C}
-    0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
-    0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
-    NoLimit,                 !- Heating Limit
-    ,                        !- Maximum Heating Air Flow Rate {m3/s}
-    ,                        !- Maximum Sensible Heating Capacity {W}
-    NoLimit,                 !- Cooling Limit
-    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
-    ,                        !- Maximum Total Cooling Capacity {W}
-    ,                        !- Heating Availability Schedule Name
-    ,                        !- Cooling Availability Schedule Name
-    ConstantSensibleHeatRatio,  !- Dehumidification Control Type
-    0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
-    ,                        !- Dehumidification Setpoint {percent}
-    None,                    !- Humidification Control Type
-    30,                      !- Humidification Setpoint {percent}
-    None,                    !- Outdoor Air Method
-    0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
-    ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
-    ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
-    ,                        !- Design Specification Outdoor Air Object Name
-    None,                    !- Demand Controlled Ventilation Type
-    NoEconomizer,            !- Outdoor Air Economizer Type
-    None,                    !- Heat Recovery Type
-    0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
-    0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
-
-HVACTemplate:Zone:IdealLoadsAirSystem,
-    Mid_3R_AC_Mid2,          !- Zone Name
-    AC zones,                !- Template Thermostat Name
-    ,                        !- System Availability Schedule Name
-    50,                      !- Maximum Heating Supply Air Temperature {C}
-    13,                      !- Minimum Cooling Supply Air Temperature {C}
-    0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
-    0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
-    NoLimit,                 !- Heating Limit
-    ,                        !- Maximum Heating Air Flow Rate {m3/s}
-    ,                        !- Maximum Sensible Heating Capacity {W}
-    NoLimit,                 !- Cooling Limit
-    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
-    ,                        !- Maximum Total Cooling Capacity {W}
-    ,                        !- Heating Availability Schedule Name
-    ,                        !- Cooling Availability Schedule Name
-    ConstantSensibleHeatRatio,  !- Dehumidification Control Type
-    0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
-    ,                        !- Dehumidification Setpoint {percent}
-    None,                    !- Humidification Control Type
-    30,                      !- Humidification Setpoint {percent}
-    None,                    !- Outdoor Air Method
-    0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
-    ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
-    ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
-    ,                        !- Design Specification Outdoor Air Object Name
-    None,                    !- Demand Controlled Ventilation Type
-    NoEconomizer,            !- Outdoor Air Economizer Type
-    None,                    !- Heat Recovery Type
-    0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
-    0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
-
-HVACTemplate:Zone:IdealLoadsAirSystem,
-    Mid_3R_AC_Lft,           !- Zone Name
-    AC zones,                !- Template Thermostat Name
-    ,                        !- System Availability Schedule Name
-    50,                      !- Maximum Heating Supply Air Temperature {C}
-    13,                      !- Minimum Cooling Supply Air Temperature {C}
-    0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
-    0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
-    NoLimit,                 !- Heating Limit
-    ,                        !- Maximum Heating Air Flow Rate {m3/s}
-    ,                        !- Maximum Sensible Heating Capacity {W}
-    NoLimit,                 !- Cooling Limit
-    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
-    ,                        !- Maximum Total Cooling Capacity {W}
-    ,                        !- Heating Availability Schedule Name
-    ,                        !- Cooling Availability Schedule Name
-    ConstantSensibleHeatRatio,  !- Dehumidification Control Type
-    0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
-    ,                        !- Dehumidification Setpoint {percent}
-    None,                    !- Humidification Control Type
-    30,                      !- Humidification Setpoint {percent}
-    None,                    !- Outdoor Air Method
-    0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
-    ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
-    ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
-    ,                        !- Design Specification Outdoor Air Object Name
-    None,                    !- Demand Controlled Ventilation Type
-    NoEconomizer,            !- Outdoor Air Economizer Type
-    None,                    !- Heat Recovery Type
-    0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
-    0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
-
-HVACTemplate:Zone:IdealLoadsAirSystem,
-    Mid_3R_AC_Mid,           !- Zone Name
-    AC zones,                !- Template Thermostat Name
-    ,                        !- System Availability Schedule Name
-    50,                      !- Maximum Heating Supply Air Temperature {C}
-    13,                      !- Minimum Cooling Supply Air Temperature {C}
-    0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
-    0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
-    NoLimit,                 !- Heating Limit
-    ,                        !- Maximum Heating Air Flow Rate {m3/s}
-    ,                        !- Maximum Sensible Heating Capacity {W}
-    NoLimit,                 !- Cooling Limit
-    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
-    ,                        !- Maximum Total Cooling Capacity {W}
-    ,                        !- Heating Availability Schedule Name
-    ,                        !- Cooling Availability Schedule Name
-    ConstantSensibleHeatRatio,  !- Dehumidification Control Type
-    0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
-    ,                        !- Dehumidification Setpoint {percent}
-    None,                    !- Humidification Control Type
-    30,                      !- Humidification Setpoint {percent}
-    None,                    !- Outdoor Air Method
-    0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
-    ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
-    ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
-    ,                        !- Design Specification Outdoor Air Object Name
-    None,                    !- Demand Controlled Ventilation Type
-    NoEconomizer,            !- Outdoor Air Economizer Type
-    None,                    !- Heat Recovery Type
-    0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
-    0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
-
-HVACTemplate:Zone:IdealLoadsAirSystem,
-    Mid_3R_AC_Rht,           !- Zone Name
-    AC zones,                !- Template Thermostat Name
-    ,                        !- System Availability Schedule Name
-    50,                      !- Maximum Heating Supply Air Temperature {C}
-    13,                      !- Minimum Cooling Supply Air Temperature {C}
-    0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
-    0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
-    NoLimit,                 !- Heating Limit
-    ,                        !- Maximum Heating Air Flow Rate {m3/s}
-    ,                        !- Maximum Sensible Heating Capacity {W}
-    NoLimit,                 !- Cooling Limit
-    ,                        !- Maximum Cooling Air Flow Rate {m3/s}
-    ,                        !- Maximum Total Cooling Capacity {W}
-    ,                        !- Heating Availability Schedule Name
-    ,                        !- Cooling Availability Schedule Name
-    ConstantSensibleHeatRatio,  !- Dehumidification Control Type
-    0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
-    ,                        !- Dehumidification Setpoint {percent}
-    None,                    !- Humidification Control Type
-    30,                      !- Humidification Setpoint {percent}
-    None,                    !- Outdoor Air Method
-    0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
-    ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
-    ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
-    ,                        !- Design Specification Outdoor Air Object Name
-    None,                    !- Demand Controlled Ventilation Type
-    NoEconomizer,            !- Outdoor Air Economizer Type
-    None,                    !- Heat Recovery Type
-    0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
-    0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
+! 
+! HVACTemplate:Zone:IdealLoadsAirSystem,
+!     Top_3R_AC_Mid2,          !- Zone Name
+!     AC zones,                !- Template Thermostat Name
+!     ,                        !- System Availability Schedule Name
+!     50,                      !- Maximum Heating Supply Air Temperature {C}
+!     13,                      !- Minimum Cooling Supply Air Temperature {C}
+!     0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     NoLimit,                 !- Heating Limit
+!     ,                        !- Maximum Heating Air Flow Rate {m3/s}
+!     ,                        !- Maximum Sensible Heating Capacity {W}
+!     NoLimit,                 !- Cooling Limit
+!     ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+!     ,                        !- Maximum Total Cooling Capacity {W}
+!     ,                        !- Heating Availability Schedule Name
+!     ,                        !- Cooling Availability Schedule Name
+!     ConstantSensibleHeatRatio,  !- Dehumidification Control Type
+!     0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
+!     ,                        !- Dehumidification Setpoint {percent}
+!     None,                    !- Humidification Control Type
+!     30,                      !- Humidification Setpoint {percent}
+!     None,                    !- Outdoor Air Method
+!     0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
+!     ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
+!     ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
+!     ,                        !- Design Specification Outdoor Air Object Name
+!     None,                    !- Demand Controlled Ventilation Type
+!     NoEconomizer,            !- Outdoor Air Economizer Type
+!     None,                    !- Heat Recovery Type
+!     0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
+!     0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
+! 
+! HVACTemplate:Zone:IdealLoadsAirSystem,
+!     Top_3R_AC_Lft,           !- Zone Name
+!     AC zones,                !- Template Thermostat Name
+!     ,                        !- System Availability Schedule Name
+!     50,                      !- Maximum Heating Supply Air Temperature {C}
+!     13,                      !- Minimum Cooling Supply Air Temperature {C}
+!     0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     NoLimit,                 !- Heating Limit
+!     ,                        !- Maximum Heating Air Flow Rate {m3/s}
+!     ,                        !- Maximum Sensible Heating Capacity {W}
+!     NoLimit,                 !- Cooling Limit
+!     ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+!     ,                        !- Maximum Total Cooling Capacity {W}
+!     ,                        !- Heating Availability Schedule Name
+!     ,                        !- Cooling Availability Schedule Name
+!     ConstantSensibleHeatRatio,  !- Dehumidification Control Type
+!     0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
+!     ,                        !- Dehumidification Setpoint {percent}
+!     None,                    !- Humidification Control Type
+!     30,                      !- Humidification Setpoint {percent}
+!     None,                    !- Outdoor Air Method
+!     0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
+!     ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
+!     ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
+!     ,                        !- Design Specification Outdoor Air Object Name
+!     None,                    !- Demand Controlled Ventilation Type
+!     NoEconomizer,            !- Outdoor Air Economizer Type
+!     None,                    !- Heat Recovery Type
+!     0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
+!     0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
+! 
+! HVACTemplate:Zone:IdealLoadsAirSystem,
+!     Top_3R_AC_Mid,           !- Zone Name
+!     AC zones,                !- Template Thermostat Name
+!     ,                        !- System Availability Schedule Name
+!     50,                      !- Maximum Heating Supply Air Temperature {C}
+!     13,                      !- Minimum Cooling Supply Air Temperature {C}
+!     0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     NoLimit,                 !- Heating Limit
+!     ,                        !- Maximum Heating Air Flow Rate {m3/s}
+!     ,                        !- Maximum Sensible Heating Capacity {W}
+!     NoLimit,                 !- Cooling Limit
+!     ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+!     ,                        !- Maximum Total Cooling Capacity {W}
+!     ,                        !- Heating Availability Schedule Name
+!     ,                        !- Cooling Availability Schedule Name
+!     ConstantSensibleHeatRatio,  !- Dehumidification Control Type
+!     0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
+!     ,                        !- Dehumidification Setpoint {percent}
+!     None,                    !- Humidification Control Type
+!     30,                      !- Humidification Setpoint {percent}
+!     None,                    !- Outdoor Air Method
+!     0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
+!     ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
+!     ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
+!     ,                        !- Design Specification Outdoor Air Object Name
+!     None,                    !- Demand Controlled Ventilation Type
+!     NoEconomizer,            !- Outdoor Air Economizer Type
+!     None,                    !- Heat Recovery Type
+!     0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
+!     0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
+! 
+! HVACTemplate:Zone:IdealLoadsAirSystem,
+!     Top_3R_AC_Rht,           !- Zone Name
+!     AC zones,                !- Template Thermostat Name
+!     ,                        !- System Availability Schedule Name
+!     50,                      !- Maximum Heating Supply Air Temperature {C}
+!     13,                      !- Minimum Cooling Supply Air Temperature {C}
+!     0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     NoLimit,                 !- Heating Limit
+!     ,                        !- Maximum Heating Air Flow Rate {m3/s}
+!     ,                        !- Maximum Sensible Heating Capacity {W}
+!     NoLimit,                 !- Cooling Limit
+!     ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+!     ,                        !- Maximum Total Cooling Capacity {W}
+!     ,                        !- Heating Availability Schedule Name
+!     ,                        !- Cooling Availability Schedule Name
+!     ConstantSensibleHeatRatio,  !- Dehumidification Control Type
+!     0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
+!     ,                        !- Dehumidification Setpoint {percent}
+!     None,                    !- Humidification Control Type
+!     30,                      !- Humidification Setpoint {percent}
+!     None,                    !- Outdoor Air Method
+!     0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
+!     ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
+!     ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
+!     ,                        !- Design Specification Outdoor Air Object Name
+!     None,                    !- Demand Controlled Ventilation Type
+!     NoEconomizer,            !- Outdoor Air Economizer Type
+!     None,                    !- Heat Recovery Type
+!     0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
+!     0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
+! 
+! HVACTemplate:Zone:IdealLoadsAirSystem,
+!     Mid_3R_AC_Mid2,          !- Zone Name
+!     AC zones,                !- Template Thermostat Name
+!     ,                        !- System Availability Schedule Name
+!     50,                      !- Maximum Heating Supply Air Temperature {C}
+!     13,                      !- Minimum Cooling Supply Air Temperature {C}
+!     0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     NoLimit,                 !- Heating Limit
+!     ,                        !- Maximum Heating Air Flow Rate {m3/s}
+!     ,                        !- Maximum Sensible Heating Capacity {W}
+!     NoLimit,                 !- Cooling Limit
+!     ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+!     ,                        !- Maximum Total Cooling Capacity {W}
+!     ,                        !- Heating Availability Schedule Name
+!     ,                        !- Cooling Availability Schedule Name
+!     ConstantSensibleHeatRatio,  !- Dehumidification Control Type
+!     0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
+!     ,                        !- Dehumidification Setpoint {percent}
+!     None,                    !- Humidification Control Type
+!     30,                      !- Humidification Setpoint {percent}
+!     None,                    !- Outdoor Air Method
+!     0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
+!     ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
+!     ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
+!     ,                        !- Design Specification Outdoor Air Object Name
+!     None,                    !- Demand Controlled Ventilation Type
+!     NoEconomizer,            !- Outdoor Air Economizer Type
+!     None,                    !- Heat Recovery Type
+!     0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
+!     0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
+! 
+! HVACTemplate:Zone:IdealLoadsAirSystem,
+!     Mid_3R_AC_Lft,           !- Zone Name
+!     AC zones,                !- Template Thermostat Name
+!     ,                        !- System Availability Schedule Name
+!     50,                      !- Maximum Heating Supply Air Temperature {C}
+!     13,                      !- Minimum Cooling Supply Air Temperature {C}
+!     0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     NoLimit,                 !- Heating Limit
+!     ,                        !- Maximum Heating Air Flow Rate {m3/s}
+!     ,                        !- Maximum Sensible Heating Capacity {W}
+!     NoLimit,                 !- Cooling Limit
+!     ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+!     ,                        !- Maximum Total Cooling Capacity {W}
+!     ,                        !- Heating Availability Schedule Name
+!     ,                        !- Cooling Availability Schedule Name
+!     ConstantSensibleHeatRatio,  !- Dehumidification Control Type
+!     0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
+!     ,                        !- Dehumidification Setpoint {percent}
+!     None,                    !- Humidification Control Type
+!     30,                      !- Humidification Setpoint {percent}
+!     None,                    !- Outdoor Air Method
+!     0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
+!     ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
+!     ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
+!     ,                        !- Design Specification Outdoor Air Object Name
+!     None,                    !- Demand Controlled Ventilation Type
+!     NoEconomizer,            !- Outdoor Air Economizer Type
+!     None,                    !- Heat Recovery Type
+!     0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
+!     0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
+! 
+! HVACTemplate:Zone:IdealLoadsAirSystem,
+!     Mid_3R_AC_Mid,           !- Zone Name
+!     AC zones,                !- Template Thermostat Name
+!     ,                        !- System Availability Schedule Name
+!     50,                      !- Maximum Heating Supply Air Temperature {C}
+!     13,                      !- Minimum Cooling Supply Air Temperature {C}
+!     0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     NoLimit,                 !- Heating Limit
+!     ,                        !- Maximum Heating Air Flow Rate {m3/s}
+!     ,                        !- Maximum Sensible Heating Capacity {W}
+!     NoLimit,                 !- Cooling Limit
+!     ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+!     ,                        !- Maximum Total Cooling Capacity {W}
+!     ,                        !- Heating Availability Schedule Name
+!     ,                        !- Cooling Availability Schedule Name
+!     ConstantSensibleHeatRatio,  !- Dehumidification Control Type
+!     0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
+!     ,                        !- Dehumidification Setpoint {percent}
+!     None,                    !- Humidification Control Type
+!     30,                      !- Humidification Setpoint {percent}
+!     None,                    !- Outdoor Air Method
+!     0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
+!     ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
+!     ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
+!     ,                        !- Design Specification Outdoor Air Object Name
+!     None,                    !- Demand Controlled Ventilation Type
+!     NoEconomizer,            !- Outdoor Air Economizer Type
+!     None,                    !- Heat Recovery Type
+!     0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
+!     0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
+! 
+! HVACTemplate:Zone:IdealLoadsAirSystem,
+!     Mid_3R_AC_Rht,           !- Zone Name
+!     AC zones,                !- Template Thermostat Name
+!     ,                        !- System Availability Schedule Name
+!     50,                      !- Maximum Heating Supply Air Temperature {C}
+!     13,                      !- Minimum Cooling Supply Air Temperature {C}
+!     0.0156,                  !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     0.0077,                  !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+!     NoLimit,                 !- Heating Limit
+!     ,                        !- Maximum Heating Air Flow Rate {m3/s}
+!     ,                        !- Maximum Sensible Heating Capacity {W}
+!     NoLimit,                 !- Cooling Limit
+!     ,                        !- Maximum Cooling Air Flow Rate {m3/s}
+!     ,                        !- Maximum Total Cooling Capacity {W}
+!     ,                        !- Heating Availability Schedule Name
+!     ,                        !- Cooling Availability Schedule Name
+!     ConstantSensibleHeatRatio,  !- Dehumidification Control Type
+!     0.6,                     !- Cooling Sensible Heat Ratio {dimensionless}
+!     ,                        !- Dehumidification Setpoint {percent}
+!     None,                    !- Humidification Control Type
+!     30,                      !- Humidification Setpoint {percent}
+!     None,                    !- Outdoor Air Method
+!     0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
+!     ,                        !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
+!     ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
+!     ,                        !- Design Specification Outdoor Air Object Name
+!     None,                    !- Demand Controlled Ventilation Type
+!     NoEconomizer,            !- Outdoor Air Economizer Type
+!     None,                    !- Heat Recovery Type
+!     0.7,                     !- Sensible Heat Recovery Effectiveness {dimensionless}
+!     0.65;                    !- Latent Heat Recovery Effectiveness {dimensionless}
 
 
 !-   ===========  ALL OBJECTS IN CLASS: SIZING:PARAMETERS ===========
@@ -11079,4 +11079,491 @@ Output:SQLite,
 
 Output:Diagnostics,
     DisplayExtraWarnings;    !- Key 1
+! 
+! -------------------------------------------------------------
+! New objects created from ExpandObjects
+! -------------------------------------------------------------
+! 
 
+ScheduleTypeLimits,
+  HVACTemplate Any Number;                                 !- Name
+
+Schedule:Compact,
+  HVACTemplate-Always 0,                                   !- Name
+  HVACTemplate Any Number,                                 !- Schedule Type Limits Name
+  Through: 12/31,                                          !- Field 1
+  For: AllDays,                                            !- Field 2
+  Until: 24:00,                                            !- Field 3
+  0;                                                       !- Field 4
+
+ThermostatSetpoint:DualSetpoint,
+  AC zones Dual SP Control,                                !- Name
+  HVACTemplate-Always 0,                                   !- Heating Setpoint Temperature Schedule Name
+  Cooling Setpoint Schedule;                               !- Cooling Setpoint Temperature Schedule Name
+
+Schedule:Compact,
+  HVACTemplate-Always 50,                                  !- Name
+  HVACTemplate Any Number,                                 !- Schedule Type Limits Name
+  Through: 12/31,                                          !- Field 1
+  For: AllDays,                                            !- Field 2
+  Until: 24:00,                                            !- Field 3
+  50;                                                      !- Field 4
+
+ThermostatSetpoint:DualSetpoint,
+  Non-AC zones Dual SP Control,                            !- Name
+  HVACTemplate-Always 0,                                   !- Heating Setpoint Temperature Schedule Name
+  HVACTemplate-Always 50;                                  !- Cooling Setpoint Temperature Schedule Name
+
+Schedule:Compact,
+  HVACTemplate-Always 4,                                   !- Name
+  HVACTemplate Any Number,                                 !- Schedule Type Limits Name
+  Through: 12/31,                                          !- Field 1
+  For: AllDays,                                            !- Field 2
+  Until: 24:00,                                            !- Field 3
+  4;                                                       !- Field 4
+
+ZoneControl:Thermostat,
+  Top_3R_AC_Mid2 Thermostat,                               !- Name
+  Top_3R_AC_Mid2,                                          !- Zone or ZoneList Name
+  HVACTemplate-Always 4,                                   !- Control Type Schedule Name
+  ThermostatSetpoint:DualSetpoint,                         !- Control Object Type
+  AC zones Dual SP Control;                                !- Control Name
+
+ZoneHVAC:EquipmentConnections,
+  Top_3R_AC_Mid2,                                          !- Zone Name
+  Top_3R_AC_Mid2 Equipment,                                !- Zone Conditioning Equipment List Name
+  Top_3R_AC_Mid2 Ideal Loads Supply Inlet,                 !- Zone Air Inlet Node or NodeList Name
+  ,                                                        !- Zone Air Exhaust Node or NodeList Name
+  Top_3R_AC_Mid2 Zone Air Node,                            !- Zone Air Node Name
+  Top_3R_AC_Mid2 Return Outlet;                            !- Zone Return Air Node Name
+
+ZoneHVAC:EquipmentList,
+  Top_3R_AC_Mid2 Equipment,                                !- Name
+  SequentialLoad,                                          !- Load Distribution Scheme
+  ZoneHVAC:IdealLoadsAirSystem,                            !- Zone Equipment Object Type
+  Top_3R_AC_Mid2 Ideal Loads Air System,                   !- Zone Equipment Name
+  1,                                                       !- Zone Equipment Cooling Sequence
+  1,                                                       !- Zone Equipment Heating or No-Load Sequence
+  ,                                                        !- Zone Equipment Sequential Cooling Fraction Schedule Name
+  ;                                                        !- Zone Equipment Sequential Heating Fraction Schedule Name
+
+ZoneHVAC:IdealLoadsAirSystem,
+  Top_3R_AC_Mid2 Ideal Loads Air System,                   !- Name
+  ,                                                        !- Availability Schedule Name
+  Top_3R_AC_Mid2 Ideal Loads Supply Inlet,                 !- Zone Supply Air Node Name
+  ,                                                        !- Zone Exhaust Air Node Name
+  ,                                                        !- System Inlet Air Node Name
+  50,                                                      !- Maximum Heating Supply Air Temperature [C]
+  13,                                                      !- Minimum Cooling Supply Air Temperature [C]
+  0.0156,                                                  !- Maximum Heating Supply Air Humidity Ratio [kg-H20/kg-air]
+  0.0077,                                                  !- Minimum Cooling Supply Air Humidity Ratio [kg-H20/kg-air]
+  NoLimit,                                                 !- Heating Limit
+  ,                                                        !- Maximum Heating Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Sensible Heating Capacity {m3/s}
+  NoLimit,                                                 !- Cooling Limit
+  ,                                                        !- Maximum Cooling Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Total Cooling Capacity {m3/s}
+  ,                                                        !- Heating Availability Schedule Name
+  ,                                                        !- Cooling Availability Schedule Name
+  ConstantSensibleHeatRatio,                               !- Dehumidification Control Type
+  0.6,                                                     !- Cooling Sensible Heat Ratio
+  None,                                                    !- Humidification Control Type
+  ,                                                        !- Design Specification Outdoor Air Object Name
+  ,                                                        !- Outdoor Air Inlet Node Name
+  None,                                                    !- Demand Controlled Ventilation Type
+  NoEconomizer,                                            !- Outdoor Air Economizer Type
+  None,                                                    !- Heat Recovery Type
+  0.7,                                                     !- Sensible Heat Recovery Effectiveness
+  0.65;                                                    !- Latent Heat Recovery Effectiveness
+
+ZoneControl:Thermostat,
+  Top_3R_AC_Lft Thermostat,                                !- Name
+  Top_3R_AC_Lft,                                           !- Zone or ZoneList Name
+  HVACTemplate-Always 4,                                   !- Control Type Schedule Name
+  ThermostatSetpoint:DualSetpoint,                         !- Control Object Type
+  AC zones Dual SP Control;                                !- Control Name
+
+ZoneHVAC:EquipmentConnections,
+  Top_3R_AC_Lft,                                           !- Zone Name
+  Top_3R_AC_Lft Equipment,                                 !- Zone Conditioning Equipment List Name
+  Top_3R_AC_Lft Ideal Loads Supply Inlet,                  !- Zone Air Inlet Node or NodeList Name
+  ,                                                        !- Zone Air Exhaust Node or NodeList Name
+  Top_3R_AC_Lft Zone Air Node,                             !- Zone Air Node Name
+  Top_3R_AC_Lft Return Outlet;                             !- Zone Return Air Node Name
+
+ZoneHVAC:EquipmentList,
+  Top_3R_AC_Lft Equipment,                                 !- Name
+  SequentialLoad,                                          !- Load Distribution Scheme
+  ZoneHVAC:IdealLoadsAirSystem,                            !- Zone Equipment Object Type
+  Top_3R_AC_Lft Ideal Loads Air System,                    !- Zone Equipment Name
+  1,                                                       !- Zone Equipment Cooling Sequence
+  1,                                                       !- Zone Equipment Heating or No-Load Sequence
+  ,                                                        !- Zone Equipment Sequential Cooling Fraction Schedule Name
+  ;                                                        !- Zone Equipment Sequential Heating Fraction Schedule Name
+
+ZoneHVAC:IdealLoadsAirSystem,
+  Top_3R_AC_Lft Ideal Loads Air System,                    !- Name
+  ,                                                        !- Availability Schedule Name
+  Top_3R_AC_Lft Ideal Loads Supply Inlet,                  !- Zone Supply Air Node Name
+  ,                                                        !- Zone Exhaust Air Node Name
+  ,                                                        !- System Inlet Air Node Name
+  50,                                                      !- Maximum Heating Supply Air Temperature [C]
+  13,                                                      !- Minimum Cooling Supply Air Temperature [C]
+  0.0156,                                                  !- Maximum Heating Supply Air Humidity Ratio [kg-H20/kg-air]
+  0.0077,                                                  !- Minimum Cooling Supply Air Humidity Ratio [kg-H20/kg-air]
+  NoLimit,                                                 !- Heating Limit
+  ,                                                        !- Maximum Heating Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Sensible Heating Capacity {m3/s}
+  NoLimit,                                                 !- Cooling Limit
+  ,                                                        !- Maximum Cooling Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Total Cooling Capacity {m3/s}
+  ,                                                        !- Heating Availability Schedule Name
+  ,                                                        !- Cooling Availability Schedule Name
+  ConstantSensibleHeatRatio,                               !- Dehumidification Control Type
+  0.6,                                                     !- Cooling Sensible Heat Ratio
+  None,                                                    !- Humidification Control Type
+  ,                                                        !- Design Specification Outdoor Air Object Name
+  ,                                                        !- Outdoor Air Inlet Node Name
+  None,                                                    !- Demand Controlled Ventilation Type
+  NoEconomizer,                                            !- Outdoor Air Economizer Type
+  None,                                                    !- Heat Recovery Type
+  0.7,                                                     !- Sensible Heat Recovery Effectiveness
+  0.65;                                                    !- Latent Heat Recovery Effectiveness
+
+ZoneControl:Thermostat,
+  Top_3R_AC_Mid Thermostat,                                !- Name
+  Top_3R_AC_Mid,                                           !- Zone or ZoneList Name
+  HVACTemplate-Always 4,                                   !- Control Type Schedule Name
+  ThermostatSetpoint:DualSetpoint,                         !- Control Object Type
+  AC zones Dual SP Control;                                !- Control Name
+
+ZoneHVAC:EquipmentConnections,
+  Top_3R_AC_Mid,                                           !- Zone Name
+  Top_3R_AC_Mid Equipment,                                 !- Zone Conditioning Equipment List Name
+  Top_3R_AC_Mid Ideal Loads Supply Inlet,                  !- Zone Air Inlet Node or NodeList Name
+  ,                                                        !- Zone Air Exhaust Node or NodeList Name
+  Top_3R_AC_Mid Zone Air Node,                             !- Zone Air Node Name
+  Top_3R_AC_Mid Return Outlet;                             !- Zone Return Air Node Name
+
+ZoneHVAC:EquipmentList,
+  Top_3R_AC_Mid Equipment,                                 !- Name
+  SequentialLoad,                                          !- Load Distribution Scheme
+  ZoneHVAC:IdealLoadsAirSystem,                            !- Zone Equipment Object Type
+  Top_3R_AC_Mid Ideal Loads Air System,                    !- Zone Equipment Name
+  1,                                                       !- Zone Equipment Cooling Sequence
+  1,                                                       !- Zone Equipment Heating or No-Load Sequence
+  ,                                                        !- Zone Equipment Sequential Cooling Fraction Schedule Name
+  ;                                                        !- Zone Equipment Sequential Heating Fraction Schedule Name
+
+ZoneHVAC:IdealLoadsAirSystem,
+  Top_3R_AC_Mid Ideal Loads Air System,                    !- Name
+  ,                                                        !- Availability Schedule Name
+  Top_3R_AC_Mid Ideal Loads Supply Inlet,                  !- Zone Supply Air Node Name
+  ,                                                        !- Zone Exhaust Air Node Name
+  ,                                                        !- System Inlet Air Node Name
+  50,                                                      !- Maximum Heating Supply Air Temperature [C]
+  13,                                                      !- Minimum Cooling Supply Air Temperature [C]
+  0.0156,                                                  !- Maximum Heating Supply Air Humidity Ratio [kg-H20/kg-air]
+  0.0077,                                                  !- Minimum Cooling Supply Air Humidity Ratio [kg-H20/kg-air]
+  NoLimit,                                                 !- Heating Limit
+  ,                                                        !- Maximum Heating Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Sensible Heating Capacity {m3/s}
+  NoLimit,                                                 !- Cooling Limit
+  ,                                                        !- Maximum Cooling Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Total Cooling Capacity {m3/s}
+  ,                                                        !- Heating Availability Schedule Name
+  ,                                                        !- Cooling Availability Schedule Name
+  ConstantSensibleHeatRatio,                               !- Dehumidification Control Type
+  0.6,                                                     !- Cooling Sensible Heat Ratio
+  None,                                                    !- Humidification Control Type
+  ,                                                        !- Design Specification Outdoor Air Object Name
+  ,                                                        !- Outdoor Air Inlet Node Name
+  None,                                                    !- Demand Controlled Ventilation Type
+  NoEconomizer,                                            !- Outdoor Air Economizer Type
+  None,                                                    !- Heat Recovery Type
+  0.7,                                                     !- Sensible Heat Recovery Effectiveness
+  0.65;                                                    !- Latent Heat Recovery Effectiveness
+
+ZoneControl:Thermostat,
+  Top_3R_AC_Rht Thermostat,                                !- Name
+  Top_3R_AC_Rht,                                           !- Zone or ZoneList Name
+  HVACTemplate-Always 4,                                   !- Control Type Schedule Name
+  ThermostatSetpoint:DualSetpoint,                         !- Control Object Type
+  AC zones Dual SP Control;                                !- Control Name
+
+ZoneHVAC:EquipmentConnections,
+  Top_3R_AC_Rht,                                           !- Zone Name
+  Top_3R_AC_Rht Equipment,                                 !- Zone Conditioning Equipment List Name
+  Top_3R_AC_Rht Ideal Loads Supply Inlet,                  !- Zone Air Inlet Node or NodeList Name
+  ,                                                        !- Zone Air Exhaust Node or NodeList Name
+  Top_3R_AC_Rht Zone Air Node,                             !- Zone Air Node Name
+  Top_3R_AC_Rht Return Outlet;                             !- Zone Return Air Node Name
+
+ZoneHVAC:EquipmentList,
+  Top_3R_AC_Rht Equipment,                                 !- Name
+  SequentialLoad,                                          !- Load Distribution Scheme
+  ZoneHVAC:IdealLoadsAirSystem,                            !- Zone Equipment Object Type
+  Top_3R_AC_Rht Ideal Loads Air System,                    !- Zone Equipment Name
+  1,                                                       !- Zone Equipment Cooling Sequence
+  1,                                                       !- Zone Equipment Heating or No-Load Sequence
+  ,                                                        !- Zone Equipment Sequential Cooling Fraction Schedule Name
+  ;                                                        !- Zone Equipment Sequential Heating Fraction Schedule Name
+
+ZoneHVAC:IdealLoadsAirSystem,
+  Top_3R_AC_Rht Ideal Loads Air System,                    !- Name
+  ,                                                        !- Availability Schedule Name
+  Top_3R_AC_Rht Ideal Loads Supply Inlet,                  !- Zone Supply Air Node Name
+  ,                                                        !- Zone Exhaust Air Node Name
+  ,                                                        !- System Inlet Air Node Name
+  50,                                                      !- Maximum Heating Supply Air Temperature [C]
+  13,                                                      !- Minimum Cooling Supply Air Temperature [C]
+  0.0156,                                                  !- Maximum Heating Supply Air Humidity Ratio [kg-H20/kg-air]
+  0.0077,                                                  !- Minimum Cooling Supply Air Humidity Ratio [kg-H20/kg-air]
+  NoLimit,                                                 !- Heating Limit
+  ,                                                        !- Maximum Heating Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Sensible Heating Capacity {m3/s}
+  NoLimit,                                                 !- Cooling Limit
+  ,                                                        !- Maximum Cooling Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Total Cooling Capacity {m3/s}
+  ,                                                        !- Heating Availability Schedule Name
+  ,                                                        !- Cooling Availability Schedule Name
+  ConstantSensibleHeatRatio,                               !- Dehumidification Control Type
+  0.6,                                                     !- Cooling Sensible Heat Ratio
+  None,                                                    !- Humidification Control Type
+  ,                                                        !- Design Specification Outdoor Air Object Name
+  ,                                                        !- Outdoor Air Inlet Node Name
+  None,                                                    !- Demand Controlled Ventilation Type
+  NoEconomizer,                                            !- Outdoor Air Economizer Type
+  None,                                                    !- Heat Recovery Type
+  0.7,                                                     !- Sensible Heat Recovery Effectiveness
+  0.65;                                                    !- Latent Heat Recovery Effectiveness
+
+ZoneControl:Thermostat,
+  Mid_3R_AC_Mid2 Thermostat,                               !- Name
+  Mid_3R_AC_Mid2,                                          !- Zone or ZoneList Name
+  HVACTemplate-Always 4,                                   !- Control Type Schedule Name
+  ThermostatSetpoint:DualSetpoint,                         !- Control Object Type
+  AC zones Dual SP Control;                                !- Control Name
+
+ZoneHVAC:EquipmentConnections,
+  Mid_3R_AC_Mid2,                                          !- Zone Name
+  Mid_3R_AC_Mid2 Equipment,                                !- Zone Conditioning Equipment List Name
+  Mid_3R_AC_Mid2 Ideal Loads Supply Inlet,                 !- Zone Air Inlet Node or NodeList Name
+  ,                                                        !- Zone Air Exhaust Node or NodeList Name
+  Mid_3R_AC_Mid2 Zone Air Node,                            !- Zone Air Node Name
+  Mid_3R_AC_Mid2 Return Outlet;                            !- Zone Return Air Node Name
+
+ZoneHVAC:EquipmentList,
+  Mid_3R_AC_Mid2 Equipment,                                !- Name
+  SequentialLoad,                                          !- Load Distribution Scheme
+  ZoneHVAC:IdealLoadsAirSystem,                            !- Zone Equipment Object Type
+  Mid_3R_AC_Mid2 Ideal Loads Air System,                   !- Zone Equipment Name
+  1,                                                       !- Zone Equipment Cooling Sequence
+  1,                                                       !- Zone Equipment Heating or No-Load Sequence
+  ,                                                        !- Zone Equipment Sequential Cooling Fraction Schedule Name
+  ;                                                        !- Zone Equipment Sequential Heating Fraction Schedule Name
+
+ZoneHVAC:IdealLoadsAirSystem,
+  Mid_3R_AC_Mid2 Ideal Loads Air System,                   !- Name
+  ,                                                        !- Availability Schedule Name
+  Mid_3R_AC_Mid2 Ideal Loads Supply Inlet,                 !- Zone Supply Air Node Name
+  ,                                                        !- Zone Exhaust Air Node Name
+  ,                                                        !- System Inlet Air Node Name
+  50,                                                      !- Maximum Heating Supply Air Temperature [C]
+  13,                                                      !- Minimum Cooling Supply Air Temperature [C]
+  0.0156,                                                  !- Maximum Heating Supply Air Humidity Ratio [kg-H20/kg-air]
+  0.0077,                                                  !- Minimum Cooling Supply Air Humidity Ratio [kg-H20/kg-air]
+  NoLimit,                                                 !- Heating Limit
+  ,                                                        !- Maximum Heating Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Sensible Heating Capacity {m3/s}
+  NoLimit,                                                 !- Cooling Limit
+  ,                                                        !- Maximum Cooling Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Total Cooling Capacity {m3/s}
+  ,                                                        !- Heating Availability Schedule Name
+  ,                                                        !- Cooling Availability Schedule Name
+  ConstantSensibleHeatRatio,                               !- Dehumidification Control Type
+  0.6,                                                     !- Cooling Sensible Heat Ratio
+  None,                                                    !- Humidification Control Type
+  ,                                                        !- Design Specification Outdoor Air Object Name
+  ,                                                        !- Outdoor Air Inlet Node Name
+  None,                                                    !- Demand Controlled Ventilation Type
+  NoEconomizer,                                            !- Outdoor Air Economizer Type
+  None,                                                    !- Heat Recovery Type
+  0.7,                                                     !- Sensible Heat Recovery Effectiveness
+  0.65;                                                    !- Latent Heat Recovery Effectiveness
+
+ZoneControl:Thermostat,
+  Mid_3R_AC_Lft Thermostat,                                !- Name
+  Mid_3R_AC_Lft,                                           !- Zone or ZoneList Name
+  HVACTemplate-Always 4,                                   !- Control Type Schedule Name
+  ThermostatSetpoint:DualSetpoint,                         !- Control Object Type
+  AC zones Dual SP Control;                                !- Control Name
+
+ZoneHVAC:EquipmentConnections,
+  Mid_3R_AC_Lft,                                           !- Zone Name
+  Mid_3R_AC_Lft Equipment,                                 !- Zone Conditioning Equipment List Name
+  Mid_3R_AC_Lft Ideal Loads Supply Inlet,                  !- Zone Air Inlet Node or NodeList Name
+  ,                                                        !- Zone Air Exhaust Node or NodeList Name
+  Mid_3R_AC_Lft Zone Air Node,                             !- Zone Air Node Name
+  Mid_3R_AC_Lft Return Outlet;                             !- Zone Return Air Node Name
+
+ZoneHVAC:EquipmentList,
+  Mid_3R_AC_Lft Equipment,                                 !- Name
+  SequentialLoad,                                          !- Load Distribution Scheme
+  ZoneHVAC:IdealLoadsAirSystem,                            !- Zone Equipment Object Type
+  Mid_3R_AC_Lft Ideal Loads Air System,                    !- Zone Equipment Name
+  1,                                                       !- Zone Equipment Cooling Sequence
+  1,                                                       !- Zone Equipment Heating or No-Load Sequence
+  ,                                                        !- Zone Equipment Sequential Cooling Fraction Schedule Name
+  ;                                                        !- Zone Equipment Sequential Heating Fraction Schedule Name
+
+ZoneHVAC:IdealLoadsAirSystem,
+  Mid_3R_AC_Lft Ideal Loads Air System,                    !- Name
+  ,                                                        !- Availability Schedule Name
+  Mid_3R_AC_Lft Ideal Loads Supply Inlet,                  !- Zone Supply Air Node Name
+  ,                                                        !- Zone Exhaust Air Node Name
+  ,                                                        !- System Inlet Air Node Name
+  50,                                                      !- Maximum Heating Supply Air Temperature [C]
+  13,                                                      !- Minimum Cooling Supply Air Temperature [C]
+  0.0156,                                                  !- Maximum Heating Supply Air Humidity Ratio [kg-H20/kg-air]
+  0.0077,                                                  !- Minimum Cooling Supply Air Humidity Ratio [kg-H20/kg-air]
+  NoLimit,                                                 !- Heating Limit
+  ,                                                        !- Maximum Heating Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Sensible Heating Capacity {m3/s}
+  NoLimit,                                                 !- Cooling Limit
+  ,                                                        !- Maximum Cooling Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Total Cooling Capacity {m3/s}
+  ,                                                        !- Heating Availability Schedule Name
+  ,                                                        !- Cooling Availability Schedule Name
+  ConstantSensibleHeatRatio,                               !- Dehumidification Control Type
+  0.6,                                                     !- Cooling Sensible Heat Ratio
+  None,                                                    !- Humidification Control Type
+  ,                                                        !- Design Specification Outdoor Air Object Name
+  ,                                                        !- Outdoor Air Inlet Node Name
+  None,                                                    !- Demand Controlled Ventilation Type
+  NoEconomizer,                                            !- Outdoor Air Economizer Type
+  None,                                                    !- Heat Recovery Type
+  0.7,                                                     !- Sensible Heat Recovery Effectiveness
+  0.65;                                                    !- Latent Heat Recovery Effectiveness
+
+ZoneControl:Thermostat,
+  Mid_3R_AC_Mid Thermostat,                                !- Name
+  Mid_3R_AC_Mid,                                           !- Zone or ZoneList Name
+  HVACTemplate-Always 4,                                   !- Control Type Schedule Name
+  ThermostatSetpoint:DualSetpoint,                         !- Control Object Type
+  AC zones Dual SP Control;                                !- Control Name
+
+ZoneHVAC:EquipmentConnections,
+  Mid_3R_AC_Mid,                                           !- Zone Name
+  Mid_3R_AC_Mid Equipment,                                 !- Zone Conditioning Equipment List Name
+  Mid_3R_AC_Mid Ideal Loads Supply Inlet,                  !- Zone Air Inlet Node or NodeList Name
+  ,                                                        !- Zone Air Exhaust Node or NodeList Name
+  Mid_3R_AC_Mid Zone Air Node,                             !- Zone Air Node Name
+  Mid_3R_AC_Mid Return Outlet;                             !- Zone Return Air Node Name
+
+ZoneHVAC:EquipmentList,
+  Mid_3R_AC_Mid Equipment,                                 !- Name
+  SequentialLoad,                                          !- Load Distribution Scheme
+  ZoneHVAC:IdealLoadsAirSystem,                            !- Zone Equipment Object Type
+  Mid_3R_AC_Mid Ideal Loads Air System,                    !- Zone Equipment Name
+  1,                                                       !- Zone Equipment Cooling Sequence
+  1,                                                       !- Zone Equipment Heating or No-Load Sequence
+  ,                                                        !- Zone Equipment Sequential Cooling Fraction Schedule Name
+  ;                                                        !- Zone Equipment Sequential Heating Fraction Schedule Name
+
+ZoneHVAC:IdealLoadsAirSystem,
+  Mid_3R_AC_Mid Ideal Loads Air System,                    !- Name
+  ,                                                        !- Availability Schedule Name
+  Mid_3R_AC_Mid Ideal Loads Supply Inlet,                  !- Zone Supply Air Node Name
+  ,                                                        !- Zone Exhaust Air Node Name
+  ,                                                        !- System Inlet Air Node Name
+  50,                                                      !- Maximum Heating Supply Air Temperature [C]
+  13,                                                      !- Minimum Cooling Supply Air Temperature [C]
+  0.0156,                                                  !- Maximum Heating Supply Air Humidity Ratio [kg-H20/kg-air]
+  0.0077,                                                  !- Minimum Cooling Supply Air Humidity Ratio [kg-H20/kg-air]
+  NoLimit,                                                 !- Heating Limit
+  ,                                                        !- Maximum Heating Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Sensible Heating Capacity {m3/s}
+  NoLimit,                                                 !- Cooling Limit
+  ,                                                        !- Maximum Cooling Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Total Cooling Capacity {m3/s}
+  ,                                                        !- Heating Availability Schedule Name
+  ,                                                        !- Cooling Availability Schedule Name
+  ConstantSensibleHeatRatio,                               !- Dehumidification Control Type
+  0.6,                                                     !- Cooling Sensible Heat Ratio
+  None,                                                    !- Humidification Control Type
+  ,                                                        !- Design Specification Outdoor Air Object Name
+  ,                                                        !- Outdoor Air Inlet Node Name
+  None,                                                    !- Demand Controlled Ventilation Type
+  NoEconomizer,                                            !- Outdoor Air Economizer Type
+  None,                                                    !- Heat Recovery Type
+  0.7,                                                     !- Sensible Heat Recovery Effectiveness
+  0.65;                                                    !- Latent Heat Recovery Effectiveness
+
+ZoneControl:Thermostat,
+  Mid_3R_AC_Rht Thermostat,                                !- Name
+  Mid_3R_AC_Rht,                                           !- Zone or ZoneList Name
+  HVACTemplate-Always 4,                                   !- Control Type Schedule Name
+  ThermostatSetpoint:DualSetpoint,                         !- Control Object Type
+  AC zones Dual SP Control;                                !- Control Name
+
+ZoneHVAC:EquipmentConnections,
+  Mid_3R_AC_Rht,                                           !- Zone Name
+  Mid_3R_AC_Rht Equipment,                                 !- Zone Conditioning Equipment List Name
+  Mid_3R_AC_Rht Ideal Loads Supply Inlet,                  !- Zone Air Inlet Node or NodeList Name
+  ,                                                        !- Zone Air Exhaust Node or NodeList Name
+  Mid_3R_AC_Rht Zone Air Node,                             !- Zone Air Node Name
+  Mid_3R_AC_Rht Return Outlet;                             !- Zone Return Air Node Name
+
+ZoneHVAC:EquipmentList,
+  Mid_3R_AC_Rht Equipment,                                 !- Name
+  SequentialLoad,                                          !- Load Distribution Scheme
+  ZoneHVAC:IdealLoadsAirSystem,                            !- Zone Equipment Object Type
+  Mid_3R_AC_Rht Ideal Loads Air System,                    !- Zone Equipment Name
+  1,                                                       !- Zone Equipment Cooling Sequence
+  1,                                                       !- Zone Equipment Heating or No-Load Sequence
+  ,                                                        !- Zone Equipment Sequential Cooling Fraction Schedule Name
+  ;                                                        !- Zone Equipment Sequential Heating Fraction Schedule Name
+
+ZoneHVAC:IdealLoadsAirSystem,
+  Mid_3R_AC_Rht Ideal Loads Air System,                    !- Name
+  ,                                                        !- Availability Schedule Name
+  Mid_3R_AC_Rht Ideal Loads Supply Inlet,                  !- Zone Supply Air Node Name
+  ,                                                        !- Zone Exhaust Air Node Name
+  ,                                                        !- System Inlet Air Node Name
+  50,                                                      !- Maximum Heating Supply Air Temperature [C]
+  13,                                                      !- Minimum Cooling Supply Air Temperature [C]
+  0.0156,                                                  !- Maximum Heating Supply Air Humidity Ratio [kg-H20/kg-air]
+  0.0077,                                                  !- Minimum Cooling Supply Air Humidity Ratio [kg-H20/kg-air]
+  NoLimit,                                                 !- Heating Limit
+  ,                                                        !- Maximum Heating Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Sensible Heating Capacity {m3/s}
+  NoLimit,                                                 !- Cooling Limit
+  ,                                                        !- Maximum Cooling Air Flow Rate {m3/s}
+  ,                                                        !- Maximum Total Cooling Capacity {m3/s}
+  ,                                                        !- Heating Availability Schedule Name
+  ,                                                        !- Cooling Availability Schedule Name
+  ConstantSensibleHeatRatio,                               !- Dehumidification Control Type
+  0.6,                                                     !- Cooling Sensible Heat Ratio
+  None,                                                    !- Humidification Control Type
+  ,                                                        !- Design Specification Outdoor Air Object Name
+  ,                                                        !- Outdoor Air Inlet Node Name
+  None,                                                    !- Demand Controlled Ventilation Type
+  NoEconomizer,                                            !- Outdoor Air Economizer Type
+  None,                                                    !- Heat Recovery Type
+  0.7,                                                     !- Sensible Heat Recovery Effectiveness
+  0.65;                                                    !- Latent Heat Recovery Effectiveness
+
+Site:GroundTemperature:BuildingSurface,
+  18,                                                      !- January Ground Temperature
+  18,                                                      !- February Ground Temperature
+  18,                                                      !- March Ground Temperature
+  18,                                                      !- April Ground Temperature
+  24,                                                      !- May Ground Temperature
+  24.3,                                                    !- June Ground Temperature
+  24,                                                      !- July Ground Temperature
+  18,                                                      !- August Ground Temperature
+  18,                                                      !- September Ground Temperature
+  18,                                                      !- October Ground Temperature
+  18,                                                      !- November Ground Temperature
+  18;                                                      !- December Ground Temperature
