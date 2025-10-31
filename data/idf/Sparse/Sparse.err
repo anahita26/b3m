@@ -1,0 +1,281 @@
+Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.10.30 15:35,
+   ** Warning ** ManageSizing: For a zone sizing run, there must be at least 1 Sizing:Zone input object. SimulationControl Zone Sizing option ignored.
+   ** Warning ** Weather file location will be used rather than entered (IDF) Location object.
+   **   ~~~   ** ..Location object=SINGAPORE
+   **   ~~~   ** ..Weather File Location=SINGAPORE - SGP IWEC Data WMO#=486980
+   **   ~~~   ** ..due to location differences, Latitude difference=[7.00E-002] degrees, Longitude difference=[0.18] degrees.
+   **   ~~~   ** ..Time Zone difference=[0.0] hour(s), Elevation difference=[166.67] percent, [10.00] meters.
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="FAN SCHEDULE" has missing day types in Through=12/31
+   **   ~~~   ** Last "For" field=FOR: WEEKENDS
+   **   ~~~   ** Missing day types="Holiday","SummerDesignDay","WinterDesignDay","CustomDay1","CustomDay2"
+   **   ~~~   ** Missing day types will have 0.0 as Schedule Values
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="NAC LIGHTING SCHEDULE" has missing day types in Through=12/31
+   **   ~~~   ** Last "For" field=FOR: WEEKENDS
+   **   ~~~   ** Missing day types="Holiday","SummerDesignDay","WinterDesignDay","CustomDay1","CustomDay2"
+   **   ~~~   ** Missing day types will have 0.0 as Schedule Values
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="COOLING SETPOINT SCHEDULE" has missing day types in Through=12/31
+   **   ~~~   ** Last "For" field=FOR: WEEKENDS
+   **   ~~~   ** Missing day types="Holiday","SummerDesignDay","WinterDesignDay","CustomDay1","CustomDay2"
+   **   ~~~   ** Missing day types will have 0.0 as Schedule Values
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="KETTLE SCHEDULE" has missing day types in Through=12/31
+   **   ~~~   ** Last "For" field=FOR: WEEKENDS
+   **   ~~~   ** Missing day types="Holiday","SummerDesignDay","WinterDesignDay","CustomDay1","CustomDay2"
+   **   ~~~   ** Missing day types will have 0.0 as Schedule Values
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="TV SCHEDULE" has missing day types in Through=12/31
+   **   ~~~   ** Last "For" field=FOR: WEEKENDS
+   **   ~~~   ** Missing day types="Holiday","SummerDesignDay","WinterDesignDay","CustomDay1","CustomDay2"
+   **   ~~~   ** Missing day types will have 0.0 as Schedule Values
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="COMPUTER SCHEDULE" has missing day types in Through=12/31
+   **   ~~~   ** Last "For" field=FOR: WEEKENDS
+   **   ~~~   ** Missing day types="Holiday","SummerDesignDay","WinterDesignDay","CustomDay1","CustomDay2"
+   **   ~~~   ** Missing day types will have 0.0 as Schedule Values
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="RICE COOKER SCHEDULE" has missing day types in Through=12/31
+   **   ~~~   ** Last "For" field=FOR: WEEKENDS
+   **   ~~~   ** Missing day types="Holiday","SummerDesignDay","WinterDesignDay","CustomDay1","CustomDay2"
+   **   ~~~   ** Missing day types will have 0.0 as Schedule Values
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="SLEEPING SCHEDULE PER PAX" has missing day types in Through=12/31
+   **   ~~~   ** Last "For" field=FOR: WEEKENDS
+   **   ~~~   ** Missing day types="Holiday","SummerDesignDay","WinterDesignDay","CustomDay1","CustomDay2"
+   **   ~~~   ** Missing day types will have 0.0 as Schedule Values
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="SLEEPING OCC SCHEDULE" has missing day types in Through=12/31
+   **   ~~~   ** Last "For" field=FOR: WEEKENDS
+   **   ~~~   ** Missing day types="Holiday","SummerDesignDay","WinterDesignDay","CustomDay1","CustomDay2"
+   **   ~~~   ** Missing day types will have 0.0 as Schedule Values
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="COOLING SCHEDULE" has missing day types in Through=12/31
+   **   ~~~   ** Last "For" field=FOR: WEEKENDS
+   **   ~~~   ** Missing day types="Holiday","SummerDesignDay","WinterDesignDay","CustomDay1","CustomDay2"
+   **   ~~~   ** Missing day types will have 0.0 as Schedule Values
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="VENTILATION SCHEDULE" has missing day types in Through=12/31
+   **   ~~~   ** Last "For" field=FOR: WEEKENDS
+   **   ~~~   ** Missing day types="Holiday","SummerDesignDay","WinterDesignDay","CustomDay1","CustomDay2"
+   **   ~~~   ** Missing day types will have 0.0 as Schedule Values
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="AC LIGHTING SCHEDULE" has missing day types in Through=12/31
+   **   ~~~   ** Last "For" field=FOR: WEEKENDS
+   **   ~~~   ** Missing day types="Holiday","SummerDesignDay","WinterDesignDay","CustomDay1","CustomDay2"
+   **   ~~~   ** Missing day types will have 0.0 as Schedule Values
+   ** Warning ** CheckConvexity: Zone="TOP_3R_AC_MID2", Surface="A7E34B" is non-convex.
+   **   ~~~   ** ...vertex 4 to vertex 5 to vertex 6
+   **   ~~~   ** ...vertex 4=[99.21,43.65,34.40]
+   **   ~~~   ** ...vertex 5=[97.64,43.42,34.40]
+   **   ~~~   ** ...vertex 6=[97.56,43.96,34.40]
+   ** Warning ** CheckConvexity: Zone="TOP_3R_AC_MID2", Surface="75DE40" is non-convex.
+   **   ~~~   ** ...vertex 2 to vertex 3 to vertex 4
+   **   ~~~   ** ...vertex 2=[99.30,45.18,34.40]
+   **   ~~~   ** ...vertex 3=[102.42,45.64,34.40]
+   **   ~~~   ** ...vertex 4=[102.60,44.44,34.40]
+   ** Warning ** CheckConvexity: Zone="TOP_3R_NV_LFT", Surface="E1E523" is non-convex.
+   **   ~~~   ** ...vertex 2 to vertex 3 to vertex 4
+   **   ~~~   ** ...vertex 2=[59.44,45.13,34.40]
+   **   ~~~   ** ...vertex 3=[61.32,45.41,34.40]
+   **   ~~~   ** ...vertex 4=[62.95,34.37,34.40]
+   ** Warning ** CheckConvexity: Zone="TOP_3R_NV_RHT", Surface="E8EDFB" is non-convex.
+   **   ~~~   ** ...vertex 2 to vertex 3 to vertex 4
+   **   ~~~   ** ...vertex 2=[144.18,57.65,34.40]
+   **   ~~~   ** ...vertex 3=[143.42,57.53,34.40]
+   **   ~~~   ** ...vertex 4=[143.75,55.28,34.40]
+   ** Warning ** CheckConvexity: Zone="TOP_3R_NV_MID", Surface="D92264" is non-convex.
+   **   ~~~   ** ...vertex 2 to vertex 3 to vertex 4
+   **   ~~~   ** ...vertex 2=[83.79,48.73,34.40]
+   **   ~~~   ** ...vertex 3=[83.03,48.62,34.40]
+   **   ~~~   ** ...vertex 4=[83.36,46.36,34.40]
+   ** Warning ** CheckConvexity: Zone="TOP_3R_NV_MID2", Surface="B7B826" is non-convex.
+   **   ~~~   ** ...vertex 2 to vertex 3 to vertex 4
+   **   ~~~   ** ...vertex 2=[96.27,50.57,34.40]
+   **   ~~~   ** ...vertex 3=[94.83,50.36,34.40]
+   **   ~~~   ** ...vertex 4=[95.81,43.70,34.40]
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=4.9, Multipliers=54, Total Area=267.6 in Surface=623268 Zone=MID_3R_AC_MID2
+   **   ~~~   **   Area=6.3, Multipliers=1, Total Area=6.3 in Surface=E313CC Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=1.5, Multipliers=54, Total Area=82.5 in Surface=77100A Zone=MID_3R_AC_MID2
+   **   ~~~   **   Area=1.9, Multipliers=1, Total Area=1.9 in Surface=24F025 Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=4.4, Multipliers=54, Total Area=239.3 in Surface=D6EE8E Zone=MID_3R_AC_MID2
+   **   ~~~   **   Area=5.6, Multipliers=1, Total Area=5.6 in Surface=FD96CD Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=10.8, Multipliers=54, Total Area=587.5 in Surface=B00950 Zone=MID_3R_AC_MID2
+   **   ~~~   **   Area=13.9, Multipliers=1, Total Area=13.9 in Surface=F6CCEE Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=3.4, Multipliers=54, Total Area=184.1 in Surface=3E816C Zone=MID_3R_AC_MID2
+   **   ~~~   **   Area=4.3, Multipliers=1, Total Area=4.3 in Surface=BC749E Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=8.8, Multipliers=54, Total Area=477.0 in Surface=60E63B Zone=MID_3R_AC_MID2
+   **   ~~~   **   Area=11.3, Multipliers=1, Total Area=11.3 in Surface=72EFCA Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=8.0, Multipliers=54, Total Area=435.7 in Surface=A53E1C Zone=MID_3R_AC_MID2
+   **   ~~~   **   Area=10.3, Multipliers=1, Total Area=10.3 in Surface=1B59AD Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=4.3, Multipliers=54, Total Area=234.9 in Surface=EC1B1F Zone=MID_3R_AC_MID2
+   **   ~~~   **   Area=5.5, Multipliers=1, Total Area=5.5 in Surface=58768C Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=5.3, Multipliers=9, Total Area=47.9 in Surface=1400F3 Zone=MID_3R_NV_RHT
+   **   ~~~   **   Area=6.8, Multipliers=1, Total Area=6.8 in Surface=40A37B Zone=GND_3R_NAC_RHT
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=31.2, Multipliers=9, Total Area=281.3 in Surface=678A72 Zone=MID_3R_NV_RHT
+   **   ~~~   **   Area=40.1, Multipliers=1, Total Area=40.1 in Surface=5A873A Zone=GND_3R_NAC_RHT
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=31.2, Multipliers=9, Total Area=281.3 in Surface=55D403 Zone=MID_3R_AC_RHT
+   **   ~~~   **   Area=40.1, Multipliers=1, Total Area=40.1 in Surface=B884B5 Zone=GND_3R_NV_RHT
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=5.3, Multipliers=9, Total Area=47.9 in Surface=FA08B3 Zone=MID_3R_AC_RHT
+   **   ~~~   **   Area=6.8, Multipliers=1, Total Area=6.8 in Surface=5843B0 Zone=GND_3R_NV_RHT
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=5.3, Multipliers=36, Total Area=191.6 in Surface=A7CEB5 Zone=MID_3R_NV_MID
+   **   ~~~   **   Area=6.8, Multipliers=1, Total Area=6.8 in Surface=E2D85B Zone=GND_3R_NAC_MID
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=31.2, Multipliers=36, Total Area=1125.2 in Surface=DD9B4D Zone=MID_3R_NV_MID
+   **   ~~~   **   Area=40.1, Multipliers=1, Total Area=40.1 in Surface=120881 Zone=GND_3R_NAC_MID
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=24.8, Multipliers=36, Total Area=895.3 in Surface=AF3F1D Zone=MID_3R_NV_MID
+   **   ~~~   **   Area=31.9, Multipliers=1, Total Area=31.9 in Surface=5100C1 Zone=GND_3R_NV_MID
+   ** Warning ** GetSurfaceData: InterZone Surface Azimuths do not match as expected.
+   **   ~~~   **   Azimuth=261.6, Tilt=90.0, in Surface=AF3F1D, Zone=MID_3R_NV_MID
+   **   ~~~   **   Azimuth=261.6, Tilt=90.0, in Surface=5100C1, Zone=GND_3R_NV_MID
+   **   ~~~   ** ..surface class of first surface=Wall
+   **   ~~~   ** ..surface class of second surface=Wall
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=8.0, Multipliers=54, Total Area=435.7 in Surface=550CDC Zone=MID_3R_NV_MID2
+   **   ~~~   **   Area=10.3, Multipliers=1, Total Area=10.3 in Surface=C00851 Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=8.8, Multipliers=54, Total Area=477.0 in Surface=F404F7 Zone=MID_3R_NV_MID2
+   **   ~~~   **   Area=11.3, Multipliers=1, Total Area=11.3 in Surface=9BB333 Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=3.4, Multipliers=54, Total Area=184.1 in Surface=38933C Zone=MID_3R_NV_MID2
+   **   ~~~   **   Area=4.3, Multipliers=1, Total Area=4.3 in Surface=4EA790 Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=10.8, Multipliers=54, Total Area=587.5 in Surface=ACD4C8 Zone=MID_3R_NV_MID2
+   **   ~~~   **   Area=13.9, Multipliers=1, Total Area=13.9 in Surface=F7E5F9 Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=4.4, Multipliers=54, Total Area=239.3 in Surface=586D18 Zone=MID_3R_NV_MID2
+   **   ~~~   **   Area=5.6, Multipliers=1, Total Area=5.6 in Surface=81998C Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=1.5, Multipliers=54, Total Area=82.5 in Surface=EA84EE Zone=MID_3R_NV_MID2
+   **   ~~~   **   Area=1.9, Multipliers=1, Total Area=1.9 in Surface=BE0F22 Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=4.9, Multipliers=54, Total Area=267.6 in Surface=6C17BB Zone=MID_3R_NV_MID2
+   **   ~~~   **   Area=6.3, Multipliers=1, Total Area=6.3 in Surface=38316D Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=4.3, Multipliers=54, Total Area=234.9 in Surface=DFC313 Zone=MID_3R_NV_MID2
+   **   ~~~   **   Area=5.5, Multipliers=1, Total Area=5.5 in Surface=248178 Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=31.2, Multipliers=36, Total Area=1125.2 in Surface=520407 Zone=MID_3R_AC_MID
+   **   ~~~   **   Area=40.1, Multipliers=1, Total Area=40.1 in Surface=F3AEE5 Zone=GND_3R_NV_MID
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=5.3, Multipliers=36, Total Area=191.6 in Surface=DB7B24 Zone=MID_3R_AC_MID
+   **   ~~~   **   Area=6.8, Multipliers=1, Total Area=6.8 in Surface=7C3286 Zone=GND_3R_NV_MID
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=4.9, Multipliers=6, Total Area=29.7 in Surface=A3125C Zone=TOP_3R_AC_MID2
+   **   ~~~   **   Area=6.3, Multipliers=1, Total Area=6.3 in Surface=E313CC Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=1.5, Multipliers=6, Total Area=9.1 in Surface=C9E6D7 Zone=TOP_3R_AC_MID2
+   **   ~~~   **   Area=1.9, Multipliers=1, Total Area=1.9 in Surface=24F025 Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=4.4, Multipliers=6, Total Area=26.5 in Surface=ADD8C6 Zone=TOP_3R_AC_MID2
+   **   ~~~   **   Area=5.6, Multipliers=1, Total Area=5.6 in Surface=FD96CD Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=10.8, Multipliers=6, Total Area=65.2 in Surface=CD3E03 Zone=TOP_3R_AC_MID2
+   **   ~~~   **   Area=13.9, Multipliers=1, Total Area=13.9 in Surface=F6CCEE Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=3.4, Multipliers=6, Total Area=20.4 in Surface=BDF462 Zone=TOP_3R_AC_MID2
+   **   ~~~   **   Area=4.3, Multipliers=1, Total Area=4.3 in Surface=BC749E Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=8.8, Multipliers=6, Total Area=53.0 in Surface=6E79CF Zone=TOP_3R_AC_MID2
+   **   ~~~   **   Area=11.3, Multipliers=1, Total Area=11.3 in Surface=72EFCA Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=8.0, Multipliers=6, Total Area=48.4 in Surface=CD89CB Zone=TOP_3R_AC_MID2
+   **   ~~~   **   Area=10.3, Multipliers=1, Total Area=10.3 in Surface=1B59AD Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=4.3, Multipliers=6, Total Area=26.1 in Surface=3D68F1 Zone=TOP_3R_AC_MID2
+   **   ~~~   **   Area=5.5, Multipliers=1, Total Area=5.5 in Surface=58768C Zone=GND_3R_NV_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=31.2, Multipliers=4, Total Area=125.0 in Surface=6D770A Zone=TOP_3R_AC_MID
+   **   ~~~   **   Area=40.1, Multipliers=1, Total Area=40.1 in Surface=F3AEE5 Zone=GND_3R_NV_MID
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=5.3, Multipliers=4, Total Area=21.2 in Surface=2C6CDD Zone=TOP_3R_AC_MID
+   **   ~~~   **   Area=6.8, Multipliers=1, Total Area=6.8 in Surface=7C3286 Zone=GND_3R_NV_MID
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=5.3 in Surface=6EF9C9, Zone=TOP_3R_NV_RHT
+   **   ~~~   **   Area=6.8 in Surface=40A37B, Zone=GND_3R_NAC_RHT
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=31.2 in Surface=8A846F, Zone=TOP_3R_NV_RHT
+   **   ~~~   **   Area=40.1 in Surface=5A873A, Zone=GND_3R_NAC_RHT
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=31.2 in Surface=3D566D, Zone=TOP_3R_AC_RHT
+   **   ~~~   **   Area=40.1 in Surface=B884B5, Zone=GND_3R_NV_RHT
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=5.3 in Surface=153C54, Zone=TOP_3R_AC_RHT
+   **   ~~~   **   Area=6.8 in Surface=5843B0, Zone=GND_3R_NV_RHT
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=5.3, Multipliers=4, Total Area=21.2 in Surface=72CFEF Zone=TOP_3R_NV_MID
+   **   ~~~   **   Area=6.8, Multipliers=1, Total Area=6.8 in Surface=E2D85B Zone=GND_3R_NAC_MID
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=31.2, Multipliers=4, Total Area=125.0 in Surface=37BDC9 Zone=TOP_3R_NV_MID
+   **   ~~~   **   Area=40.1, Multipliers=1, Total Area=40.1 in Surface=120881 Zone=GND_3R_NAC_MID
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=8.0, Multipliers=6, Total Area=48.4 in Surface=2E62BE Zone=TOP_3R_NV_MID2
+   **   ~~~   **   Area=10.3, Multipliers=1, Total Area=10.3 in Surface=C00851 Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=8.8, Multipliers=6, Total Area=53.0 in Surface=1C2A01 Zone=TOP_3R_NV_MID2
+   **   ~~~   **   Area=11.3, Multipliers=1, Total Area=11.3 in Surface=9BB333 Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=3.4, Multipliers=6, Total Area=20.4 in Surface=CD04B4 Zone=TOP_3R_NV_MID2
+   **   ~~~   **   Area=4.3, Multipliers=1, Total Area=4.3 in Surface=4EA790 Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=10.8, Multipliers=6, Total Area=65.2 in Surface=4FDE52 Zone=TOP_3R_NV_MID2
+   **   ~~~   **   Area=13.9, Multipliers=1, Total Area=13.9 in Surface=F7E5F9 Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=4.4, Multipliers=6, Total Area=26.5 in Surface=1FF52E Zone=TOP_3R_NV_MID2
+   **   ~~~   **   Area=5.6, Multipliers=1, Total Area=5.6 in Surface=81998C Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=1.5, Multipliers=6, Total Area=9.1 in Surface=2ABCE6 Zone=TOP_3R_NV_MID2
+   **   ~~~   **   Area=1.9, Multipliers=1, Total Area=1.9 in Surface=BE0F22 Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=4.9, Multipliers=6, Total Area=29.7 in Surface=A8C08C Zone=TOP_3R_NV_MID2
+   **   ~~~   **   Area=6.3, Multipliers=1, Total Area=6.3 in Surface=38316D Zone=GND_3R_NAC_MID2
+   ** Warning ** GetSurfaceData: InterZone Surface Areas do not match as expected and might not satisfy conservation of energy:
+   **   ~~~   **   Area=4.3, Multipliers=6, Total Area=26.1 in Surface=541BB2 Zone=TOP_3R_NV_MID2
+   **   ~~~   **   Area=5.5, Multipliers=1, Total Area=5.5 in Surface=248178 Zone=GND_3R_NAC_MID2
+   ** Warning ** CheckUsedConstructions: There are 1 nominally unused constructions in input.
+   **   ~~~   ** Each Unused construction is shown.
+   ************* Construction=GREEN ROOF
+   ** Warning ** GetInternalHeatGains: People="SLEEPING 3-R", Activity Level Schedule Name values
+   **   ~~~   ** fall outside typical range [70,1000] W/person for Thermal Comfort Reporting.
+   **   ~~~   ** Odd comfort values may result; Schedule="SLEEPING SCHEDULE PER PAX".
+   **   ~~~   ** Entered min/max range=[0.0,72.0] W/person.
+   ** Warning ** GetInternalHeatGains: People="SITTING 3-R C-ROOMS", Activity Level Schedule Name values
+   **   ~~~   ** fall outside typical range [70,1000] W/person for Thermal Comfort Reporting.
+   **   ~~~   ** Odd comfort values may result; Schedule="SITTING C-ROOM SCHEDULE PER PAX".
+   **   ~~~   ** Entered min/max range=[0.0,108.0] W/person.
+   ** Warning ** GetInternalHeatGains: People="SITTING LIVING ROOMS", Activity Level Schedule Name values
+   **   ~~~   ** fall outside typical range [70,1000] W/person for Thermal Comfort Reporting.
+   **   ~~~   ** Odd comfort values may result; Schedule="SITTING L-ROOM SCHEDULE PER PAX".
+   **   ~~~   ** Entered min/max range=[0.0,108.0] W/person.
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ************* Beginning Simulation
+   ************* Simulation Error Summary *************
+   ************* There are 4 unused schedules in input.
+   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
+   *************
+   ************* ===== Final Error Summary =====
+   ************* The following error categories occurred.  Consider correcting or noting.
+   ************* InterZone Surface Areas -- mismatch
+   ************* ..Area mismatch errors happen when the interzone surface in zone A is
+   ************* ..not the same size as it's companion in zone B.
+   ************* InterZone Surface Azimuths -- mismatch
+   ************* ..The azimuths (outward facing angle) of two interzone surfaces should not be the same.
+   ************* ..Normally, the absolute difference between the two azimuths will be 180 degrees.
+   ************* ..You can turn on the report: Output:Surfaces:List,Details; to inspect your surfaces.
+   ************* Nominally Unused Constructions
+   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause
+   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm
+   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 1 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 74 Warning; 0 Severe Errors; Elapsed Time=00hr 00min 13.40sec

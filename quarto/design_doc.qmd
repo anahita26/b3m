@@ -78,6 +78,8 @@ Best facades to shade for highest payoff
 
 ### Cool coating (exterior walls)
 
+Since the exterior walls were already created and already had a filed for the solar absorptance, I did not need to make any adjustments using the IDFeditor and I was able to immediately begin a parametric analysis using the param() function of eplusr. I first ran a test case to ensure that everything was working properly.
+
 E+ objects (surface construction elements)
 
 -   Material
@@ -91,6 +93,8 @@ What to vary
 ## Nature Intervention
 
 ### Green roof
+
+I added the Material:RoofVegetation class manually in the IDFEditor to have a baseline case for the parametric study. All the fields for the baseline case were filled in by default values as outlined in the InputOuput Reference manual. I also manually added a new construction object for the green roof, which has all the same elements as the original roof, but now includes the roof vegetation as the outermost layer.
 
 E+ objects (surface construction elements)
 
