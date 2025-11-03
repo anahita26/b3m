@@ -20,7 +20,7 @@ epw <- read_epw(path_epw)
 param <- param_job(model, epw)
 
 # Assign scenario variables 
-shading <- c(0, 0.5, 1)
+shading <- c(0.1, 0.5, 1)
 coating <- c(0.7, 0.4, 0.2)
 lai <- c(1, 2.5, 5)
 
@@ -109,16 +109,46 @@ model_update_leaf$'Material:RoofVegetation'$'green_roof'$`Leaf Area Index`
 model_update_shade <- set_shading(model, shading[2])
 model_update_shade$'Shading:Overhang:Projection'$Overhang_9B19D6$`Depth as Fraction of Window/Door Height`
 
-# Apply measure to model
-param$apply_measure(set_coating,
-                    coating,
-                    .names = c("Dark", "Medium", "Cool"))
-param$apply_measure(set_lai,
-                    lai,
-                    .names = c("Sparse", "Moderate", "Lush"))
-param$apply_measure(set_shading,
-                    shading,
-                    .names = c("No Shade", "Half Shade", "Full Shade"))
+## Apply all measures to model
+# name the simulation cases
+names <- expand.grid(
+  Coating = c("Dark", "Medium", "Cool"),
+  LAI = c("Sparse", "Moderate", "Lush"),
+  Shading = c("No Shade", "Half Shade", "Full Shade")
+) |> 
+  apply(1, paste, collapse = "_")
+
+# create simulation grid
+param_grid <- expand.grid(
+  coating = coating,
+  lai = lai,
+  shading = shading
+)
+
+# use a wrapper function
+ecm <- function(model, coating, lai, shading) {
+  model <- set_coating(model, coating)
+  model <- set_lai(model, lai)
+  model <- set_shading(model, lai)
+}
+
+param$apply_measure(ecm,
+                    coating = param_grid$coating,
+                    lai = param_grid$lai,
+                    shading = param_grid$shading,
+                    .names = names)
+
+
+# Apply each measure separately for testing
+#param$apply_measure(set_coating,
+                    #coating,
+                    #.names = c("Dark", "Medium", "Cool"))
+#param$apply_measure(set_lai,
+                    #lai,
+                    #.names = c("Sparse", "Moderate", "Lush"))
+#param$apply_measure(set_shading,
+                    #shading,
+                    #.names = c("No Shade", "Half Shade", "Full Shade"))
 
 # Retrieve summary of parameter values and model names
 param$cases()
@@ -129,7 +159,30 @@ param$status()
 
 ## Collect results
 report <-  param$report_data()
-#Filter by on specific variable and sum over all the zones and time to get the final result of the building
+
+# 1) Cooling demand via Zone Ideal Loads Supply Air Total Cooling Energy
+report_cooling <- report |> 
+  filter(name == "Zone Ideal Loads Supply Air Total Cooling Energy")
+
+cooling_all_cases <- numeric(length(names))
+# loop through each case
+for (i in seq_along(names)) {
+  case_name <- names[i]
+  
+  # filter for particular case and sum the "value" column 
+  total_value <- report_cooling |> 
+    filter(case == case_name) |> 
+    summarise(sum_value = sum(value, na.rm = TRUE)) |> 
+    pull(sum_value)
+  
+  # store total value in vector
+  cooling_all_cases[i] <- total_value
+}
+
+cooling_all_cases_kWh <- cooling_all_cases / 3.6e6
+
+
+
 
 # Need to look deeper into results that are actually affected by the green roof to show success
 param_energy <- param$tabular_data(table_name = "Site and Source Energy", wide = TRUE)[[1L]] |> 

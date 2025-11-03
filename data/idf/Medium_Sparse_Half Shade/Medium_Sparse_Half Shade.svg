@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<svg width="250mm" height="200mm" viewBox="0 0   2500    1500"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ev="http://www.w3.org/2001/xml-events">
+<g font-family="Verdana" font-size="8" >
+  <text x="   200" y="    40">Unused Non-Parent Objects:</text>
+  <text x="   220" y="    60">TOP_3R_AC_MID2</text>
+  <text x="   220" y="    80">TOP_3R_AC_LFT</text>
+  <text x="   220" y="   100">TOP_3R_AC_MID</text>
+  <text x="   220" y="   120">TOP_3R_AC_RHT</text>
+  <text x="   220" y="   140">MID_3R_AC_MID2</text>
+  <text x="   220" y="   160">MID_3R_AC_LFT</text>
+  <text x="   220" y="   180">MID_3R_AC_MID</text>
+  <text x="   220" y="   200">MID_3R_AC_RHT</text>
+  <text x="   220" y="   220">TOP_3R_AC_MID2 IDEAL LOADS AIR SYSTEM</text>
+  <text x="   220" y="   240">TOP_3R_AC_LFT IDEAL LOADS AIR SYSTEM</text>
+  <text x="   220" y="   260">TOP_3R_AC_MID IDEAL LOADS AIR SYSTEM</text>
+  <text x="   220" y="   280">TOP_3R_AC_RHT IDEAL LOADS AIR SYSTEM</text>
+  <text x="   220" y="   300">MID_3R_AC_MID2 IDEAL LOADS AIR SYSTEM</text>
+  <text x="   220" y="   320">MID_3R_AC_LFT IDEAL LOADS AIR SYSTEM</text>
+  <text x="   220" y="   340">MID_3R_AC_MID IDEAL LOADS AIR SYSTEM</text>
+  <text x="   220" y="   360">MID_3R_AC_RHT IDEAL LOADS AIR SYSTEM</text>
+  <text x="   200" y="   400">
+The following are not supported: objects related to controls or ZoneHVAC:IdealLoadsAirSystem</text>
+</g>
+</svg>

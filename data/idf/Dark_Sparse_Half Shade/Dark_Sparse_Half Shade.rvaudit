@@ -1,0 +1,16 @@
+ ReadVarsESO
+ processing:eplusout.inp
+ input file:eplusout.eso
+ output file:Dark_Sparse_Half Shade.csv
+ getting all vars from:eplusout.eso
+  number variables requested for output=        1343
+ ReadVars Run Time=00hr 00min  0.06sec
+ ReadVarsESO program completed successfully.
+ ReadVarsESO
+ processing:eplusmtr.inp
+ input file:eplusout.mtr
+ output file:Dark_Sparse_Half ShadeMeter.csv
+ getting all vars from:eplusout.mtr
+  number variables requested for output=           1
+ ReadVars Run Time=00hr 00min  0.03sec
+ ReadVarsESO program completed successfully.

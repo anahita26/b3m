@@ -142,4 +142,14 @@ df |>
 
 # Results
 
+Key performance indicators to focus on:
+
+-   Annual cooling demand (ideal loads) (minimize)
+
+-   Zone Operative Temperature
+
+    -   overheating degree hours (minimize)
+
+-   Whole building electricity
+
 # Conclusion
