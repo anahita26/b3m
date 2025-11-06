@@ -11741,6 +11741,11 @@ Output:Variable,
     Surface Outside Face Incident Solar Radiation Rate per Area,  !- Variable Name
     Monthly;                 !- Reporting Frequency
 
+Output:Variable,
+    *,                       !- Key Value
+    Surface Outside Face Absorbed Shortwave Radiation Rate,  !- Variable Name
+    Monthly;                 !- Reporting Frequency
+
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:METER ===========
 

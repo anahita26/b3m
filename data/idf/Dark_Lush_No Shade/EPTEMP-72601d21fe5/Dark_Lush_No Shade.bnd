@@ -1,0 +1,73 @@
+Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.11.04 11:06
+! This file shows details about the branches, nodes, and other
+! elements of the flow connections.
+! This file is intended for use in "debugging" potential problems
+! that may also be detected by the program, but may be more easily
+! identified by "eye".
+! This file is also intended to support software which draws a
+! schematic diagram of the HVAC system.
+! ===============================================================
+! #Nodes,<Number of Unique Nodes>
+ #Nodes,24
+! <Node>,<NodeNumber>,<Node Name>,<Node Fluid Type>,<# Times Node Referenced After Definition>
+ Node,1,TOP_3R_AC_MID2 ZONE AIR NODE,Air,0
+ Node,2,TOP_3R_AC_MID2 IDEAL LOADS SUPPLY INLET,Air,1
+ Node,3,TOP_3R_AC_MID2 RETURN OUTLET,Air,0
+ Node,4,TOP_3R_AC_LFT ZONE AIR NODE,Air,0
+ Node,5,TOP_3R_AC_LFT IDEAL LOADS SUPPLY INLET,Air,1
+ Node,6,TOP_3R_AC_LFT RETURN OUTLET,Air,0
+ Node,7,TOP_3R_AC_MID ZONE AIR NODE,Air,0
+ Node,8,TOP_3R_AC_MID IDEAL LOADS SUPPLY INLET,Air,1
+ Node,9,TOP_3R_AC_MID RETURN OUTLET,Air,0
+ Node,10,TOP_3R_AC_RHT ZONE AIR NODE,Air,0
+ Node,11,TOP_3R_AC_RHT IDEAL LOADS SUPPLY INLET,Air,1
+ Node,12,TOP_3R_AC_RHT RETURN OUTLET,Air,0
+ Node,13,MID_3R_AC_MID2 ZONE AIR NODE,Air,0
+ Node,14,MID_3R_AC_MID2 IDEAL LOADS SUPPLY INLET,Air,1
+ Node,15,MID_3R_AC_MID2 RETURN OUTLET,Air,0
+ Node,16,MID_3R_AC_LFT ZONE AIR NODE,Air,0
+ Node,17,MID_3R_AC_LFT IDEAL LOADS SUPPLY INLET,Air,1
+ Node,18,MID_3R_AC_LFT RETURN OUTLET,Air,0
+ Node,19,MID_3R_AC_MID ZONE AIR NODE,Air,0
+ Node,20,MID_3R_AC_MID IDEAL LOADS SUPPLY INLET,Air,1
+ Node,21,MID_3R_AC_MID RETURN OUTLET,Air,0
+ Node,22,MID_3R_AC_RHT ZONE AIR NODE,Air,0
+ Node,23,MID_3R_AC_RHT IDEAL LOADS SUPPLY INLET,Air,1
+ Node,24,MID_3R_AC_RHT RETURN OUTLET,Air,0
+! ===============================================================
+! Suspicious nodes have 0 references.  It is normal for some nodes, however.
+! Listing nodes with 0 references (culled from previous list):
+! <Suspicious Node>,<NodeNumber>,<Node Name>,<Node Fluid Type>,<# Times Node Referenced After Definition>
+ Suspicious Node,1,TOP_3R_AC_MID2 ZONE AIR NODE,Air,0
+ Suspicious Node,3,TOP_3R_AC_MID2 RETURN OUTLET,Air,0
+ Suspicious Node,4,TOP_3R_AC_LFT ZONE AIR NODE,Air,0
+ Suspicious Node,6,TOP_3R_AC_LFT RETURN OUTLET,Air,0
+ Suspicious Node,7,TOP_3R_AC_MID ZONE AIR NODE,Air,0
+ Suspicious Node,9,TOP_3R_AC_MID RETURN OUTLET,Air,0
+ Suspicious Node,10,TOP_3R_AC_RHT ZONE AIR NODE,Air,0
+ Suspicious Node,12,TOP_3R_AC_RHT RETURN OUTLET,Air,0
+ Suspicious Node,13,MID_3R_AC_MID2 ZONE AIR NODE,Air,0
+ Suspicious Node,15,MID_3R_AC_MID2 RETURN OUTLET,Air,0
+ Suspicious Node,16,MID_3R_AC_LFT ZONE AIR NODE,Air,0
+ Suspicious Node,18,MID_3R_AC_LFT RETURN OUTLET,Air,0
+ Suspicious Node,19,MID_3R_AC_MID ZONE AIR NODE,Air,0
+ Suspicious Node,21,MID_3R_AC_MID RETURN OUTLET,Air,0
+ Suspicious Node,22,MID_3R_AC_RHT ZONE AIR NODE,Air,0
+ Suspicious Node,24,MID_3R_AC_RHT RETURN OUTLET,Air,0
+! ===============================================================
+! <#Branch Lists>,<Number of Branch Lists>
+ #Branch Lists,0
+! <Branch List>,<Branch List Count>,<Branch List Name>,<Loop Name>,<Loop Type>,<Number of Branches>
+! <Branch>,<Branch Count>,<Branch Name>,<Loop Name>,<Loop Type>,<Branch Inlet Node Name>,<Branch Outlet Node Name>
+! ===============================================================
+! <#Supply Air Paths>,<Number of Supply Air Paths>
+ #Supply Air Paths,0
+! <Supply Air Path>,<Supply Air Path Count>,<Supply Air Path Name>,<AirLoopHVAC Name>
+! <#Components on Supply Air Path>,<Number of Components>
+! <Supply Air Path Component>,<Component Count>,<Component Type>,<Component Name>,<AirLoopHVAC Name>
+! <#Outlet Nodes on Supply Air Path Component>,<Number of Nodes>
+! <Supply Air Path Component Nodes>,<Node Count>,<Component Type>,<Component Name>,<Inlet Node Name>,<Outlet Node Name>,<AirLoopHVAC Name>
+! ===============================================================
+! <#Return Air Paths>,<Number of Return Air Paths>
+ #Return Air Paths,0
+! <Return Air Path>,<Return 

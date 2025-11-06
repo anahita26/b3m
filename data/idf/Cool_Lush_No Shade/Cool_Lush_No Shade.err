@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.11.03 15:36,
+Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.11.06 15:49,
    ** Warning ** ManageSizing: For a zone sizing run, there must be at least 1 Sizing:Zone input object. SimulationControl Zone Sizing option ignored.
    ** Warning ** Weather file location will be used rather than entered (IDF) Location object.
    **   ~~~   ** ..Location object=SINGAPORE
@@ -271,6 +271,10 @@ Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.11.03 15:36,
    ************* No node connection errors were found.
    ************* Beginning Simulation
    ************* Simulation Error Summary *************
+   ** Warning ** The following Report Variables were requested but not generated -- check.rdd file
+   **   ~~~   ** Either the IDF did not contain these elements, the variable name is misspelled,
+   **   ~~~   ** or the requested variable is an advanced output which requires Output : Diagnostics, DisplayAdvancedReportVariables;
+   ************* Key=*, VarName=SURFACE OUTSIDE FACE ABSORBED SHORTWAVE RADIATION RATE, Frequency=Monthly
    ************* There are 4 unused schedules in input.
    ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
    *************
@@ -290,4 +294,4 @@ Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.11.03 15:36,
    *************
    ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
    ************* EnergyPlus Sizing Error Summary. During Sizing: 1 Warning; 0 Severe Errors.
-   ************* EnergyPlus Completed Successfully-- 80 Warning; 0 Severe Errors; Elapsed Time=00hr 02min 52.10sec
+   ************* EnergyPlus Completed Successfully-- 81 Warning; 0 Severe Errors; Elapsed Time=00hr 02min  4.29sec

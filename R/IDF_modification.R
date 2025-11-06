@@ -46,6 +46,11 @@ output_list <- list(
     Variable_Name = "Surface Outside Face Incident Solar Radiation Rate per Area",
     Reporting_Frequency = "Monthly"
   ),
+  Output_Variable = list(
+    key_value = "*",
+    Variable_Name = "Surface Outside Face Absorbed Shortwave Radiation Rate",
+    Reporting_Frequency = "Monthly"
+  ),
   Output_Meter = list(
     key_name = "Electricity:Facility",
     Reporting_Frequency = "Monthly"
@@ -93,6 +98,13 @@ create_overhangs <- function(model, windows, depth = 0) {
 model <- create_overhangs(model, windows, depth = 0)
 model$"Shading:Overhang:Projection"
 
+# Change simulation period to one year
+#model$RunPeriod$June2015$`Begin Month` <- 6
+#model$RunPeriod$June2015$`End Month` <- 6
+#model$RunPeriod$June2015$`End Day of Month` <- 30
 
 # Save updated model
 model$save(here("data", "idf", "model_preprocessed.idf"), overwrite = TRUE)
+
+# Check updated were made
+model$`Output:Variable`

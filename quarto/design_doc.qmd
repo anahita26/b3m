@@ -38,6 +38,8 @@ Building retrofit has gained lots of traction in recent years due to its potenti
 
     -   I think I can leave out all the details about the previous model since that is all available in the other paper and I can just mention that all the settings are the same
 
+        -   Benchmarking case?
+
     -   Weather data, using their developed one that proved to be the "best"
 
 -   Intervention measures
@@ -45,6 +47,18 @@ Building retrofit has gained lots of traction in recent years due to its potenti
     -   Numbers and justification with sources
 
     -   Discuss why these in particular were chosen, why do a three way study?
+
+-   KPIs and output variables of interest
+
+    -   Cooling demand of whole building
+        -   **Zone Ideal Loads Supply Air Total Cooling Energy** is the district cooling energy consumed by the ideal loads system “cooling coil” to cool and dehumidify the supply air.
+    -   Energy use intensity
+    -   How cool the building is / how well it blocks solar heat
+        -   **Surface Outside Face Incident Solar Radiation Rate per Area:** what's hitting each surface
+        -   **Surface Outside Face Absorbed Shortwave Radiation Rate per Area:** how much is being absorbed
+        -   **Surface Outside Face Temperature:** Skin temp
+        -   **Surface Inside Face Temperature**
+        -   **Surface Inside Face Conduction Heat Gain Rate:** Direct conductive gains from opaque envelope into zones
 
 ## Design Intervention
 

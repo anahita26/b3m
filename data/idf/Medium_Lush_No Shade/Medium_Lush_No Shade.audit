@@ -30,14 +30,14 @@
  NumEnergyMeters=         172
  NumVarMeterArrays=         166
  maxUniqueKeyCount=        1500
- maxNumberOfFigures=         675
+ maxNumberOfFigures=         427
  MAXHCArrayBounds=          34
  MaxVerticesPerSurface=          16
  NumReportList=         500
  InstMeterCacheSize=        1000
  ClippingAlgorithm=SutherlandHodgman
  MonthlyFieldSetInputCount=           0
- NumConsideredOutputVariables=           6
+ NumConsideredOutputVariables=           7
  MaxConsideredOutputVariables=       10000
  numActuatorsUsed=           0
  numEMSActuatorsAvailable=           0

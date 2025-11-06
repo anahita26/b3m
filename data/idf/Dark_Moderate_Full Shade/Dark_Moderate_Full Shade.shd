@@ -4,7 +4,7 @@ Shadowing Combinations
 ..But all surfaces are used in the calculations.
 ==================================
 Surface=50AC43 is used as Receiving Surface in calculations and is convex.
-Number of general casting surfaces=124
+Number of general casting surfaces=121
 ..Surface=Mir-F54309
 ..Surface=Mir-54D892
 ..Surface=Mir-552D5D
@@ -19,7 +19,7 @@ Number of back surfaces=0
 Number of receiving sub surfaces=0
 ==================================
 Surface=Mir-50AC43 is used as Receiving Surface in calculations and is convex.
-Number of general casting surfaces=34
+Number of general casting surfaces=31
 ..Surface=Mir-F376D0
 ..Surface=Mir-5FCE87
 ..Surface=Mir-3DC15E
@@ -34,7 +34,7 @@ Number of back surfaces=0
 Number of receiving sub surfaces=0
 ==================================
 Surface=34ACA5 is used as Receiving Surface in calculations and is convex.
-Number of general casting surfaces=124
+Number of general casting surfaces=121
 ..Surface=Mir-F54309
 ..Surface=Mir-54D892
 ..Surface=Mir-552D5D
@@ -49,7 +49,7 @@ Number of back surfaces=0
 Number of receiving sub surfaces=0
 ==================================
 Surface=Mir-34ACA5 is used as Receiving Surface in calculations and is convex.
-Number of general casting surfaces=34
+Number of general casting surfaces=31
 ..Surface=Mir-F376D0
 ..Surface=5FCE87
 ..Surface=Mir-3DC15E
@@ -94,7 +94,7 @@ Number of back surfaces=0
 Number of receiving sub surfaces=0
 ==================================
 Surface=BAAA05 is used as Receiving Surface in calculations and is convex.
-Number of general casting surfaces=126
+Number of general casting surfaces=123
 ..Surface=Mir-F54309
 ..Surface=Mir-54D892
 ..Surface=Mir-552D5D
@@ -109,7 +109,7 @@ Number of back surfaces=0
 Number of receiving sub surfaces=0
 ==================================
 Surface=Mir-BAAA05 is used as Receiving Surface in calculations and is convex.
-Number of general casting surfaces=34
+Number of general casting surfaces=31
 ..Surface=Mir-F376D0
 ..Surface=5FCE87
 ..Surface=Mir-3DC15E
@@ -244,7 +244,7 @@ Number of back surfaces=0
 Number of receiving sub surfaces=0
 ==================================
 Surface=A75E54 is used as Receiving Surface in calculations and is convex.
-Number of general casting surfaces=124
+Number of general casting surfaces=121
 ..Surface=Mir-F54309
 ..Surface=Mir-54D892
 ..Surface=Mir-552D5D
@@ -259,7 +259,7 @@ Number of back surfaces=0
 Number of receiving sub surfaces=0
 ==================================
 Surface=Mir-A75E54 is used as Receiving Surface in calculations and is convex.
-Number of general casting surfaces=34
+Number of general casting surfaces=31
 ..Surface=Mir-F376D0
 ..Surface=5FCE87
 ..Surface=Mir-3DC15E
