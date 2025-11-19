@@ -124,9 +124,9 @@ What to vary
 library(gt)
 
 #Assign values to variables
-shading <- c(0, 0.8, 1.5)
+shading <- c(0.1, 0.5, 1)
 absorptance <- c(0.7, 0.4, 0.2)
-lai <- c(0, 2.5, 5)
+lai <- c(1, 2.5, 5)
 assign <- c("Baseline", "Medium", "High")
 
 #Create dataframe
@@ -141,7 +141,7 @@ df <- data.frame(
 #Create table
 df |> 
   gt() |> 
-  tab_header(title = "Building Retrofit Scenarios") |> 
+  tab_header(title = "Values for Building Retrofit") |> 
   fmt_number(columns = 2:4, decimals = 2) |> 
   tab_style(
     style = cell_text(weight = "bold"),

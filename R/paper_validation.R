@@ -1,13 +1,16 @@
 library(eplusr)
 library(here)
 library(tidyverse)
+library(lubridate)
+library(tidyr)
+library(dplyr)
 
 #General flow: Import idf and epw, run sim, preprocess the idf, save it, run sim again
 
 use_eplus("C:/EnergyPlusV9-3-0")
 
 #Assign idf and weather file
-path_idf <- here("data", "idf", "Blk7_V930.idf")
+path_idf <- here("data", "idf", "Blk7.idf")
 model <- read_idf(path_idf)
 path_epw <- here("data", "epw", "SGP_Developed_Site(Blk7).epw")
 epw <- read_epw(path_epw)
@@ -15,7 +18,6 @@ epw <- read_epw(path_epw)
 #Verify run period is June 2015 (same as paper)
 model$'RunPeriod'
 
-#1st run through of simulation without weather data (less time consuming)
 job <- model$run(epw, dir = tempdir())
 
 #Retrieving variables and meters after simulation
@@ -28,112 +30,77 @@ model$Output_Meter <- NULL
 
 #Create output list of interest
 output_list <- list(
-  Output_Variable = list(
-    key_value = "*",
-    Variable_Name = "Site Outdoor Air Drybulb Temperature",
-    Reporting_Frequency = "Hourly"
-  ),
-  Output_Variable = list(
-    key_value = "*",
-    Variable_Name = "Zone Mean Air Temperature",
-    Reporting_Frequency = "Hourly"
-  ),
-  Output_Variable = list(
-    key_value = "*",
-    Variable_Name = "Zone Operative Temperature",
-    Reporting_Frequency = "Hourly"
-  ),
-  Output_Variable = list(
-    key_value = "*",
-    Variable_Name = "Zone Ideal Loads Supply Air Sensible Cooling Energy",
-    Reporting_Frequency = "Hourly"
-  ),
-  Output_Variable = list(
-    key_value = "*",
-    Variable_Name = "Zone Ideal Loads Supply Air Sensible Cooling Rate",
-    Reporting_Frequency = "Hourly"
+  Output_Meter = list(
+    key_name = "Cooling:EnergyTransfer",
+    Reporting_Frequency = "Daily"
   ),
   Output_Meter = list(
-    key_name = "Electricity:Facility",
-    Reporting_Frequency = "Hourly"
+    key_name = "InteriorLights:Electricity",
+    Reporting_Frequency = "Daily"
+  ),
+  Output_Meter = list(
+    key_name = "InteriorEquipment:Electricity",
+    Reporting_Frequency = "Daily"
   )
 )
-
 model$add(output_list)
 
-#Save preprocessed model
+# Save preprocessed model
 model$save(here("data", "idf", "model_preprocessed.idf"), overwrite = TRUE)
 
-#2nd run through of sim
+# 2nd run through of sim
 job <- model$run(epw, dir = tempdir())
 
-#Look at results
+# Filter results for only weekdays
 report <- job$report_data()
-unique(report$name)
-table <- report |> 
-  select(datetime, name, value) |> 
-  pivot_wider(
-    names_from = name,
-    values_from = value
+report_clean <- report |> 
+  mutate(
+    datetime = ymd(datetime)
   )
+report_weekday <- report_clean |> 
+  filter(!(wday(datetime) %in% c(1,7)))
+
+# Calculate energy consumption
+energy_by_meter <- report_weekday |> 
+  group_by(name) |> 
+  summarise(e_J = sum(value), .groups = "drop") |> 
+  mutate(e_kWh = e_J / 3.6e6)
+
+# Energy consumption by lighting
+e_light <- energy_by_meter |> 
+  filter(name == "InteriorLights:Electricity") |> 
+  pull(e_kWh)
+# Energy consumption by plug loads / interior equipment
+e_plugload <- energy_by_meter |> 
+  filter(name == "InteriorEquipment:Electricity") |> 
+  pull(e_kWh)
+# Energy consumption by AC
+cop <- 3 #COP defined in paper
+e_ac <- energy_by_meter |> 
+  filter(name == "Cooling:EnergyTransfer") |> 
+  pull(e_kWh) / cop
+
+# Define all variables in equ
+# AC_ownership % per building
+ac_own <- c(1, 0.83, 0.88, 0.97, 0.97, 0.86, 0.91)
+# Number of occupied flats
+n_occ <- c(95, 94, 96, 94, 94, 95, 120)
+# Number of total flats 
+n_flats <- c(99, 99, 99, 99, 99, 99, 120)
 
 
+# Apply equation
+e_total = (e_light + (e_ac * ac_own[7]) + e_plugload) * (n_occ[7] / n_flats[7])
 
+all_totals <- c(48421.92, 43324.31, 45918.52, 47128.58, 48047.19, 46439.92, 52361.64)
+all_totals_adjusted <- c(23388.22, 22014.88,  22895.67, 23398.05, 23182.92, 22910.57, 27000.77)
 
-
-
-
-
-
-
-
-
-
-
-#Another way, doesnt work
-meters <- c(
-  "Electricity:Facility",
-  "Electricity:Building"
-)
-for (m in meters) {
-  model <- model$add("Output:Meter",
-                     list(key_name = m,
-                          Reporting_Frequency = "Hourly"))
-}
-vars <- c(
-  "Zone Mean Air Temperature",
-  "Zone Operative Temperature",
-  "Zone Ideal Loads Supply Air Sensible Cooling Energy",
-  "Site Outdoor Air Drybulb Temperature",
-  "Zone Ventilation Air Flow Rate"
-)
-for(v in vars) {
-  model <- model$add(Output_Variable,
-                     list(key_value = "*",
-                          Variable_Name = v,
-                          Reporting_Frequency = "Hourly"))
-}
-
-#Old way of adding, doesn't really work
-meters <- list(
-  key_name = c(
-    "Electricity:Facility",
-    "Electricity:Building"
-  ),
-  Reporting_Frequency = "Hourly"
-)
-variables <- list(
-  key_value = "*",
-  Variable_Name = c(
-    "Zone Mean Air Temperature",
-    "Zone Operative Temperature",
-    "Zone Ideal Loads Supply Air Sensible Cooling Energy",
-    "Site Outdoor Air Drybulb Temperature",
-    "Zone Ventilation Air Flow Rate"
-  ),
-  Reporting_Frequency = "Hourly"
-)
-#Add list to model
-model$add(Output_Variable := variables)
-model$add(Output_Meter := meters)
-model$Output_Variable
+windows <- model$to_table(class = "FenestrationSurface:Detailed")
+surf_table <- model$to_table(class = "BuildingSurface:Detailed")
+surf_info <- surf_table |> 
+  select(name, field, value) |> 
+  pivot_wider(names_from = field,
+              values_from = value)
+surf_info_clean <- surf_info |> 
+  filter(`Outside Boundary Condition` == "Outdoors",
+         `Surface Type` %in% c("Wall", "Roof"))

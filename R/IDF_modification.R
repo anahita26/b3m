@@ -1,5 +1,5 @@
 ## The following R script makes all necessary modifications to the original IDF file to prepare it for analysis
-
+# Clear env: rm(list = ls())
 # Load relevant libraries
 library(eplusr)
 library(here)
@@ -52,7 +52,29 @@ output_list <- list(
     Reporting_Frequency = "Monthly"
   ),
   Output_Meter = list(
-    key_name = "Electricity:Facility",
+    key_name = "Cooling:Electricity",
+    Reporting_Frequency = "Monthly"
+  ),
+  Output_Meter = list(
+    key_name = "InteriorLights:Electricity",
+    Reporting_Frequency = "Monthly"
+  ),
+  Output_Meter = list(
+    key_name = "InteriorEquipment:Electricity",
+    Reporting_Frequency = "Monthly"
+  )
+)
+output_list <- list(
+  Output_Meter = list(
+    key_name = "Cooling:EnergyTransfer",
+    Reporting_Frequency = "Monthly"
+  ),
+  Output_Meter = list(
+    key_name = "InteriorLights:Electricity",
+    Reporting_Frequency = "Monthly"
+  ),
+  Output_Meter = list(
+    key_name = "InteriorEquipment:Electricity",
     Reporting_Frequency = "Monthly"
   )
 )

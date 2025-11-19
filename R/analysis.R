@@ -1,8 +1,26 @@
 # The following document uses the report data obtained in eplus_sim.R and analyzes the data for the specified output parameters
+library(here)
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+library(eplusr)
+library(ggpubr)
+library(broom)
+library(AICcmodavg)
+
+report <- read.csv("C:/Users/anahi/OneDrive/Documents/NUS/b3m/data/raw/report.csv")
 
 ## 1) Cooling demand via Zone Ideal Loads Supply Air Total Cooling Energy
 report_cooling <- report |> 
   filter(name == "Zone Ideal Loads Supply Air Total Cooling Energy")
+
+# create names vector
+names <- expand.grid(
+  Coating = c("Dark", "Medium", "Cool"),
+  LAI = c("Sparse", "Moderate", "Lush"),
+  Shading = c("No Shade", "Half Shade", "Full Shade")
+)|> 
+  apply(1, paste, collapse = "_")
 
 cooling_all_cases <- numeric(length(names))
 # loop through each case
@@ -21,9 +39,15 @@ for (i in seq_along(names)) {
 
 cooling_all_cases_kWh <- cooling_all_cases / 3.6e6
 
+# create a data frame with results 
+names <- expand.grid(
+  Coating = c("Dark", "Medium", "Cool"),
+  LAI = c("Sparse", "Moderate", "Lush"),
+  Shading = c("No Shade", "Half Shade", "Full Shade")
+)
+cooling_df <- data.frame(coating = names$Coating, lai = names$LAI, shading = names$Shading, cooling_kWh = cooling_all_cases_kWh)
 
-
-## 2) Looking at surfaces
+## 2) Incident solar radiation-- not sure if this is a good metric
 solar <- report |> 
   filter(name == "Surface Outside Face Incident Solar Radiation Rate per Area") #value in W/m2
 
@@ -40,6 +64,7 @@ solar_clean <- solar |>
   filter(!grepl("^Mir-", key_value))
 
 # filter for exterior opaque surfaces only
+# need to load model (should add at top of code)
 surf_table <- model$to_table(class = "BuildingSurface:Detailed")
 surf_info <- surf_table |> 
   select(name, field, value) |> 
@@ -68,6 +93,68 @@ solar_summary <- solar_joined_clean |>
   group_by(case, `Surface Type`) |> 
   summarise(total_incident_KWhm2 = sum(value * 3600) / 3.6e6, #total sunlight energy received on that surface
             avg_incident_Wm2 = mean(value)) #power intensity - how strong sunlight usually is
+
+solar_building <- solar_summary |> 
+  filter(`Surface Type` %in% c("Roof", "Wall")) |> 
+  tidyr::separate(case, into = c("coating", "lai", "shading"), sep = "_")
+
+
+
+## 3) Surface Outside Face Temperature
+face_temp <- report |> 
+  filter(name == "Surface Outside Face Temperature")
+
+face_temp_joined <- face_temp |> 
+  left_join(surf_info_clean, by = c("key_value" = "name")) |> 
+  filter(!is.na(`Surface Type`)) |> 
+  select(case, key_value, `Surface Type`, value) |> 
+  tidyr::separate(case, into = c("coating", "vegetation", "shading"), sep = "_")
+
+wall_summary <- face_temp_joined |> 
+  filter(`Surface Type` == "Wall") |> 
+  group_by(coating, vegetation, shading) |> 
+  summarise(mean_temp = mean(value, na.rm = TRUE),
+            sd_temp = sd(value, na.rm = TRUE),
+            .groups = "drop")
+
+
+# ANOVA test trial
+anova_oneway <- aov(cooling_kWh ~ coating, data = cooling_df)
+summary(anova_oneway)
+anova_twoway <- aov(cooling_kWh ~ coating * lai, data = cooling_df)
+summary(anova_twoway)
+anova_threeway <- aov(cooling_kWh ~ coating * lai * shading, data = cooling_df)
+summary(anova_threeway) #three way not working correctly
+
+model.set <- list(anova_oneway, anova_twoway, anova_threeway)
+model.names <- c("one_way", "two_way", "three_way")
+aictab(model.set, modnames = model.names)
+
+# trying to get azimuth angles - will return to this later
+geo <- model$geometry()
+az <- geo$azimuth() |> 
+  filter(type %in% c("Wall", "Roof"))
+
+# join with building surface detailed table
+surf_info_clean <- surf_info_clean |> 
+  left_join(az, by = "name")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
