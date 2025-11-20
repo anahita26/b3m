@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.10.29 15:45,
+Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.11.20 16:10,
    ** Warning ** ManageSizing: For a zone sizing run, there must be at least 1 Sizing:Zone input object. SimulationControl Zone Sizing option ignored.
    ** Warning ** Weather file location will be used rather than entered (IDF) Location object.
    **   ~~~   ** ..Location object=SINGAPORE
@@ -247,6 +247,18 @@ Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.10.29 15:45,
    **   ~~~   ** fall outside typical range [70,1000] W/person for Thermal Comfort Reporting.
    **   ~~~   ** Odd comfort values may result; Schedule="SITTING L-ROOM SCHEDULE PER PAX".
    **   ~~~   ** Entered min/max range=[0.0,108.0] W/person.
+   ** Warning ** DetermineShadowingCombinations: Surface="A7E34B" is a receiving surface and is non-convex.
+   **   ~~~   ** ...Shadowing values may be inaccurate. Check .shd report file for more surface shading details
+   ** Warning ** DetermineShadowingCombinations: Surface="75DE40" is a receiving surface and is non-convex.
+   **   ~~~   ** ...Shadowing values may be inaccurate. Check .shd report file for more surface shading details
+   ** Warning ** DetermineShadowingCombinations: Surface="E1E523" is a receiving surface and is non-convex.
+   **   ~~~   ** ...Shadowing values may be inaccurate. Check .shd report file for more surface shading details
+   ** Warning ** DetermineShadowingCombinations: Surface="E8EDFB" is a receiving surface and is non-convex.
+   **   ~~~   ** ...Shadowing values may be inaccurate. Check .shd report file for more surface shading details
+   ** Warning ** DetermineShadowingCombinations: Surface="D92264" is a receiving surface and is non-convex.
+   **   ~~~   ** ...Shadowing values may be inaccurate. Check .shd report file for more surface shading details
+   ** Warning ** DetermineShadowingCombinations: Surface="B7B826" is a receiving surface and is non-convex.
+   **   ~~~   ** ...Shadowing values may be inaccurate. Check .shd report file for more surface shading details
    ************* Testing Individual Branch Integrity
    ************* All Branches passed integrity testing
    ************* Testing Individual Supply Air Path Integrity
@@ -271,4 +283,4 @@ Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.10.29 15:45,
    *************
    ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
    ************* EnergyPlus Sizing Error Summary. During Sizing: 1 Warning; 0 Severe Errors.
-   ************* EnergyPlus Completed Successfully-- 73 Warning; 0 Severe Errors; Elapsed Time=00hr 00min 10.93sec
+   ************* EnergyPlus Completed Successfully-- 79 Warning; 0 Severe Errors; Elapsed Time=00hr 00min 19.01sec

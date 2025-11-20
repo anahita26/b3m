@@ -3,7 +3,7 @@
  input file:eplusout.eso
  output file:No Shade.csv
  getting all vars from:eplusout.eso
-  number variables requested for output=        1343
+  number variables requested for output=           3
  ReadVars Run Time=00hr 00min  0.03sec
  ReadVarsESO program completed successfully.
  ReadVarsESO
@@ -11,6 +11,6 @@
  input file:eplusout.mtr
  output file:No ShadeMeter.csv
  getting all vars from:eplusout.mtr
-  number variables requested for output=           1
- ReadVars Run Time=00hr 00min  0.00sec
+  number variables requested for output=           3
+ ReadVars Run Time=00hr 00min  0.02sec
  ReadVarsESO program completed successfully.

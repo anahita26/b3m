@@ -614,30 +614,6 @@ Material:AirGap,
     0.18;                    !- Thermal Resistance {m2-K/W}
 
 
-!-   ===========  ALL OBJECTS IN CLASS: MATERIAL:ROOFVEGETATION ===========
-
-Material:RoofVegetation,
-    green_roof,              !- Name
-    0.2,                     !- Height of Plants {m}
-    1,                       !- Leaf Area Index {dimensionless}
-    0.22,                    !- Leaf Reflectivity {dimensionless}
-    0.95,                    !- Leaf Emissivity
-    180,                     !- Minimum Stomatal Resistance {s/m}
-    Green Roof Soil,         !- Soil Layer Name
-    MediumRough,             !- Roughness
-    0.1,                     !- Thickness {m}
-    0.35,                    !- Conductivity of Dry Soil {W/m-K}
-    1100,                    !- Density of Dry Soil {kg/m3}
-    1200,                    !- Specific Heat of Dry Soil {J/kg-K}
-    0.9,                     !- Thermal Absorptance
-    0.7,                     !- Solar Absorptance
-    0.75,                    !- Visible Absorptance
-    0.3,                     !- Saturation Volumetric Moisture Content of the Soil Layer
-    0.01,                    !- Residual Volumetric Moisture Content of the Soil Layer
-    0.1,                     !- Initial Volumetric Moisture Content of the Soil Layer
-    Simple;                  !- Moisture Diffusion Calculation Method
-
-
 !-   ===========  ALL OBJECTS IN CLASS: WINDOWMATERIAL:GLAZING ===========
 
 WindowMaterial:Glazing,
@@ -691,14 +667,6 @@ Construction,
 Construction,
     Exterior Floor,          !- Name
     M15 150mm heavyweight concrete;  !- Outside Layer
-
-Construction,
-    Green Roof,              !- Name
-    green_roof,              !- Outside Layer
-    Ferrocement,             !- Layer 2
-    F05 Ceiling air space resistance,  !- Layer 3
-    Roof concrete,           !- Layer 4
-    Cement plaster;          !- Layer 5
 
 
 !-   ===========  ALL OBJECTS IN CLASS: GLOBALGEOMETRYRULES ===========
@@ -10470,6 +10438,414 @@ Shading:Building:Detailed,
     147.765855125401,        !- Vertex 4 X-coordinate {m}
     61.764816644504,         !- Vertex 4 Y-coordinate {m}
     34.4;                    !- Vertex 4 Z-coordinate {m}
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SHADING:OVERHANG:PROJECTION ===========
+
+Shading:Overhang:Projection,
+    Overhang_9B19D6,         !- Name
+    9B19D6,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_4BBE32,         !- Name
+    4BBE32,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_5C02CA,         !- Name
+    5C02CA,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_F6C20E,         !- Name
+    F6C20E,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_C6D9BB,         !- Name
+    C6D9BB,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_9BDED2,         !- Name
+    9BDED2,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_A8D3AE,         !- Name
+    A8D3AE,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_C55811,         !- Name
+    C55811,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_8ECBCC,         !- Name
+    8ECBCC,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_D919F4,         !- Name
+    D919F4,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_4182D5,         !- Name
+    4182D5,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_656C49,         !- Name
+    656C49,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_E012F6,         !- Name
+    E012F6,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_421611,         !- Name
+    421611,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_27260D,         !- Name
+    27260D,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_F0F00C,         !- Name
+    F0F00C,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_1B2AB0,         !- Name
+    1B2AB0,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_5D703E,         !- Name
+    5D703E,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_C85C4C,         !- Name
+    C85C4C,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_3FB956,         !- Name
+    3FB956,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_96BCDA,         !- Name
+    96BCDA,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_C2DD8D,         !- Name
+    C2DD8D,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_94BA8A,         !- Name
+    94BA8A,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_8BFBF7,         !- Name
+    8BFBF7,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_A50407,         !- Name
+    A50407,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_864E4C,         !- Name
+    864E4C,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_F7ED9D,         !- Name
+    F7ED9D,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_B1BC35,         !- Name
+    B1BC35,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_A79403,         !- Name
+    A79403,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_F8E398,         !- Name
+    F8E398,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_3134EF,         !- Name
+    3134EF,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_8C1A09,         !- Name
+    8C1A09,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_87FB35,         !- Name
+    87FB35,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_8A7124,         !- Name
+    8A7124,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_19CB71,         !- Name
+    19CB71,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_18F863,         !- Name
+    18F863,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_E42E53,         !- Name
+    E42E53,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_6C2720,         !- Name
+    6C2720,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_CDF435,         !- Name
+    CDF435,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_A6C9BD,         !- Name
+    A6C9BD,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_B4D7D4,         !- Name
+    B4D7D4,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_1FB167,         !- Name
+    1FB167,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_4B0C75,         !- Name
+    4B0C75,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_EC5B03,         !- Name
+    EC5B03,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_CDCD3D,         !- Name
+    CDCD3D,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
 
 
 !-   ===========  ALL OBJECTS IN CLASS: PEOPLE ===========

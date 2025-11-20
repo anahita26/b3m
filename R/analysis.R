@@ -130,15 +130,6 @@ model.set <- list(anova_oneway, anova_twoway, anova_threeway)
 model.names <- c("one_way", "two_way", "three_way")
 aictab(model.set, modnames = model.names)
 
-# trying to get azimuth angles - will return to this later
-geo <- model$geometry()
-az <- geo$azimuth() |> 
-  filter(type %in% c("Wall", "Roof"))
-
-# join with building surface detailed table
-surf_info_clean <- surf_info_clean |> 
-  left_join(az, by = "name")
-
 
 
 
