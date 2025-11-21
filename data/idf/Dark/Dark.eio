@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.11.20 16:10
+Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.11.21 15:13
 ! <Version>, Version ID
  Version, 9.3
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -58,34 +58,34 @@ Environment:Site Atmospheric Variation,0.220,370.000,6.500000E-003
 ! <Surface Heat Transfer Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CondFD - ConductionFiniteDifference | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}, Surface Convection Coefficient Lower Limit {W/m2-K}, Surface Convection Coefficient Upper Limit {W/m2-K}
 Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.0
 ! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
- Shading Summary,0,44,90
+ Shading Summary,0,44,144
 ! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
  Zone Summary,24,351,72
 ! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
- Zone Information, GND_3R_NAC_MID2,0.0,70.65,-114.75,0.00,99.92,44.33,1.80,1,1,1,95.81,104.31,39.32,48.75,0.00,3.60,3.60,108.71,TARP,DOE-2,30.00,30.32,26.92,3.40,17,2,2,Yes
- Zone Information, GND_3R_NV_MID2,0.0,70.65,-103.59,0.00,98.83,46.58,1.80,1,1,1,94.83,103.21,39.81,53.11,0.00,3.60,3.60,197.28,TARP,DOE-2,55.00,72.00,65.78,6.22,19,4,6,Yes
- Zone Information, GND_3R_NV_MID,0.0,87.76,-114.75,0.00,84.39,45.33,1.80,1,1,1,81.89,86.76,37.36,51.27,0.00,3.60,3.60,145.49,TARP,DOE-2,40.00,54.50,48.28,6.22,12,4,6,Yes
- Zone Information, GND_3R_NAC_MID,0.0,94.46,-114.75,0.00,87.35,43.61,1.80,1,1,1,84.88,89.83,37.85,49.38,0.00,3.60,3.60,134.75,TARP,DOE-2,37.00,17.30,13.78,3.52,7,2,0,Yes
- Zone Information, GND_3R_NV_RHT,0.0,87.76,-114.75,0.00,144.78,54.25,1.80,1,1,1,142.28,147.15,46.27,60.19,0.00,3.60,3.60,145.49,TARP,DOE-2,40.00,54.50,48.28,6.22,12,4,6,Yes
- Zone Information, GND_3R_NAC_RHT,0.0,94.46,-114.75,0.00,147.74,52.53,1.80,1,1,1,145.27,150.21,46.76,58.30,0.00,3.60,3.60,134.75,TARP,DOE-2,37.00,57.48,53.97,3.52,7,2,2,Yes
- Zone Information, GND_3R_NAC_LFT,0.0,94.46,-114.75,0.00,60.47,39.64,1.80,1,1,1,58.00,62.95,33.88,45.41,0.00,3.60,3.60,134.75,TARP,DOE-2,37.00,57.48,53.97,3.52,7,2,2,Yes
- Zone Information, GND_3R_NV_LFT,0.0,128.34,-114.75,0.00,62.81,42.14,1.80,1,1,1,59.13,66.26,34.37,47.67,0.00,3.60,3.60,145.49,TARP,DOE-2,40.00,54.50,47.58,6.91,12,4,6,Yes
- Zone Information, MID_3R_AC_MID2,0.0,70.65,-114.75,0.00,99.93,44.34,19.00,1,6,9,95.81,104.31,39.32,48.75,17.60,20.40,2.68,84.56,TARP,DOE-2,30.00,23.58,20.19,3.40,17,2,2,Yes
- Zone Information, MID_3R_NV_LFT,0.0,128.34,-114.75,0.00,62.79,42.26,19.00,1,1,9,59.13,66.26,34.37,47.67,17.60,20.40,2.62,113.16,TARP,DOE-2,40.00,42.39,35.47,6.91,12,4,6,Yes
- Zone Information, MID_3R_NV_RHT,0.0,87.76,-114.75,0.00,144.77,54.36,19.00,1,1,9,142.28,147.15,46.27,60.19,17.60,20.40,2.62,113.16,TARP,DOE-2,40.00,42.39,36.17,6.22,12,4,6,Yes
- Zone Information, MID_3R_AC_RHT,0.0,94.46,-114.75,0.00,147.74,52.53,19.00,1,1,9,145.27,150.21,46.76,58.30,17.60,20.40,2.60,104.80,TARP,DOE-2,37.00,44.71,41.19,3.52,7,2,2,Yes
- Zone Information, MID_3R_NV_MID,0.0,87.76,-114.75,0.00,84.38,45.45,19.00,1,4,9,81.89,86.76,37.36,51.27,17.60,20.40,2.62,113.16,TARP,DOE-2,40.00,42.39,36.17,6.22,12,4,6,Yes
- Zone Information, MID_3R_AC_LFT,0.0,94.46,-114.75,0.00,60.47,39.64,19.00,1,1,9,58.00,62.95,33.88,45.41,17.60,20.40,2.60,104.80,TARP,DOE-2,37.00,44.71,41.19,3.52,7,2,2,Yes
- Zone Information, MID_3R_NV_MID2,0.0,70.65,-103.59,0.00,98.82,46.61,19.00,1,6,9,94.83,103.21,39.81,53.11,17.60,20.40,2.86,153.44,TARP,DOE-2,55.00,56.00,49.78,6.22,19,4,6,Yes
- Zone Information, MID_3R_AC_MID,0.0,94.46,-114.75,0.00,87.35,43.61,19.00,1,4,9,84.88,89.83,37.85,49.38,17.60,20.40,2.60,104.80,TARP,DOE-2,37.00,13.45,9.94,3.52,7,2,0,Yes
- Zone Information, TOP_3R_AC_MID2,0.0,70.65,-114.75,0.00,99.93,44.34,33.00,1,6,1,95.81,104.31,39.32,48.75,31.60,34.40,2.59,84.56,TARP,DOE-2,30.00,23.58,20.19,3.40,17,2,2,Yes
- Zone Information, TOP_3R_NV_LFT,0.0,128.34,-114.75,0.00,62.79,42.26,33.00,1,1,1,59.13,66.26,34.37,47.67,31.60,34.40,2.47,113.16,TARP,DOE-2,40.00,42.39,35.47,6.91,12,4,6,Yes
- Zone Information, TOP_3R_AC_MID,0.0,94.46,-114.75,0.00,87.35,43.61,33.00,1,4,1,84.88,89.83,37.85,49.38,31.60,34.40,2.43,104.80,TARP,DOE-2,37.00,13.45,9.94,3.52,7,2,0,Yes
- Zone Information, TOP_3R_NV_RHT,0.0,87.76,-114.75,0.00,144.77,54.36,33.00,1,1,1,142.28,147.15,46.27,60.19,31.60,34.40,2.47,113.16,TARP,DOE-2,40.00,42.39,36.17,6.22,12,4,6,Yes
- Zone Information, TOP_3R_AC_RHT,0.0,94.46,-114.75,0.00,147.74,52.53,33.00,1,1,1,145.27,150.21,46.76,58.30,31.60,34.40,2.43,104.80,TARP,DOE-2,37.00,44.71,41.19,3.52,7,2,2,Yes
- Zone Information, TOP_3R_AC_LFT,0.0,94.46,-114.75,0.00,60.47,39.64,33.00,1,1,1,58.00,62.95,33.88,45.41,31.60,34.40,2.43,104.80,TARP,DOE-2,37.00,44.71,41.19,3.52,7,2,2,Yes
- Zone Information, TOP_3R_NV_MID,0.0,87.76,-114.75,0.00,84.38,45.45,33.00,1,4,1,81.89,86.76,37.36,51.27,31.60,34.40,2.47,113.16,TARP,DOE-2,40.00,42.39,36.17,6.22,12,4,6,Yes
- Zone Information, TOP_3R_NV_MID2,0.0,70.65,-103.59,0.00,98.82,46.61,33.00,1,6,1,94.83,103.21,39.81,53.11,31.60,34.40,2.91,153.44,TARP,DOE-2,55.00,56.00,49.78,6.22,19,4,6,Yes
+ Zone Information, GND_3R_NAC_MID2,0.0,70.65,-114.75,0.00,99.92,44.33,1.80,1,1,1,95.81,104.31,39.32,48.75,0.00,3.60,3.60,108.71,TARP,DOE-2,30.00,30.32,26.92,3.40,17,2,4,Yes
+ Zone Information, GND_3R_NV_MID2,0.0,70.65,-103.59,0.00,98.83,46.58,1.80,1,1,1,94.83,103.21,39.81,53.11,0.00,3.60,3.60,197.28,TARP,DOE-2,55.00,72.00,65.78,6.22,19,4,8,Yes
+ Zone Information, GND_3R_NV_MID,0.0,87.76,-114.75,0.00,84.39,45.33,1.80,1,1,1,81.89,86.76,37.36,51.27,0.00,3.60,3.60,145.49,TARP,DOE-2,40.00,54.50,48.28,6.22,12,4,8,Yes
+ Zone Information, GND_3R_NAC_MID,0.0,94.46,-114.75,0.00,87.35,43.61,1.80,1,1,1,84.88,89.83,37.85,49.38,0.00,3.60,3.60,134.75,TARP,DOE-2,37.00,17.30,13.78,3.52,7,2,4,Yes
+ Zone Information, GND_3R_NV_RHT,0.0,87.76,-114.75,0.00,144.78,54.25,1.80,1,1,1,142.28,147.15,46.27,60.19,0.00,3.60,3.60,145.49,TARP,DOE-2,40.00,54.50,48.28,6.22,12,4,8,Yes
+ Zone Information, GND_3R_NAC_RHT,0.0,94.46,-114.75,0.00,147.74,52.53,1.80,1,1,1,145.27,150.21,46.76,58.30,0.00,3.60,3.60,134.75,TARP,DOE-2,37.00,57.48,53.97,3.52,7,2,4,Yes
+ Zone Information, GND_3R_NAC_LFT,0.0,94.46,-114.75,0.00,60.47,39.64,1.80,1,1,1,58.00,62.95,33.88,45.41,0.00,3.60,3.60,134.75,TARP,DOE-2,37.00,57.48,53.97,3.52,7,2,4,Yes
+ Zone Information, GND_3R_NV_LFT,0.0,128.34,-114.75,0.00,62.81,42.14,1.80,1,1,1,59.13,66.26,34.37,47.67,0.00,3.60,3.60,145.49,TARP,DOE-2,40.00,54.50,47.58,6.91,12,4,8,Yes
+ Zone Information, MID_3R_AC_MID2,0.0,70.65,-114.75,0.00,99.93,44.34,19.00,1,6,9,95.81,104.31,39.32,48.75,17.60,20.40,2.68,84.56,TARP,DOE-2,30.00,23.58,20.19,3.40,17,2,4,Yes
+ Zone Information, MID_3R_NV_LFT,0.0,128.34,-114.75,0.00,62.79,42.26,19.00,1,1,9,59.13,66.26,34.37,47.67,17.60,20.40,2.62,113.16,TARP,DOE-2,40.00,42.39,35.47,6.91,12,4,8,Yes
+ Zone Information, MID_3R_NV_RHT,0.0,87.76,-114.75,0.00,144.77,54.36,19.00,1,1,9,142.28,147.15,46.27,60.19,17.60,20.40,2.62,113.16,TARP,DOE-2,40.00,42.39,36.17,6.22,12,4,8,Yes
+ Zone Information, MID_3R_AC_RHT,0.0,94.46,-114.75,0.00,147.74,52.53,19.00,1,1,9,145.27,150.21,46.76,58.30,17.60,20.40,2.60,104.80,TARP,DOE-2,37.00,44.71,41.19,3.52,7,2,4,Yes
+ Zone Information, MID_3R_NV_MID,0.0,87.76,-114.75,0.00,84.38,45.45,19.00,1,4,9,81.89,86.76,37.36,51.27,17.60,20.40,2.62,113.16,TARP,DOE-2,40.00,42.39,36.17,6.22,12,4,8,Yes
+ Zone Information, MID_3R_AC_LFT,0.0,94.46,-114.75,0.00,60.47,39.64,19.00,1,1,9,58.00,62.95,33.88,45.41,17.60,20.40,2.60,104.80,TARP,DOE-2,37.00,44.71,41.19,3.52,7,2,4,Yes
+ Zone Information, MID_3R_NV_MID2,0.0,70.65,-103.59,0.00,98.82,46.61,19.00,1,6,9,94.83,103.21,39.81,53.11,17.60,20.40,2.86,153.44,TARP,DOE-2,55.00,56.00,49.78,6.22,19,4,8,Yes
+ Zone Information, MID_3R_AC_MID,0.0,94.46,-114.75,0.00,87.35,43.61,19.00,1,4,9,84.88,89.83,37.85,49.38,17.60,20.40,2.60,104.80,TARP,DOE-2,37.00,13.45,9.94,3.52,7,2,4,Yes
+ Zone Information, TOP_3R_AC_MID2,0.0,70.65,-114.75,0.00,99.93,44.34,33.00,1,6,1,95.81,104.31,39.32,48.75,31.60,34.40,2.59,84.56,TARP,DOE-2,30.00,23.58,20.19,3.40,17,2,4,Yes
+ Zone Information, TOP_3R_NV_LFT,0.0,128.34,-114.75,0.00,62.79,42.26,33.00,1,1,1,59.13,66.26,34.37,47.67,31.60,34.40,2.47,113.16,TARP,DOE-2,40.00,42.39,35.47,6.91,12,4,8,Yes
+ Zone Information, TOP_3R_AC_MID,0.0,94.46,-114.75,0.00,87.35,43.61,33.00,1,4,1,84.88,89.83,37.85,49.38,31.60,34.40,2.43,104.80,TARP,DOE-2,37.00,13.45,9.94,3.52,7,2,4,Yes
+ Zone Information, TOP_3R_NV_RHT,0.0,87.76,-114.75,0.00,144.77,54.36,33.00,1,1,1,142.28,147.15,46.27,60.19,31.60,34.40,2.47,113.16,TARP,DOE-2,40.00,42.39,36.17,6.22,12,4,8,Yes
+ Zone Information, TOP_3R_AC_RHT,0.0,94.46,-114.75,0.00,147.74,52.53,33.00,1,1,1,145.27,150.21,46.76,58.30,31.60,34.40,2.43,104.80,TARP,DOE-2,37.00,44.71,41.19,3.52,7,2,4,Yes
+ Zone Information, TOP_3R_AC_LFT,0.0,94.46,-114.75,0.00,60.47,39.64,33.00,1,1,1,58.00,62.95,33.88,45.41,31.60,34.40,2.43,104.80,TARP,DOE-2,37.00,44.71,41.19,3.52,7,2,4,Yes
+ Zone Information, TOP_3R_NV_MID,0.0,87.76,-114.75,0.00,84.38,45.45,33.00,1,4,1,81.89,86.76,37.36,51.27,31.60,34.40,2.47,113.16,TARP,DOE-2,40.00,42.39,36.17,6.22,12,4,8,Yes
+ Zone Information, TOP_3R_NV_MID2,0.0,70.65,-103.59,0.00,98.82,46.61,33.00,1,6,1,94.83,103.21,39.81,53.11,31.60,34.40,2.91,153.44,TARP,DOE-2,55.00,56.00,49.78,6.22,19,4,8,Yes
 ! <Zone Internal Gains Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
  Zone Internal Gains Nominal, GND_3R_NAC_MID2,30.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
  Zone Internal Gains Nominal, GND_3R_NV_MID2,55.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
@@ -742,7 +742,7 @@ Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
 ! <HeatTransfer Surface>,Surface Name,Surface Class,Base Surface,Heat Transfer Algorithm,Construction,Nominal U (w/o film coefs) {W/m2-K},Nominal U (with film coefs) {W/m2-K},Solar Diffusing,Area (Net) {m2},Area (Gross) {m2},Area (Sunlit Calc) {m2},Azimuth {deg},Tilt {deg},~Width {m},~Height {m},Reveal {m},ExtBoundCondition,ExtConvCoeffCalc,IntConvCoeffCalc,SunExposure,WindExposure,ViewFactorToGround,ViewFactorToSky,ViewFactorToGround-IR,ViewFactorToSky-IR,#Sides
 ! <Shading Surface>,Surface Name,Surface Class,Base Surface,Heat Transfer Algorithm,Transmittance Schedule,Min Schedule Value,Max Schedule Value,Solar Diffusing,Area (Net) {m2},Area (Gross) {m2},Area (Sunlit Calc) {m2},Azimuth {deg},Tilt {deg},~Width {m},~Height {m},Reveal {m},ExtBoundCondition,ExtConvCoeffCalc,IntConvCoeffCalc,SunExposure,WindExposure,ViewFactorToGround,ViewFactorToSky,ViewFactorToGround-IR,ViewFactorToSky-IR,#Sides
 ! <Frame/Divider Surface>,Surface Name,Surface Class,Base Surface,Heat Transfer Algorithm,Construction,Nominal U (w/o film coefs) {W/m2-K},Nominal U (with film coefs) {W/m2-K},Solar Diffusing,Area (Net) {m2},Area (Gross) {m2},Area (Sunlit Calc) {m2},Azimuth {deg},Tilt {deg},~Width {m},~Height {m},Reveal {m}
-Shading Surfaces,Number of Shading Surfaces,134
+Shading Surfaces,Number of Shading Surfaces,188
 Shading Surface,50AC43,Detached Shading:Building,,None,,0.0,0.0, ,9.19,9.19,9.19,171.60,0.00,6.71,1.37,,,,,,,,,,,4
 Shading Surface,Mir-50AC43,Detached Shading:Building,,None,,0.0,0.0, ,9.19,9.19,9.19,351.60,180.00,6.71,1.37,,,,,,,,,,,4
 Shading Surface,34ACA5,Detached Shading:Building,,None,,0.0,0.0, ,9.19,9.19,9.19,171.60,0.00,6.71,1.37,,,,,,,,,,,4
@@ -791,8 +791,16 @@ Shading Surface,OVERHANG_9B19D6,Shading,1432F0,None,,0.0,0.0, ,0.85,0.85,0.85,35
 Shading Surface,Mir-OVERHANG_9B19D6,Shading,1432F0,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_4BBE32,Shading,EB381E,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_4BBE32,Shading,EB381E,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,OVERHANG_3CC912,Shading,13A266,None,,0.0,0.0, ,0.91,0.91,0.91,351.60,90.00,1.20,0.76,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_3CC912,Shading,13A266,None,,0.0,0.0, ,0.91,0.91,0.91,171.60,90.00,1.20,0.76,,,,,,,,,,,4
 Shading Surface,OVERHANG_5C02CA,Shading,42F015,None,,0.0,0.0, ,0.56,0.56,0.56,351.60,90.00,1.00,0.56,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_5C02CA,Shading,42F015,None,,0.0,0.0, ,0.56,0.56,0.56,171.60,90.00,1.00,0.56,,,,,,,,,,,4
+Shading Surface,OVERHANG_7807BB,Shading,965308,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_7807BB,Shading,965308,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,OVERHANG_D0B56C,Shading,C6AAEF,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_D0B56C,Shading,C6AAEF,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,OVERHANG_F0171B,Shading,A15EF2,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_F0171B,Shading,A15EF2,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_F6C20E,Shading,BD6CAC,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_F6C20E,Shading,BD6CAC,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_C6D9BB,Shading,BD6CAC,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
@@ -801,44 +809,66 @@ Shading Surface,OVERHANG_9BDED2,Shading,1432F0,None,,0.0,0.0, ,0.85,0.85,0.85,35
 Shading Surface,Mir-OVERHANG_9BDED2,Shading,1432F0,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_A8D3AE,Shading,DFBD24,None,,0.0,0.0, ,0.56,0.56,0.56,351.60,90.00,1.00,0.56,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_A8D3AE,Shading,DFBD24,None,,0.0,0.0, ,0.56,0.56,0.56,171.60,90.00,1.00,0.56,,,,,,,,,,,4
+Shading Surface,OVERHANG_DC887A,Shading,E9194B,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_DC887A,Shading,E9194B,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,OVERHANG_7B4B22,Shading,2C24D6,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_7B4B22,Shading,2C24D6,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_C55811,Shading,F1C0E5,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_C55811,Shading,F1C0E5,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_8ECBCC,Shading,B56771,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_8ECBCC,Shading,B56771,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_D919F4,Shading,1B0191,None,,0.0,0.0, ,0.56,0.56,0.56,351.60,90.00,1.00,0.56,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_D919F4,Shading,1B0191,None,,0.0,0.0, ,0.56,0.56,0.56,171.60,90.00,1.00,0.56,,,,,,,,,,,4
+Shading Surface,OVERHANG_3C0ECF,Shading,93BADA,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_3C0ECF,Shading,93BADA,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_4182D5,Shading,4CB7BB,None,,0.0,0.0, ,0.91,0.91,0.91,351.60,90.00,1.20,0.76,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_4182D5,Shading,4CB7BB,None,,0.0,0.0, ,0.91,0.91,0.91,171.60,90.00,1.20,0.76,,,,,,,,,,,4
+Shading Surface,OVERHANG_C7CB71,Shading,37ACDC,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_C7CB71,Shading,37ACDC,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_656C49,Shading,825422,None,,0.0,0.0, ,0.91,0.91,0.91,351.60,90.00,1.20,0.76,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_656C49,Shading,825422,None,,0.0,0.0, ,0.91,0.91,0.91,171.60,90.00,1.20,0.76,,,,,,,,,,,4
+Shading Surface,OVERHANG_EF34E7,Shading,3B958D,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_EF34E7,Shading,3B958D,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_E012F6,Shading,8C7F16,None,,0.0,0.0, ,0.91,0.91,0.91,351.60,90.00,1.20,0.76,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_E012F6,Shading,8C7F16,None,,0.0,0.0, ,0.91,0.91,0.91,171.60,90.00,1.20,0.76,,,,,,,,,,,4
 Shading Surface,OVERHANG_421611,Shading,B56771,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_421611,Shading,B56771,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_27260D,Shading,F1C0E5,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_27260D,Shading,F1C0E5,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,OVERHANG_69B3C6,Shading,CA5CD4,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_69B3C6,Shading,CA5CD4,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_F0F00C,Shading,2B77D4,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_F0F00C,Shading,2B77D4,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,OVERHANG_265AE9,Shading,A13DB3,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_265AE9,Shading,A13DB3,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_1B2AB0,Shading,228D6F,None,,0.0,0.0, ,0.91,0.91,0.91,351.60,90.00,1.20,0.76,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_1B2AB0,Shading,228D6F,None,,0.0,0.0, ,0.91,0.91,0.91,171.60,90.00,1.20,0.76,,,,,,,,,,,4
 Shading Surface,OVERHANG_5D703E,Shading,B7BDE5,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_5D703E,Shading,B7BDE5,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_C85C4C,Shading,B7BDE5,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_C85C4C,Shading,B7BDE5,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,OVERHANG_8DAF8D,Shading,6C8EDB,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_8DAF8D,Shading,6C8EDB,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_3FB956,Shading,D47298,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_3FB956,Shading,D47298,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_96BCDA,Shading,D47298,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_96BCDA,Shading,D47298,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_C2DD8D,Shading,E7A049,None,,0.0,0.0, ,0.56,0.56,0.56,351.60,90.00,1.00,0.56,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_C2DD8D,Shading,E7A049,None,,0.0,0.0, ,0.56,0.56,0.56,171.60,90.00,1.00,0.56,,,,,,,,,,,4
+Shading Surface,OVERHANG_23DAAD,Shading,E9A1AB,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_23DAAD,Shading,E9A1AB,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_94BA8A,Shading,D19393,None,,0.0,0.0, ,0.91,0.91,0.91,351.60,90.00,1.20,0.76,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_94BA8A,Shading,D19393,None,,0.0,0.0, ,0.91,0.91,0.91,171.60,90.00,1.20,0.76,,,,,,,,,,,4
+Shading Surface,OVERHANG_7BA5DE,Shading,AA51D4,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_7BA5DE,Shading,AA51D4,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_8BFBF7,Shading,A54BE7,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_8BFBF7,Shading,A54BE7,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_A50407,Shading,A54BE7,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_A50407,Shading,A54BE7,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_864E4C,Shading,2986A4,None,,0.0,0.0, ,0.56,0.56,0.56,351.60,90.00,1.00,0.56,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_864E4C,Shading,2986A4,None,,0.0,0.0, ,0.56,0.56,0.56,171.60,90.00,1.00,0.56,,,,,,,,,,,4
+Shading Surface,OVERHANG_E26F8E,Shading,C1301C,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_E26F8E,Shading,C1301C,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_F7ED9D,Shading,8CC1C8,None,,0.0,0.0, ,0.91,0.91,0.91,351.60,90.00,1.20,0.76,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_F7ED9D,Shading,8CC1C8,None,,0.0,0.0, ,0.91,0.91,0.91,171.60,90.00,1.20,0.76,,,,,,,,,,,4
 Shading Surface,OVERHANG_B1BC35,Shading,1FE133,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
@@ -847,24 +877,46 @@ Shading Surface,OVERHANG_A79403,Shading,1FE133,None,,0.0,0.0, ,0.85,0.85,0.85,35
 Shading Surface,Mir-OVERHANG_A79403,Shading,1FE133,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_F8E398,Shading,B8067C,None,,0.0,0.0, ,0.56,0.56,0.56,351.60,90.00,1.00,0.56,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_F8E398,Shading,B8067C,None,,0.0,0.0, ,0.56,0.56,0.56,171.60,90.00,1.00,0.56,,,,,,,,,,,4
+Shading Surface,OVERHANG_653A8A,Shading,834AD4,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_653A8A,Shading,834AD4,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,OVERHANG_953913,Shading,3A89E2,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_953913,Shading,3A89E2,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,OVERHANG_699E7C,Shading,6AD0AC,None,,0.0,0.0, ,0.91,0.91,0.91,351.60,90.00,1.20,0.76,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_699E7C,Shading,6AD0AC,None,,0.0,0.0, ,0.91,0.91,0.91,171.60,90.00,1.20,0.76,,,,,,,,,,,4
+Shading Surface,OVERHANG_C5516B,Shading,7BCC00,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_C5516B,Shading,7BCC00,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_3134EF,Shading,65FB66,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_3134EF,Shading,65FB66,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,OVERHANG_5877D0,Shading,62647D,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_5877D0,Shading,62647D,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_8C1A09,Shading,460E14,None,,0.0,0.0, ,0.91,0.91,0.91,351.60,90.00,1.20,0.76,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_8C1A09,Shading,460E14,None,,0.0,0.0, ,0.91,0.91,0.91,171.60,90.00,1.20,0.76,,,,,,,,,,,4
 Shading Surface,OVERHANG_87FB35,Shading,FF1857,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_87FB35,Shading,FF1857,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_8A7124,Shading,FF1857,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_8A7124,Shading,FF1857,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,OVERHANG_AAA4E4,Shading,DEE2B1,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_AAA4E4,Shading,DEE2B1,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,OVERHANG_BB81B1,Shading,95BEA6,None,,0.0,0.0, ,0.91,0.91,0.91,351.60,90.00,1.20,0.76,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_BB81B1,Shading,95BEA6,None,,0.0,0.0, ,0.91,0.91,0.91,171.60,90.00,1.20,0.76,,,,,,,,,,,4
+Shading Surface,OVERHANG_6A1CD1,Shading,A5D7A2,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_6A1CD1,Shading,A5D7A2,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_19CB71,Shading,D4DC85,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_19CB71,Shading,D4DC85,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_18F863,Shading,D4DC85,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_18F863,Shading,D4DC85,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_E42E53,Shading,36AA50,None,,0.0,0.0, ,0.56,0.56,0.56,351.60,90.00,1.00,0.56,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_E42E53,Shading,36AA50,None,,0.0,0.0, ,0.56,0.56,0.56,171.60,90.00,1.00,0.56,,,,,,,,,,,4
+Shading Surface,OVERHANG_C2FD0D,Shading,64FC7F,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_C2FD0D,Shading,64FC7F,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_6C2720,Shading,CFFA86,None,,0.0,0.0, ,0.91,0.91,0.91,351.60,90.00,1.20,0.76,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_6C2720,Shading,CFFA86,None,,0.0,0.0, ,0.91,0.91,0.91,171.60,90.00,1.20,0.76,,,,,,,,,,,4
+Shading Surface,OVERHANG_A2960A,Shading,E0F521,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_A2960A,Shading,E0F521,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_CDF435,Shading,59C019,None,,0.0,0.0, ,0.91,0.91,0.91,351.60,90.00,1.20,0.76,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_CDF435,Shading,59C019,None,,0.0,0.0, ,0.91,0.91,0.91,171.60,90.00,1.20,0.76,,,,,,,,,,,4
+Shading Surface,OVERHANG_8580C7,Shading,AC0D6E,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_8580C7,Shading,AC0D6E,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_A6C9BD,Shading,38392B,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_A6C9BD,Shading,38392B,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_B4D7D4,Shading,38392B,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
@@ -877,6 +929,8 @@ Shading Surface,OVERHANG_EC5B03,Shading,EB36B0,None,,0.0,0.0, ,0.85,0.85,0.85,35
 Shading Surface,Mir-OVERHANG_EC5B03,Shading,EB36B0,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
 Shading Surface,OVERHANG_CDCD3D,Shading,836FB1,None,,0.0,0.0, ,0.56,0.56,0.56,351.60,90.00,1.00,0.56,,,,,,,,,,,4
 Shading Surface,Mir-OVERHANG_CDCD3D,Shading,836FB1,None,,0.0,0.0, ,0.56,0.56,0.56,171.60,90.00,1.00,0.56,,,,,,,,,,,4
+Shading Surface,OVERHANG_210899,Shading,8EB296,None,,0.0,0.0, ,0.85,0.85,0.85,171.60,90.00,1.20,0.71,,,,,,,,,,,4
+Shading Surface,Mir-OVERHANG_210899,Shading,8EB296,None,,0.0,0.0, ,0.85,0.85,0.85,351.60,90.00,1.20,0.71,,,,,,,,,,,4
 Zone Surfaces,GND_3R_NAC_MID2,19
 HeatTransfer Surface,BE0F22,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,1.97,1.97,1.97,81.60,90.00,0.55,3.60,0.00,24F025,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,D9BF5D,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,15.96,15.96,15.96,261.60,90.00,4.43,3.60,0.00,D9BF5D,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
@@ -1072,7 +1126,7 @@ HeatTransfer Surface,545054,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL
 HeatTransfer Surface,A54BE7,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.78,0.22,4
 HeatTransfer Surface,8BFBF7,Window,A54BE7,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.78,0.22,4
 HeatTransfer Surface,A50407,Window,A54BE7,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.78,0.22,4
-HeatTransfer Surface,4D66A8,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,81.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
+HeatTransfer Surface,4D66A8,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,81.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.73,0.27,4
 HeatTransfer Surface,A7CEB5,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,5.32,5.32,5.32,171.60,90.00,1.90,2.80,0.00,E2D85B,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,DD9B4D,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,31.26,31.26,31.26,81.60,90.00,11.16,2.80,0.00,120881,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,AA51D4,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.69,9.39,7.69,171.60,90.00,3.35,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
@@ -1145,7 +1199,7 @@ HeatTransfer Surface,65FB66,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL
 HeatTransfer Surface,3134EF,Window,65FB66,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.63,0.37,4
 HeatTransfer Surface,656FB7,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,14.00,14.00,14.00,351.60,180.00,3.74,3.74,0.00,656FB7,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,6
 HeatTransfer Surface,EDB3C0,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,16.20,16.20,16.20,351.60,180.00,4.03,4.03,0.00,EDB3C0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,6
-HeatTransfer Surface,A7E34B,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,14.00,14.00,14.00,171.60,0.00,3.74,3.74,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,6
+HeatTransfer Surface,A7E34B,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,14.00,14.00,14.00,171.60,0.00,3.74,3.74,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,1.71E-002,0.98,6
 HeatTransfer Surface,75DE40,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,16.20,16.20,16.20,171.60,0.00,4.03,4.03,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,1.07E-002,0.99,6
 Zone Surfaces,TOP_3R_NV_LFT,16
 HeatTransfer Surface,F5C112,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,31.26,31.26,31.26,261.60,90.00,11.16,2.80,0.00,D35429,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
@@ -1163,7 +1217,7 @@ HeatTransfer Surface,ED595C,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL
 HeatTransfer Surface,62647D,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.69,9.39,7.69,171.60,90.00,3.35,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.68,0.32,4
 HeatTransfer Surface,5877D0,Window,62647D,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.70,0.30,4
 HeatTransfer Surface,2563D9,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,40.41,40.41,40.41,171.60,180.00,6.36,6.36,0.00,2563D9,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,10
-HeatTransfer Surface,E1E523,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,40.41,40.41,40.41,171.60,0.00,6.36,6.36,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,2.05E-002,0.98,10
+HeatTransfer Surface,E1E523,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,40.41,40.41,40.41,171.60,0.00,6.36,6.36,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,2.74E-002,0.97,10
 Zone Surfaces,TOP_3R_AC_MID,9
 HeatTransfer Surface,DEE2B1,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.69,9.39,7.69,171.60,90.00,3.35,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.66,0.34,4
 HeatTransfer Surface,AAA4E4,Window,DEE2B1,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
@@ -1173,7 +1227,7 @@ HeatTransfer Surface,F54FA9,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL
 HeatTransfer Surface,95BEA6,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.25,4.07,2.25,351.60,90.00,1.45,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.64,0.36,4
 HeatTransfer Surface,BB81B1,Window,95BEA6,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.60,90.00,1.20,1.51,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.64,0.36,4
 HeatTransfer Surface,C0ACA3,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,37.43,37.43,37.43,351.60,180.00,3.35,11.16,0.00,C0ACA3,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
-HeatTransfer Surface,D1FFE3,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,37.43,37.43,37.43,171.60,0.00,3.35,11.16,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,6.95E-004,1.00,4
+HeatTransfer Surface,D1FFE3,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,37.43,37.43,37.43,171.60,0.00,3.35,11.16,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,1.65E-002,0.98,4
 Zone Surfaces,TOP_3R_NV_RHT,16
 HeatTransfer Surface,EED077,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.15,2.15,2.15,351.60,90.00,0.77,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.69,0.31,4
 HeatTransfer Surface,653211,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,261.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.57,0.43,4
@@ -1190,7 +1244,7 @@ HeatTransfer Surface,36AA50,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL
 HeatTransfer Surface,E42E53,Window,36AA50,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.13,1.13,1.13,351.60,90.00,1.00,1.13,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.64,0.36,4
 HeatTransfer Surface,755B68,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.39,6.39,6.39,261.60,90.00,2.28,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.59,0.41,4
 HeatTransfer Surface,AC1AA7,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,40.41,40.41,40.41,351.60,180.00,6.36,6.36,0.00,AC1AA7,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,10
-HeatTransfer Surface,E8EDFB,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,40.41,40.41,40.41,351.60,0.00,6.36,6.36,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,1.27E-002,0.99,10
+HeatTransfer Surface,E8EDFB,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,40.41,40.41,40.41,351.60,0.00,6.36,6.36,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,2.10E-002,0.98,10
 Zone Surfaces,TOP_3R_AC_RHT,9
 HeatTransfer Surface,64FC7F,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.69,9.39,7.69,171.60,90.00,3.35,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.68,0.32,4
 HeatTransfer Surface,C2FD0D,Window,64FC7F,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
@@ -1200,7 +1254,7 @@ HeatTransfer Surface,5874F1,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL
 HeatTransfer Surface,CFFA86,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.25,4.07,2.25,351.60,90.00,1.45,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
 HeatTransfer Surface,6C2720,Window,CFFA86,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.60,90.00,1.20,1.51,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.64,0.36,4
 HeatTransfer Surface,CECEB2,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,37.43,37.43,37.43,351.60,180.00,3.35,11.16,0.00,CECEB2,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
-HeatTransfer Surface,B99D0E,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,37.43,37.43,37.43,171.60,0.00,3.35,11.16,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,7.61E-003,0.99,4
+HeatTransfer Surface,B99D0E,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,37.43,37.43,37.43,171.60,0.00,3.35,11.16,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,1.65E-002,0.98,4
 Zone Surfaces,TOP_3R_AC_LFT,9
 HeatTransfer Surface,E0F521,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.69,9.39,7.69,171.60,90.00,3.35,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.68,0.32,4
 HeatTransfer Surface,A2960A,Window,E0F521,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
@@ -1210,14 +1264,14 @@ HeatTransfer Surface,CDF435,Window,59C019,Window5 Detailed Fenestration,EXTERIOR
 HeatTransfer Surface,D35429,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,31.26,31.26,31.26,81.60,90.00,11.16,2.80,0.00,F5C112,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,98B642,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,5.32,5.32,5.32,351.60,90.00,1.90,2.80,0.00,C5E0DF,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,A9C204,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,37.43,37.43,37.43,351.60,180.00,3.35,11.16,0.00,A9C204,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
-HeatTransfer Surface,52AE84,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,37.43,37.43,37.43,171.60,0.00,3.35,11.16,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,4.09E-003,1.00,4
+HeatTransfer Surface,52AE84,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,37.43,37.43,37.43,171.60,0.00,3.35,11.16,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,1.29E-002,0.99,4
 Zone Surfaces,TOP_3R_NV_MID,16
 HeatTransfer Surface,16CA10,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.15,2.15,2.15,351.60,90.00,0.77,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.68,0.32,4
 HeatTransfer Surface,2D05E1,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,261.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.57,0.43,4
 HeatTransfer Surface,38392B,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,A6C9BD,Window,38392B,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,B4D7D4,Window,38392B,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,A53796,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,81.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.60,0.40,4
+HeatTransfer Surface,A53796,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,81.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.62,0.38,4
 HeatTransfer Surface,72CFEF,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,5.32,5.32,5.32,171.60,90.00,1.90,2.80,0.00,E2D85B,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,37BDC9,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,31.26,31.26,31.26,81.60,90.00,11.16,2.80,0.00,120881,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,AC0D6E,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.69,9.39,7.69,171.60,90.00,3.35,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.66,0.34,4
@@ -1227,7 +1281,7 @@ HeatTransfer Surface,FAE232,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL
 HeatTransfer Surface,1FB167,Window,FAE232,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.13,1.13,1.13,351.60,90.00,1.00,1.13,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.64,0.36,4
 HeatTransfer Surface,2E5565,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.39,6.39,6.39,261.60,90.00,2.28,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.59,0.41,4
 HeatTransfer Surface,84F16F,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,40.41,40.41,40.41,351.60,180.00,6.36,6.36,0.00,84F16F,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,10
-HeatTransfer Surface,D92264,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,40.41,40.41,40.41,351.60,0.00,6.36,6.36,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,1.20E-002,0.99,10
+HeatTransfer Surface,D92264,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,40.41,40.41,40.41,351.60,0.00,6.36,6.36,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,2.10E-002,0.98,10
 Zone Surfaces,TOP_3R_NV_MID2,23
 HeatTransfer Surface,2E62BE,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,8.07,8.07,8.07,81.60,90.00,2.88,2.80,0.00,C00851,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,1C2A01,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,8.83,8.83,8.83,351.60,90.00,3.15,2.80,0.00,9BB333,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
@@ -1251,7 +1305,7 @@ HeatTransfer Surface,3BE8A8,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL
 HeatTransfer Surface,541BB2,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.35,4.35,4.35,171.60,90.00,1.55,2.80,0.00,248178,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,4C3012,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,11.68,11.68,11.68,81.60,90.00,4.17,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.56,0.44,4
 HeatTransfer Surface,E030B1,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,54.80,54.80,54.80,351.60,180.00,7.40,7.40,0.00,E030B1,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,16
-HeatTransfer Surface,B7B826,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,54.80,54.80,54.80,351.60,0.00,7.40,7.40,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,8.04E-003,0.99,16
+HeatTransfer Surface,B7B826,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,54.80,54.80,54.80,351.60,0.00,7.40,7.40,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,1.12E-002,0.99,16
 ! <Environment>,Environment Name,Environment Type, Start Date, End Date, Start DayOfWeek, Duration {#days}, Source:Start DayOfWeek,  Use Daylight Saving, Use Holidays, Apply Weekend Holiday Rule,  Use Rain Values, Use Snow Values, Sky Temperature Model
 ! <Environment:Special Days>, Special Day Name, Special Day Type, Source, Start Date, Duration {#days}
 ! <Environment:Daylight Saving>, Daylight Saving Indicator, Source, Start Date, End Date
@@ -1260,30 +1314,30 @@ Environment,JUNE2015,WeatherFileRunPeriod,06/01/2015,06/30/2015,Monday,30,Use Ru
 Environment:Daylight Saving,No,RunPeriod Object
 Environment:WarmupDays,  4
 ! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
- Warmup Convergence Information,GND_3R_NAC_MID2,RunPeriod: JUNE2015,2.4822776974E-003,2.6741360209E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,GND_3R_NV_MID2,RunPeriod: JUNE2015,3.9935702977E-003,3.5338493192E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,GND_3R_NV_MID,RunPeriod: JUNE2015,4.0831820728E-003,4.1912447746E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,GND_3R_NAC_MID,RunPeriod: JUNE2015,2.5817581536E-003,2.4964426845E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,GND_3R_NV_RHT,RunPeriod: JUNE2015,4.5772774559E-003,4.2096348937E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,GND_3R_NAC_RHT,RunPeriod: JUNE2015,2.8568560501E-003,2.7436084823E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,GND_3R_NAC_LFT,RunPeriod: JUNE2015,2.8704834759E-003,2.6061060890E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,GND_3R_NV_LFT,RunPeriod: JUNE2015,4.1000210300E-003,4.1593448546E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,MID_3R_AC_MID2,RunPeriod: JUNE2015,3.1324641662E-002,0.2334922456,Pass,Pass,3.6001664938E-003,4.3831600825E-002,Pass,Pass
- Warmup Convergence Information,MID_3R_NV_LFT,RunPeriod: JUNE2015,2.3522896763E-002,4.1040653238E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,MID_3R_NV_RHT,RunPeriod: JUNE2015,2.3622311867E-002,4.1377949804E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,MID_3R_AC_RHT,RunPeriod: JUNE2015,3.2420004151E-002,0.2368202254,Pass,Pass,4.1995836950E-003,5.3111598735E-002,Pass,Pass
- Warmup Convergence Information,MID_3R_NV_MID,RunPeriod: JUNE2015,2.3677999261E-002,4.1827848300E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,MID_3R_AC_LFT,RunPeriod: JUNE2015,3.1801080191E-002,0.2360539299,Pass,Pass,3.1922753741E-003,3.6550485093E-002,Pass,Pass
- Warmup Convergence Information,MID_3R_NV_MID2,RunPeriod: JUNE2015,2.2320637755E-002,3.1336679198E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,MID_3R_AC_MID,RunPeriod: JUNE2015,3.2306706162E-002,0.2367810590,Pass,Pass,3.9476253434E-003,4.9285309967E-002,Pass,Pass
- Warmup Convergence Information,TOP_3R_AC_MID2,RunPeriod: JUNE2015,3.0805361932E-002,0.2297206971,Pass,Pass,3.3875612165E-003,3.8255167673E-002,Pass,Pass
- Warmup Convergence Information,TOP_3R_NV_LFT,RunPeriod: JUNE2015,2.3217744532E-002,4.0689679241E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,TOP_3R_AC_MID,RunPeriod: JUNE2015,3.1436495566E-002,0.2321988929,Pass,Pass,3.3041477623E-003,3.5967318811E-002,Pass,Pass
- Warmup Convergence Information,TOP_3R_NV_RHT,RunPeriod: JUNE2015,2.3410623965E-002,4.1075277894E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,TOP_3R_AC_RHT,RunPeriod: JUNE2015,3.1481724970E-002,0.2317624306,Pass,Pass,3.2644051404E-003,3.8505359649E-002,Pass,Pass
- Warmup Convergence Information,TOP_3R_AC_LFT,RunPeriod: JUNE2015,3.1403569264E-002,0.2341247298,Pass,Pass,3.4349221730E-003,4.7415086340E-002,Pass,Pass
- Warmup Convergence Information,TOP_3R_NV_MID,RunPeriod: JUNE2015,2.3416148893E-002,4.1088244549E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,TOP_3R_NV_MID2,RunPeriod: JUNE2015,2.2089735719E-002,3.1096236611E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_3R_NAC_MID2,RunPeriod: JUNE2015,2.4822194655E-003,2.6740016876E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_3R_NV_MID2,RunPeriod: JUNE2015,3.9934863745E-003,3.5334110673E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_3R_NV_MID,RunPeriod: JUNE2015,4.0839245702E-003,4.1906898984E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_3R_NAC_MID,RunPeriod: JUNE2015,2.5816606574E-003,2.4961655148E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_3R_NV_RHT,RunPeriod: JUNE2015,4.5772582830E-003,4.2092179662E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_3R_NAC_RHT,RunPeriod: JUNE2015,2.8567054874E-003,2.7432944927E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_3R_NAC_LFT,RunPeriod: JUNE2015,2.8704842530E-003,2.6061057334E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_3R_NV_LFT,RunPeriod: JUNE2015,4.1000222613E-003,4.1593437818E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,MID_3R_AC_MID2,RunPeriod: JUNE2015,3.1325849445E-002,0.2335002174,Pass,Pass,3.6004615197E-003,4.3835038877E-002,Pass,Pass
+ Warmup Convergence Information,MID_3R_NV_LFT,RunPeriod: JUNE2015,2.3522897535E-002,4.1040654698E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,MID_3R_NV_RHT,RunPeriod: JUNE2015,2.3622269671E-002,4.1377447528E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,MID_3R_AC_RHT,RunPeriod: JUNE2015,3.2420234004E-002,0.2368220781,Pass,Pass,4.1990952652E-003,5.3104121312E-002,Pass,Pass
+ Warmup Convergence Information,MID_3R_NV_MID,RunPeriod: JUNE2015,2.3678033547E-002,4.1827541655E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,MID_3R_AC_LFT,RunPeriod: JUNE2015,3.1801079740E-002,0.2360539255,Pass,Pass,3.1922749539E-003,3.6550488375E-002,Pass,Pass
+ Warmup Convergence Information,MID_3R_NV_MID2,RunPeriod: JUNE2015,2.2320603747E-002,3.1336467263E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,MID_3R_AC_MID,RunPeriod: JUNE2015,3.2306709998E-002,0.2367802603,Pass,Pass,3.9477359117E-003,4.9286944177E-002,Pass,Pass
+ Warmup Convergence Information,TOP_3R_AC_MID2,RunPeriod: JUNE2015,3.0807251443E-002,0.2297372826,Pass,Pass,3.3862122185E-003,3.8285738553E-002,Pass,Pass
+ Warmup Convergence Information,TOP_3R_NV_LFT,RunPeriod: JUNE2015,2.3216024239E-002,4.0686026538E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,TOP_3R_AC_MID,RunPeriod: JUNE2015,3.1438337924E-002,0.2321989883,Pass,Pass,3.3012881630E-003,3.5976602205E-002,Pass,Pass
+ Warmup Convergence Information,TOP_3R_NV_RHT,RunPeriod: JUNE2015,2.3409112605E-002,4.1070509590E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,TOP_3R_AC_RHT,RunPeriod: JUNE2015,3.1483618421E-002,0.2317806513,Pass,Pass,3.2666665360E-003,3.8410988795E-002,Pass,Pass
+ Warmup Convergence Information,TOP_3R_AC_LFT,RunPeriod: JUNE2015,3.1402902363E-002,0.2341371602,Pass,Pass,3.4366381148E-003,4.7475701656E-002,Pass,Pass
+ Warmup Convergence Information,TOP_3R_NV_MID,RunPeriod: JUNE2015,2.3414675248E-002,4.1083748372E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,TOP_3R_NV_MID2,RunPeriod: JUNE2015,2.2089186088E-002,3.1095071987E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
 ! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
 Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
 End of Data

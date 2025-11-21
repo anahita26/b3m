@@ -14,13 +14,14 @@ summarise_meters <- function(report_weekday,
   list(
     e_light = energy_by_meter |>
       filter(name == "InteriorLights:Electricity") |>
-      pull(e_kWh),
+      select(case, e_kWh),
     e_plug  = energy_by_meter |>
       filter(name == "InteriorEquipment:Electricity") |>
-      pull(e_kWh),
+      select(case, e_kWh),
     e_ac    = energy_by_meter |>
       filter(name == "Cooling:EnergyTransfer") |>
-      pull(e_kWh) / cop
+      mutate(e_ac = e_kWh / cop) |> 
+      select(case, e_ac)
   )
 }
 

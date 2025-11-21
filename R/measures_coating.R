@@ -1,10 +1,9 @@
 set_coating <- function(model, 
-                        coating = NA,
-                        material_name = "M15 150mm heavyweight concrete") {
+                        coating = NA) {
   if (is.na(coating)) return(model)
   
   coat_tbl <- model$to_table(class = "Material") |> 
-    filter(name == material_name) |> 
+    filter(name == "M15 150mm heavyweight concrete") |> 
     mutate(value = case_when(
         field == "Solar Absorptance" ~ sprintf("%.2f", coating),
         TRUE ~ value)

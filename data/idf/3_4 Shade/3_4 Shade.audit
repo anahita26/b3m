@@ -16,13 +16,13 @@
  numTableEntry=        5581
  sizeCompSizeTableEntry=           0
  numCompSizeTableEntry=           0
- NumOfRVariable=       35013
- NumOfRVariable(Total)=       35013
+ NumOfRVariable=       36093
+ NumOfRVariable(Total)=       36093
  NumOfRVariable(Actual)=         166
  NumOfRVariable(Summed)=         166
  NumOfRVariable(Meter)=         166
- NumOfIVariable=        2348
- NumOfIVariable(Total)=        2348
+ NumOfIVariable=        2402
+ NumOfIVariable(Total)=        2402
  NumOfIVariable(Actual)=           0
  NumOfIVariable(Summed)=           0
  MaxRVariable=        1000
@@ -30,7 +30,7 @@
  NumEnergyMeters=         172
  NumVarMeterArrays=         166
  maxUniqueKeyCount=        1500
- maxNumberOfFigures=         471
+ maxNumberOfFigures=         559
  MAXHCArrayBounds=          34
  MaxVerticesPerSurface=          16
  NumReportList=         500

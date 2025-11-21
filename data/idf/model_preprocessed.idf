@@ -571,7 +571,7 @@ Material,
     2240,                    !- Density {kg/m3}
     900,                     !- Specific Heat {J/kg-K}
     0.9,                     !- Thermal Absorptance
-    0.7,                     !- Solar Absorptance
+    0.2,                     !- Solar Absorptance
     0.7;                     !- Visible Absorptance
 
 Material,
@@ -612,6 +612,30 @@ Material,
 Material:AirGap,
     F05 Ceiling air space resistance,  !- Name
     0.18;                    !- Thermal Resistance {m2-K/W}
+
+
+!-   ===========  ALL OBJECTS IN CLASS: MATERIAL:ROOFVEGETATION ===========
+
+Material:RoofVegetation,
+    green_roof,              !- Name
+    1,                       !- Height of Plants {m}
+    1.5,                     !- Leaf Area Index {dimensionless}
+    0.2,                     !- Leaf Reflectivity {dimensionless}
+    0.95,                    !- Leaf Emissivity
+    180,                     !- Minimum Stomatal Resistance {s/m}
+    Green Roof Soil,         !- Soil Layer Name
+    MediumRough,             !- Roughness
+    0.1,                     !- Thickness {m}
+    0.35,                    !- Conductivity of Dry Soil {W/m-K}
+    1100,                    !- Density of Dry Soil {kg/m3}
+    1200,                    !- Specific Heat of Dry Soil {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.75,                    !- Visible Absorptance
+    0.3,                     !- Saturation Volumetric Moisture Content of the Soil Layer
+    0.01,                    !- Residual Volumetric Moisture Content of the Soil Layer
+    0.1,                     !- Initial Volumetric Moisture Content of the Soil Layer
+    Simple;                  !- Moisture Diffusion Calculation Method
 
 
 !-   ===========  ALL OBJECTS IN CLASS: WINDOWMATERIAL:GLAZING ===========
@@ -667,6 +691,14 @@ Construction,
 Construction,
     Exterior Floor,          !- Name
     M15 150mm heavyweight concrete;  !- Outside Layer
+
+Construction,
+    Green Roof,              !- Name
+    green_roof,              !- Outside Layer
+    Ferrocement,             !- Layer 2
+    F05 Ceiling air space resistance,  !- Layer 3
+    Roof concrete,           !- Layer 4
+    Cement plaster;          !- Layer 5
 
 
 !-   ===========  ALL OBJECTS IN CLASS: GLOBALGEOMETRYRULES ===========
@@ -1104,7 +1136,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     6,                       !- Number of Vertices
     33.874999999999,         !- Vertex 1 X-coordinate {m}
     143.436999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1134,7 +1166,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     6,                       !- Number of Vertices
     39.076999999999,         !- Vertex 1 X-coordinate {m}
     147.822999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1164,7 +1196,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     16,                      !- Number of Vertices
     35.741999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1224,7 +1256,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     35.741999999999,         !- Vertex 1 X-coordinate {m}
     136.659999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1248,7 +1280,7 @@ BuildingSurface:Detailed,
     38316D,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     30.521999999999,         !- Vertex 1 X-coordinate {m}
     132.819999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1272,7 +1304,7 @@ BuildingSurface:Detailed,
     248178,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.187999999999,         !- Vertex 1 X-coordinate {m}
     136.659999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1296,7 +1328,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     31.973999999999,         !- Vertex 1 X-coordinate {m}
     141.675999999993,        !- Vertex 1 Y-coordinate {m}
@@ -1320,7 +1352,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.973999999999,         !- Vertex 1 X-coordinate {m}
     141.675999999993,        !- Vertex 1 Y-coordinate {m}
@@ -1344,7 +1376,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     35.741999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1392,7 +1424,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.973999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1416,7 +1448,7 @@ BuildingSurface:Detailed,
     BE0F22,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     32.291999999999,         !- Vertex 1 X-coordinate {m}
     132.819999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1440,7 +1472,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     31.973999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1464,7 +1496,7 @@ BuildingSurface:Detailed,
     81998C,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     32.291999999999,         !- Vertex 1 X-coordinate {m}
     132.273999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1488,7 +1520,7 @@ BuildingSurface:Detailed,
     4EA790,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     132.559999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1512,7 +1544,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     33.874999999999,         !- Vertex 1 X-coordinate {m}
     128.387999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1536,7 +1568,7 @@ BuildingSurface:Detailed,
     C00851,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.187999999999,         !- Vertex 1 X-coordinate {m}
     133.777999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1560,7 +1592,7 @@ BuildingSurface:Detailed,
     9BB333,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     133.777999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1584,7 +1616,7 @@ BuildingSurface:Detailed,
     F7E5F9,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     33.874999999999,         !- Vertex 1 X-coordinate {m}
     132.273999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1668,7 +1700,7 @@ BuildingSurface:Detailed,
     24F025,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     32.291999999999,         !- Vertex 1 X-coordinate {m}
     143.436999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1746,7 +1778,7 @@ BuildingSurface:Detailed,
     F6CCEE,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     33.874999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1770,7 +1802,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     30.521999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1794,7 +1826,7 @@ BuildingSurface:Detailed,
     FD96CD,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     33.874999999999,         !- Vertex 1 X-coordinate {m}
     143.436999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1818,7 +1850,7 @@ BuildingSurface:Detailed,
     E313CC,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     32.291999999999,         !- Vertex 1 X-coordinate {m}
     143.982999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1872,7 +1904,7 @@ BuildingSurface:Detailed,
     58768C,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     35.741999999999,         !- Vertex 1 X-coordinate {m}
     147.822999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1896,7 +1928,7 @@ BuildingSurface:Detailed,
     1B59AD,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.187999999999,         !- Vertex 1 X-coordinate {m}
     147.822999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1920,7 +1952,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     143.722999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1944,7 +1976,7 @@ BuildingSurface:Detailed,
     72EFCA,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.187999999999,         !- Vertex 1 X-coordinate {m}
     144.940999999994,        !- Vertex 1 Y-coordinate {m}
@@ -1968,7 +2000,7 @@ BuildingSurface:Detailed,
     BC749E,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     144.940999999994,        !- Vertex 1 Y-coordinate {m}
@@ -2016,7 +2048,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     10,                      !- Number of Vertices
     5.254000000001,          !- Vertex 1 X-coordinate {m}
     152.838999999994,        !- Vertex 1 Y-coordinate {m}
@@ -2082,7 +2114,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     1e-12,                   !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -2106,7 +2138,7 @@ BuildingSurface:Detailed,
     120881,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     3.353,                   !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -2130,7 +2162,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     5.254000000001,          !- Vertex 1 X-coordinate {m}
     150.713999999993,        !- Vertex 1 Y-coordinate {m}
@@ -2154,7 +2186,7 @@ BuildingSurface:Detailed,
     E2D85B,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     3.353,                   !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -2178,7 +2210,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     1.486000000001,          !- Vertex 1 X-coordinate {m}
     148.432999999994,        !- Vertex 1 Y-coordinate {m}
@@ -2202,7 +2234,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     1.486000000001,          !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -2268,7 +2300,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     5.254000000001,          !- Vertex 1 X-coordinate {m}
     152.838999999994,        !- Vertex 1 Y-coordinate {m}
@@ -2292,7 +2324,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     2.254000000002,          !- Vertex 1 X-coordinate {m}
     152.838999999994,        !- Vertex 1 Y-coordinate {m}
@@ -2316,7 +2348,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     2.254000000002,          !- Vertex 1 X-coordinate {m}
     150.713999999993,        !- Vertex 1 Y-coordinate {m}
@@ -2340,7 +2372,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     0,                       !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -2388,7 +2420,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -3.352999999997,         !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -2412,7 +2444,7 @@ BuildingSurface:Detailed,
     F3AEE5,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -3.352999999997,         !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -2436,7 +2468,7 @@ BuildingSurface:Detailed,
     7C3286,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -1.451999999999,         !- Vertex 1 X-coordinate {m}
     150.713999999993,        !- Vertex 1 Y-coordinate {m}
@@ -2484,7 +2516,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     10,                      !- Number of Vertices
     66.298,                  !- Vertex 1 X-coordinate {m}
     152.838999999995,        !- Vertex 1 Y-coordinate {m}
@@ -2568,7 +2600,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     63.298,                  !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -2592,7 +2624,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     63.298,                  !- Vertex 1 X-coordinate {m}
     152.838999999995,        !- Vertex 1 Y-coordinate {m}
@@ -2616,7 +2648,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     66.298,                  !- Vertex 1 X-coordinate {m}
     152.838999999995,        !- Vertex 1 Y-coordinate {m}
@@ -2640,7 +2672,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     66.298,                  !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -2664,7 +2696,7 @@ BuildingSurface:Detailed,
     40A37B,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     64.396999999998,         !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -2688,7 +2720,7 @@ BuildingSurface:Detailed,
     5A873A,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     64.396999999998,         !- Vertex 1 X-coordinate {m}
     139.550999999995,        !- Vertex 1 Y-coordinate {m}
@@ -2712,7 +2744,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     61.044,                  !- Vertex 1 X-coordinate {m}
     139.550999999995,        !- Vertex 1 Y-coordinate {m}
@@ -2760,7 +2792,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     62.529999999999,         !- Vertex 1 X-coordinate {m}
     148.432999999996,        !- Vertex 1 Y-coordinate {m}
@@ -2784,7 +2816,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     62.529999999999,         !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -2808,7 +2840,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     61.043999999998,         !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -2856,7 +2888,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     57.691000000002,         !- Vertex 1 X-coordinate {m}
     139.550999999995,        !- Vertex 1 Y-coordinate {m}
@@ -2880,7 +2912,7 @@ BuildingSurface:Detailed,
     B884B5,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     57.691000000002,         !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -2904,7 +2936,7 @@ BuildingSurface:Detailed,
     5843B0,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     59.592,                  !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -2952,7 +2984,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -27.169000000004,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3000,7 +3032,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -30.522,                 !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -3024,7 +3056,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -30.522,                 !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3048,7 +3080,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -29.070000000001,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3072,7 +3104,7 @@ BuildingSurface:Detailed,
     C57B07,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -27.169000000004,        !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -3096,7 +3128,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     10,                      !- Number of Vertices
     -59.177000000001,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3162,7 +3194,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -59.177000000001,        !- Vertex 1 X-coordinate {m}
     148.432999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3186,7 +3218,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -59.177000000001,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3210,7 +3242,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -59.945000000001,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3234,7 +3266,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -59.945000000001,        !- Vertex 1 X-coordinate {m}
     152.838999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3258,7 +3290,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -62.945000000001,        !- Vertex 1 X-coordinate {m}
     152.838999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3282,7 +3314,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -61.043999999999,        !- Vertex 1 X-coordinate {m}
     139.551,                 !- Vertex 1 Y-coordinate {m}
@@ -3306,7 +3338,7 @@ BuildingSurface:Detailed,
     91238A,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -61.043999999999,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3330,7 +3362,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -57.691000000001,        !- Vertex 1 X-coordinate {m}
     148.432999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3354,7 +3386,7 @@ BuildingSurface:Detailed,
     F20A24,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -62.945000000001,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3420,7 +3452,7 @@ BuildingSurface:Detailed,
     8F3BA2,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -27.169000000004,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3444,7 +3476,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     0,                       !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3468,7 +3500,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     39.076999999999,         !- Vertex 1 X-coordinate {m}
     147.822999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3492,7 +3524,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     61.043999999998,         !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -3516,7 +3548,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     128.387999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3654,7 +3686,7 @@ BuildingSurface:Detailed,
     E313CC,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     32.291999999999,         !- Vertex 1 X-coordinate {m}
     143.982999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3678,7 +3710,7 @@ BuildingSurface:Detailed,
     24F025,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     32.291999999999,         !- Vertex 1 X-coordinate {m}
     143.436999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3702,7 +3734,7 @@ BuildingSurface:Detailed,
     FD96CD,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     33.874999999999,         !- Vertex 1 X-coordinate {m}
     143.436999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3726,7 +3758,7 @@ BuildingSurface:Detailed,
     F6CCEE,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     33.874999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3750,7 +3782,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     30.521999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3828,7 +3860,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     143.722999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3852,7 +3884,7 @@ BuildingSurface:Detailed,
     BC749E,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     144.940999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3876,7 +3908,7 @@ BuildingSurface:Detailed,
     72EFCA,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.187999999999,         !- Vertex 1 X-coordinate {m}
     144.940999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3900,7 +3932,7 @@ BuildingSurface:Detailed,
     1B59AD,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.187999999999,         !- Vertex 1 X-coordinate {m}
     147.822999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3924,7 +3956,7 @@ BuildingSurface:Detailed,
     58768C,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     35.741999999999,         !- Vertex 1 X-coordinate {m}
     147.822999999994,        !- Vertex 1 Y-coordinate {m}
@@ -3948,7 +3980,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     39.076999999999,         !- Vertex 1 X-coordinate {m}
     147.822999999994,        !- Vertex 1 Y-coordinate {m}
@@ -4056,7 +4088,7 @@ BuildingSurface:Detailed,
     CD9488,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -61.043999999999,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -4080,7 +4112,7 @@ BuildingSurface:Detailed,
     DC1B74,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -62.945000000001,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -4104,7 +4136,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -62.945000000001,        !- Vertex 1 X-coordinate {m}
     152.838999999993,        !- Vertex 1 Y-coordinate {m}
@@ -4128,7 +4160,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -59.945000000001,        !- Vertex 1 X-coordinate {m}
     152.838999999993,        !- Vertex 1 Y-coordinate {m}
@@ -4152,7 +4184,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -59.945000000001,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -4176,7 +4208,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -59.177000000001,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -4200,7 +4232,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -59.177000000001,        !- Vertex 1 X-coordinate {m}
     148.432999999994,        !- Vertex 1 Y-coordinate {m}
@@ -4224,7 +4256,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -57.691000000001,        !- Vertex 1 X-coordinate {m}
     148.432999999994,        !- Vertex 1 Y-coordinate {m}
@@ -4272,7 +4304,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -61.043999999999,        !- Vertex 1 X-coordinate {m}
     139.551,                 !- Vertex 1 Y-coordinate {m}
@@ -4380,7 +4412,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     63.298,                  !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -4404,7 +4436,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     63.298,                  !- Vertex 1 X-coordinate {m}
     152.838999999995,        !- Vertex 1 Y-coordinate {m}
@@ -4428,7 +4460,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     66.298,                  !- Vertex 1 X-coordinate {m}
     152.838999999995,        !- Vertex 1 Y-coordinate {m}
@@ -4452,7 +4484,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     66.298,                  !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -4476,7 +4508,7 @@ BuildingSurface:Detailed,
     40A37B,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     64.396999999999,         !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -4500,7 +4532,7 @@ BuildingSurface:Detailed,
     5A873A,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     64.396999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999995,        !- Vertex 1 Y-coordinate {m}
@@ -4524,7 +4556,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     61.044,                  !- Vertex 1 X-coordinate {m}
     139.550999999995,        !- Vertex 1 Y-coordinate {m}
@@ -4572,7 +4604,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     62.529999999999,         !- Vertex 1 X-coordinate {m}
     148.432999999996,        !- Vertex 1 Y-coordinate {m}
@@ -4596,7 +4628,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     62.529999999999,         !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -4668,7 +4700,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     57.691000000002,         !- Vertex 1 X-coordinate {m}
     139.550999999995,        !- Vertex 1 Y-coordinate {m}
@@ -4692,7 +4724,7 @@ BuildingSurface:Detailed,
     B884B5,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     57.691000000002,         !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -4716,7 +4748,7 @@ BuildingSurface:Detailed,
     5843B0,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     59.592,                  !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -4764,7 +4796,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     61.043999999998,         !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -4872,7 +4904,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     2.254000000002,          !- Vertex 1 X-coordinate {m}
     150.713999999993,        !- Vertex 1 Y-coordinate {m}
@@ -4896,7 +4928,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     2.254000000002,          !- Vertex 1 X-coordinate {m}
     152.838999999993,        !- Vertex 1 Y-coordinate {m}
@@ -4920,7 +4952,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     5.254000000001,          !- Vertex 1 X-coordinate {m}
     152.838999999993,        !- Vertex 1 Y-coordinate {m}
@@ -4944,7 +4976,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     5.254000000001,          !- Vertex 1 X-coordinate {m}
     150.713999999993,        !- Vertex 1 Y-coordinate {m}
@@ -4968,7 +5000,7 @@ BuildingSurface:Detailed,
     E2D85B,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     3.353,                   !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -4992,7 +5024,7 @@ BuildingSurface:Detailed,
     120881,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     3.353,                   !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -5016,7 +5048,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     1e-12,                   !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -5064,7 +5096,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     1.486000000001,          !- Vertex 1 X-coordinate {m}
     148.432999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5088,7 +5120,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     1.486000000001,          !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5160,7 +5192,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -30.522,                 !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -5184,7 +5216,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -30.522,                 !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5208,7 +5240,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -29.070000000001,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5232,7 +5264,7 @@ BuildingSurface:Detailed,
     FC7A86,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -27.169000000004,        !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -5256,7 +5288,7 @@ BuildingSurface:Detailed,
     8E46FE,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -27.169000000004,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5400,7 +5432,7 @@ BuildingSurface:Detailed,
     C00851,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.187999999999,         !- Vertex 1 X-coordinate {m}
     133.777999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5424,7 +5456,7 @@ BuildingSurface:Detailed,
     9BB333,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     133.777999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5448,7 +5480,7 @@ BuildingSurface:Detailed,
     4EA790,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     132.559999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5472,7 +5504,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     33.874999999999,         !- Vertex 1 X-coordinate {m}
     128.387999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5496,7 +5528,7 @@ BuildingSurface:Detailed,
     F7E5F9,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     33.874999999999,         !- Vertex 1 X-coordinate {m}
     132.273999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5520,7 +5552,7 @@ BuildingSurface:Detailed,
     81998C,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     32.291999999999,         !- Vertex 1 X-coordinate {m}
     132.273999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5544,7 +5576,7 @@ BuildingSurface:Detailed,
     BE0F22,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     32.291999999999,         !- Vertex 1 X-coordinate {m}
     132.819999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5568,7 +5600,7 @@ BuildingSurface:Detailed,
     38316D,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     30.521999999999,         !- Vertex 1 X-coordinate {m}
     132.819999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5616,7 +5648,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     31.973999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -5640,7 +5672,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     31.973999999999,         !- Vertex 1 X-coordinate {m}
     141.675999999993,        !- Vertex 1 Y-coordinate {m}
@@ -5664,7 +5696,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.973999999999,         !- Vertex 1 X-coordinate {m}
     141.675999999993,        !- Vertex 1 Y-coordinate {m}
@@ -5688,7 +5720,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.973999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -5712,7 +5744,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     35.741999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -5736,7 +5768,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     35.741999999999,         !- Vertex 1 X-coordinate {m}
     136.659999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5760,7 +5792,7 @@ BuildingSurface:Detailed,
     248178,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.187999999999,         !- Vertex 1 X-coordinate {m}
     136.659999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5784,7 +5816,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     128.387999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5856,7 +5888,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -3.352999999997,         !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -5880,7 +5912,7 @@ BuildingSurface:Detailed,
     F3AEE5,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -3.352999999997,         !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -5904,7 +5936,7 @@ BuildingSurface:Detailed,
     7C3286,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -1.451999999999,         !- Vertex 1 X-coordinate {m}
     150.713999999993,        !- Vertex 1 Y-coordinate {m}
@@ -5952,7 +5984,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     0,                       !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6030,13 +6062,13 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     A7E34B,                  !- Name
     Roof,                    !- Surface Type
-    Exterior Roof,           !- Construction Name
+    Green Roof,              !- Construction Name
     Top_3R_AC_Mid2,          !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     6,                       !- Number of Vertices
     30.521999999999,         !- Vertex 1 X-coordinate {m}
     143.982999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6090,7 +6122,7 @@ BuildingSurface:Detailed,
     E313CC,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     32.291999999999,         !- Vertex 1 X-coordinate {m}
     143.982999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6114,7 +6146,7 @@ BuildingSurface:Detailed,
     24F025,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     32.291999999999,         !- Vertex 1 X-coordinate {m}
     143.436999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6138,7 +6170,7 @@ BuildingSurface:Detailed,
     FD96CD,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     33.874999999999,         !- Vertex 1 X-coordinate {m}
     143.436999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6162,7 +6194,7 @@ BuildingSurface:Detailed,
     F6CCEE,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     33.874999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6186,7 +6218,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     30.521999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6204,13 +6236,13 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     75DE40,                  !- Name
     Roof,                    !- Surface Type
-    Exterior Roof,           !- Construction Name
+    Green Roof,              !- Construction Name
     Top_3R_AC_Mid2,          !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     6,                       !- Number of Vertices
     34.187999999999,         !- Vertex 1 X-coordinate {m}
     147.822999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6264,7 +6296,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     143.722999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6288,7 +6320,7 @@ BuildingSurface:Detailed,
     BC749E,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     144.940999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6312,7 +6344,7 @@ BuildingSurface:Detailed,
     72EFCA,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.187999999999,         !- Vertex 1 X-coordinate {m}
     144.940999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6336,7 +6368,7 @@ BuildingSurface:Detailed,
     1B59AD,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.187999999999,         !- Vertex 1 X-coordinate {m}
     147.822999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6360,7 +6392,7 @@ BuildingSurface:Detailed,
     58768C,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     35.741999999999,         !- Vertex 1 X-coordinate {m}
     147.822999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6384,7 +6416,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     39.076999999999,         !- Vertex 1 X-coordinate {m}
     147.822999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6444,13 +6476,13 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     E1E523,                  !- Name
     Roof,                    !- Surface Type
-    Exterior Roof,           !- Construction Name
+    Green Roof,              !- Construction Name
     Top_3R_NV_Lft,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     10,                      !- Number of Vertices
     -62.945000000001,        !- Vertex 1 X-coordinate {m}
     152.838999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6492,7 +6524,7 @@ BuildingSurface:Detailed,
     D35429,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -61.043999999999,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6516,7 +6548,7 @@ BuildingSurface:Detailed,
     98B642,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -62.945000000001,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6540,7 +6572,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -62.945000000001,        !- Vertex 1 X-coordinate {m}
     152.838999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6564,7 +6596,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -59.945000000001,        !- Vertex 1 X-coordinate {m}
     152.838999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6588,7 +6620,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -59.945000000001,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6612,7 +6644,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -59.177000000001,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6636,7 +6668,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -59.177000000001,        !- Vertex 1 X-coordinate {m}
     148.432999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6660,7 +6692,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -57.691000000001,        !- Vertex 1 X-coordinate {m}
     148.432999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6708,7 +6740,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -61.043999999999,        !- Vertex 1 X-coordinate {m}
     139.551,                 !- Vertex 1 Y-coordinate {m}
@@ -6750,13 +6782,13 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     D1FFE3,                  !- Name
     Roof,                    !- Surface Type
-    Exterior Roof,           !- Construction Name
+    Green Roof,              !- Construction Name
     Top_3R_AC_Mid,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -3.352999999997,         !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6780,7 +6812,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -3.352999999997,         !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -6804,7 +6836,7 @@ BuildingSurface:Detailed,
     F3AEE5,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -3.352999999997,         !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6828,7 +6860,7 @@ BuildingSurface:Detailed,
     7C3286,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -1.451999999999,         !- Vertex 1 X-coordinate {m}
     150.713999999993,        !- Vertex 1 Y-coordinate {m}
@@ -6876,7 +6908,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     0,                       !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -6936,13 +6968,13 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     E8EDFB,                  !- Name
     Roof,                    !- Surface Type
-    Exterior Roof,           !- Construction Name
+    Green Roof,              !- Construction Name
     Top_3R_NV_Rht,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     10,                      !- Number of Vertices
     63.298,                  !- Vertex 1 X-coordinate {m}
     152.838999999995,        !- Vertex 1 Y-coordinate {m}
@@ -6984,7 +7016,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     63.298,                  !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -7008,7 +7040,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     63.298,                  !- Vertex 1 X-coordinate {m}
     152.838999999995,        !- Vertex 1 Y-coordinate {m}
@@ -7032,7 +7064,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     66.298,                  !- Vertex 1 X-coordinate {m}
     152.838999999995,        !- Vertex 1 Y-coordinate {m}
@@ -7056,7 +7088,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     66.298,                  !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -7080,7 +7112,7 @@ BuildingSurface:Detailed,
     40A37B,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     64.396999999999,         !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -7104,7 +7136,7 @@ BuildingSurface:Detailed,
     5A873A,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     64.396999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999995,        !- Vertex 1 Y-coordinate {m}
@@ -7128,7 +7160,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     61.044,                  !- Vertex 1 X-coordinate {m}
     139.550999999995,        !- Vertex 1 Y-coordinate {m}
@@ -7176,7 +7208,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     62.529999999999,         !- Vertex 1 X-coordinate {m}
     148.432999999996,        !- Vertex 1 Y-coordinate {m}
@@ -7200,7 +7232,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     62.529999999999,         !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -7242,13 +7274,13 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     B99D0E,                  !- Name
     Roof,                    !- Surface Type
-    Exterior Roof,           !- Construction Name
+    Green Roof,              !- Construction Name
     Top_3R_AC_Rht,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     57.691000000002,         !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -7272,7 +7304,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     57.691000000002,         !- Vertex 1 X-coordinate {m}
     139.550999999995,        !- Vertex 1 Y-coordinate {m}
@@ -7296,7 +7328,7 @@ BuildingSurface:Detailed,
     B884B5,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     57.691000000002,         !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -7320,7 +7352,7 @@ BuildingSurface:Detailed,
     5843B0,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     59.592,                  !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -7368,7 +7400,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     61.043999999998,         !- Vertex 1 X-coordinate {m}
     150.713999999995,        !- Vertex 1 Y-coordinate {m}
@@ -7410,13 +7442,13 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     52AE84,                  !- Name
     Roof,                    !- Surface Type
-    Exterior Roof,           !- Construction Name
+    Green Roof,              !- Construction Name
     Top_3R_AC_Lft,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -30.522,                 !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -7440,7 +7472,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -30.522,                 !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -7464,7 +7496,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -30.522,                 !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -7488,7 +7520,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -29.070000000001,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -7512,7 +7544,7 @@ BuildingSurface:Detailed,
     F5C112,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -27.169000000004,        !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -7536,7 +7568,7 @@ BuildingSurface:Detailed,
     C5E0DF,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     -27.169000000004,        !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -7596,13 +7628,13 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     D92264,                  !- Name
     Roof,                    !- Surface Type
-    Exterior Roof,           !- Construction Name
+    Green Roof,              !- Construction Name
     Top_3R_NV_Mid,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     10,                      !- Number of Vertices
     2.254000000002,          !- Vertex 1 X-coordinate {m}
     152.838999999994,        !- Vertex 1 Y-coordinate {m}
@@ -7644,7 +7676,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     2.254000000002,          !- Vertex 1 X-coordinate {m}
     150.713999999993,        !- Vertex 1 Y-coordinate {m}
@@ -7668,7 +7700,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     2.254000000002,          !- Vertex 1 X-coordinate {m}
     152.838999999994,        !- Vertex 1 Y-coordinate {m}
@@ -7692,7 +7724,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     5.254000000001,          !- Vertex 1 X-coordinate {m}
     152.838999999994,        !- Vertex 1 Y-coordinate {m}
@@ -7716,7 +7748,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     5.254000000001,          !- Vertex 1 X-coordinate {m}
     150.713999999993,        !- Vertex 1 Y-coordinate {m}
@@ -7740,7 +7772,7 @@ BuildingSurface:Detailed,
     E2D85B,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     3.353,                   !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -7764,7 +7796,7 @@ BuildingSurface:Detailed,
     120881,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     3.353,                   !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -7788,7 +7820,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     1e-12,                   !- Vertex 1 X-coordinate {m}
     139.550999999993,        !- Vertex 1 Y-coordinate {m}
@@ -7836,7 +7868,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     1.486000000001,          !- Vertex 1 X-coordinate {m}
     148.432999999994,        !- Vertex 1 Y-coordinate {m}
@@ -7860,7 +7892,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     1.486000000001,          !- Vertex 1 X-coordinate {m}
     150.713999999994,        !- Vertex 1 Y-coordinate {m}
@@ -7938,13 +7970,13 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     B7B826,                  !- Name
     Roof,                    !- Surface Type
-    Exterior Roof,           !- Construction Name
+    Green Roof,              !- Construction Name
     Top_3R_NV_Mid2,          !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     16,                      !- Number of Vertices
     31.973999999999,         !- Vertex 1 X-coordinate {m}
     141.675999999993,        !- Vertex 1 Y-coordinate {m}
@@ -8004,7 +8036,7 @@ BuildingSurface:Detailed,
     C00851,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.187999999999,         !- Vertex 1 X-coordinate {m}
     133.777999999994,        !- Vertex 1 Y-coordinate {m}
@@ -8028,7 +8060,7 @@ BuildingSurface:Detailed,
     9BB333,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     133.777999999994,        !- Vertex 1 Y-coordinate {m}
@@ -8052,7 +8084,7 @@ BuildingSurface:Detailed,
     4EA790,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     132.559999999994,        !- Vertex 1 Y-coordinate {m}
@@ -8076,7 +8108,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     33.874999999999,         !- Vertex 1 X-coordinate {m}
     128.387999999994,        !- Vertex 1 Y-coordinate {m}
@@ -8100,7 +8132,7 @@ BuildingSurface:Detailed,
     F7E5F9,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     33.874999999999,         !- Vertex 1 X-coordinate {m}
     132.273999999994,        !- Vertex 1 Y-coordinate {m}
@@ -8124,7 +8156,7 @@ BuildingSurface:Detailed,
     81998C,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     32.291999999999,         !- Vertex 1 X-coordinate {m}
     132.273999999994,        !- Vertex 1 Y-coordinate {m}
@@ -8148,7 +8180,7 @@ BuildingSurface:Detailed,
     BE0F22,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     32.291999999999,         !- Vertex 1 X-coordinate {m}
     132.819999999994,        !- Vertex 1 Y-coordinate {m}
@@ -8172,7 +8204,7 @@ BuildingSurface:Detailed,
     38316D,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     30.521999999999,         !- Vertex 1 X-coordinate {m}
     132.819999999994,        !- Vertex 1 Y-coordinate {m}
@@ -8220,7 +8252,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     31.973999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999994,        !- Vertex 1 Y-coordinate {m}
@@ -8244,7 +8276,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     31.973999999999,         !- Vertex 1 X-coordinate {m}
     141.675999999993,        !- Vertex 1 Y-coordinate {m}
@@ -8268,7 +8300,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.973999999999,         !- Vertex 1 X-coordinate {m}
     141.675999999993,        !- Vertex 1 Y-coordinate {m}
@@ -8292,7 +8324,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.973999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999994,        !- Vertex 1 Y-coordinate {m}
@@ -8316,7 +8348,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     35.741999999999,         !- Vertex 1 X-coordinate {m}
     139.550999999994,        !- Vertex 1 Y-coordinate {m}
@@ -8340,7 +8372,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     35.741999999999,         !- Vertex 1 X-coordinate {m}
     136.659999999994,        !- Vertex 1 Y-coordinate {m}
@@ -8364,7 +8396,7 @@ BuildingSurface:Detailed,
     248178,                  !- Outside Boundary Condition Object
     NoSun,                   !- Sun Exposure
     NoWind,                  !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     34.187999999999,         !- Vertex 1 X-coordinate {m}
     136.659999999994,        !- Vertex 1 Y-coordinate {m}
@@ -8388,7 +8420,7 @@ BuildingSurface:Detailed,
     ,                        !- Outside Boundary Condition Object
     SunExposed,              !- Sun Exposure
     WindExposed,             !- Wind Exposure
-    ,                        !- View Factor to Ground
+    autocalculate,           !- View Factor to Ground
     4,                       !- Number of Vertices
     37.342999999999,         !- Vertex 1 X-coordinate {m}
     128.387999999994,        !- Vertex 1 Y-coordinate {m}
@@ -10449,7 +10481,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_4BBE32,         !- Name
@@ -10458,7 +10490,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_3CC912,         !- Name
+    3CC912,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_5C02CA,         !- Name
@@ -10467,7 +10508,34 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_7807BB,         !- Name
+    7807BB,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_D0B56C,         !- Name
+    D0B56C,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_F0171B,         !- Name
+    F0171B,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_F6C20E,         !- Name
@@ -10476,7 +10544,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_C6D9BB,         !- Name
@@ -10485,7 +10553,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_9BDED2,         !- Name
@@ -10494,7 +10562,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_A8D3AE,         !- Name
@@ -10503,7 +10571,25 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_DC887A,         !- Name
+    DC887A,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_7B4B22,         !- Name
+    7B4B22,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_C55811,         !- Name
@@ -10512,7 +10598,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_8ECBCC,         !- Name
@@ -10521,7 +10607,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_D919F4,         !- Name
@@ -10530,7 +10616,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_3C0ECF,         !- Name
+    3C0ECF,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_4182D5,         !- Name
@@ -10539,7 +10634,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_C7CB71,         !- Name
+    C7CB71,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_656C49,         !- Name
@@ -10548,7 +10652,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_EF34E7,         !- Name
+    EF34E7,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_E012F6,         !- Name
@@ -10557,7 +10670,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_421611,         !- Name
@@ -10566,7 +10679,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_27260D,         !- Name
@@ -10575,7 +10688,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_69B3C6,         !- Name
+    69B3C6,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_F0F00C,         !- Name
@@ -10584,7 +10706,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_265AE9,         !- Name
+    265AE9,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_1B2AB0,         !- Name
@@ -10593,7 +10724,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_5D703E,         !- Name
@@ -10602,7 +10733,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_C85C4C,         !- Name
@@ -10611,7 +10742,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_8DAF8D,         !- Name
+    8DAF8D,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_3FB956,         !- Name
@@ -10620,7 +10760,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_96BCDA,         !- Name
@@ -10629,7 +10769,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_C2DD8D,         !- Name
@@ -10638,7 +10778,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_23DAAD,         !- Name
+    23DAAD,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_94BA8A,         !- Name
@@ -10647,7 +10796,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_7BA5DE,         !- Name
+    7BA5DE,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_8BFBF7,         !- Name
@@ -10656,7 +10814,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_A50407,         !- Name
@@ -10665,7 +10823,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_864E4C,         !- Name
@@ -10674,7 +10832,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_E26F8E,         !- Name
+    E26F8E,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_F7ED9D,         !- Name
@@ -10683,7 +10850,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_B1BC35,         !- Name
@@ -10692,7 +10859,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_A79403,         !- Name
@@ -10701,7 +10868,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_F8E398,         !- Name
@@ -10710,7 +10877,43 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_653A8A,         !- Name
+    653A8A,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_953913,         !- Name
+    953913,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_699E7C,         !- Name
+    699E7C,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_C5516B,         !- Name
+    C5516B,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_3134EF,         !- Name
@@ -10719,7 +10922,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_5877D0,         !- Name
+    5877D0,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_8C1A09,         !- Name
@@ -10728,7 +10940,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_87FB35,         !- Name
@@ -10737,7 +10949,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_8A7124,         !- Name
@@ -10746,7 +10958,34 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_AAA4E4,         !- Name
+    AAA4E4,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_BB81B1,         !- Name
+    BB81B1,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_6A1CD1,         !- Name
+    6A1CD1,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_19CB71,         !- Name
@@ -10755,7 +10994,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_18F863,         !- Name
@@ -10764,7 +11003,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_E42E53,         !- Name
@@ -10773,7 +11012,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_C2FD0D,         !- Name
+    C2FD0D,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_6C2720,         !- Name
@@ -10782,7 +11030,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_A2960A,         !- Name
+    A2960A,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_CDF435,         !- Name
@@ -10791,7 +11048,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_8580C7,         !- Name
+    8580C7,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_A6C9BD,         !- Name
@@ -10800,7 +11066,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_B4D7D4,         !- Name
@@ -10809,7 +11075,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_1FB167,         !- Name
@@ -10818,7 +11084,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_4B0C75,         !- Name
@@ -10827,7 +11093,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_EC5B03,         !- Name
@@ -10836,7 +11102,7 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 Shading:Overhang:Projection,
     Overhang_CDCD3D,         !- Name
@@ -10845,7 +11111,16 @@ Shading:Overhang:Projection,
     0,                       !- Tilt Angle from Window/Door {deg}
     0,                       !- Left extension from Window/Door Width {m}
     0,                       !- Right extension from Window/Door Width {m}
-    0;                       !- Depth as Fraction of Window/Door Height {dimensionless}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
+
+Shading:Overhang:Projection,
+    Overhang_210899,         !- Name
+    210899,                  !- Window or Door Name
+    0.1,                     !- Height above Window or Door {m}
+    0,                       !- Tilt Angle from Window/Door {deg}
+    0,                       !- Left extension from Window/Door Width {m}
+    0,                       !- Right extension from Window/Door Width {m}
+    0.5;                     !- Depth as Fraction of Window/Door Height {dimensionless}
 
 
 !-   ===========  ALL OBJECTS IN CLASS: PEOPLE ===========

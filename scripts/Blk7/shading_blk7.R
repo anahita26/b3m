@@ -1,3 +1,4 @@
+rm(list = ls())
 library(eplusr)
 library(here)
 source("R/setup_model.R")
@@ -13,11 +14,11 @@ epw <- load_weather(epw_path)
 geo <- model$geometry()
 az <- geo$azimuth() |> 
   filter(type == "Window")
-north <- az |> 
-  filter(azimuth == 0)
+south <- az |> 
+  filter(azimuth == 180) #change name and azimuth angle to desired: north = 0, south = 180
 
-# Create placeholder overhangs on north facade
-model <- create_overhangs(model, north, depth = 0)
+# Create placeholder overhangs on facade(s) of choice 
+model <- create_overhangs(model, az, depth = 0) #change facade here
 model$save(here("data", "idf", "model_preprocessed.idf"), overwrite = TRUE)
 param <- param_job(model, epw)
 
@@ -42,6 +43,19 @@ n_occ   <- c(95, 94, 96, 94, 94, 95, 120)
 n_flats <- c(99, 99, 99, 99, 99, 99, 120)
 
 E_total_blk7 <- compute_E_total_blk(
-  energies$e_light, energies$e_ac, energies$e_plug,
+  energies$e_light[2], energies$e_ac[2], energies$e_plug[2],
   ac_own, n_occ, n_flats, blk = 7
+)
+
+write.csv(
+  tibble(E_total_blk7 = E_total_blk7),
+  here("data", "results", "shading_total_blk7")
+)
+
+write.csv(
+  tibble(E_AC_blk7 = energies$e_ac),
+  here("data", "results", "shading_cooling_blk7")
+)
+check <- read.csv(
+  here("data", "results", "shading_cooling_blk7")
 )
