@@ -1,0 +1,43 @@
+case_id,scenario_type,facade,case,energy_ac
+1,Shading,North,1/4 Shade,6131.511
+2,Shading,North,3/4 Shade,6128.65
+3,Shading,North,Full Shade,6127.095
+4,Shading,North,Half Shade,6130.231
+5,Shading,South,1/4 Shade,6131.818
+6,Shading,South,3/4 Shade,6132.428
+7,Shading,South,Full Shade,6132.782
+8,Shading,South,Half Shade,6132.138
+9,Shading,Both,1/4 Shade,6131.716
+10,Shading,Both,3/4 Shade,6129.45
+11,Shading,Both,Full Shade,6128.249
+12,Shading,Both,Half Shade,6130.749
+13,Coating,North,Cool,6091.024
+14,Coating,North,Dark,6131.614
+15,Coating,North,Med-Cool,6099.475
+16,Coating,North,Med-Dark,6115.853
+17,Coating,North,Medium,6107.748
+18,Coating,South,Cool,6102.033
+19,Coating,South,Dark,6131.614
+20,Coating,South,Med-Cool,6108.013
+21,Coating,South,Med-Dark,6119.903
+22,Coating,South,Medium,6113.974
+23,Coating,Both,Cool,6061.494
+24,Coating,Both,Dark,6131.614
+25,Coating,Both,Med-Cool,6075.902
+26,Coating,Both,Med-Dark,6104.145
+27,Coating,Both,Medium,6090.122
+28,Combined,North,Shade0.5_Cool,6089.648
+29,Combined,North,Shade0.5_Dark,6130.231
+30,Combined,North,Shade0.5_Med-Cool,6098.097
+31,Combined,North,Shade0.5_Med-Dark,6114.472
+32,Combined,North,Shade0.5_Medium,6106.369
+33,Combined,South,Shade0.5_Cool,6102.555
+34,Combined,South,Shade0.5_Dark,6132.138
+35,Combined,South,Shade0.5_Med-Cool,6108.535
+36,Combined,South,Shade0.5_Med-Dark,6120.425
+37,Combined,South,Shade0.5_Medium,6114.496
+38,Combined,Both,Shade0.5_Cool,6060.637
+39,Combined,Both,Shade0.5_Dark,6130.749
+40,Combined,Both,Shade0.5_Med-Cool,6075.043
+41,Combined,Both,Shade0.5_Med-Dark,6103.281
+42,Combined,Both,Shade0.5_Medium,6089.261

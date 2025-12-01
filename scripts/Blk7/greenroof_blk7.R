@@ -19,7 +19,7 @@ az <- geo$azimuth() |>
   filter(type == "Window")
 
 # Create overhangs on facade(s) with depth 0.5
-model <- create_overhangs(model, az, depth = 0.5) 
+#model <- create_overhangs(model, az, depth = 0.5) 
 
 # Change coating to 0.2
 model$Material$`M15 150mm heavyweight concrete`$`Solar Absorptance` <- 0.2
@@ -57,8 +57,5 @@ results <- bind_rows(grass, shrubs)
 
 write.csv(
   results,
-  here("data", "results", "greenroof_cooling_blk7")
-)
-check <- read.csv(
-  here("data", "results", "greenroof_cooling_blk7")
+  here("data", "results", "greenroof_0.2coating_blk7")
 )
