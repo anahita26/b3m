@@ -7,7 +7,8 @@ library(dplyr)
 results <- read_csv(here("data", "results", "all_scenarios_blk7"))
 results_greenroof <- read_csv(here("data", "results", "greenroof_data_blk7"))
 
-baseline <- 6131.61
+baseline <- read_csv( here("data", "results", "blk7_baseline"))
+baseline <- baseline$e_ac
 
 results_pct <- results |> 
   mutate(pct_change = 100 * (results$energy_ac - baseline) / baseline)

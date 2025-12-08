@@ -1,31 +1,31 @@
 case_id,scenario_type,facade,case,energy_ac
-1,Shading,North,1/4 Shade,6337.912
-2,Shading,North,3/4 Shade,6337.027
-3,Shading,North,Full Shade,6336.661
-4,Shading,North,Half Shade,6337.427
-5,Shading,South,1/4 Shade,6338.131
-6,Shading,South,3/4 Shade,6337.086
-7,Shading,South,Full Shade,6336.528
-8,Shading,South,Half Shade,6337.682
-9,Shading,Both,1/4 Shade,6337.857
-10,Shading,Both,3/4 Shade,6335.923
-11,Shading,Both,Full Shade,6334.991
-12,Shading,Both,Half Shade,6336.923
-13,Coating,North,Cool,6330.15
-14,Coating,North,Dark,6338.185
-15,Coating,North,Med-Cool,6331.813
-16,Coating,North,Med-Dark,6335.052
-17,Coating,North,Medium,6333.447
-18,Coating,South,Cool,6301.924
-19,Coating,South,Dark,6338.185
-20,Coating,South,Med-Cool,6309.311
-21,Coating,South,Med-Dark,6323.895
-22,Coating,South,Medium,6316.635
-23,Coating,Both,Cool,6293.878
-24,Coating,Both,Dark,6338.185
-25,Coating,Both,Med-Cool,6302.932
-26,Coating,Both,Med-Dark,6320.76
-27,Coating,Both,Medium,6311.894
+1,Shading,North,1/4 Shade,6471.929
+2,Shading,North,3/4 Shade,6471.027
+3,Shading,North,Full Shade,6470.657
+4,Shading,North,Half Shade,6471.436
+5,Shading,South,1/4 Shade,6472.162
+6,Shading,South,3/4 Shade,6471.176
+7,Shading,South,Full Shade,6470.643
+8,Shading,South,Half Shade,6471.744
+9,Shading,Both,1/4 Shade,6471.886
+10,Shading,Both,3/4 Shade,6469.992
+11,Shading,Both,Full Shade,6469.08
+12,Shading,Both,Half Shade,6470.972
+13,Coating,North,Cool,6463.632
+14,Coating,North,Dark,6472.206
+15,Coating,North,Med-Cool,6465.424
+16,Coating,North,Med-Dark,6468.887
+17,Coating,North,Medium,6467.175
+18,Coating,South,Cool,6432.648
+19,Coating,South,Dark,6472.206
+20,Coating,South,Med-Cool,6440.684
+21,Coating,South,Med-Dark,6456.835
+22,Coating,South,Medium,6448.984
+23,Coating,Both,Cool,6424.063
+24,Coating,Both,Dark,6472.206
+25,Coating,Both,Med-Cool,6433.896
+26,Coating,Both,Med-Dark,6453.514
+27,Coating,Both,Medium,6443.947
 28,Combined,North,Shade0.5_Cool,6328.888
 29,Combined,North,Shade0.5_Dark,6336.923
 30,Combined,North,Shade0.5_Med-Cool,6330.551

@@ -3,7 +3,7 @@
  input file:eplusout.eso
  output file:Med-Dark.csv
  getting all vars from:eplusout.eso
-  number variables requested for output=           3
+  number variables requested for output=         229
  ReadVars Run Time=00hr 00min  0.02sec
  ReadVarsESO program completed successfully.
  ReadVarsESO
@@ -12,5 +12,5 @@
  output file:Med-DarkMeter.csv
  getting all vars from:eplusout.mtr
   number variables requested for output=           3
- ReadVars Run Time=00hr 00min  0.02sec
+ ReadVars Run Time=00hr 00min  0.00sec
  ReadVarsESO program completed successfully.

@@ -1,11 +1,12 @@
 rm(list = ls())
 library(eplusr)
 library(here)
+library(tidyverse)
 source("R/setup_model.R")
 source("R/postprocess_energy.R")
 
 idf_path <- here("data", "idf", "Blk2.idf")
-epw_path <- here("data", "epw", "SGP_Developed_Site(SurBlks).epw")
+epw_path <- here("data", "epw", "SGP_Developed_Site(Blk7).epw")
 
 model <- load_model(idf_path) |> set_ouput_meters()
 epw <- load_weather(epw_path)
@@ -18,3 +19,19 @@ report_weekday <- filter_weekdays(report)
 energies <- summarise_meters(report_weekday, cop = 3)
 
 baseline_blk2 <- energies$e_ac
+
+write_csv(baseline_blk2,
+          here("data", "results", "blk2_baseline"))
+
+# Get roof solar exposure
+roof_vec <- model$to_table(class = "BuildingSurface:Detailed") |> 
+  filter(value == "Roof") |> 
+  pull(name)
+
+roof_exposure <- report |> 
+  filter(name == "Surface Outside Face Incident Solar Radiation Rate per Area",
+         key_value %in% roof_vec) |> 
+  summarise(mean_solar = mean(value))
+
+write_csv(roof_exposure,
+          here("data", "results", "roof_solar_blk2"))

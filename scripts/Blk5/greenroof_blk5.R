@@ -9,7 +9,7 @@ source("R/measures_greenroof.R")
 source("R/postprocess_energy.R")
 
 idf_path <- here("data", "idf", "Blk5.idf")
-epw_path <- here("data", "epw", "SGP_Developed_Site(SurBlks).epw")
+epw_path <- here("data", "epw", "SGP_Developed_Site(Blk7).epw")
 
 model <- load_model(idf_path) |> set_ouput_meters()
 epw <- load_weather(epw_path)
@@ -22,7 +22,7 @@ az <- geo$azimuth() |>
 #model <- create_overhangs(model, az, depth = 0.5) 
 
 # Change coating to 0.2
-model$Material$`M15 150mm heavyweight concrete`$`Solar Absorptance` <- 0.2
+#model$Material$`M15 150mm heavyweight concrete`$`Solar Absorptance` <- 0.2
 
 # Add green roof with first set of metrics
 model <- create_roof_vegetation(model,
@@ -57,5 +57,5 @@ results <- bind_rows(grass, shrubs)
 
 write.csv(
   results,
-  here("data", "results", "greenroof_0.2coating_blk5")
+  here("data", "results", "greenroof_cooling_blk5")
 )

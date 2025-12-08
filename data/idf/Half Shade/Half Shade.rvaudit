@@ -3,8 +3,8 @@
  input file:eplusout.eso
  output file:Half Shade.csv
  getting all vars from:eplusout.eso
-  number variables requested for output=           3
- ReadVars Run Time=00hr 00min  0.02sec
+  number variables requested for output=         365
+ ReadVars Run Time=00hr 00min  0.03sec
  ReadVarsESO program completed successfully.
  ReadVarsESO
  processing:eplusmtr.inp

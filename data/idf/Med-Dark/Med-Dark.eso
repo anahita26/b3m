@@ -1,11 +1,237 @@
-Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.12.01 16:03
+Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.12.08 12:17
 1,5,Environment Title[],Latitude[deg],Longitude[deg],Time Zone[],Elevation[m]
 2,8,Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],Hour[],StartMinute[],EndMinute[],DayType
 3,5,Cumulative Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],DayType  ! When Daily Report Variables Requested
 4,2,Cumulative Days of Simulation[],Month[]  ! When Monthly Report Variables Requested
 5,1,Cumulative Days of Simulation[] ! When Run Period Report Variables Requested
 6,1,Calendar Year of Simulation[] ! When Annual Report Variables Requested
-1043,7,Cooling:EnergyTransfer [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+735,9,FB8D0E,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+736,9,BDBF90,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+737,9,D61763,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+738,9,500A08,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+739,9,5D0225,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+740,9,E7AD5B,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+741,9,2F4E56,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+742,9,476DED,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+743,9,5F1461,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+744,9,328801,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+745,9,4D1BF7,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+746,9,379398,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+747,9,A5FD0B,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+748,9,22017D,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+749,9,17224B,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+750,9,FF9093,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+751,9,677367,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+752,9,A9FB06,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+753,9,1D88C5,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+754,9,F52E84,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+755,9,C127F1,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+756,9,F559FB,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+757,9,6219BC,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+758,9,90AF14,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+759,9,C43240,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+760,9,B22655,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+761,9,999A8C,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+762,9,184CBE,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+763,9,8EACF0,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+764,9,E8F7AE,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+765,9,878591,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+766,9,E3D83D,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+767,9,B9503E,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+768,9,487A7A,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+769,9,740B46,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+770,9,8877FE,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+771,9,FB0386,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+772,9,304505,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+773,9,AD95CD,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+774,9,8AAD0C,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+775,9,7A57F8,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+776,9,B9856D,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+777,9,AA1293,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+778,9,52D9B6,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+779,9,3CA229,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+780,9,BBFA04,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+781,9,253C09,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+782,9,2A2747,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+783,9,414173,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+784,9,3A0439,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+785,9,A3181A,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+786,9,331365,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+787,9,CCAE33,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+788,9,A1CC73,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+789,9,5BEA2E,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+790,9,CE766C,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+791,9,3737B9,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+792,9,53EDC6,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+793,9,56A512,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+794,9,C47F78,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+795,9,F85590,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+796,9,C5F616,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+797,9,E3B14D,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+798,9,B39D0F,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+799,9,510402,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+800,9,E67E0A,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+801,9,7F89F3,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+802,9,247208,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+803,9,66F1DB,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+804,9,300191,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+805,9,EDFCDA,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+806,9,C21C53,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+807,9,CF9255,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+808,9,3463F1,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+809,9,452853,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+810,9,77EFE6,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+811,9,56D0A6,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+812,9,73E906,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+813,9,87B661,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+814,9,8B0418,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+815,9,1C8687,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+816,9,548844,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+817,9,36B370,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+818,9,EC5ADB,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+819,9,A71B75,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+820,9,27CF50,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+821,9,DB79D8,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+822,9,41E445,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+823,9,6987BB,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+824,9,5C1120,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+825,9,85D0D4,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+826,9,A4131E,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+827,9,99D41A,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+828,9,6EEDA7,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+829,9,A01467,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+830,9,691677,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+831,9,301B80,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+832,9,4BBE32,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+833,9,9529E4,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+834,9,EB2856,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+835,9,5CAEC0,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+836,9,AD982D,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+837,9,ECE390,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+838,9,6603F7,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+839,9,1955C0,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+840,9,95D1E0,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+841,9,3AAC09,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+842,9,3995BD,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+843,9,39BFA5,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+844,9,AEBE84,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+845,9,C317F2,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+846,9,44F682,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+847,9,6F7E7A,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+848,9,84FDA0,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+849,9,B7C7BE,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+850,9,7C6FBE,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+851,9,78F321,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+852,9,8FA002,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+853,9,4ECBB8,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+854,9,D1A16C,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+855,9,7CB2FD,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+856,9,D020FF,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+857,9,4F36FB,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+858,9,31ADC0,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+859,9,597B67,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+860,9,D9FA58,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+861,9,D6C4FE,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+862,9,FC0A3A,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+863,9,35802D,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+864,9,F89961,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+865,9,CC71D7,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+866,9,76E26E,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+867,9,3CC912,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+868,9,843BF2,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+869,9,F9E5BE,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+870,9,2B918C,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+871,9,5DFC19,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+872,9,44DE59,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+873,9,8B4AA2,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+874,9,2701E7,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+875,9,B6F494,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+876,9,FC792B,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+877,9,A43C01,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+878,9,A7BC2C,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+879,9,9B19D6,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+880,9,6C832B,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+881,9,909EB2,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+882,9,B9FAB8,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+883,9,584446,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+884,9,D13485,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+885,9,E5B936,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+886,9,59E82F,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+887,9,BA17F2,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+888,9,F9B930,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+889,9,72D250,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+890,9,E5EBD1,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+891,9,9365A7,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+892,9,FB793D,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+893,9,562C47,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+894,9,E027B2,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+895,9,765034,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+896,9,4EEB5E,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+897,9,44E75C,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+898,9,7A577E,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+899,9,E56E8F,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+900,9,82B7F9,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+901,9,6C1D12,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+902,9,2A1373,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+903,9,4C212F,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+904,9,1DFEF5,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+905,9,7D02C2,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+906,9,BC7910,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+907,9,1E6C14,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+908,9,370F56,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+909,9,946703,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+910,9,11F049,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+911,9,5B74C1,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+912,9,64A9EA,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+913,9,55F188,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+914,9,D30172,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+915,9,A03C9D,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+916,9,5C02CA,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+917,9,AA94FC,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+918,9,75250A,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+919,9,99FA8A,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+920,9,CE9631,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+921,9,E33917,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+922,9,DDCB5D,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+923,9,D2B9BD,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+924,9,589CE0,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+925,9,8CA917,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+926,9,FB8E71,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+927,9,2ED691,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+928,9,505C6F,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+929,9,A14D79,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+930,9,16CAD5,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+931,9,1C01B8,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+932,9,5FE007,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+933,9,277330,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+934,9,AE1BBD,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+935,9,253964,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+936,9,595A23,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+937,9,2DD4CC,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+938,9,7B5F9C,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+939,9,1ACF04,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+940,9,AB6A7E,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+941,9,DA9B49,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+942,9,3A7027,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+943,9,210DA1,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+944,9,29EF4F,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+945,9,D769F6,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+946,9,1F64B3,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+947,9,C0CE40,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+948,9,AE405A,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+949,9,1CC64C,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+950,9,3D5490,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+951,9,CC449B,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+952,9,84529B,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+953,9,B5A0F1,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+954,9,512080,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+955,9,9FE16B,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+956,9,AFA981,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+957,9,3A1818,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+958,9,1EA7B0,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+959,9,9A0068,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+960,9,815C4A,Surface Outside Face Incident Solar Radiation Rate per Area [W/m2] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+1269,7,Cooling:EnergyTransfer [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
 46,7,InteriorLights:Electricity [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
 458,7,InteriorEquipment:Electricity [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
 End of Data Dictionary
@@ -13,122 +239,349 @@ End of Data Dictionary
 3,1, 6, 1, 0,Monday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,3641983241.5554049,0.0, 7, 2,77775974.59713507,24,32
+1269,3739746481.361528,0.0, 7, 2,79680172.70670164,24,32
 3,2, 6, 2, 0,Tuesday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,3634884750.8699824,0.0, 7, 2,72414665.14006292,24,32
+1269,3696832544.3956887,0.0, 7, 2,77506202.21211837,24,32
 3,3, 6, 3, 0,Wednesday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,3682514418.2333366,0.0, 7, 2,78349668.51706343,24,32
+1269,3759219096.7683665,0.0, 7, 2,80062109.24334233,24,32
 3,4, 6, 4, 0,Thursday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,3735184845.195445,0.0, 7, 2,58731281.7493518,24,32
+1269,3795737405.7289764,0.0, 7, 2,64463794.99028614,24,32
 3,5, 6, 5, 0,Friday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,3466810630.6746985,0.0, 7, 2,74349285.94275892,24,32
+1269,3540573110.7981665,0.0, 7, 2,78474652.11402908,24,32
 3,6, 6, 6, 0,Saturday
 46,281160000.0,0.0, 1, 2,2059200.0, 7,52
 458,3042646200.0,1259280.0, 1, 2,31256280.0, 7,52
-1043,3299296033.7153189,0.0, 7, 2,70533385.78365769,24,32
+1269,3390931116.752554,0.0, 7, 2,74348336.62485916,24,32
 3,7, 6, 7, 0,Sunday
 46,281160000.0,0.0, 1, 2,2059200.0, 7,52
 458,3042646200.0,1259280.0, 1, 2,31256280.0, 7,52
-1043,2681992029.829385,0.0, 7, 2,64607877.60954919,24,32
+1269,2742414163.7997777,0.0, 7, 2,67441667.30380923,24,32
 3,8, 6, 8, 0,Monday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,2460063850.2560207,0.0, 7, 2,69203541.38752495,24,32
+1269,2515635040.991799,0.0, 7, 2,75639527.7504463,24,32
 3,9, 6, 9, 0,Tuesday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,2590340222.9721195,0.0, 7, 2,60378026.0150897,24,32
+1269,2676382936.6910688,0.0, 7, 2,63388504.02927926,24,32
 3,10, 6,10, 0,Wednesday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,2517791650.0220119,0.0, 7, 2,74040273.48656355,24,32
+1269,2595760668.526379,0.0, 7, 2,77914048.46976616,24,32
 3,11, 6,11, 0,Thursday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,3210002377.274448,0.0, 7, 2,57180922.69077149,24,32
+1269,3281424509.800859,0.0, 7, 2,60156142.498136069,24,32
 3,12, 6,12, 0,Friday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,2608324507.239463,0.0, 7, 2,35884899.33820947,24,32
+1269,2669123453.789245,0.0, 7, 2,40350387.19842565,24,32
 3,13, 6,13, 0,Saturday
 46,281160000.0,0.0, 1, 2,2059200.0, 7,52
 458,3042646200.0,1259280.0, 1, 2,31256280.0, 7,52
-1043,1799798572.0887502,0.0, 7, 2,69998554.49396603,24,32
+1269,1847414456.4363399,0.0, 7, 2,74881539.38039564,24,32
 3,14, 6,14, 0,Sunday
 46,281160000.0,0.0, 1, 2,2059200.0, 7,52
 458,3042646200.0,1259280.0, 1, 2,31256280.0, 7,52
-1043,2321731770.7014214,0.0, 7, 2,46394975.03758986,24,32
+1269,2383847970.7876355,0.0, 7, 2,48827581.46713229,24,32
 3,15, 6,15, 0,Monday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,1638146836.1650198,0.0, 7, 2,65345979.70702916,24,32
+1269,1684143471.2405954,0.0, 7, 2,69038339.87926126,24,32
 3,16, 6,16, 0,Tuesday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,2000534609.597161,0.0, 7, 2,63097006.05300865,24,32
+1269,2048452165.7303589,0.0, 7, 2,65489943.146896008,24,32
 3,17, 6,17, 0,Wednesday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,1995671295.9921845,0.0, 7, 2,61231930.08759959,24,32
+1269,2034302589.8641463,0.0, 7, 2,63988442.819185677,24,32
 3,18, 6,18, 0,Thursday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,2266564565.345236,0.0, 7, 2,70194649.90877693,24,32
+1269,2297862715.526313,0.0, 7, 2,71593673.12822379,24,32
 3,19, 6,19, 0,Friday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,3243536878.9204609,0.0, 7, 2,73377185.95878622,24,32
+1269,3274865419.7455618,0.0, 7, 2,75169269.38292858,24,32
 3,20, 6,20, 0,Saturday
 46,281160000.0,0.0, 1, 2,2059200.0, 7,52
 458,3042646200.0,1259280.0, 1, 2,31256280.0, 7,52
-1043,3156721915.9286329,0.0, 7, 2,80095289.89403431,24,32
+1269,3192704168.8562805,0.0, 7, 2,82228670.50694993,24,32
 3,21, 6,21, 0,Sunday
 46,281160000.0,0.0, 1, 2,2059200.0, 7,52
 458,3042646200.0,1259280.0, 1, 2,31256280.0, 7,52
-1043,3547301519.851715,0.0, 7, 2,79308098.246252,24,32
+1269,3594892475.0247299,0.0, 7, 2,80877599.55769834,24,32
 3,22, 6,22, 0,Monday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,3712820532.453551,0.0, 7, 2,84622831.31337017,24,32
+1269,3759930567.7003986,0.0, 7, 2,86997684.3565571,24,32
 3,23, 6,23, 0,Tuesday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,4016603671.3208568,0.0, 7, 2,79584116.51082427,24,32
+1269,4071125176.6245715,0.0, 7, 2,81388171.22684318,24,32
 3,24, 6,24, 0,Wednesday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,3865194019.7091968,0.0, 7, 2,75063020.80551061,24,32
+1269,3916830608.8306305,0.0, 7, 2,76581250.55159837,24,32
 3,25, 6,25, 0,Thursday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,3489168816.37279,0.0, 7, 2,76309717.00796478,24,32
+1269,3530748141.1027705,0.0, 7, 2,78241073.70017632,24,32
 3,26, 6,26, 0,Friday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,3453374293.7178418,0.0, 7, 2,74900561.65364275,24,32
+1269,3487965262.3003857,0.0, 7, 2,76435529.68294119,24,32
 3,27, 6,27, 0,Saturday
 46,281160000.0,0.0, 1, 2,2059200.0, 7,52
 458,3042646200.0,1259280.0, 1, 2,31256280.0, 7,52
-1043,3463286014.5316898,0.0, 7, 2,79392375.60588658,24,32
+1269,3500749667.8394739,0.0, 7, 2,81270199.06453555,24,32
 3,28, 6,28, 0,Sunday
 46,281160000.0,0.0, 1, 2,2059200.0, 7,52
 458,3042646200.0,1259280.0, 1, 2,31256280.0, 7,52
-1043,3793100792.855073,0.0, 7, 2,76071857.5863338,24,32
+1269,3840487088.833324,0.0, 7, 2,78585017.98011504,24,32
 3,29, 6,29, 0,Monday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,3685623408.399914,0.0, 7, 2,78588909.83307506,24,32
+1269,3746765830.496281,0.0, 7, 2,80252662.63675314,24,32
 3,30, 6,30, 0,Tuesday
 46,332640000.0,0.0, 1, 2,2059200.0, 7, 2
 458,2556338400.0,1259280.0, 1, 2,39857400.0, 8, 2
-1043,3931344307.0548985,0.0, 7, 2,77656277.4378474,24,32
+1269,3985404841.983403,0.0, 7, 2,79425279.24746067,24,32
+4,30, 6
+735,63.275649140843288,0.0, 1, 1, 2,479.9918551199922, 2,15,22
+736,63.10947259193683,0.0, 1, 1, 2,481.22499811483018, 2,15,30
+737,63.14385742863557,0.0, 1, 1, 2,481.3223011367757, 2,15,30
+738,40.28288870743882,0.0, 1, 1, 2,175.5796709071315, 9,13,30
+739,42.57504137827425,0.0, 1, 1, 2,186.58694435635855,13,14,30
+740,39.58577729210224,0.0, 1, 1, 2,271.73645007602809, 2,16,28
+741,50.56871440146152,0.0, 1, 1, 2,480.6581371271721, 2,15,30
+742,47.3852729155259,0.0, 1, 1, 2,480.19701336345517, 2,15,30
+743,42.921736710862628,0.0, 1, 1, 2,479.12278629960078, 2,15,22
+744,39.334735538917019,0.0, 1, 1, 2,480.76057296778887, 2,15,30
+745,29.434362976352607,0.0, 1, 1, 2,235.98905947007033, 2,15, 4
+746,50.05895895653066,0.0, 1, 1, 2,451.27201628526117, 2,14,26
+747,50.3600295679311,0.0, 1, 1, 2,457.57307793370486, 2,14,40
+748,49.458936928308798,0.0, 1, 1, 2,457.57307793370458, 2,14,40
+749,75.51774117841967,0.0, 1, 1, 2,841.6381503145328, 2,11,30
+750,57.07832751555161,0.0, 1, 1, 2,442.8252361800783, 2,14,16
+751,68.81633964703525,0.0, 1, 1, 2,827.464058142916, 2,11,30
+752,55.39312433103609,0.0, 1, 1, 2,442.9458068252242, 2,14,16
+753,35.719040334741219,0.0, 1, 1, 2,157.32889146668527,13,14,30
+754,53.66943068100928,0.0, 1, 1, 2,562.3588487659845, 2,11,30
+755,39.8448556112047,0.0, 1, 1, 2,173.55459620074013, 9,13,30
+756,42.68643606089671,0.0, 1, 1, 2,187.33692914200103,13,14,30
+757,42.25140047505599,0.0, 1, 1, 2,184.40797362178467,13,14,30
+758,31.07647989708585,0.0, 1, 1, 2,367.8784057885981, 2,15,38
+759,63.05312108483528,0.0, 1, 1, 2,479.4831826541279, 2,15,22
+760,82.12627093072844,0.0, 1, 1, 2,854.6230793585604, 2,11,30
+761,85.95717103610733,0.0, 1, 1, 2,510.6290779609517,28,17,30
+762,89.61932809953957,0.0, 1, 1, 2,515.039701593638,28,17,30
+763,80.10513920171903,0.0, 1, 1, 2,667.4012134562379,28,17,30
+764,112.32554612192044,0.0, 1, 1, 2,524.2111437223257,28,17,30
+765,116.94038918202294,0.0, 1, 1, 2,537.0380412430947,28,17,30
+766,116.93825902774977,0.0, 1, 1, 2,537.0380412426907,28,17,30
+767,96.1157086122986,0.0, 1, 1, 2,864.7045666963725, 2,11,30
+768,75.94864164796603,0.0, 1, 1, 2,469.13042307107937, 4,13,30
+769,78.28013657396019,0.0, 1, 1, 2,467.81832896841947, 4,13,30
+770,36.33841433186066,0.0, 1, 1, 2,161.50194405336323,13,14,30
+771,63.84989256837872,0.0, 1, 1, 2,630.6280276530653, 2,11,30
+772,39.45661543423187,0.0, 1, 1, 2,171.72571475098474, 9,13,30
+773,37.201024439219299,0.0, 1, 1, 2,160.65662201887575, 9,13,30
+774,36.74687315955375,0.0, 1, 1, 2,158.57323282618277, 9,13,30
+775,64.84199886871453,0.0, 1, 1, 2,638.669415026312,28,17,30
+776,114.56907473648606,0.0, 1, 1, 2,530.5409610751609,28,17,30
+777,181.88257918898828,0.0, 1, 1, 2,972.8691069286329, 4,13,30
+778,181.88257918898828,0.0, 1, 1, 2,972.8691069286329, 4,13,30
+779,113.58626117029097,0.0, 1, 1, 2,527.7870403941863,28,17,30
+780,116.75007005742899,0.0, 1, 1, 2,536.4047668778509,28,17,30
+781,116.74930056853494,0.0, 1, 1, 2,536.3988944621578,28,17,30
+782,44.082557086314597,0.0, 1, 1, 2,197.686107921398,13,14,30
+783,42.140706851750248,0.0, 1, 1, 2,184.3247743161214,13,14,30
+784,48.41029373602112,0.0, 1, 1, 2,325.76742263500815, 2,16,30
+785,75.10088042284819,0.0, 1, 1, 2,503.7879285446185, 2,15,30
+786,85.65250131992055,0.0, 1, 1, 2,505.3330577884894, 2,15,30
+787,181.88257918898828,0.0, 1, 1, 2,972.8691069286329, 4,13,30
+788,181.88257918898828,0.0, 1, 1, 2,972.8691069286329, 4,13,30
+789,86.75726627979873,0.0, 1, 1, 2,486.12532500227698, 2,15,30
+790,88.06494815555529,0.0, 1, 1, 2,486.7609395258905, 2,15,30
+791,88.14736336739003,0.0, 1, 1, 2,486.9385963476563, 2,15,30
+792,43.193333424280179,0.0, 1, 1, 2,193.118062221206,13,14,30
+793,40.955104161274579,0.0, 1, 1, 2,178.49941208489339, 9,13,30
+794,47.19289651813161,0.0, 1, 1, 2,323.4355572916646, 2,16,30
+795,63.50869315446763,0.0, 1, 1, 2,484.1943234824159, 2,15,30
+796,73.48180907258096,0.0, 1, 1, 2,485.4279791046102, 2,15,30
+797,65.59939110499173,0.0, 1, 1, 2,484.21835843369646, 2,15,30
+798,68.64692286733413,0.0, 1, 1, 2,484.7342420123735, 2,15,30
+799,56.3005726467158,0.0, 1, 1, 2,637.3690344841976,28,17,30
+800,83.88558231690517,0.0, 1, 1, 2,485.9397230963513, 2,15,30
+801,84.64083008259034,0.0, 1, 1, 2,486.0934431268527, 2,15,30
+802,84.76775498581361,0.0, 1, 1, 2,486.1001924480449, 2,15,30
+803,86.87684881653728,0.0, 1, 1, 2,846.963370204932, 2,11,30
+804,63.082661762749619,0.0, 1, 1, 2,446.2999202340789, 2,14,16
+805,74.84496467473993,0.0, 1, 1, 2,840.8355929312879, 2,11,30
+806,66.64924306494609,0.0, 1, 1, 2,447.9154067478426, 2,14,16
+807,36.23782717375244,0.0, 1, 1, 2,160.92777506418075,13,14,30
+808,62.21547845790168,0.0, 1, 1, 2,627.7269532183153, 2,11,30
+809,39.0392786362127,0.0, 1, 1, 2,169.9379867104965, 9,13,30
+810,36.460647336323457,0.0, 1, 1, 2,157.36685151121587, 9,13,30
+811,36.86288110766125,0.0, 1, 1, 2,159.19875076609837, 9,13,30
+812,55.929574365171777,0.0, 1, 1, 2,627.0562822969235,28,17,30
+813,87.16490865041894,0.0, 1, 1, 2,486.10575695399776, 2,15,30
+814,31.98387322523477,0.0, 1, 1, 2,138.89478995209886, 9,13,30
+815,33.22646087211147,0.0, 1, 1, 2,144.42950838590293, 9,13,30
+816,68.65523210162304,0.0, 1, 1, 2,628.7815823502587, 2,11,30
+817,69.03997212636569,0.0, 1, 1, 2,454.5377047337894, 4,13,30
+818,70.53602338345408,0.0, 1, 1, 2,463.60101921485968, 2,14,32
+819,33.43739950390702,0.0, 1, 1, 2,242.57748648630028, 2,15, 4
+820,87.20138556840296,0.0, 1, 1, 2,850.4920785301257, 2,11,30
+821,35.56530498995154,0.0, 1, 1, 2,154.89527295548954, 9,13,30
+822,37.12276064759146,0.0, 1, 1, 2,161.85699876913024, 9,13,30
+823,88.13632434981956,0.0, 1, 1, 2,852.2764304531196, 2,11,30
+824,59.85004457086446,0.0, 1, 1, 2,456.43574740413848, 2,14,26
+825,60.19155616755567,0.0, 1, 1, 2,463.57994789172519, 2,14,42
+826,60.21371582995004,0.0, 1, 1, 2,463.5799478914105, 2,14,42
+827,42.27554333270612,0.0, 1, 1, 2,478.9768702720248, 2,15,22
+828,41.20239969593183,0.0, 1, 1, 2,480.6486596933009, 2,15,30
+829,63.50838354768279,0.0, 1, 1, 2,454.12282531272049, 4,13,30
+830,33.412619633489558,0.0, 1, 1, 2,242.2932096275783, 2,15, 4
+831,39.055780226312609,0.0, 1, 1, 2,170.1481192479939, 9,13,30
+832,41.50607318108711,0.0, 1, 1, 2,181.55855896441455,13,14,30
+833,57.580135919534587,0.0, 1, 1, 2,453.13265688135399, 2,14,26
+834,57.84276065679439,0.0, 1, 1, 2,460.14020996106668, 2,14,42
+835,57.820600994363257,0.0, 1, 1, 2,460.1402099610642, 2,14,42
+836,37.09421217425619,0.0, 1, 1, 2,478.8741727188878, 2,15,22
+837,35.356072140001597,0.0, 1, 1, 2,376.504035864593, 2,15,38
+838,84.23725610570716,0.0, 1, 1, 2,844.9228916668349, 2,11,30
+839,60.78510084572647,0.0, 1, 1, 2,444.9709284668112, 4,13,30
+840,61.225530566504279,0.0, 1, 1, 2,449.59736070327485, 2,14,24
+841,39.46663809844372,0.0, 1, 1, 2,172.03717045964675, 9,13,30
+842,42.01156602426751,0.0, 1, 1, 2,184.96188067344878,13,14,30
+843,51.40498694884209,0.0, 1, 1, 2,481.2115646012224, 2,15,30
+844,48.50331749028563,0.0, 1, 1, 2,480.87491008859157, 2,15,30
+845,77.47113864466984,0.0, 1, 1, 2,493.16281618025627, 2,15,30
+846,75.23608006608906,0.0, 1, 1, 2,492.91171935931239, 2,15,30
+847,30.52909013445706,0.0, 1, 1, 2,132.46943029103444, 9,13,30
+848,32.0235689924638,0.0, 1, 1, 2,139.11153696784857, 9,13,30
+849,51.10115921358256,0.0, 1, 1, 2,431.44608704113019,28,17,30
+850,62.53649356907645,0.0, 1, 1, 2,847.552589284113, 2,11,30
+851,59.59089670502116,0.0, 1, 1, 2,443.6554431963617, 2,14,16
+852,53.913632999072557,0.0, 1, 1, 2,446.1446323476942, 2,14,20
+853,34.29718291307249,0.0, 1, 1, 2,149.29832785195499, 9,13,30
+854,35.86399099950861,0.0, 1, 1, 2,156.30947887472099, 9,13,30
+855,69.75629482242688,0.0, 1, 1, 2,644.8158541068978,28,17,30
+856,69.5537385536343,0.0, 1, 1, 2,492.66098071623056, 2,15,30
+857,70.9534975044082,0.0, 1, 1, 2,650.8466044886651,28,17,30
+858,75.52277288857002,0.0, 1, 1, 2,484.93011589170745,28,17,30
+859,74.86921342055318,0.0, 1, 1, 2,484.9852980687578,28,17,30
+860,76.81185094338577,0.0, 1, 1, 2,484.98529806928,28,17,30
+861,69.450965246898,0.0, 1, 1, 2,629.8105530364529, 2,11,30
+862,30.995393443924877,0.0, 1, 1, 2,134.39158193622178, 9,13,30
+863,31.650065675787464,0.0, 1, 1, 2,137.05634529553186, 9,13,30
+864,78.02301229998239,0.0, 1, 1, 2,457.6722629481736, 4,13,30
+865,77.27856368163488,0.0, 1, 1, 2,465.2422021093976, 2,14,28
+866,72.40938372367006,0.0, 1, 1, 2,485.8327785313557, 2,15,30
+867,72.33208604546434,0.0, 1, 1, 2,485.9210863875075, 2,15,30
+868,38.149646691417078,0.0, 1, 1, 2,166.0370614522128, 9,13,30
+869,39.5363015489747,0.0, 1, 1, 2,171.92272072909339, 9,13,30
+870,87.66661288251228,0.0, 1, 1, 2,849.4347744428918, 2,11,30
+871,69.81604194181954,0.0, 1, 1, 2,448.07743085325799, 2,14,16
+872,69.40627620372335,0.0, 1, 1, 2,453.6457279768103, 2,14,24
+873,37.89134615007838,0.0, 1, 1, 2,164.86955652452546, 9,13,30
+874,39.28543581724365,0.0, 1, 1, 2,170.74913340861384, 9,13,30
+875,61.235518756386728,0.0, 1, 1, 2,640.4177830172955,28,17,30
+876,60.89435661370774,0.0, 1, 1, 2,483.7639607944173, 2,15,30
+877,59.40156880965357,0.0, 1, 1, 2,644.2935997369423,28,17,30
+878,85.09537516764236,0.0, 1, 1, 2,487.94728405413056, 2,15,30
+879,85.0753832431937,0.0, 1, 1, 2,487.811605581843, 2,15,30
+880,85.0923648054248,0.0, 1, 1, 2,487.81160558124608, 2,15,30
+881,89.80255390340935,0.0, 1, 1, 2,853.8606212409943, 2,11,30
+882,67.86169569811173,0.0, 1, 1, 2,455.59370703582717, 4,13,30
+883,90.20602168424104,0.0, 1, 1, 2,854.9580532899887, 2,11,30
+884,34.57778310100303,0.0, 1, 1, 2,150.39116354620786, 9,13,30
+885,35.35133106661964,0.0, 1, 1, 2,153.5699869042345, 9,13,30
+886,66.47416023801444,0.0, 1, 1, 2,484.2887857431934, 2,15,30
+887,67.16791553309912,0.0, 1, 1, 2,484.51233575574346, 2,15,30
+888,58.25791868397989,0.0, 1, 1, 2,643.3507082442569,28,17,30
+889,86.70248429864455,0.0, 1, 1, 2,491.3560173768213, 2,15,30
+890,86.79269834077106,0.0, 1, 1, 2,491.2240283175591, 2,15,30
+891,86.81328737264961,0.0, 1, 1, 2,491.2275559258779, 2,15,30
+892,82.59796451260226,0.0, 1, 1, 2,496.3285102024218, 2,15,30
+893,80.41758718780324,0.0, 1, 1, 2,495.72301415688249, 2,15,30
+894,29.692996356270549,0.0, 1, 1, 2,128.65933160591849, 9,13,30
+895,30.23018536919945,0.0, 1, 1, 2,130.7795586092508, 9,13,30
+896,33.633307136192339,0.0, 1, 1, 2,374.504222446568,28,17,30
+897,85.2926193210546,0.0, 1, 1, 2,851.7868184425593, 2,11,30
+898,70.09776925824719,0.0, 1, 1, 2,447.53323031883539, 2,14,16
+899,66.51194289985414,0.0, 1, 1, 2,452.2257957695816, 2,14,24
+900,33.56231963143188,0.0, 1, 1, 2,145.95087847243949, 9,13,30
+901,33.61000220059374,0.0, 1, 1, 2,145.83499750329617, 9,13,30
+902,71.88612456632127,0.0, 1, 1, 2,647.9641951323348,28,17,30
+903,72.44522426163999,0.0, 1, 1, 2,494.06717078469429, 2,15,30
+904,74.00154621281289,0.0, 1, 1, 2,653.1708121873915,28,17,30
+905,94.70203026491231,0.0, 1, 1, 2,491.7241908409323, 2,15,30
+906,94.76395802536578,0.0, 1, 1, 2,491.7849668573395, 2,15,30
+907,94.7581419339537,0.0, 1, 1, 2,491.7817214528407, 2,15,30
+908,87.14698138359607,0.0, 1, 1, 2,793.3547062907659, 2,11,30
+909,34.75020861414054,0.0, 1, 1, 2,151.3968859284701, 9,13,30
+910,35.7985852073248,0.0, 1, 1, 2,156.03375773603629, 9,13,30
+911,86.6112330011729,0.0, 1, 1, 2,474.33119511938187, 4,13,30
+912,87.97863135569877,0.0, 1, 1, 2,485.29582684829,22,14,38
+913,181.88257918898828,0.0, 1, 1, 2,972.8691069286329, 4,13,30
+914,98.44887504916959,0.0, 1, 1, 2,870.1190045489396, 2,11,30
+915,84.65289828550977,0.0, 1, 1, 2,471.46525429480905, 4,13,30
+916,81.97445403081373,0.0, 1, 1, 2,480.1330241200251,22,14,28
+917,39.32708621662785,0.0, 1, 1, 2,171.09261927482644, 9,13,30
+918,40.972247052932598,0.0, 1, 1, 2,178.07481614793984, 9,13,30
+919,79.95053074680975,0.0, 1, 1, 2,666.4093411125425,28,17,30
+920,79.83047397617301,0.0, 1, 1, 2,507.79497062964625,28,17,30
+921,81.55727509352603,0.0, 1, 1, 2,670.2108479249004,28,17,30
+922,112.75996313194021,0.0, 1, 1, 2,525.3677750648383,28,17,30
+923,116.3337115090948,0.0, 1, 1, 2,535.4291205519639,28,17,30
+924,116.2647008893192,0.0, 1, 1, 2,535.2397841857909,28,17,30
+925,181.88257918898828,0.0, 1, 1, 2,972.8691069286329, 4,13,30
+926,90.76356730798377,0.0, 1, 1, 2,514.5970287000612,28,17,30
+927,90.77635711053138,0.0, 1, 1, 2,514.8227163007185,28,17,30
+928,31.892242438892195,0.0, 1, 1, 2,138.60649751251945, 9,13,30
+929,33.395008690985367,0.0, 1, 1, 2,145.1918213848216, 9,13,30
+930,59.66011747404247,0.0, 1, 1, 2,458.0226570000596,28,17,30
+931,181.88257918898828,0.0, 1, 1, 2,972.8691069286329, 4,13,30
+932,90.18879930111946,0.0, 1, 1, 2,514.0387918904911,28,17,30
+933,90.96197007430203,0.0, 1, 1, 2,514.9929859268902,28,17,30
+934,39.403223173412708,0.0, 1, 1, 2,171.45809454665426, 9,13,30
+935,40.57268858225064,0.0, 1, 1, 2,176.2105628730254, 9,13,30
+936,181.88257918898828,0.0, 1, 1, 2,972.8691069286329, 4,13,30
+937,100.1312132918634,0.0, 1, 1, 2,872.9897590083818, 2,11,30
+938,76.04714308030704,0.0, 1, 1, 2,469.3811898016771, 4,13,30
+939,98.68738636841049,0.0, 1, 1, 2,870.3580337390882, 2,11,30
+940,37.2743936664476,0.0, 1, 1, 2,162.494919657135, 9,13,30
+941,38.09367167412806,0.0, 1, 1, 2,165.63941389010453, 9,13,30
+942,86.37473263470007,0.0, 1, 1, 2,510.3964860195508,28,17,30
+943,88.63658858047921,0.0, 1, 1, 2,514.7423525859091,28,17,30
+944,79.94126491787242,0.0, 1, 1, 2,666.9377243276775,28,17,30
+945,112.74947778591897,0.0, 1, 1, 2,525.3390076471843,28,17,30
+946,116.34916164785754,0.0, 1, 1, 2,535.471509291235,28,17,30
+947,116.28015102810199,0.0, 1, 1, 2,535.2821729246067,28,17,30
+948,181.88257918898828,0.0, 1, 1, 2,972.8691069286329, 4,13,30
+949,98.50195476549126,0.0, 1, 1, 2,870.5231083948166, 2,11,30
+950,84.0646311288198,0.0, 1, 1, 2,471.58641818640469, 4,13,30
+951,83.12322709216629,0.0, 1, 1, 2,482.08976195818476,22,14,30
+952,36.4530444075444,0.0, 1, 1, 2,158.9804033291282, 9,13,30
+953,37.04371194355293,0.0, 1, 1, 2,161.03908425093628, 9,13,30
+954,80.51221505278046,0.0, 1, 1, 2,667.2086671074776,28,17,30
+955,80.0986427571978,0.0, 1, 1, 2,508.0253230119867,28,17,30
+956,82.05681418853327,0.0, 1, 1, 2,670.7010534931808,28,17,30
+957,113.43376131750405,0.0, 1, 1, 2,526.7428576192317,28,17,30
+958,115.78429268900011,0.0, 1, 1, 2,533.4029388377984,28,17,30
+959,115.71696700324404,0.0, 1, 1, 2,533.2136024716298,28,17,30
+960,181.88257918898828,0.0, 1, 1, 2,972.8691069286329, 4,13,30
 End of Data
- Number of Records Written=          90
+ Number of Records Written=         316

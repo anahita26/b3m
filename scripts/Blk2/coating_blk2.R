@@ -7,7 +7,7 @@ source("R/measures_coating.R")
 source("R/postprocess_energy.R")
 
 idf_path <- here("data", "idf", "Blk2.idf")
-epw_path <- here("data", "epw", "SGP_Developed_Site(SurBlks).epw")
+epw_path <- here("data", "epw", "SGP_Developed_Site(Blk7).epw")
 
 model <- load_model(idf_path) |> set_ouput_meters()
 epw <- load_weather(epw_path)
@@ -29,7 +29,7 @@ both_exterior <- c(north_exterior, south_exterior)
 
 # Apply facade specific coating once to have baseline absorptance
 model <- apply_facade_coating(model,
-                              facade_walls = both_exterior, #change facade here
+                              facade_walls = north_exterior, #change facade here
                               absorptance = 0.7) 
 
 model$save(here("data", "idf", "model_preprocessed.idf"), overwrite = TRUE)
@@ -52,7 +52,7 @@ energies <- summarise_meters(report_weekday, cop = 3)
 
 write.csv(
   tibble(E_AC_blk2 = energies$e_ac),
-  here("data", "results", "shading0.5_coating_both_blk2") # update csv name
+  here("data", "results", "shading0.5_coating_north_blk2") # update csv name
 )
 #check <- read.csv(
 #here("data", "results", "coating_cooling_blk7")

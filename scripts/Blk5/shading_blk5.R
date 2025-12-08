@@ -6,7 +6,7 @@ source("R/measures_overhang.R")
 source("R/postprocess_energy.R")
 
 idf_path <- here("data", "idf", "Blk5.idf")
-epw_path <- here("data", "epw", "SGP_Developed_Site(SurBlks).epw")
+epw_path <- here("data", "epw", "SGP_Developed_Site(Blk7).epw")
 
 model <- load_model(idf_path) |> set_ouput_meters()
 epw <- load_weather(epw_path)
@@ -20,7 +20,7 @@ south_windows <- az |>
   filter(azimuth >= 135 & azimuth < 225)
 
 # Create placeholder overhangs on facade(s) of choice 
-model <- create_overhangs(model, az, depth = 0) #change facade here
+model <- create_overhangs(model, south_windows, depth = 0) #change facade here
 model$save(here("data", "idf", "model_preprocessed.idf"), overwrite = TRUE)
 param <- param_job(model, epw)
 
@@ -56,7 +56,7 @@ energies <- summarise_meters(report_weekday, cop = 3)
 
 write.csv(
   tibble(E_AC_blk5 = energies$e_ac),
-  here("data", "results", "shading_both_blk5")
+  here("data", "results", "shading_south_blk5")
 )
 #check <- read.csv(
 #here("data", "results", "shading_cooling_blk7")

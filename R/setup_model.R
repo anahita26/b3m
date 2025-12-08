@@ -31,7 +31,12 @@ set_ouput_meters <- function(model) {
   
   # Add desired meters
   output_list <- list(
-    Output_Meter = list(
+    Output_Variable = list(
+      key_value = "*",
+      Variable_Name = "Surface Outside Face Incident Solar Radiation Rate per Area",
+      Reporting_Frequency = "Monthly"
+    ),
+     Output_Meter = list(
       key_name = "Cooling:EnergyTransfer",
       Reporting_Frequency = "Daily"
     ),
