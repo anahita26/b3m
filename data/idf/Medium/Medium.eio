@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.12.08 12:17
+Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.12.09 17:43
 ! <Version>, Version ID
  Version, 9.3
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -255,29 +255,6 @@ Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.
  CTF,   2,       308.50121    ,      0.26552672E-03,       308.50121    ,      -6.8243751    
  CTF,   1,      -173.65341    ,      0.17060211E-04,      -173.65341    ,       4.0336338    
  CTF,   0,       40.919919    ,      0.63852298E-07,       40.919919    
- Construction CTF,EXTERIOR ROOF,   5,   4,  17,   0.033,      3.037    ,   0.900,   0.900,   0.700,   0.700,MediumRough
- Material CTF Summary,FERROCEMENT,  0.0300,         0.836,   1280.000,      900.000,  0.3589E-01
- Material:Air,F05 CEILING AIR SPACE RESISTANCE,  0.1800    
- Material CTF Summary,ROOF CONCRETE,  0.1500,         1.442,   2240.000,      900.000,  0.1040    
- Material CTF Summary,CEMENT PLASTER,  0.0050,         0.533,   1280.000,      840.000,  0.9381E-02
- CTF,  17,     -0.78368024E-12,      0.42857764E-22,     -0.45761948E-10,      0.20260497E-16
- CTF,  16,      0.16508074E-07,     -0.19089599E-18,      0.12914871E-06,     -0.35516335E-11
- CTF,  15,     -0.10967419E-04,     -0.19750812E-15,     -0.19306860E-04,      0.10029644E-07
- CTF,  14,      0.71794155E-03,     -0.30094747E-13,      0.96521361E-03,     -0.13190618E-05
- CTF,  13,     -0.20208420E-01,      0.13890912E-12,     -0.24336665E-01,      0.51105832E-04
- CTF,  12,      0.32561486    ,      0.32356902E-11,      0.37078522    ,     -0.10206122E-02
- CTF,  11,      -3.3954331    ,      0.32741715E-09,      -3.7494079    ,      0.12612273E-01
- CTF,  10,       24.455615    ,      0.54809773E-08,       26.554044    ,     -0.10509418    
- CTF,   9,      -126.32741    ,      0.54529243E-07,      -136.00697    ,      0.61856918    
- CTF,   8,       478.31963    ,      0.22601443E-06,       513.28925    ,      -2.6393540    
- CTF,   7,      -1342.2728    ,      0.53436297E-06,      -1440.4774    ,       8.2725553    
- CTF,   6,       2798.3775    ,      0.49249115E-06,       3009.6957    ,      -19.116093    
- CTF,   5,      -4308.1309    ,      0.36593061E-06,      -4650.2920    ,       32.399032    
- CTF,   4,       4819.4904    ,     -0.53553522E-07,       5226.7024    ,      -39.661856    
- CTF,   3,      -3799.9708    ,      0.10068509E-06,      -4144.0800    ,       34.037625    
- CTF,   2,       1997.4720    ,     -0.54559712E-07,       2192.3608    ,      -19.383328    
- CTF,   1,      -627.16597    ,      0.18466759E-07,      -693.35881    ,       6.5663025    
- CTF,   0,       88.841991    ,     -0.28044965E-08,       99.015114    
  Construction CTF,EXTERIOR WALL,   6,   3,  12,   0.067,     0.3114    ,   0.900,   0.900,   0.700,   0.700,MediumRough
  Material CTF Summary,M15 150MM HEAVYWEIGHT CONCRETE,  0.1500,         1.950,   2240.000,      900.000,  0.7692E-01
  Material CTF Summary,POLYETHYLENE,  0.0750,         0.024,     24.000,      303.000,   3.125    
@@ -306,23 +283,29 @@ Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.
  CTF,   2,       864.61507    ,      0.34202847E-03,       864.61507    ,      -7.6695530    
  CTF,   1,      -460.08899    ,      0.20744555E-04,      -460.08899    ,       4.2609087    
  CTF,   0,       103.24247    ,      0.73224326E-07,       103.24247    
- Construction CTF,COOL WALL,   8,   3,  12,   0.067,     0.3114    ,   0.900,   0.900,   0.400,   0.700,MediumRough
- Material CTF Summary,COOL CONCRETE,  0.1500,         1.950,   2240.000,      900.000,  0.7692E-01
- Material CTF Summary,POLYETHYLENE,  0.0750,         0.024,     24.000,      303.000,   3.125    
+ Construction CTF,COOL FACADE,   8,   4,  17,   0.033,      3.037    ,   0.900,   0.900,   0.400,   0.700,MediumRough
+ Material CTF Summary,COOL CONCRETE,  0.0300,         0.836,   1280.000,      900.000,  0.3589E-01
+ Material:Air,F05 CEILING AIR SPACE RESISTANCE,  0.1800    
+ Material CTF Summary,ROOF CONCRETE,  0.1500,         1.442,   2240.000,      900.000,  0.1040    
  Material CTF Summary,CEMENT PLASTER,  0.0050,         0.533,   1280.000,      840.000,  0.9381E-02
- CTF,  12,      0.81283440E-11,     -0.47281497E-14,      0.19090310E-07,     -0.48103965E-13
- CTF,  11,     -0.14617254E-06,      0.23351299E-13,     -0.46555466E-05,      0.86506521E-09
- CTF,  10,      0.34748618E-04,      0.37871350E-11,      0.32153682E-03,     -0.20744173E-06
- CTF,   9,     -0.23148778E-02,      0.10730957E-08,     -0.10339769E-01,      0.14118271E-04
- CTF,   8,      0.70847273E-01,      0.78611235E-07,      0.18195949    ,     -0.44524377E-03
- CTF,   7,      -1.1653471    ,      0.18824949E-05,      -1.8892333    ,      0.76166393E-02
- CTF,   6,       11.047082    ,      0.16539793E-04,       12.077386    ,     -0.75835209E-01
- CTF,   5,      -62.621483    ,      0.55717624E-04,      -48.689246    ,      0.45583523    
- CTF,   4,       215.71710    ,      0.70691802E-04,       124.67232    ,      -1.6796808    
- CTF,   3,      -448.90655    ,      0.30771898E-04,      -200.43948    ,       3.7677060    
- CTF,   2,       544.86095    ,      0.36172397E-05,       194.60750    ,      -4.9565658    
- CTF,   1,      -352.15147    ,      0.76626675E-07,      -103.76662    ,       3.4807792    
- CTF,   0,       93.151331    ,      0.36262966E-08,       23.255626    
+ CTF,  17,     -0.78368024E-12,      0.42857764E-22,     -0.45761948E-10,      0.20260497E-16
+ CTF,  16,      0.16508074E-07,     -0.19089599E-18,      0.12914871E-06,     -0.35516335E-11
+ CTF,  15,     -0.10967419E-04,     -0.19750812E-15,     -0.19306860E-04,      0.10029644E-07
+ CTF,  14,      0.71794155E-03,     -0.30094747E-13,      0.96521361E-03,     -0.13190618E-05
+ CTF,  13,     -0.20208420E-01,      0.13890912E-12,     -0.24336665E-01,      0.51105832E-04
+ CTF,  12,      0.32561486    ,      0.32356902E-11,      0.37078522    ,     -0.10206122E-02
+ CTF,  11,      -3.3954331    ,      0.32741715E-09,      -3.7494079    ,      0.12612273E-01
+ CTF,  10,       24.455615    ,      0.54809773E-08,       26.554044    ,     -0.10509418    
+ CTF,   9,      -126.32741    ,      0.54529243E-07,      -136.00697    ,      0.61856918    
+ CTF,   8,       478.31963    ,      0.22601443E-06,       513.28925    ,      -2.6393540    
+ CTF,   7,      -1342.2728    ,      0.53436297E-06,      -1440.4774    ,       8.2725553    
+ CTF,   6,       2798.3775    ,      0.49249115E-06,       3009.6957    ,      -19.116093    
+ CTF,   5,      -4308.1309    ,      0.36593061E-06,      -4650.2920    ,       32.399032    
+ CTF,   4,       4819.4904    ,     -0.53553522E-07,       5226.7024    ,      -39.661856    
+ CTF,   3,      -3799.9708    ,      0.10068509E-06,      -4144.0800    ,       34.037625    
+ CTF,   2,       1997.4720    ,     -0.54559712E-07,       2192.3608    ,      -19.383328    
+ CTF,   1,      -627.16597    ,      0.18466759E-07,      -693.35881    ,       6.5663025    
+ CTF,   0,       88.841991    ,     -0.28044965E-08,       99.015114    
 ! <WindowConstruction>,Construction Name,Index,#Layers,Roughness,Conductance {W/m2-K},SHGC,Solar Transmittance at Normal Incidence,Visible Transmittance at Normal Incidence
 ! <WindowMaterial:Glazing>, Material Name, Optical Data Type, Spectral Data Set Name, Thickness {m}, Solar Transmittance,Front Solar Reflectance, Back Solar Reflectance, Visible Transmittance, Front Visible Reflectance,Back Visible Reflectance,Infrared Transmittance, Front Thermal Emissivity, Back Thermal Emissivity,Conductivity {W/m-K},Dirt Factor,Solar Diffusing
  WindowConstruction,EXTERIOR WINDOW,1,1,VerySmooth,5.778,0.862,0.837,0.898
@@ -851,16 +834,16 @@ HeatTransfer Surface,3C8DB6,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL
 HeatTransfer Surface,22F258,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,2.19,2.19,2.19,261.60,90.00,0.61,3.60,0.00,9B8728,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,86D15C,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,3.20,3.20,3.20,351.60,90.00,0.89,3.60,0.00,993BB2,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,184EEE,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,7.54,7.54,7.54,261.60,90.00,2.10,3.60,0.00,E44A8B,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,FB8D0E,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,5.05,7.77,5.05,351.60,90.00,2.16,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.94,6.07E-002,4
+HeatTransfer Surface,FB8D0E,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.05,7.77,5.05,351.60,90.00,2.16,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.94,6.07E-002,4
 HeatTransfer Surface,BDBF90,Window,FB8D0E,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,0.91,0.91,0.91,351.60,90.00,0.60,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.94,5.91E-002,4
 HeatTransfer Surface,D61763,Window,FB8D0E,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.94,5.98E-002,4
 HeatTransfer Surface,BBB520,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,10.97,10.97,10.97,351.60,90.00,3.05,3.60,0.00,C02BC7,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,E6790B,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,14.93,14.93,14.93,81.60,90.00,4.15,3.60,0.00,E6790B,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,500A08,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,9.15,10.97,9.15,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.66,0.34,4
+HeatTransfer Surface,500A08,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,9.15,10.97,9.15,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.66,0.34,4
 HeatTransfer Surface,5D0225,Window,500A08,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,171.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.63,0.37,4
 HeatTransfer Surface,E7AD5B,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.48,6.48,6.48,261.60,90.00,1.80,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.79,0.21,4
 HeatTransfer Surface,7F973B,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,8.45,8.45,8.45,261.60,90.00,2.35,3.60,0.00,1F98F7,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,2F4E56,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,3.53,5.35,3.53,351.58,90.00,1.49,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,4.46E-002,4
+HeatTransfer Surface,2F4E56,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,3.53,5.35,3.53,351.58,90.00,1.49,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,4.46E-002,4
 HeatTransfer Surface,476DED,Window,2F4E56,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.58,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,3.84E-002,4
 HeatTransfer Surface,11A61F,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,5.62,5.62,5.62,351.58,90.00,1.56,3.60,0.00,1B0F1F,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
 HeatTransfer Surface,8A0498,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,23.16,23.16,23.16,81.60,90.00,6.43,3.60,0.00,8A0498,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
@@ -870,16 +853,16 @@ HeatTransfer Surface,F581E9,Roof,,CTF - ConductionTransferFunction,INTERIOR CEIL
 HeatTransfer Surface,AA4BEC,Roof,,CTF - ConductionTransferFunction,INTERIOR CEILING,13.000,3.768,,12.64,12.64,12.64,171.60,0.00,3.05,4.15,0.00,AA4BEC,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
 Zone Surfaces,GND_5R_NV,33
 HeatTransfer Surface,3CAD39,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,42.48,42.48,42.48,261.60,90.00,11.80,3.60,0.00,3CAD39,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,5F1461,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,2.87,3.99,2.87,351.60,90.00,1.11,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,4.39E-002,4
+HeatTransfer Surface,5F1461,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.87,3.99,2.87,351.60,90.00,1.11,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,4.39E-002,4
 HeatTransfer Surface,328801,Window,5F1461,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.13,1.13,1.13,351.60,90.00,1.00,1.13,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,4.07E-002,4
 HeatTransfer Surface,4D1BF7,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.65,7.65,7.65,261.60,90.00,2.12,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.84,0.16,4
-HeatTransfer Surface,379398,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,7.40,10.80,7.40,351.60,90.00,3.00,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.95,4.88E-002,4
+HeatTransfer Surface,379398,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.40,10.80,7.40,351.60,90.00,3.00,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.95,4.88E-002,4
 HeatTransfer Surface,A5FD0B,Window,379398,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.95,4.95E-002,4
 HeatTransfer Surface,22017D,Window,379398,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.95,4.95E-002,4
 HeatTransfer Surface,17224B,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.65,7.65,7.65,81.60,90.00,2.12,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.82,0.18,4
-HeatTransfer Surface,FF9093,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.80,1.80,1.80,351.60,90.00,0.50,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,3.93E-002,4
+HeatTransfer Surface,FF9093,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.80,1.80,1.80,351.60,90.00,0.50,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,3.93E-002,4
 HeatTransfer Surface,677367,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,9.74,9.74,9.74,81.60,90.00,2.71,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.87,0.13,4
-HeatTransfer Surface,A9FB06,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,5.35,5.35,5.35,351.60,90.00,1.49,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,4.24E-002,4
+HeatTransfer Surface,A9FB06,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.35,5.35,5.35,351.60,90.00,1.49,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,4.24E-002,4
 HeatTransfer Surface,2BBF6A,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,14.93,14.93,14.93,81.60,90.00,4.15,3.60,0.00,3C8DB6,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,1596C2,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,8.09,8.09,8.09,351.60,90.00,2.25,3.60,0.00,F50B24,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,4F6FA7,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,1.51,1.51,1.51,261.60,90.00,0.42,3.60,0.00,11F539,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
@@ -887,13 +870,13 @@ HeatTransfer Surface,34A94F,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL
 HeatTransfer Surface,1D28C2,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,4.39,4.39,4.39,81.60,90.00,1.22,3.60,0.00,1D28C2,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
 HeatTransfer Surface,C02BC7,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,10.97,10.97,10.97,171.60,90.00,3.05,3.60,0.00,BBB520,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,1F98F7,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,8.45,8.45,8.45,81.60,90.00,2.35,3.60,0.00,7F973B,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,1D88C5,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,10.97,10.97,10.97,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
+HeatTransfer Surface,1D88C5,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,10.97,10.97,10.97,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
 HeatTransfer Surface,F52E84,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.48,6.48,6.48,81.60,90.00,1.80,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.80,0.20,4
-HeatTransfer Surface,C127F1,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,18.55,21.95,18.55,171.60,90.00,6.10,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
+HeatTransfer Surface,C127F1,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,18.55,21.95,18.55,171.60,90.00,6.10,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
 HeatTransfer Surface,F559FB,Window,C127F1,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.62,0.38,4
 HeatTransfer Surface,6219BC,Window,C127F1,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.63,0.37,4
 HeatTransfer Surface,90AF14,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,9.73,9.73,9.73,261.60,90.00,2.70,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.87,0.13,4
-HeatTransfer Surface,C43240,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,8.82,8.82,8.82,351.60,90.00,2.45,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.94,5.73E-002,4
+HeatTransfer Surface,C43240,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,8.82,8.82,8.82,351.60,90.00,2.45,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.94,5.73E-002,4
 HeatTransfer Surface,E44A8B,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,7.54,7.54,7.54,81.60,90.00,2.10,3.60,0.00,184EEE,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,993BB2,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,3.20,3.20,3.20,171.60,90.00,0.89,3.60,0.00,86D15C,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,9B8728,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,2.19,2.19,2.19,81.60,90.00,0.61,3.60,0.00,22F258,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
@@ -905,15 +888,15 @@ HeatTransfer Surface,69F9F2,Roof,,CTF - ConductionTransferFunction,INTERIOR CEIL
 Zone Surfaces,TOP_5R_NV,33
 HeatTransfer Surface,B22655,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.57,7.57,7.57,81.60,90.00,2.71,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.70,0.30,4
 HeatTransfer Surface,EB1FCD,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,33.04,33.04,33.04,261.60,90.00,11.80,2.80,0.00,EB1FCD,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,999A8C,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
+HeatTransfer Surface,999A8C,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
 HeatTransfer Surface,184CBE,Window,999A8C,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.13,1.13,1.13,351.60,90.00,1.00,1.13,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.65,0.35,4
 HeatTransfer Surface,8EACF0,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,261.60,90.00,2.12,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.58,0.42,4
-HeatTransfer Surface,E8F7AE,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.55,0.45,4
+HeatTransfer Surface,E8F7AE,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.55,0.45,4
 HeatTransfer Surface,878591,Window,E8F7AE,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,E3D83D,Window,E8F7AE,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,B9503E,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,81.60,90.00,2.12,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.61,0.39,4
-HeatTransfer Surface,487A7A,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
-HeatTransfer Surface,740B46,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,4.16,4.16,4.16,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.70,0.30,4
+HeatTransfer Surface,487A7A,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
+HeatTransfer Surface,740B46,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,4.16,4.16,4.16,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.70,0.30,4
 HeatTransfer Surface,AD6C5F,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,11.61,11.61,11.61,81.60,90.00,4.15,2.80,0.00,A41238,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,3FB3A4,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,6.29,6.29,6.29,351.60,90.00,2.25,2.80,0.00,B06D19,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,9E64DB,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,1.17,1.17,1.17,261.60,90.00,0.42,2.80,0.00,83F6F1,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
@@ -921,21 +904,21 @@ HeatTransfer Surface,BE5C55,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL
 HeatTransfer Surface,F528D6,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,3.41,3.41,3.41,81.60,90.00,1.22,2.80,0.00,F528D6,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
 HeatTransfer Surface,F7DE3D,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,8.53,8.53,8.53,171.60,90.00,3.05,2.80,0.00,3FA100,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,BCADCB,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,6.57,6.57,6.57,81.60,90.00,2.35,2.80,0.00,5BB072,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,8877FE,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,8.53,8.53,8.53,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.70,0.30,4
+HeatTransfer Surface,8877FE,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,8.53,8.53,8.53,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.70,0.30,4
 HeatTransfer Surface,FB0386,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.04,5.04,5.04,81.60,90.00,1.80,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.74,0.26,4
-HeatTransfer Surface,304505,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,13.67,17.07,13.67,171.60,90.00,6.10,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.68,0.32,4
+HeatTransfer Surface,304505,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,13.67,17.07,13.67,171.60,90.00,6.10,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.68,0.32,4
 HeatTransfer Surface,AD95CD,Window,304505,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.73,0.27,4
 HeatTransfer Surface,8AAD0C,Window,304505,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.74,0.26,4
 HeatTransfer Surface,7A57F8,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.57,7.57,7.57,261.60,90.00,2.70,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
-HeatTransfer Surface,B9856D,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.86,6.86,6.86,351.60,90.00,2.45,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.53,0.47,4
+HeatTransfer Surface,B9856D,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.86,6.86,6.86,351.60,90.00,2.45,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.53,0.47,4
 HeatTransfer Surface,45A47E,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,5.87,5.87,5.87,81.60,90.00,2.10,2.80,0.00,5B4EDC,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,7E57B2,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,2.49,2.49,2.49,171.60,90.00,0.89,2.80,0.00,AE2634,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,B130FA,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,1.71,1.71,1.71,81.60,90.00,0.61,2.80,0.00,E4E407,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,AE309E,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.38,4.38,4.38,171.60,90.00,1.56,2.80,0.00,24673B,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
 HeatTransfer Surface,441136,Floor,,CTF - ConductionTransferFunction,EXTERIOR FLOOR,13.000,3.125,,87.92,87.92,87.92,351.60,180.00,9.38,9.38,0.00,441136,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,18
 HeatTransfer Surface,2DECB4,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,6.09,6.09,6.09,351.60,180.00,2.47,2.47,0.00,2DECB4,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,6
-HeatTransfer Surface,AA1293,Roof,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.768,,87.92,87.92,87.92,351.60,0.00,9.38,9.38,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,18
-HeatTransfer Surface,52D9B6,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,6.09,6.09,6.09,171.60,0.00,2.47,2.47,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,6
+HeatTransfer Surface,AA1293,Roof,,CTF - ConductionTransferFunction,COOL FACADE,3.037,1.932,,87.92,87.92,87.92,351.60,0.00,9.38,9.38,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,18
+HeatTransfer Surface,52D9B6,Roof,,CTF - ConductionTransferFunction,COOL FACADE,3.037,1.932,,6.09,6.09,6.09,171.60,0.00,2.47,2.47,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,6
 Zone Surfaces,TOP_5R_AC,24
 HeatTransfer Surface,43C7FA,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,10.77,10.77,10.77,171.60,90.00,3.85,2.80,0.00,BE5C55,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,83F6F1,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,1.17,1.17,1.17,81.60,90.00,0.42,2.80,0.00,9E64DB,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
@@ -944,23 +927,23 @@ HeatTransfer Surface,A41238,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL
 HeatTransfer Surface,E4E407,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,1.71,1.71,1.71,261.60,90.00,0.61,2.80,0.00,B130FA,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,AE2634,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,2.49,2.49,2.49,351.60,90.00,0.89,2.80,0.00,7E57B2,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,5B4EDC,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,5.87,5.87,5.87,261.60,90.00,2.10,2.80,0.00,45A47E,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,3CA229,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,3.32,6.05,3.32,351.60,90.00,2.16,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.54,0.46,4
+HeatTransfer Surface,3CA229,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,3.32,6.05,3.32,351.60,90.00,2.16,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.54,0.46,4
 HeatTransfer Surface,BBFA04,Window,3CA229,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,253C09,Window,3CA229,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,0.91,0.91,0.91,351.60,90.00,0.60,1.51,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,3FA100,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,8.53,8.53,8.53,351.60,90.00,3.05,2.80,0.00,F7DE3D,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,A5DEA4,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,11.61,11.61,11.61,81.60,90.00,4.15,2.80,0.00,A5DEA4,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,2A2747,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.71,8.53,6.71,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.59,0.41,4
+HeatTransfer Surface,2A2747,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.71,8.53,6.71,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.59,0.41,4
 HeatTransfer Surface,414173,Window,2A2747,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,171.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.63,0.37,4
 HeatTransfer Surface,3A0439,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.04,5.04,5.04,261.60,90.00,1.80,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.74,0.26,4
 HeatTransfer Surface,9DCFF7,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,18.01,18.01,18.01,81.60,90.00,6.43,2.80,0.00,9DCFF7,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
 HeatTransfer Surface,5BB072,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,6.57,6.57,6.57,261.60,90.00,2.35,2.80,0.00,BCADCB,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,A3181A,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,2.34,4.16,2.34,351.58,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
+HeatTransfer Surface,A3181A,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.34,4.16,2.34,351.58,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
 HeatTransfer Surface,331365,Window,A3181A,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.58,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.69,0.31,4
 HeatTransfer Surface,24673B,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.37,4.37,4.37,351.58,90.00,1.56,2.80,0.00,AE309E,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
 HeatTransfer Surface,829D8A,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,30.05,30.05,30.05,351.60,180.00,5.48,5.48,0.00,829D8A,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,10
 HeatTransfer Surface,D9C72F,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,12.64,12.64,12.64,351.60,180.00,3.05,4.15,0.00,D9C72F,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
-HeatTransfer Surface,CCAE33,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,12.64,12.64,12.64,171.60,0.00,3.05,4.15,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
-HeatTransfer Surface,A1CC73,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,30.05,30.05,30.05,351.60,0.00,5.48,5.48,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,10
+HeatTransfer Surface,CCAE33,Roof,,CTF - ConductionTransferFunction,COOL FACADE,3.037,1.932,,12.64,12.64,12.64,171.60,0.00,3.05,4.15,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
+HeatTransfer Surface,A1CC73,Roof,,CTF - ConductionTransferFunction,COOL FACADE,3.037,1.932,,30.05,30.05,30.05,351.60,0.00,5.48,5.48,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,10
 Zone Surfaces,MID_5R_AC,24
 HeatTransfer Surface,AA0EBF,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,10.77,10.77,10.77,171.60,90.00,3.85,2.80,0.00,EF5B77,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,897177,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,1.17,1.17,1.17,81.60,90.00,0.42,2.80,0.00,8046BE,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
@@ -969,16 +952,16 @@ HeatTransfer Surface,B4DC0A,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL
 HeatTransfer Surface,C8FD29,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,1.71,1.71,1.71,261.60,90.00,0.61,2.80,0.00,A58DB1,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,9BC0AD,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,2.49,2.49,2.49,351.60,90.00,0.89,2.80,0.00,498A0F,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,EC61DF,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,5.87,5.87,5.87,261.60,90.00,2.10,2.80,0.00,AE92BF,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,5BEA2E,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,3.32,6.05,3.32,351.60,90.00,2.16,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.85,0.15,4
+HeatTransfer Surface,5BEA2E,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,3.32,6.05,3.32,351.60,90.00,2.16,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.85,0.15,4
 HeatTransfer Surface,CE766C,Window,5BEA2E,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,0.91,0.91,0.91,351.60,90.00,0.60,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.84,0.16,4
 HeatTransfer Surface,3737B9,Window,5BEA2E,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.84,0.16,4
 HeatTransfer Surface,93ADC8,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,8.53,8.53,8.53,351.60,90.00,3.05,2.80,0.00,78B2F7,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,33AAA3,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,11.61,11.61,11.61,81.60,90.00,4.15,2.80,0.00,33AAA3,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,53EDC6,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.71,8.53,6.71,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.61,0.39,4
+HeatTransfer Surface,53EDC6,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.71,8.53,6.71,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.61,0.39,4
 HeatTransfer Surface,56A512,Window,53EDC6,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,171.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.65,0.35,4
 HeatTransfer Surface,C47F78,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.04,5.04,5.04,261.60,90.00,1.80,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.76,0.24,4
 HeatTransfer Surface,6CAB6C,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,6.57,6.57,6.57,261.60,90.00,2.35,2.80,0.00,28A0B3,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,F85590,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,2.34,4.16,2.34,351.58,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
+HeatTransfer Surface,F85590,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.34,4.16,2.34,351.58,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
 HeatTransfer Surface,C5F616,Window,F85590,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.58,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
 HeatTransfer Surface,EE2543,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.37,4.37,4.37,351.58,90.00,1.56,2.80,0.00,20742C,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
 HeatTransfer Surface,B017AD,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,18.01,18.01,18.01,81.60,90.00,6.43,2.80,0.00,B017AD,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
@@ -988,16 +971,16 @@ HeatTransfer Surface,932411,Roof,,CTF - ConductionTransferFunction,INTERIOR CEIL
 HeatTransfer Surface,4C3906,Roof,,CTF - ConductionTransferFunction,INTERIOR CEILING,13.000,3.768,,30.05,30.05,30.05,351.60,0.00,5.48,5.48,0.00,4C3906,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,10
 Zone Surfaces,MID_5R_NV,33
 HeatTransfer Surface,6B463D,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,33.04,33.04,33.04,261.60,90.00,11.80,2.80,0.00,6B463D,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,E3B14D,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
+HeatTransfer Surface,E3B14D,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
 HeatTransfer Surface,B39D0F,Window,E3B14D,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.13,1.13,1.13,351.60,90.00,1.00,1.13,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.88,0.12,4
 HeatTransfer Surface,510402,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,261.60,90.00,2.12,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.76,0.24,4
-HeatTransfer Surface,E67E0A,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.87,0.13,4
+HeatTransfer Surface,E67E0A,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.87,0.13,4
 HeatTransfer Surface,7F89F3,Window,E67E0A,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
 HeatTransfer Surface,247208,Window,E67E0A,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
 HeatTransfer Surface,66F1DB,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,81.60,90.00,2.12,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.75,0.25,4
-HeatTransfer Surface,300191,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.90,9.71E-002,4
+HeatTransfer Surface,300191,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.90,9.71E-002,4
 HeatTransfer Surface,EDFCDA,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.57,7.57,7.57,81.60,90.00,2.71,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.80,0.20,4
-HeatTransfer Surface,C21C53,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,4.16,4.16,4.16,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.87,0.13,4
+HeatTransfer Surface,C21C53,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,4.16,4.16,4.16,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.87,0.13,4
 HeatTransfer Surface,18C7FD,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,11.61,11.61,11.61,81.60,90.00,4.15,2.80,0.00,B4DC0A,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,956869,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,6.29,6.29,6.29,351.60,90.00,2.25,2.80,0.00,4B5297,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,8046BE,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,1.17,1.17,1.17,261.60,90.00,0.42,2.80,0.00,897177,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
@@ -1005,13 +988,13 @@ HeatTransfer Surface,EF5B77,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL
 HeatTransfer Surface,DE56BF,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,3.41,3.41,3.41,81.60,90.00,1.22,2.80,0.00,DE56BF,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
 HeatTransfer Surface,78B2F7,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,8.53,8.53,8.53,171.60,90.00,3.05,2.80,0.00,93ADC8,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,28A0B3,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,6.57,6.57,6.57,81.60,90.00,2.35,2.80,0.00,6CAB6C,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,CF9255,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,8.53,8.53,8.53,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
+HeatTransfer Surface,CF9255,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,8.53,8.53,8.53,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
 HeatTransfer Surface,3463F1,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.04,5.04,5.04,81.60,90.00,1.80,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.77,0.23,4
-HeatTransfer Surface,452853,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,13.67,17.07,13.67,171.60,90.00,6.10,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.69,0.31,4
+HeatTransfer Surface,452853,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,13.67,17.07,13.67,171.60,90.00,6.10,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.69,0.31,4
 HeatTransfer Surface,77EFE6,Window,452853,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.75,0.25,4
 HeatTransfer Surface,56D0A6,Window,452853,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.74,0.26,4
 HeatTransfer Surface,73E906,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.57,7.57,7.57,261.60,90.00,2.70,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.80,0.20,4
-HeatTransfer Surface,87B661,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.86,6.86,6.86,351.60,90.00,2.45,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.85,0.15,4
+HeatTransfer Surface,87B661,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.86,6.86,6.86,351.60,90.00,2.45,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.85,0.15,4
 HeatTransfer Surface,AE92BF,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,5.87,5.87,5.87,81.60,90.00,2.10,2.80,0.00,EC61DF,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,498A0F,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,2.49,2.49,2.49,171.60,90.00,0.89,2.80,0.00,9BC0AD,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,A58DB1,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,1.71,1.71,1.71,81.60,90.00,0.61,2.80,0.00,C8FD29,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
@@ -1023,10 +1006,10 @@ HeatTransfer Surface,9F1D2E,Roof,,CTF - ConductionTransferFunction,INTERIOR CEIL
 Zone Surfaces,GND_3R_NAC_RHT,9
 HeatTransfer Surface,2AEC09,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,31.82,31.82,31.82,261.60,90.00,8.84,3.60,0.00,673F71,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,C37183,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,5.62,5.62,5.62,351.60,90.00,1.56,3.60,0.00,332755,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,8B0418,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,9.15,10.97,9.15,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.79,0.21,4
+HeatTransfer Surface,8B0418,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,9.15,10.97,9.15,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.79,0.21,4
 HeatTransfer Surface,1C8687,Window,8B0418,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,171.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.77,0.23,4
 HeatTransfer Surface,548844,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,31.82,31.82,31.82,81.60,90.00,8.84,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.82,0.18,4
-HeatTransfer Surface,36B370,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,3.53,5.35,3.53,351.60,90.00,1.49,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
+HeatTransfer Surface,36B370,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,3.53,5.35,3.53,351.60,90.00,1.49,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
 HeatTransfer Surface,EC5ADB,Window,36B370,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
 HeatTransfer Surface,142241,Floor,,CTF - ConductionTransferFunction,EXTERIOR FLOOR,13.000,3.125,,26.94,26.94,26.94,351.60,180.00,3.05,8.84,0.00,Ground,N/A-Ground,ASHRAETARP,NoSun,NoWind,1.00,0.00,1.00,0.00,4
 HeatTransfer Surface,41F75B,Roof,,CTF - ConductionTransferFunction,INTERIOR CEILING,13.000,3.768,,26.94,26.94,26.94,171.60,0.00,3.05,8.84,0.00,41F75B,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
@@ -1035,50 +1018,50 @@ HeatTransfer Surface,A71B75,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL
 HeatTransfer Surface,27CF50,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.65,7.65,7.65,81.60,90.00,2.13,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.77,0.23,4
 HeatTransfer Surface,332755,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,5.62,5.62,5.62,171.60,90.00,1.56,3.60,0.00,C37183,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,673F71,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,31.82,31.82,31.82,81.60,90.00,8.84,3.60,0.00,2AEC09,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,DB79D8,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,9.27,10.97,9.27,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.73,0.27,4
+HeatTransfer Surface,DB79D8,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,9.27,10.97,9.27,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.73,0.27,4
 HeatTransfer Surface,41E445,Window,DB79D8,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
 HeatTransfer Surface,DEA40E,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,42.48,42.48,42.48,261.60,90.00,11.80,3.60,0.00,DEA40E,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
 HeatTransfer Surface,6987BB,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,10.65,10.65,10.65,81.60,90.00,2.96,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.75,0.25,4
-HeatTransfer Surface,5C1120,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,7.40,10.80,7.40,351.60,90.00,3.00,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
+HeatTransfer Surface,5C1120,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.40,10.80,7.40,351.60,90.00,3.00,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
 HeatTransfer Surface,85D0D4,Window,5C1120,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
 HeatTransfer Surface,A4131E,Window,5C1120,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
-HeatTransfer Surface,99D41A,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,2.87,3.99,2.87,351.60,90.00,1.11,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,4.49E-002,4
+HeatTransfer Surface,99D41A,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.87,3.99,2.87,351.60,90.00,1.11,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,4.49E-002,4
 HeatTransfer Surface,6EEDA7,Window,99D41A,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.13,1.13,1.13,351.60,90.00,1.00,1.13,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,4.08E-002,4
-HeatTransfer Surface,A01467,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.80,1.80,1.80,351.60,90.00,0.50,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
+HeatTransfer Surface,A01467,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.80,1.80,1.80,351.60,90.00,0.50,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
 HeatTransfer Surface,3CA1CA,Floor,,CTF - ConductionTransferFunction,EXTERIOR FLOOR,13.000,3.125,,46.96,46.96,46.96,171.60,180.00,6.85,6.85,0.00,Ground,N/A-Ground,ASHRAETARP,NoSun,NoWind,1.00,0.00,1.00,0.00,10
 HeatTransfer Surface,978F75,Roof,,CTF - ConductionTransferFunction,INTERIOR CEILING,13.000,3.768,,46.96,46.96,46.96,351.60,0.00,6.85,6.85,0.00,978F75,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,10
 Zone Surfaces,GND_3R_NV_MID,16
 HeatTransfer Surface,691677,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.65,7.65,7.65,261.60,90.00,2.13,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.77,0.23,4
-HeatTransfer Surface,301B80,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,9.27,10.97,9.27,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.68,0.32,4
+HeatTransfer Surface,301B80,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,9.27,10.97,9.27,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.68,0.32,4
 HeatTransfer Surface,4BBE32,Window,301B80,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.64,0.36,4
 HeatTransfer Surface,ACBBE7,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,31.82,31.82,31.82,261.60,90.00,8.84,3.60,0.00,DE3C3D,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,9529E4,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,7.40,10.80,7.40,351.60,90.00,3.00,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.93,6.85E-002,4
+HeatTransfer Surface,9529E4,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.40,10.80,7.40,351.60,90.00,3.00,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.93,6.85E-002,4
 HeatTransfer Surface,EB2856,Window,9529E4,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.93,6.93E-002,4
 HeatTransfer Surface,5CAEC0,Window,9529E4,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.93,6.93E-002,4
 HeatTransfer Surface,ACCA43,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,5.62,5.62,5.62,171.60,90.00,1.56,3.60,0.00,DA650F,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,AD982D,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.80,1.80,1.80,351.60,90.00,0.50,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,3.86E-002,4
+HeatTransfer Surface,AD982D,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.80,1.80,1.80,351.60,90.00,0.50,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,3.86E-002,4
 HeatTransfer Surface,ECE390,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,10.65,10.65,10.65,261.60,90.00,2.96,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.81,0.19,4
 HeatTransfer Surface,6603F7,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.65,7.65,7.65,81.60,90.00,2.13,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.81,0.19,4
 HeatTransfer Surface,D22F3B,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,42.48,42.48,42.48,81.60,90.00,11.80,3.60,0.00,D22F3B,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,1955C0,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,2.87,3.99,2.87,351.60,90.00,1.11,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.94,5.92E-002,4
+HeatTransfer Surface,1955C0,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.87,3.99,2.87,351.60,90.00,1.11,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.94,5.92E-002,4
 HeatTransfer Surface,95D1E0,Window,1955C0,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.13,1.13,1.13,351.60,90.00,1.00,1.13,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.94,5.80E-002,4
 HeatTransfer Surface,67435A,Floor,,CTF - ConductionTransferFunction,EXTERIOR FLOOR,13.000,3.125,,46.96,46.96,46.96,351.60,180.00,6.85,6.85,0.00,Ground,N/A-Ground,ASHRAETARP,NoSun,NoWind,1.00,0.00,1.00,0.00,10
 HeatTransfer Surface,792D62,Roof,,CTF - ConductionTransferFunction,INTERIOR CEILING,13.000,3.768,,46.96,46.96,46.96,351.60,0.00,6.85,6.85,0.00,792D62,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,10
 Zone Surfaces,GND_3R_NAC_MID,9
 HeatTransfer Surface,DE3C3D,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,31.82,31.82,31.82,81.60,90.00,8.84,3.60,0.00,ACBBE7,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,3AAC09,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,9.15,10.97,9.15,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
+HeatTransfer Surface,3AAC09,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,9.15,10.97,9.15,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
 HeatTransfer Surface,3995BD,Window,3AAC09,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,171.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.63,0.37,4
 HeatTransfer Surface,EFF40A,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,31.82,31.82,31.82,261.60,90.00,8.84,3.60,0.00,EFF40A,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,39BFA5,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,3.53,5.35,3.53,351.60,90.00,1.49,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.95,5.34E-002,4
+HeatTransfer Surface,39BFA5,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,3.53,5.35,3.53,351.60,90.00,1.49,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.95,5.34E-002,4
 HeatTransfer Surface,AEBE84,Window,39BFA5,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.95,4.73E-002,4
 HeatTransfer Surface,DA650F,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,5.62,5.62,5.62,351.60,90.00,1.56,3.60,0.00,ACCA43,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,5C4AAD,Floor,,CTF - ConductionTransferFunction,EXTERIOR FLOOR,13.000,3.125,,26.94,26.94,26.94,351.60,180.00,3.05,8.84,0.00,Ground,N/A-Ground,ASHRAETARP,NoSun,NoWind,1.00,0.00,1.00,0.00,4
 HeatTransfer Surface,7E5526,Roof,,CTF - ConductionTransferFunction,INTERIOR CEILING,13.000,3.768,,26.94,26.94,26.94,171.60,0.00,3.05,8.84,0.00,7E5526,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
 Zone Surfaces,GND_3R_NAC_LFT,9
-HeatTransfer Surface,C317F2,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,3.53,5.35,3.53,351.60,90.00,1.49,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.85,0.15,4
+HeatTransfer Surface,C317F2,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,3.53,5.35,3.53,351.60,90.00,1.49,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.85,0.15,4
 HeatTransfer Surface,44F682,Window,C317F2,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.85,0.15,4
 HeatTransfer Surface,F985F6,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,31.82,31.82,31.82,81.60,90.00,8.84,3.60,0.00,42DD4E,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,6F7E7A,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,9.15,10.97,9.15,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.81,0.19,4
+HeatTransfer Surface,6F7E7A,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,9.15,10.97,9.15,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.81,0.19,4
 HeatTransfer Surface,84FDA0,Window,6F7E7A,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,171.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.79,0.21,4
 HeatTransfer Surface,B7C7BE,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,31.82,31.82,31.82,261.60,90.00,8.84,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.85,0.15,4
 HeatTransfer Surface,587C8E,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,5.62,5.62,5.62,351.60,90.00,1.56,3.60,0.00,63304A,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
@@ -1086,17 +1069,17 @@ HeatTransfer Surface,A5F97E,Floor,,CTF - ConductionTransferFunction,EXTERIOR FLO
 HeatTransfer Surface,71D670,Roof,,CTF - ConductionTransferFunction,INTERIOR CEILING,13.000,3.768,,26.94,26.94,26.94,171.60,0.00,3.05,8.84,0.00,71D670,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
 Zone Surfaces,GND_3R_NV_LFT,16
 HeatTransfer Surface,7C6FBE,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.65,7.65,7.65,81.60,90.00,2.13,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.78,0.22,4
-HeatTransfer Surface,78F321,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,2.87,3.99,2.87,351.60,90.00,1.11,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.95,5.07E-002,4
+HeatTransfer Surface,78F321,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.87,3.99,2.87,351.60,90.00,1.11,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.95,5.07E-002,4
 HeatTransfer Surface,8FA002,Window,78F321,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.13,1.13,1.13,351.60,90.00,1.00,1.13,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.96,4.29E-002,4
 HeatTransfer Surface,419EC9,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,42.48,42.48,42.48,81.60,90.00,11.80,3.60,0.00,419EC9,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,4ECBB8,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,9.27,10.97,9.27,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.75,0.25,4
+HeatTransfer Surface,4ECBB8,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,9.27,10.97,9.27,171.60,90.00,3.05,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.75,0.25,4
 HeatTransfer Surface,D1A16C,Window,4ECBB8,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.73,0.27,4
 HeatTransfer Surface,42DD4E,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,31.82,31.82,31.82,261.60,90.00,8.84,3.60,0.00,F985F6,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,63304A,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,5.62,5.62,5.62,171.60,90.00,1.56,3.60,0.00,587C8E,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
 HeatTransfer Surface,7CB2FD,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,10.65,10.65,10.65,261.60,90.00,2.96,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.76,0.24,4
-HeatTransfer Surface,D020FF,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.80,1.80,1.80,351.60,90.00,0.50,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
+HeatTransfer Surface,D020FF,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.80,1.80,1.80,351.60,90.00,0.50,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
 HeatTransfer Surface,4F36FB,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.65,7.65,7.65,261.60,90.00,2.13,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
-HeatTransfer Surface,31ADC0,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,7.40,10.80,7.40,351.60,90.00,3.00,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
+HeatTransfer Surface,31ADC0,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,7.40,10.80,7.40,351.60,90.00,3.00,3.60,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
 HeatTransfer Surface,597B67,Window,31ADC0,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
 HeatTransfer Surface,D9FA58,Window,31ADC0,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
 HeatTransfer Surface,B6BC20,Floor,,CTF - ConductionTransferFunction,EXTERIOR FLOOR,13.000,3.125,,46.96,46.96,46.96,351.60,180.00,6.85,6.85,0.00,Ground,N/A-Ground,ASHRAETARP,NoSun,NoWind,1.00,0.00,1.00,0.00,10
@@ -1104,18 +1087,18 @@ HeatTransfer Surface,A8EB8C,Roof,,CTF - ConductionTransferFunction,INTERIOR CEIL
 Zone Surfaces,MID_3R_AC_RHT,9
 HeatTransfer Surface,EA7C04,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.37,4.37,4.37,351.60,90.00,1.56,2.80,0.00,72538B,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,D6C4FE,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,24.75,24.75,24.75,81.60,90.00,8.84,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.80,0.20,4
-HeatTransfer Surface,FC0A3A,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.72,8.53,6.72,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.81,0.19,4
+HeatTransfer Surface,FC0A3A,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.72,8.53,6.72,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.81,0.19,4
 HeatTransfer Surface,35802D,Window,FC0A3A,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,171.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.80,0.20,4
 HeatTransfer Surface,85ED59,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,24.75,24.75,24.75,261.60,90.00,8.84,2.80,0.00,3D4ED7,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,F89961,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,2.34,4.16,2.34,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.79,0.21,4
+HeatTransfer Surface,F89961,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.34,4.16,2.34,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.79,0.21,4
 HeatTransfer Surface,CC71D7,Window,F89961,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.79,0.21,4
 HeatTransfer Surface,CB0C32,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,26.94,26.94,26.94,351.60,180.00,3.05,8.84,0.00,CB0C32,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
 HeatTransfer Surface,D36CC0,Roof,,CTF - ConductionTransferFunction,INTERIOR CEILING,13.000,3.768,,26.94,26.94,26.94,171.60,0.00,3.05,8.84,0.00,D36CC0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
 Zone Surfaces,MID_3R_AC_MID,9
-HeatTransfer Surface,76E26E,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,2.34,4.16,2.34,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
+HeatTransfer Surface,76E26E,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.34,4.16,2.34,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
 HeatTransfer Surface,3CC912,Window,76E26E,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
 HeatTransfer Surface,7E47DC,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,24.75,24.75,24.75,81.60,90.00,8.84,2.80,0.00,9A756A,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,843BF2,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.72,8.53,6.72,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.70,0.30,4
+HeatTransfer Surface,843BF2,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.72,8.53,6.72,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.70,0.30,4
 HeatTransfer Surface,F9E5BE,Window,843BF2,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,171.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.68,0.32,4
 HeatTransfer Surface,988252,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,24.75,24.75,24.75,261.60,90.00,8.84,2.80,0.00,988252,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
 HeatTransfer Surface,282D14,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.37,4.37,4.37,351.60,90.00,1.56,2.80,0.00,2A2CD7,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
@@ -1123,43 +1106,43 @@ HeatTransfer Surface,BB4848,Floor,,CTF - ConductionTransferFunction,INTERIOR FLO
 HeatTransfer Surface,403280,Roof,,CTF - ConductionTransferFunction,INTERIOR CEILING,13.000,3.768,,26.94,26.94,26.94,171.60,0.00,3.05,8.84,0.00,403280,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
 Zone Surfaces,MID_3R_NV_MID,16
 HeatTransfer Surface,2B918C,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,81.60,90.00,2.12,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.74,0.26,4
-HeatTransfer Surface,5DFC19,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.88,0.12,4
+HeatTransfer Surface,5DFC19,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.88,0.12,4
 HeatTransfer Surface,44DE59,Window,5DFC19,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.13,1.13,1.13,351.60,90.00,1.00,1.13,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.88,0.12,4
 HeatTransfer Surface,355F58,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,33.04,33.04,33.04,81.60,90.00,11.80,2.80,0.00,355F58,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,8B4AA2,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.84,8.53,6.84,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.70,0.30,4
+HeatTransfer Surface,8B4AA2,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.84,8.53,6.84,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.70,0.30,4
 HeatTransfer Surface,2701E7,Window,8B4AA2,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.69,0.31,4
 HeatTransfer Surface,9A756A,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,24.75,24.75,24.75,261.60,90.00,8.84,2.80,0.00,7E47DC,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,2A2CD7,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.37,4.37,4.37,171.60,90.00,1.56,2.80,0.00,282D14,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,B6F494,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,8.29,8.29,8.29,261.60,90.00,2.96,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.73,0.27,4
-HeatTransfer Surface,FC792B,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.90,9.97E-002,4
+HeatTransfer Surface,FC792B,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.90,9.97E-002,4
 HeatTransfer Surface,A43C01,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,261.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
-HeatTransfer Surface,A7BC2C,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.85,0.15,4
+HeatTransfer Surface,A7BC2C,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.85,0.15,4
 HeatTransfer Surface,9B19D6,Window,A7BC2C,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
 HeatTransfer Surface,6C832B,Window,A7BC2C,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.86,0.14,4
 HeatTransfer Surface,E65D17,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,46.96,46.96,46.96,351.60,180.00,6.85,6.85,0.00,E65D17,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,10
 HeatTransfer Surface,7DF66C,Roof,,CTF - ConductionTransferFunction,INTERIOR CEILING,13.000,3.768,,46.96,46.96,46.96,351.60,0.00,6.85,6.85,0.00,7DF66C,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,10
 Zone Surfaces,MID_3R_NV_RHT,16
 HeatTransfer Surface,909EB2,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,81.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
-HeatTransfer Surface,B9FAB8,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.83,0.17,4
+HeatTransfer Surface,B9FAB8,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.83,0.17,4
 HeatTransfer Surface,584446,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,8.29,8.29,8.29,81.60,90.00,2.96,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
 HeatTransfer Surface,72538B,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.37,4.37,4.37,171.60,90.00,1.56,2.80,0.00,EA7C04,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,3D4ED7,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,24.75,24.75,24.75,81.60,90.00,8.84,2.80,0.00,85ED59,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,D13485,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.84,8.53,6.84,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.75,0.25,4
+HeatTransfer Surface,D13485,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.84,8.53,6.84,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.75,0.25,4
 HeatTransfer Surface,E5B936,Window,D13485,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.74,0.26,4
 HeatTransfer Surface,9E05A0,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,33.04,33.04,33.04,261.60,90.00,11.80,2.80,0.00,9E05A0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,59E82F,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
+HeatTransfer Surface,59E82F,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
 HeatTransfer Surface,BA17F2,Window,59E82F,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.13,1.13,1.13,351.60,90.00,1.00,1.13,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
 HeatTransfer Surface,F9B930,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,261.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.74,0.26,4
-HeatTransfer Surface,72D250,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.83,0.17,4
+HeatTransfer Surface,72D250,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.83,0.17,4
 HeatTransfer Surface,E5EBD1,Window,72D250,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.83,0.17,4
 HeatTransfer Surface,9365A7,Window,72D250,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.83,0.17,4
 HeatTransfer Surface,772717,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,46.96,46.96,46.96,171.60,180.00,6.85,6.85,0.00,772717,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,10
 HeatTransfer Surface,B9D1B2,Roof,,CTF - ConductionTransferFunction,INTERIOR CEILING,13.000,3.768,,46.96,46.96,46.96,351.60,0.00,6.85,6.85,0.00,B9D1B2,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,10
 Zone Surfaces,MID_3R_AC_LFT,9
-HeatTransfer Surface,FB793D,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,2.34,4.16,2.34,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.79,0.21,4
+HeatTransfer Surface,FB793D,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.34,4.16,2.34,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.79,0.21,4
 HeatTransfer Surface,562C47,Window,FB793D,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.80,0.20,4
 HeatTransfer Surface,6E80CA,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,24.75,24.75,24.75,81.60,90.00,8.84,2.80,0.00,D2AF0D,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,E027B2,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.72,8.53,6.72,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.83,0.17,4
+HeatTransfer Surface,E027B2,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.72,8.53,6.72,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.83,0.17,4
 HeatTransfer Surface,765034,Window,E027B2,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,171.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.82,0.18,4
 HeatTransfer Surface,4EEB5E,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,24.75,24.75,24.75,261.60,90.00,8.84,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,0.50,0.83,0.17,4
 HeatTransfer Surface,2593B2,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.37,4.37,4.37,351.60,90.00,1.56,2.80,0.00,A6642B,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
@@ -1167,17 +1150,17 @@ HeatTransfer Surface,10ACA5,Floor,,CTF - ConductionTransferFunction,INTERIOR FLO
 HeatTransfer Surface,4C88AC,Roof,,CTF - ConductionTransferFunction,INTERIOR CEILING,13.000,3.768,,26.94,26.94,26.94,171.60,0.00,3.05,8.84,0.00,4C88AC,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
 Zone Surfaces,MID_3R_NV_LFT,16
 HeatTransfer Surface,44E75C,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,81.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
-HeatTransfer Surface,7A577E,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.88,0.12,4
+HeatTransfer Surface,7A577E,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.88,0.12,4
 HeatTransfer Surface,E56E8F,Window,7A577E,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.13,1.13,1.13,351.60,90.00,1.00,1.13,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.89,0.11,4
 HeatTransfer Surface,75A6EB,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,33.04,33.04,33.04,81.60,90.00,11.80,2.80,0.00,75A6EB,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,82B7F9,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.84,8.53,6.84,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.77,0.23,4
+HeatTransfer Surface,82B7F9,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.84,8.53,6.84,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.77,0.23,4
 HeatTransfer Surface,6C1D12,Window,82B7F9,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.77,0.23,4
 HeatTransfer Surface,D2AF0D,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,24.75,24.75,24.75,261.60,90.00,8.84,2.80,0.00,6E80CA,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,A6642B,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.37,4.37,4.37,171.60,90.00,1.56,2.80,0.00,2593B2,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,2A1373,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,8.29,8.29,8.29,261.60,90.00,2.96,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
-HeatTransfer Surface,4C212F,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.83,0.17,4
+HeatTransfer Surface,4C212F,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.83,0.17,4
 HeatTransfer Surface,1DFEF5,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,261.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.68,0.32,4
-HeatTransfer Surface,7D02C2,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.83,0.17,4
+HeatTransfer Surface,7D02C2,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.83,0.17,4
 HeatTransfer Surface,BC7910,Window,7D02C2,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.82,0.18,4
 HeatTransfer Surface,1E6C14,Window,7D02C2,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.82,0.18,4
 HeatTransfer Surface,20A32F,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,46.96,46.96,46.96,351.60,180.00,6.85,6.85,0.00,20A32F,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,10
@@ -1185,116 +1168,116 @@ HeatTransfer Surface,3E5458,Roof,,CTF - ConductionTransferFunction,INTERIOR CEIL
 Zone Surfaces,TOP_3R_AC_RHT,9
 HeatTransfer Surface,607A72,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.37,4.37,4.37,351.60,90.00,1.56,2.80,0.00,D683DB,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,370F56,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,24.75,24.75,24.75,81.60,90.00,8.84,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.63,0.37,4
-HeatTransfer Surface,946703,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.72,8.53,6.72,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.74,0.26,4
+HeatTransfer Surface,946703,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.72,8.53,6.72,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.74,0.26,4
 HeatTransfer Surface,11F049,Window,946703,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,171.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.73,0.27,4
 HeatTransfer Surface,41779A,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,24.75,24.75,24.75,261.60,90.00,8.84,2.80,0.00,2A3A5D,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,5B74C1,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,2.34,4.16,2.34,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.66,0.34,4
+HeatTransfer Surface,5B74C1,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.34,4.16,2.34,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.66,0.34,4
 HeatTransfer Surface,64A9EA,Window,5B74C1,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.65,0.35,4
 HeatTransfer Surface,BA613E,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,26.94,26.94,26.94,351.60,180.00,3.05,8.84,0.00,BA613E,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
-HeatTransfer Surface,55F188,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,26.94,26.94,26.94,171.60,0.00,3.05,8.84,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
+HeatTransfer Surface,55F188,Roof,,CTF - ConductionTransferFunction,COOL FACADE,3.037,1.932,,26.94,26.94,26.94,171.60,0.00,3.05,8.84,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
 Zone Surfaces,TOP_3R_NV_MID,16
 HeatTransfer Surface,D30172,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,81.60,90.00,2.12,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.59,0.41,4
-HeatTransfer Surface,A03C9D,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
+HeatTransfer Surface,A03C9D,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
 HeatTransfer Surface,5C02CA,Window,A03C9D,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.13,1.13,1.13,351.60,90.00,1.00,1.13,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
 HeatTransfer Surface,49DDF4,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,33.04,33.04,33.04,81.60,90.00,11.80,2.80,0.00,49DDF4,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,AA94FC,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.84,8.53,6.84,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.68,0.32,4
+HeatTransfer Surface,AA94FC,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.84,8.53,6.84,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.68,0.32,4
 HeatTransfer Surface,75250A,Window,AA94FC,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.66,0.34,4
 HeatTransfer Surface,5D2093,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,24.75,24.75,24.75,261.60,90.00,8.84,2.80,0.00,6F006D,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,1DC386,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.37,4.37,4.37,171.60,90.00,1.56,2.80,0.00,9DD567,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,99FA8A,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,8.29,8.29,8.29,261.60,90.00,2.96,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.58,0.42,4
-HeatTransfer Surface,CE9631,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
+HeatTransfer Surface,CE9631,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
 HeatTransfer Surface,E33917,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,261.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.56,0.44,4
-HeatTransfer Surface,DDCB5D,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.55,0.45,4
+HeatTransfer Surface,DDCB5D,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.55,0.45,4
 HeatTransfer Surface,D2B9BD,Window,DDCB5D,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.51,0.49,4
 HeatTransfer Surface,589CE0,Window,DDCB5D,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.51,0.49,4
 HeatTransfer Surface,CFA69D,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,46.96,46.96,46.96,351.60,180.00,6.85,6.85,0.00,CFA69D,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,10
-HeatTransfer Surface,8CA917,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,46.96,46.96,46.96,351.60,0.00,6.85,6.85,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,10
+HeatTransfer Surface,8CA917,Roof,,CTF - ConductionTransferFunction,COOL FACADE,3.037,1.932,,46.96,46.96,46.96,351.60,0.00,6.85,6.85,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,10
 Zone Surfaces,TOP_3R_AC_LFT,9
-HeatTransfer Surface,FB8E71,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,2.34,4.16,2.34,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.65,0.35,4
+HeatTransfer Surface,FB8E71,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.34,4.16,2.34,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.65,0.35,4
 HeatTransfer Surface,2ED691,Window,FB8E71,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.65,0.35,4
 HeatTransfer Surface,9515AB,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,24.75,24.75,24.75,81.60,90.00,8.84,2.80,0.00,907FE0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,505C6F,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.72,8.53,6.72,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.79,0.21,4
+HeatTransfer Surface,505C6F,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.72,8.53,6.72,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.79,0.21,4
 HeatTransfer Surface,A14D79,Window,505C6F,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,171.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.77,0.23,4
 HeatTransfer Surface,16CAD5,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,24.75,24.75,24.75,261.60,90.00,8.84,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
 HeatTransfer Surface,9E11EE,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.37,4.37,4.37,351.60,90.00,1.56,2.80,0.00,D222D1,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,F4F565,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,26.94,26.94,26.94,351.60,180.00,3.05,8.84,0.00,F4F565,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
-HeatTransfer Surface,1C01B8,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,26.94,26.94,26.94,171.60,0.00,3.05,8.84,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
+HeatTransfer Surface,1C01B8,Roof,,CTF - ConductionTransferFunction,COOL FACADE,3.037,1.932,,26.94,26.94,26.94,171.60,0.00,3.05,8.84,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
 Zone Surfaces,TOP_3R_AC_MID,9
-HeatTransfer Surface,5FE007,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,2.34,4.16,2.34,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.65,0.35,4
+HeatTransfer Surface,5FE007,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,2.34,4.16,2.34,351.60,90.00,1.49,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.65,0.35,4
 HeatTransfer Surface,277330,Window,5FE007,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,351.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.65,0.35,4
 HeatTransfer Surface,6F006D,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,24.75,24.75,24.75,81.60,90.00,8.84,2.80,0.00,5D2093,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,AE1BBD,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.72,8.53,6.72,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.68,0.32,4
+HeatTransfer Surface,AE1BBD,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.72,8.53,6.72,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.68,0.32,4
 HeatTransfer Surface,253964,Window,AE1BBD,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.82,1.82,1.82,171.60,90.00,1.20,1.52,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
 HeatTransfer Surface,C07EEF,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,24.75,24.75,24.75,261.60,90.00,8.84,2.80,0.00,C07EEF,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
 HeatTransfer Surface,9DD567,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.37,4.37,4.37,351.60,90.00,1.56,2.80,0.00,1DC386,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,EAA6B2,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,26.94,26.94,26.94,351.60,180.00,3.05,8.84,0.00,EAA6B2,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
-HeatTransfer Surface,595A23,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,26.94,26.94,26.94,171.60,0.00,3.05,8.84,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
+HeatTransfer Surface,595A23,Roof,,CTF - ConductionTransferFunction,COOL FACADE,3.037,1.932,,26.94,26.94,26.94,171.60,0.00,3.05,8.84,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
 Zone Surfaces,TOP_3R_NV_RHT,16
 HeatTransfer Surface,2DD4CC,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,81.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.56,0.44,4
-HeatTransfer Surface,7B5F9C,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
+HeatTransfer Surface,7B5F9C,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
 HeatTransfer Surface,1ACF04,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,8.29,8.29,8.29,81.60,90.00,2.96,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.58,0.42,4
 HeatTransfer Surface,D683DB,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.37,4.37,4.37,171.60,90.00,1.56,2.80,0.00,607A72,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,2A3A5D,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,24.75,24.75,24.75,81.60,90.00,8.84,2.80,0.00,41779A,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
-HeatTransfer Surface,AB6A7E,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.84,8.53,6.84,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
+HeatTransfer Surface,AB6A7E,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.84,8.53,6.84,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
 HeatTransfer Surface,DA9B49,Window,AB6A7E,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.70,0.30,4
 HeatTransfer Surface,3C3CB9,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,33.04,33.04,33.04,261.60,90.00,11.80,2.80,0.00,3C3CB9,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,3A7027,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
+HeatTransfer Surface,3A7027,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
 HeatTransfer Surface,210DA1,Window,3A7027,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.13,1.13,1.13,351.60,90.00,1.00,1.13,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.66,0.34,4
 HeatTransfer Surface,29EF4F,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,261.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.59,0.41,4
-HeatTransfer Surface,D769F6,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.55,0.45,4
+HeatTransfer Surface,D769F6,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.55,0.45,4
 HeatTransfer Surface,1F64B3,Window,D769F6,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.51,0.49,4
 HeatTransfer Surface,C0CE40,Window,D769F6,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.51,0.49,4
 HeatTransfer Surface,983555,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,46.96,46.96,46.96,171.60,180.00,6.85,6.85,0.00,983555,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,10
-HeatTransfer Surface,AE405A,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,46.96,46.96,46.96,351.60,0.00,6.85,6.85,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,10
+HeatTransfer Surface,AE405A,Roof,,CTF - ConductionTransferFunction,COOL FACADE,3.037,1.932,,46.96,46.96,46.96,351.60,0.00,6.85,6.85,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,10
 Zone Surfaces,TOP_3R_NV_LFT,16
 HeatTransfer Surface,1CC64C,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,81.60,90.00,2.13,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.58,0.42,4
-HeatTransfer Surface,3D5490,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
+HeatTransfer Surface,3D5490,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.98,3.11,1.98,351.60,90.00,1.11,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.67,0.33,4
 HeatTransfer Surface,CC449B,Window,3D5490,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.13,1.13,1.13,351.60,90.00,1.00,1.13,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.66,0.34,4
 HeatTransfer Surface,9A2A47,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,33.04,33.04,33.04,81.60,90.00,11.80,2.80,0.00,9A2A47,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
-HeatTransfer Surface,84529B,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,6.84,8.53,6.84,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
+HeatTransfer Surface,84529B,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,6.84,8.53,6.84,171.60,90.00,3.05,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
 HeatTransfer Surface,B5A0F1,Window,84529B,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,171.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.72,0.28,4
 HeatTransfer Surface,907FE0,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,24.75,24.75,24.75,261.60,90.00,8.84,2.80,0.00,9515AB,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,D222D1,Wall,,CTF - ConductionTransferFunction,INTERIOR WALL,5.217,2.929,,4.37,4.37,4.37,171.60,90.00,1.56,2.80,0.00,9E11EE,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.50,0.50,0.50,0.50,4
 HeatTransfer Surface,512080,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,8.29,8.29,8.29,261.60,90.00,2.96,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.58,0.42,4
-HeatTransfer Surface,9FE16B,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
+HeatTransfer Surface,9FE16B,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,1.40,1.40,1.40,351.60,90.00,0.50,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.71,0.29,4
 HeatTransfer Surface,AFA981,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.95,5.95,5.95,261.60,90.00,2.12,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.56,0.44,4
-HeatTransfer Surface,3A1818,Wall,,CTF - ConductionTransferFunction,COOL WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.54,0.46,4
+HeatTransfer Surface,3A1818,Wall,,CTF - ConductionTransferFunction,EXTERIOR WALL,0.311,0.298,,5.00,8.40,5.00,351.60,90.00,3.00,2.80,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.54,0.46,4
 HeatTransfer Surface,1EA7B0,Window,3A1818,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.51,0.49,4
 HeatTransfer Surface,9A0068,Window,3A1818,Window5 Detailed Fenestration,EXTERIOR WINDOW,N/A,5.778,No,1.70,1.70,1.70,351.60,90.00,1.20,1.41,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.52,0.48,4
 HeatTransfer Surface,1BF807,Floor,,CTF - ConductionTransferFunction,INTERIOR FLOOR,13.000,3.125,,46.96,46.96,46.96,351.60,180.00,6.85,6.85,0.00,1BF807,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,10
-HeatTransfer Surface,815C4A,Roof,,CTF - ConductionTransferFunction,EXTERIOR ROOF,3.037,1.932,,46.96,46.96,46.96,351.60,0.00,6.85,6.85,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,10
+HeatTransfer Surface,815C4A,Roof,,CTF - ConductionTransferFunction,COOL FACADE,3.037,1.932,,46.96,46.96,46.96,351.60,0.00,6.85,6.85,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,10
 ! <Environment>,Environment Name,Environment Type, Start Date, End Date, Start DayOfWeek, Duration {#days}, Source:Start DayOfWeek,  Use Daylight Saving, Use Holidays, Apply Weekend Holiday Rule,  Use Rain Values, Use Snow Values, Sky Temperature Model
 ! <Environment:Special Days>, Special Day Name, Special Day Type, Source, Start Date, Duration {#days}
 ! <Environment:Daylight Saving>, Daylight Saving Indicator, Source, Start Date, End Date
 ! <Environment:WarmupDays>, NumberofWarmupDays
 Environment,JUNE2015,WeatherFileRunPeriod,06/01/2015,06/30/2015,Monday,30,Use RunPeriod Specified Day,No,No,No,Yes,No,Clark and Allen
 Environment:Daylight Saving,No,RunPeriod Object
-Environment:WarmupDays,  4
+Environment:WarmupDays,  3
 ! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
- Warmup Convergence Information,GND_5R_NAC,RunPeriod: JUNE2015,3.6353540454E-003,3.3213783413E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,GND_5R_NV,RunPeriod: JUNE2015,3.0866977773E-003,2.5000161921E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,TOP_5R_NV,RunPeriod: JUNE2015,2.0597984617E-002,2.1215902241E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,TOP_5R_AC,RunPeriod: JUNE2015,3.1106828596E-002,0.2346379679,Pass,Pass,3.9161925176E-003,6.0092703147E-002,Pass,Pass
- Warmup Convergence Information,MID_5R_AC,RunPeriod: JUNE2015,3.1657248826E-002,0.2362878589,Pass,Pass,3.2074061371E-003,4.4891377380E-002,Pass,Pass
- Warmup Convergence Information,MID_5R_NV,RunPeriod: JUNE2015,2.0806495460E-002,2.1577817220E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,GND_3R_NAC_RHT,RunPeriod: JUNE2015,3.7665568278E-003,3.1794511050E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,GND_3R_NV_RHT,RunPeriod: JUNE2015,3.7265229481E-003,3.4025602157E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,GND_3R_NV_MID,RunPeriod: JUNE2015,3.8129396933E-003,3.4695345067E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,GND_3R_NAC_MID,RunPeriod: JUNE2015,3.3239171053E-003,2.7242282760E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,GND_3R_NAC_LFT,RunPeriod: JUNE2015,3.8066935329E-003,3.1404273552E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,GND_3R_NV_LFT,RunPeriod: JUNE2015,4.1299930230E-003,3.5408174503E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,MID_3R_AC_RHT,RunPeriod: JUNE2015,3.1832190517E-002,0.2362767681,Pass,Pass,3.1966877740E-003,3.9315704133E-002,Pass,Pass
- Warmup Convergence Information,MID_3R_AC_MID,RunPeriod: JUNE2015,3.1769949397E-002,0.2365866963,Pass,Pass,3.1533081344E-003,3.9775796998E-002,Pass,Pass
- Warmup Convergence Information,MID_3R_NV_MID,RunPeriod: JUNE2015,2.2871366918E-002,3.5682546436E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,MID_3R_NV_RHT,RunPeriod: JUNE2015,2.2866291583E-002,3.5682115870E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,MID_3R_AC_LFT,RunPeriod: JUNE2015,3.1810704361E-002,0.2363425247,Pass,Pass,3.1913456423E-003,3.9689198830E-002,Pass,Pass
- Warmup Convergence Information,MID_3R_NV_LFT,RunPeriod: JUNE2015,2.2851700394E-002,3.5674501799E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,TOP_3R_AC_RHT,RunPeriod: JUNE2015,3.1385739750E-002,0.2342532862,Pass,Pass,3.6373930462E-003,5.2477164114E-002,Pass,Pass
- Warmup Convergence Information,TOP_3R_NV_MID,RunPeriod: JUNE2015,2.2580814358E-002,3.5442752722E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,TOP_3R_AC_LFT,RunPeriod: JUNE2015,3.1364931615E-002,0.2343663301,Pass,Pass,3.6590715820E-003,5.2989520509E-002,Pass,Pass
- Warmup Convergence Information,TOP_3R_AC_MID,RunPeriod: JUNE2015,3.1317783416E-002,0.2345992118,Pass,Pass,3.6507907214E-003,5.3400735567E-002,Pass,Pass
- Warmup Convergence Information,TOP_3R_NV_RHT,RunPeriod: JUNE2015,2.2585809108E-002,3.5440630483E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,TOP_3R_NV_LFT,RunPeriod: JUNE2015,2.2578413581E-002,3.5449693572E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_5R_NAC,RunPeriod: JUNE2015,3.6225958935E-003,3.3196634868E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_5R_NV,RunPeriod: JUNE2015,3.0823081808E-003,2.4948530673E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,TOP_5R_NV,RunPeriod: JUNE2015,2.0731456177E-002,2.1602648450E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,TOP_5R_AC,RunPeriod: JUNE2015,3.1310687889E-002,0.2321995766,Pass,Pass,3.3435601238E-003,4.6220302337E-002,Pass,Pass
+ Warmup Convergence Information,MID_5R_AC,RunPeriod: JUNE2015,3.1647420529E-002,0.2361957157,Pass,Pass,3.1986100703E-003,4.4795625179E-002,Pass,Pass
+ Warmup Convergence Information,MID_5R_NV,RunPeriod: JUNE2015,2.0820341710E-002,2.1604542094E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_3R_NAC_RHT,RunPeriod: JUNE2015,3.7587275534E-003,3.1759854963E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_3R_NV_RHT,RunPeriod: JUNE2015,3.7180948723E-003,3.3997451624E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_3R_NV_MID,RunPeriod: JUNE2015,3.8017624927E-003,3.4674949767E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_3R_NAC_MID,RunPeriod: JUNE2015,3.3152487161E-003,2.7231260448E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_3R_NAC_LFT,RunPeriod: JUNE2015,3.8007741289E-003,3.1338830683E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,GND_3R_NV_LFT,RunPeriod: JUNE2015,4.1181855707E-003,3.5359578428E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,MID_3R_AC_RHT,RunPeriod: JUNE2015,3.1813631556E-002,0.2361332247,Pass,Pass,3.1940909689E-003,3.9243646968E-002,Pass,Pass
+ Warmup Convergence Information,MID_3R_AC_MID,RunPeriod: JUNE2015,3.1761215163E-002,0.2365057082,Pass,Pass,3.1508488929E-003,3.9660328045E-002,Pass,Pass
+ Warmup Convergence Information,MID_3R_NV_MID,RunPeriod: JUNE2015,2.2895224473E-002,3.5721755848E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,MID_3R_NV_RHT,RunPeriod: JUNE2015,2.2888581520E-002,3.5718879700E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,MID_3R_AC_LFT,RunPeriod: JUNE2015,3.1791248445E-002,0.2361956801,Pass,Pass,3.1887348275E-003,3.9629065571E-002,Pass,Pass
+ Warmup Convergence Information,MID_3R_NV_LFT,RunPeriod: JUNE2015,2.2872807474E-002,3.5710251000E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,TOP_3R_AC_RHT,RunPeriod: JUNE2015,3.1473565829E-002,0.2321276287,Pass,Pass,3.2572623764E-003,4.0318036369E-002,Pass,Pass
+ Warmup Convergence Information,TOP_3R_NV_MID,RunPeriod: JUNE2015,2.2858270310E-002,3.5899916827E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,TOP_3R_AC_LFT,RunPeriod: JUNE2015,3.1453234107E-002,0.2322029163,Pass,Pass,3.2473235670E-003,4.0934599301E-002,Pass,Pass
+ Warmup Convergence Information,TOP_3R_AC_MID,RunPeriod: JUNE2015,3.1407659049E-002,0.2324909870,Pass,Pass,3.2052130397E-003,4.1204262746E-002,Pass,Pass
+ Warmup Convergence Information,TOP_3R_NV_RHT,RunPeriod: JUNE2015,2.2854030899E-002,3.5899327882E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,TOP_3R_NV_LFT,RunPeriod: JUNE2015,2.2854587654E-002,3.5909144410E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
 ! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
 Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
 End of Data

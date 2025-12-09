@@ -23,14 +23,20 @@ south_windows <- az |>
 # (Optional) add overhangs on facade(s)
 #model <- create_overhangs(model, az, depth = 0.5) #change facade here
 
-north_exterior <- get_facade_exterior_walls(model, "North")
-south_exterior <- get_facade_exterior_walls(model, "South")
-both_exterior <- c(north_exterior, south_exterior)
+#north_exterior <- get_facade_exterior_walls(model, "North")
+#south_exterior <- get_facade_exterior_walls(model, "South")
+#both_exterior <- c(north_exterior, south_exterior)
+roof <- get_facade_exterior_roof(model)
+roof <- roof$name
 
 # Apply facade specific coating once to have baseline absorptance
-model <- apply_facade_coating(model,
-                              facade_walls = both_exterior, #change facade here
-                              absorptance = 0.7) 
+#model <- apply_facade_coating(model,
+#                              facade_walls = both_exterior, #change facade here
+#                              absorptance = 0.7) 
+# Change roof coating
+model <- apply_roof_coating(model,
+                            facade_walls = roof,
+                            absorptance = 0.7)
 
 model$save(here("data", "idf", "model_preprocessed.idf"), overwrite = TRUE)
 param <- param_job(model, epw)
@@ -52,7 +58,7 @@ energies <- summarise_meters(report_weekday, cop = 3)
 
 write.csv(
   tibble(E_AC_blk5 = energies$e_ac),
-  here("data", "results", "coating_both_blk5") # update csv name
+  here("data", "results", "roof_coating_blk5") # update csv name
 )
 #check <- read.csv(
 #here("data", "results", "coating_cooling_blk7")

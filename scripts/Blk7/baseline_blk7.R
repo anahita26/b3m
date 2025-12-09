@@ -18,6 +18,13 @@ report <- job$report_data()
 report_weekday <- filter_weekdays(report)
 energies <- summarise_meters(report_weekday, cop = 3)
 
+ac_own  <- c(1, 0.83, 0.88, 0.97, 0.97, 0.86, 0.91)
+n_occ   <- c(95, 94, 96, 94, 94, 95, 120)
+n_flats <- c(99, 99, 99, 99, 99, 99, 120)
+total_consumption_blk5 <- compute_E_total_blk(energies$e_light[2], 
+                                              energies$e_ac[2], 
+                                              energies$e_plug[2],
+                                              ac_own, n_occ, n_flats, blk = 7)
 baseline_blk7 <- energies$e_ac
 
 write_csv(baseline_blk7,

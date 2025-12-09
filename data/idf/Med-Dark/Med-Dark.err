@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.12.08 12:17,
+Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.12.09 17:43,
    ** Warning ** ManageSizing: For a zone sizing run, there must be at least 1 Sizing:Zone input object. SimulationControl Zone Sizing option ignored.
    ** Warning ** Weather file location will be used rather than entered (IDF) Location object.
    **   ~~~   ** ..Location object=SINGAPORE
@@ -98,6 +98,9 @@ Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.12.08 12:17,
    **   ~~~   ** Entered Zone Floor Area value=32.00, Calculated Zone Floor Area value=26.94, entered Floor Area will be used in calculations.
    ** Warning ** GetSurfaceData: Entered Floor Area entered for Zone="TOP_3R_NV_RHT" significantly different from calculated Floor Area
    **   ~~~   ** Entered Zone Floor Area value=52.00, Calculated Zone Floor Area value=46.96, entered Floor Area will be used in calculations.
+   ** Warning ** CheckUsedConstructions: There are 1 nominally unused constructions in input.
+   **   ~~~   ** Each Unused construction is shown.
+   ************* Construction=EXTERIOR ROOF
    ** Warning ** GetInternalHeatGains: People="SLEEPING 5-R", Activity Level Schedule Name values
    **   ~~~   ** fall outside typical range [70,1000] W/person for Thermal Comfort Reporting.
    **   ~~~   ** Odd comfort values may result; Schedule="SLEEPING SCHEDULE PER PAX".
@@ -139,7 +142,11 @@ Program Version,EnergyPlus, Version 9.3.0-baff08990c, YMD=2025.12.08 12:17,
    ************* InterZone Surface Areas -- mismatch
    ************* ..Area mismatch errors happen when the interzone surface in zone A is
    ************* ..not the same size as it's companion in zone B.
+   ************* Nominally Unused Constructions
+   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause
+   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm
+   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).
    *************
    ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
    ************* EnergyPlus Sizing Error Summary. During Sizing: 1 Warning; 0 Severe Errors.
-   ************* EnergyPlus Completed Successfully-- 34 Warning; 0 Severe Errors; Elapsed Time=00hr 00min 21.16sec
+   ************* EnergyPlus Completed Successfully-- 35 Warning; 0 Severe Errors; Elapsed Time=00hr 00min 17.67sec

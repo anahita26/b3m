@@ -35,9 +35,30 @@ create_coating_material <- function(model,
   model
 }
 
+create_roof_material <- function(model,
+                                    new_mat = "Cool Concrete",
+                                    absorptance = 0.2) {
+  
+  mat <- list(
+    "Material" = list(
+      name = new_mat,
+      roughness = "MediumRough",
+      thickness = 0.03,
+      conductivity = 0.836,
+      density = 1280,
+      "Specific Heat" = 900,
+      "Thermal Absorptance" = 0.9,
+      "Solar Absorptance" = absorptance,
+      "Visible Absorptance" = 0.7
+    ))
+  
+  model$add(mat)
+  model
+}
+
 # Create a facade specific construction
 create_facade_construction <- function(model,
-                                       new_constr = "Cool Wall",
+                                       new_constr = "Cool Facade",
                                        new_mat = "Cool Concrete") {
   constr <- list(
     "Construction" = list(
@@ -52,10 +73,27 @@ create_facade_construction <- function(model,
   model
 }
 
+create_roof_construction <- function(model,
+                                       new_constr = "Cool Facade",
+                                       new_mat = "Cool Concrete") {
+  constr <- list(
+    "Construction" = list(
+      Name = new_constr,
+      "Outside Layer" = new_mat,
+      "Layer 2" = "F05 Ceiling air space resistance",
+      "Layer 3" = "Roof concrete",
+      "Layer 4" = "Cement plaster"
+    )
+  )
+  
+  model$add(constr)
+  model
+}
+
 # Apply construction only to selected surfaces
 apply_coating_to_surfaces <- function(model,
                                       surface_names,
-                                      new_constr = "Cool Wall") {
+                                      new_constr = "Cool Facade") {
   surf_tbl <- model$to_table(class = "BuildingSurface:Detailed")
   
   surf_tbl <- surf_tbl |> 
@@ -81,6 +119,23 @@ apply_facade_coating <- function(model,
                                    new_mat = new_mat,
                                    absorptance = absorptance)
   model <- create_facade_construction(model,
+                                      new_constr = new_constr,
+                                      new_mat = new_mat)
+  model <- apply_coating_to_surfaces(model,
+                                     surface_names = facade_walls,
+                                     new_constr = new_constr)
+  model
+}
+
+apply_roof_coating <- function(model,
+                                 facade_walls,
+                                 absorptance = 0.2,
+                                 new_mat = "Cool Concrete",
+                                 new_constr = "Cool Facade") {
+  model <- create_roof_material(model,
+                                   new_mat = new_mat,
+                                   absorptance = absorptance)
+  model <- create_roof_construction(model,
                                       new_constr = new_constr,
                                       new_mat = new_mat)
   model <- apply_coating_to_surfaces(model,
@@ -122,6 +177,16 @@ get_facade_exterior_walls <- function(model, orientation) {
            name %in% exterior_walls)
   
   return(target$name)
+}
+
+get_facade_exterior_roof <- function(model) {
+  
+  # Extract geometry and azimuths
+  geo <- model$geometry()
+  exterior_roof  <- geo$azimuth() |> 
+    filter(type == "Roof")
+  
+  return(exterior_roof)
 }
 
 
