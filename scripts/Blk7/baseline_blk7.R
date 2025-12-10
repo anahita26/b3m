@@ -4,6 +4,7 @@ library(here)
 library(tidyverse)
 source("R/setup_model.R")
 source("R/postprocess_energy.R")
+source("R/compute_AC.R")
 
 idf_path <- here("data", "idf", "Blk7.idf")
 epw_path <- here("data", "epw", "SGP_Developed_Site(Blk7).epw")
@@ -42,3 +43,8 @@ roof_exposure <- report |>
 
 write_csv(roof_exposure,
           here("data", "results", "roof_solar_blk7"))
+
+# Get AC Zone data
+AC_info <- compute_ac_exposure(model)
+write_csv(AC_info,
+          here("data", "results", "ac_info_blk7"))

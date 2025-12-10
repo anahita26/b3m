@@ -3,7 +3,7 @@ set_coating <- function(model,
   if (is.na(coating)) return(model)
   
   coat_tbl <- model$to_table(class = "Material") |> 
-    filter(name == "Cool Concrete") |> 
+    filter(name %in% c("Cool Wall Concrete", "Cool Roof Concrete")) |> 
     mutate(value = case_when(
         field == "Solar Absorptance" ~ sprintf("%.2f", coating),
         TRUE ~ value)
@@ -15,7 +15,7 @@ set_coating <- function(model,
 
 # Create a facade specific coating material
 create_coating_material <- function(model,
-                                    new_mat = "Cool Concrete",
+                                    new_mat = "Cool Wall Concrete",
                                     absorptance = 0.2) {
   
   mat <- list(
@@ -36,7 +36,7 @@ create_coating_material <- function(model,
 }
 
 create_roof_material <- function(model,
-                                    new_mat = "Cool Concrete",
+                                    new_mat = "Cool Roof Concrete",
                                     absorptance = 0.2) {
   
   mat <- list(
@@ -58,8 +58,8 @@ create_roof_material <- function(model,
 
 # Create a facade specific construction
 create_facade_construction <- function(model,
-                                       new_constr = "Cool Facade",
-                                       new_mat = "Cool Concrete") {
+                                       new_constr = "Cool Wall",
+                                       new_mat = "Cool Wall Concrete") {
   constr <- list(
     "Construction" = list(
       Name = new_constr,
@@ -74,8 +74,8 @@ create_facade_construction <- function(model,
 }
 
 create_roof_construction <- function(model,
-                                       new_constr = "Cool Facade",
-                                       new_mat = "Cool Concrete") {
+                                       new_constr = "Cool Roof",
+                                       new_mat = "Cool Roof Concrete") {
   constr <- list(
     "Construction" = list(
       Name = new_constr,
@@ -93,7 +93,7 @@ create_roof_construction <- function(model,
 # Apply construction only to selected surfaces
 apply_coating_to_surfaces <- function(model,
                                       surface_names,
-                                      new_constr = "Cool Facade") {
+                                      new_constr = "Cool Wall") {
   surf_tbl <- model$to_table(class = "BuildingSurface:Detailed")
   
   surf_tbl <- surf_tbl |> 
@@ -113,7 +113,7 @@ apply_coating_to_surfaces <- function(model,
 apply_facade_coating <- function(model,
                                  facade_walls,
                                  absorptance = 0.2,
-                                 new_mat = "Cool Concrete",
+                                 new_mat = "Cool Wall Concrete",
                                  new_constr = "Cool Wall") {
   model <- create_coating_material(model,
                                    new_mat = new_mat,
@@ -130,8 +130,8 @@ apply_facade_coating <- function(model,
 apply_roof_coating <- function(model,
                                  facade_walls,
                                  absorptance = 0.2,
-                                 new_mat = "Cool Concrete",
-                                 new_constr = "Cool Facade") {
+                                 new_mat = "Cool Roof Concrete",
+                                 new_constr = "Cool Roof") {
   model <- create_roof_material(model,
                                    new_mat = new_mat,
                                    absorptance = absorptance)
