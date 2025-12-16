@@ -19,6 +19,14 @@ north_windows <- az |>
 south_windows <- az |> 
   filter(azimuth >= 135 & azimuth < 225)
 
+area <- geo$area()
+area_north <- area |> 
+  filter(name %in% north_windows$name)
+area_north <- sum(area_north$area)
+area_south <- area |> 
+  filter(name %in% south_windows$name)
+area_south <- sum(area_south$area)
+
 # Create placeholder overhangs on facade(s) of choice 
 model <- create_overhangs(model, az, depth = 0) #change facade here
 model$save(here("data", "idf", "model_preprocessed.idf"), overwrite = TRUE)

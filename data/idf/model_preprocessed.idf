@@ -1532,7 +1532,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     E7AD5B,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_5R_NAC,              !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -1736,7 +1736,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     4D1BF7,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -1784,7 +1784,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     17224B,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -1832,7 +1832,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     677367,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -2072,7 +2072,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     F52E84,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -2180,7 +2180,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     90AF14,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -2420,7 +2420,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     B22655,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -2624,7 +2624,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     8EACF0,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -2672,7 +2672,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     B9503E,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -2936,7 +2936,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     FB0386,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -3044,7 +3044,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     7A57F8,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -3518,7 +3518,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     3A0439,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_5R_AC,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -4034,7 +4034,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     C47F78,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_5R_AC,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -4400,7 +4400,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     510402,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -4448,7 +4448,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     66F1DB,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -4496,7 +4496,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     EDFCDA,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -4736,7 +4736,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     3463F1,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -4844,7 +4844,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     73E906,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_5R_NV,               !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -5108,7 +5108,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     548844,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_3R_NAC_Rht,          !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -5174,7 +5174,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     A71B75,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_3R_NV_Rht,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -5198,7 +5198,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     27CF50,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_3R_NV_Rht,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -5318,7 +5318,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     6987BB,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_3R_NV_Rht,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -5498,7 +5498,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     691677,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_3R_NV_Mid,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -5684,7 +5684,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     ECE390,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_3R_NV_Mid,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -5708,7 +5708,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     6603F7,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_3R_NV_Mid,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -6044,7 +6044,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     B7C7BE,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_3R_NAC_Lft,          !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -6152,7 +6152,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     7C6FBE,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_3R_NV_Lft,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -6296,7 +6296,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     7CB2FD,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_3R_NV_Lft,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -6344,7 +6344,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     4F36FB,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Gnd_3R_NV_Lft,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -6464,7 +6464,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     D6C4FE,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_3R_AC_Rht,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -6764,7 +6764,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     2B918C,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_3R_NV_Mid,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -6908,7 +6908,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     B6F494,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_3R_NV_Mid,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -6956,7 +6956,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     A43C01,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_3R_NV_Mid,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -7088,7 +7088,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     909EB2,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_3R_NV_Rht,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -7136,7 +7136,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     584446,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_3R_NV_Rht,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -7280,7 +7280,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     F9B930,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_3R_NV_Rht,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -7448,7 +7448,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     4EEB5E,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_3R_AC_Lft,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -7556,7 +7556,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     44E75C,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_3R_NV_Lft,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -7700,7 +7700,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     2A1373,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_3R_NV_Lft,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -7748,7 +7748,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     1DFEF5,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Mid_3R_NV_Lft,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -7868,7 +7868,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     370F56,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_3R_AC_Rht,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -8024,7 +8024,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     D30172,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_3R_NV_Mid,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -8168,7 +8168,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     99FA8A,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_3R_NV_Mid,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -8216,7 +8216,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     E33917,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_3R_NV_Mid,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -8384,7 +8384,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     16CAD5,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_3R_AC_Lft,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -8636,7 +8636,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     2DD4CC,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_3R_NV_Rht,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -8684,7 +8684,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     1ACF04,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_3R_NV_Rht,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -8828,7 +8828,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     29EF4F,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_3R_NV_Rht,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -8960,7 +8960,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     1CC64C,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_3R_NV_Lft,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -9104,7 +9104,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     512080,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_3R_NV_Lft,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object
@@ -9152,7 +9152,7 @@ BuildingSurface:Detailed,
 BuildingSurface:Detailed,
     AFA981,                  !- Name
     Wall,                    !- Surface Type
-    Exterior Wall,           !- Construction Name
+    Cool Wall,               !- Construction Name
     Top_3R_NV_Lft,           !- Zone Name
     Outdoors,                !- Outside Boundary Condition
     ,                        !- Outside Boundary Condition Object

@@ -18,9 +18,6 @@ geo <- model$geometry()
 az <- geo$azimuth() |> 
   filter(type == "Window")
 
-# Create overhangs on facade(s) with depth 0.5
-#model <- create_overhangs(model, az, depth = 0.5) 
-
 # Change coating to 0.2
 #model$Material$`M15 150mm heavyweight concrete`$`Solar Absorptance` <- 0.2
 

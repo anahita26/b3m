@@ -7,10 +7,12 @@ library(ggthemes)
 library(knitr)
 library(gt)
 
-# Upload data
+# Upload data for block 7
 blk7_results <- read_csv(here("data", "results", "all_scenarios_blk7"))
 blk7_baseline <- read_csv( here("data", "results", "blk7_baseline"))
 blk7_baseline <- blk7_baseline$e_ac
+blk7_results$baseline <- blk7_baseline
+blk7_results$diff <- blk7_results$baseline - blk7_results$energy_ac
 blk7_results_pct <- blk7_results |> 
   mutate(pct_change = 100 * (blk7_results$energy_ac - blk7_baseline) / blk7_baseline)
 blk7_results_pct$block <- "Blk7"
@@ -20,6 +22,7 @@ blk7_results_greenroof_pct <- blk7_results_greenroof |>
   mutate(pct_change = 100 * (blk7_results_greenroof$e_ac - blk7_baseline) / blk7_baseline)
 blk7_results_greenroof_pct$block <- "Blk7"  
 
+# Upload data for block 5
 blk5_results <- read_csv(here("data", "results", "all_scenarios_blk5"))
 blk5_baseline <- read_csv( here("data", "results", "blk5_baseline"))
 blk5_baseline <- blk5_baseline$e_ac
@@ -32,6 +35,7 @@ blk5_results_greenroof_pct <- blk5_results_greenroof |>
   mutate(pct_change = 100 * (blk5_results_greenroof$e_ac - blk5_baseline) / blk5_baseline)
 blk5_results_greenroof_pct$block <- "Blk5"  
 
+# Upload data for block 2
 blk2_results <- read_csv(here("data", "results", "all_scenarios_blk2"))
 blk2_baseline <- read_csv( here("data", "results", "blk2_baseline"))
 blk2_baseline <- blk2_baseline$e_ac
@@ -44,21 +48,14 @@ blk2_results_greenroof_pct <- blk2_results_greenroof |>
   mutate(pct_change = 100 * (blk2_results_greenroof$e_ac - blk2_baseline) / blk2_baseline)
 blk2_results_greenroof_pct$block <- "Blk2"  
 
+# Create data tables for graphs
 all_blks_results <- bind_rows(blk7_results_pct, blk5_results_pct, blk2_results_pct)
-all_blks_results$scenario_type <- factor(all_blks_results$scenario_type,
-                           levels = c("Shading", "Coating", "Combined"))
-all_blks_results$block <- factor(all_blks_results$block,
-                                 levels = c("Blk2", "Blk7", "Blk5"))
-#all_blks_results$case <- factor(all_blks_results$case,
-#                                 levels = c("Cool", "Med-Cool", "Medium", "Med-Dark", "Dark"))
-all_blks_results$facade <- factor(all_blks_results$facade,
-                                 levels = c("North", "South", "Both"))
 all_blks_greenroof <- bind_rows(blk7_results_greenroof_pct, blk5_results_greenroof_pct, blk2_results_greenroof_pct)
-all_blks_greenroof$block <- factor(all_blks_greenroof$block,
-                                 levels = c("Blk2", "Blk7", "Blk5"))
 
 write_csv(all_blks_results,
           here("data", "results", "all_blks_results"))
+write_csv(all_blks_greenroof,
+          here("data", "results", "all_blks_greenroof"))
 
 # Cool coating on rooftop
 blk7_coolroof <-  read_csv(here("data", "results", "roof_coating_blk7")) |> 
@@ -88,6 +85,8 @@ blk5_coolroof$block <- "Blk5"
 coolroof <- bind_rows(blk2_coolroof, blk7_coolroof, blk5_coolroof)
 coolroof$block <- factor(coolroof$block,
                                  levels = c("Blk2", "Blk7", "Blk5"))
+write_csv(coolroof,
+          here("data", "results", "coolroof"))
 
 # Cool coating on walls and rooftop
 blk7_complete_coating <-  read_csv(here("data", "results", "complete_coating_blk7")) |> 
@@ -114,9 +113,13 @@ blk5_complete_coating <-  read_csv(here("data", "results", "complete_coating_blk
 blk5_complete_coating <- blk5_complete_coating |>
   mutate(pct_change = 100 * (blk5_complete_coating$energy_ac - blk5_baseline) / blk5_baseline)
 blk5_complete_coating$block <- "Blk5"
+
 complete_coating <- bind_rows(blk2_complete_coating, blk7_complete_coating, blk5_complete_coating)
 complete_coating$block <- factor(complete_coating$block,
                          levels = c("Blk2", "Blk7", "Blk5"))
+write_csv(complete_coating,
+          here("data", "results", "complete_coating"))
+
 
 # Only coating plots
 all_blks_results |> 
@@ -126,7 +129,7 @@ all_blks_results |>
              fill = case,
              color = case)) +
   geom_point(shape = 21, size = 3)+
-  ylim(-10,0) +
+  ylim(-.25,.25) +
   geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   facet_wrap(~facade) +
   theme_minimal()+
@@ -145,7 +148,7 @@ all_blks_results |>
              fill = case,
              color = case)) +
   geom_point(shape = 21, size = 3)+
-  ylim(-10,0) +
+  #ylim(-2.5,2.5) +
   geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   facet_wrap(~facade) +
   theme_minimal()+
@@ -179,7 +182,7 @@ complete_coating |>
   ggplot(aes(x = block,
              y = pct_change)) +
   geom_col(fill = "black") +
-  ylim(-10,0) +
+  ylim(-11,0) +
   geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   theme_minimal()+
   labs(
@@ -203,6 +206,7 @@ all_blks_greenroof |>
     x = "Block",
     y = "Δ Cooling Demand (%)"
   )
+
 
 all_blks_greenroof |> 
   filter(scenario_type == "Coating + Green Roof") |> 

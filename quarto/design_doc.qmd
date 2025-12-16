@@ -1,169 +1,484 @@
 ---
-title: "design_doc"
+title: "Evaluating Retrofit Strategies for Urban Heat Resilience: A Singapore Case Study"
+date: today
+author:
+  - name: Anahita Darvish
+    orcid: 0009-0000-4405-9889
+    email: adarvish@student.ethz.ch
+    affiliation: 
+      - name: ETH Zurich
+        url: https://ethz.ch/de.html
 format: html
+toc: true
+execute:
+  warning: false
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+csl: ieee.csl
 editor: visual
 ---
 
-# Introduction
+## Introduction
 
-Building retrofit has gained lots of traction in recent years due to its potential to increase building energy performance, provide cost savings, and lower environmental emissions. While the design of new, efficient buildings is also a research area of interest, these projects require immense amounts of resources and energy. Retrofit measures provide an effective, sustainable solution to increase building energy performance while avoiding issues related to land-use and deforestation. Facades are a key focus in retrofit designs as they are the facilitator between the indoor and outdoor worlds. Passive-design strategies, in particular, provide easy to implement and simple interventions that can have a large impact on the building's total energy consumption. This report aims to investigate the interactions and effectiveness of three different facade retrofit measures including design, engineering, and nature based solutions.
+The building sector currently comprises a large percentage of worldwide energy consumption [@SARIHI2021102525]. With the rise of climate change and energy efficiency policies, the need to improve energy efficiency in the existing built environment is vital [@martinezFundamentalsFacadeRetrofit2015]. Building energy consumption is a especially a challenge in the tropics, where high temperatures and high humidity lead to the use of large amounts of energy for cooling and de-humdification [@zotero-item-221]. Energy retrofit measures have gained lots of traction in recent years due to their potential to increase building energy performance, provide cost savings, and lower environmental emissions. Facades are a key focus area in retrofit designs as they are an essential element of the building's performance. The building facade is the primary interface between the indoor and outdoor environments, filtering heat, light, and air before reaching the interior [@richards2014importance].
 
--   Discuss specifics about Singapore so audience knows where this research is focused on
+Background info on ERM studies then novelty of my work
 
-    -   Cooling dominated society
+The objectives of this report are as follows:
 
--   More about why facades are such a key research area, what is so interesting about them in terms of saving energy?
+-   To compare the cooling demand impacts of three passive energy retrofit measures
 
--   I want to use the phrase "built environment" somewhere bc I think it sounds really good
+-   To examine how retrofit effectiveness varies across multiple blocks in the same complex
+
+-   To assess whether observed energy savings are robust or block-specific
+
+Old stuff: While the design of new, efficient buildings is also a research area of interest, these projects require immense amounts of resources and energy. Retrofit measures provide an effective, sustainable solution to increase building energy performance while avoiding issues related to land-use and deforestation. Facades are a key focus in retrofit designs as they are the facilitator between the indoor and outdoor worlds. Passive-design strategies, in particular, provide easy to implement and simple interventions that can have a large impact on the building's total energy consumption.
 
 -   Mention the structure of the report, what the reader will find in each section etc.
 
-# Background
+## Methodology
 
--   Discuss the UCDL paper
+### Target buildings and simulation setup
 
--   Discuss BEM using EnergyPlus
+A typical high-rise, public residential complex in Singapore was selected for this study. Everton park consists of seven, 12-storey-high buildings facing north or south, in the configuration shown in @fig-layout.
 
--   Discuss some papers that looked at facade retrofit optimizations
+![Everton park layout](images/everton_layout-01.png){#fig-layout}
 
--   What is the novelty of this work: looking at three different design approaches and doing a comparative analysis
+Buildings of interest in this study are the central building, block 7, and the buildings directly north and south of it, blocks 2 and 5, respectively. Evaluating multiple blocks allows for a more robust simulation of energy retrofit measures (ERMs), as they will be applied to buildings with different relative positions, solar exposure, and boundary conditions.
 
-# Methods
+Energy consumption in each building was modeled using EnergyPlus, a widely-used physics based building energy modelling (BEM) program (source). Energy models developed by [@XU2022103775a] were used as a baseline for this analysis. All parameters relevant to replicating the models including floor plans, zoning, construction materials, air-conditioning settings, and schedules can be referenced in their work. The weather file used in all simulations is the developed microclimate data by (source) which proved to perform better than historical or measured weather datasets for building energy modelling.
 
--   Study area and target building - explain why (similar to UCDL paper)
+Energy consumption due to air-conditioning is the main target area for this analysis. To represent this as an output meter in EnergyPlus, Cooling:EnergyTransfer was selected. This output meter represents how much cooling energy the building needs to maintain comfort. It does this by measuring how much heat must be removed from all zones to maintain temperature setpoints. Using this output metric, the percentage change between the baseline case and the retrofit case was calculated to identify the significance of the ERM.
 
-    -   Why choose only the central building - what is the significance
+### Selection of energy retrofit measures
 
--   Energy simulation in energyplus
-
-    -   I think I can leave out all the details about the previous model since that is all available in the other paper and I can just mention that all the settings are the same
-
-        -   Benchmarking case?
-
-    -   Weather data, using their developed one that proved to be the "best"
-
--   Intervention measures
-
-    -   Numbers and justification with sources
-
-    -   Discuss why these in particular were chosen, why do a three way study?
-
--   KPIs and output variables of interest
-
-    -   Cooling demand of whole building
-        -   **Zone Ideal Loads Supply Air Total Cooling Energy** is the district cooling energy consumed by the ideal loads system “cooling coil” to cool and dehumidify the supply air.
-    -   Energy use intensity
-    -   How cool the building is / how well it blocks solar heat
-        -   **Surface Outside Face Incident Solar Radiation Rate per Area:** what's hitting each surface
-        -   **Surface Outside Face Absorbed Shortwave Radiation Rate per Area:** how much is being absorbed
-        -   **Surface Outside Face Temperature:** Skin temp
-        -   **Surface Inside Face Temperature**
-        -   **Surface Inside Face Conduction Heat Gain Rate:** Direct conductive gains from opaque envelope into zones
-
-## Design Intervention
-
-### Fixed Exterior Shading
-
-E+ objects (Thermal Zones and Surfaces)
-
--   Shading:Overhang
-
--   Shading:Overhang:Projection (best for parametric analysis)
-
--   Shading:Fin
-
--   Shading:Fin:Projection
-
-What to vary
-
--   Overhang depth: 0 (none) / 0.8 / 1.5 (deep) m
-
-    -   Find source to backup numbers
-
--   Fin depth and spacing (optional second step)
-
-Best facades to shade for highest payoff
-
--   west
-
--   south
-
-## Engineering Intervention
-
-### Cool coating (exterior walls)
-
-Since the exterior walls were already created and already had a filed for the solar absorptance, I did not need to make any adjustments using the IDFeditor and I was able to immediately begin a parametric analysis using the param() function of eplusr. I first ran a test case to ensure that everything was working properly.
-
-E+ objects (surface construction elements)
-
--   Material
-
--   Material:NoMass
-
-What to vary
-
--   Solar absorptance: 0.7 (dark) / 0.4 (med) / 0.2 (cool)
-
-## Nature Intervention
-
-### Green roof
-
-I added the Material:RoofVegetation class manually in the IDFEditor to have a baseline case for the parametric study. All the fields for the baseline case were filled in by default values as outlined in the InputOuput Reference manual. I also manually added a new construction object for the green roof, which has all the same elements as the original roof, but now includes the roof vegetation as the outermost layer.
-
-E+ objects (surface construction elements)
-
--   Material:RoofVegetation
-
-What to vary
-
--   Leaf area index: 0 (none) / 2.5 / 5 (lush)
-
--   Soil/ substrate thickeness
+After conducting a literature review on common ERMs used in energy simulation models, three ERMs from different disciplines were chosen to expand the breadth of the study including: design, engineering, and nature based retrofits. @tbl-erms lists the ERMs as well as the building component they correspond to, namely, windows, exterior walls, and exterior roof. Shading and coating ERMs were simulated individually by adding and/or adjusting one component in the model. If the reduction in cooling demand was deemed significant, a combination of the ERM with a roof ERM was then simulated to determine the maximal possible energy savings for each block.
 
 ```{r}
+#| echo: false
+#| label: tbl-erms
+#| tbl-cap: Energy retrofit measures for simulation
+
 library(gt)
+library(tidyverse)
 
-#Assign values to variables
-shading <- c(0.1, 0.5, 1)
-absorptance <- c(0.7, 0.4, 0.2)
-lai <- c(1, 2.5, 5)
-assign <- c("Baseline", "Medium", "High")
-
-#Create dataframe
-df <- data.frame(
-  "Scenario" = assign,
-  "Overhang Depth" = shading,
-  "Solar Absorptance" = absorptance,
-  "Leaf Area Index" = lai,
-  check.names = FALSE
+component <- c("Windows", "Walls, Roof", "Roof")
+#existing <- c("Unshaded windows", 
+#              "Concrete facade with simple paint (a = 0.7)",
+#              "Concrete roof with with simple paint (a = 0.7)",
+#              "")
+retrofits <- c("Overhang shading",
+               "High reflectance coating",
+               "Roof vegetation")
+discipline <- c("Design",
+                "Engineering",
+                "Nature")
+summary_df <- tibble(
+  `Discipline` = discipline,
+  `Energy retrofit measures` = retrofits,
+  `Building component` = component
+  
+  
 )
-
-#Create table
-df |> 
+summary_df |> 
   gt() |> 
-  tab_header(title = "Values for Building Retrofit") |> 
-  fmt_number(columns = 2:4, decimals = 2) |> 
+  cols_align("left", everything()) |> 
   tab_style(
-    style = cell_text(weight = "bold"),
+    style = list(
+      cell_text(weight = "bold")
+    ),
     locations = cells_column_labels()
   )
 
 ```
 
+### Baseline case simulation and verification
+
+To determine a baseline cooling demand for each of block, the existing IDF models were simulated with the developed microclimate weather dataset. The baseline case as well as all retrofit scenarios were simulated for June 2015. A daily reporting frequency was selected for the Cooling:EnergyTransfer output meter; therefore, the daily outputs were summed to calculate the monthly cooling demand. Weekends were not considered in the analysis and were thus subtracted from the monthly total. The Cooling:EnergyTransfer output meter returns a thermal energy (heat removed from the zone). To calculate electricity used for cooling, @eq-cop was applied. Where $E_{el}$ represents the electricity input to the AC unit, $Q_{cool}$ is the heat removed from the zone for cooling, and COP is the coefficient of performance, which is set to 3. The simulation period and COP are consistent with [@XU2022103775b]. $$E_{\mathrm{el}} \;[\mathrm{kWh_{el}}]=\frac{Q_{\mathrm{cool}} \;[\mathrm{kWh_{th}}]}{\mathrm{COP}}$$ {#eq-cop}
+
+```{r}
+#| echo: false
+
+library(gt)
+library(here)
+library(tidyverse)
+
+block <- c("2","7","5")
+blk7_baseline <- read_csv( here("data", "results", "blk7_baseline"))
+blk7_baseline <- blk7_baseline$e_ac
+blk5_baseline <- read_csv( here("data", "results", "blk5_baseline"))
+blk5_baseline <- blk5_baseline$e_ac
+blk2_baseline <- read_csv( here("data", "results", "blk2_baseline"))
+blk2_baseline <- blk2_baseline$e_ac
+demand <- c(blk2_baseline, blk7_baseline, blk5_baseline)
+baseline_df <- tibble(
+  `Block` = block,
+  `Cooling demand (kWh)` = demand
+)
+```
+
+The models were verified using published data on public housing monthly electricity consumption [@zotero-item-225] and the percentage of household electricity used for air-conditioning [@zotero-item-222]. Ranges were selected around the published values to encompass both conservative and high electricity use: 250-400 kWh for household monthly electricity consumption and 20-25% of electricity use attributable to AC. @eq-ac was used to calculate upper and lower bounds for the monthly AC electricity consumption of each building. Where $p_{AC}$ is the percentage of total monthly electricity consumption per household used for cooling, $E_{tot}$ is the total monthly electricity consumption per household, and $N_{flats}$is the total number of flats in individual residential buildings.
+
+$$
+\ E_{AC} = p_{AC} * E_{tot} * N_{flats}
+$$ {#eq-ac}
+
+@fig-reference shows the range of reference values tested and where each baseline model falls within the range. All baseline values fell on the more conservative side of the range, which is plausible because the model uses an ideal loads cooling system. Block 7 shows a very conservative estimation likely because the monthly energy consumption scaled linearly with the number of flats, but the model does not, it also considers relative location and shading from surrounding blocks (idk if I want to claim this already). Since all baseline values fall within the benchmark ranges, they were deemed suitable for a comparative analysis of retrofit scenarios.
+
+```{r}
+#| echo: false
+#| label: fig-reference
+#| fig-cap: Verification of model
+#| 
+library(gt)
+library(here)
+library(tidyverse)
+library(ggplot2)
+library(ggthemes)
+
+#Make this figure a little nicer
+
+p_ac_low <- 0.20
+p_ac_high <- 0.25
+n_flats <- c(99, 120, 99)
+#ac_own <- c(0.83, 0.91, 0.97)
+e_tot_low <- 250
+e_tot_high <- 400
+e_ac_ref_low <- p_ac_low * e_tot_low * n_flats #* ac_own
+e_ac_ref_high <- p_ac_high * e_tot_high * n_flats
+#pct_diff <- ((e_ac_ref - e_ac) / e_ac_ref) * 100
+
+ref_df <- tibble(
+  block = factor(c("Block 2", "Block 7", "Block 5"),
+                 levels = c("Block 2", "Block 7", "Block 5")),
+  E_min = e_ac_ref_low,     # 250 kWh, 20%
+  E_max = e_ac_ref_high,    # 400 kWh, 25%
+  E_sim = demand
+)
+
+ggplot(ref_df, aes(y = block)) +
+  geom_linerange(
+    aes(xmin = E_min, xmax = E_max),
+    linewidth = 4,
+    color = "lightblue"
+  ) +
+  geom_point(
+    aes(x = E_sim),
+    size = 3,
+    color = "black"
+  ) +
+  geom_text(
+  aes(x = E_sim, label = paste0(round(E_sim, 0), " kWh")),
+  nudge_y = 0.25,          # move label above the dot
+  size = 4,
+  color = "black"
+  ) +
+  labs(
+    x = "Monthly AC electricity consumption (kWh)",
+    y = NULL
+  ) +
+  theme_minimal(base_size = 14)
+
+#ref_df |> 
+#  gt() |> 
+#  cols_align("left", everything()) |> 
+#  fmt_number(
+#    columns = where(is.numeric),
+#    decimals = 2
+#  ) |> 
+#  tab_style(
+#    style = list(
+#      cell_text(weight = "bold")
+#    ),
+#    locations = cells_column_labels()
+#  ) 
+```
+
 ```{r}
 
 ```
 
-# Results
+## Results
 
-Key performance indicators to focus on:
+### Shading
 
--   Annual cooling demand (ideal loads) (minimize)
+Solar shading devices play an important role in building energy and thermal behavior. In hot and humid climates like Singapore, shading can prevent excessive solar gain, lowering cooling demand. When implementing solar shading on windows, it is important to consider both solar radiation regulation and satisfactory levels of natural light and visibility to the outdoors [@su6085354]. While many residential buildings make use of internal shading devices, external devices are more effective in reducing cooling loads because they can intercept and reduce solar radiation before it reaches the glass panes [@KIM2012105]. (Add mechanism sentence)
 
--   Zone Operative Temperature
+For this study, horizontal overhangs on windows were chosen as the retrofit measure, which corresponds to the EnergyPlus input Shading:Overhang:Projection. Overhang depths were varied as a fraction of the window height including values of: 0.25, 0.50, 0.75, and 1.00. Windows in this model are only on the north and south facing facades. To test differences in response of the north and south facing facades, overhangs were applied on each facade individually then on both. Since overhangs were not a part of the baseline model, a placeholder overhang was created on each window before running a parametric simulation for overhang depths.
 
-    -   overheating degree hours (minimize)
+@fig-shading shows the results for the overhang shading parametric analysis for north facing windows, south facing windows, and all windows for each block. The results indicate that as the overhang depth increases, the percent change in cooling demand also increases. However, the results are of such a small magnitude, $\pm$ 0.1% change, that they are deemed insignificant and will not be used in comparative analysis with other retrofits.
 
--   Whole building electricity
+Shading likely did not have an effect on the overall cooling energy demand due to the climate sensitive design of the buildings. The buildings all have a north-south orientation with no windows on the east and west facing facades, strategies to minimize solar heat gains in Singapore [@zotero-item-221]. Since the sun is almost directly overhead during June in Singapore, windows on the north and south facades get very little sun exposure, thus the shading had a limited effect. Also, the baseline models consider both corridor and inter-building shading which may already provide sufficient shading on the north and south facades (should I include this line?).
 
-# Conclusion
+```{r}
+#| echo: false
+#| label: fig-shading
+#| fig-cap: Effects of overhang shading on windows
+library(here)
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(ggthemes)
+
+all_blks_results <- read_csv(here("data", "results", "all_blks_results"))
+all_blks_results$facade <- factor(all_blks_results$facade,
+                                 levels = c("North", "South", "Both"))
+all_blks_results$block <- factor(all_blks_results$block,
+                                 levels = c("Blk2", "Blk7", "Blk5"))
+all_blks_results$case <- factor(all_blks_results$case,
+                                levels = c("1/4 Shade", "Half Shade", "3/4 Shade", "Full Shade"))
+
+
+all_blks_results |> 
+  filter(scenario_type == "Shading") |> 
+  ggplot(aes(x = block,
+             y = pct_change,
+             fill = case,
+             color = case)) +
+  geom_point(shape = 21, size = 3)+
+  ylim(-.1,.1) +
+  geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
+  facet_wrap(~facade) +
+  theme_minimal(base_size = 14)+
+  labs(
+    title = "Effects of overhang shading on windows",
+    x = NULL,
+    y = "Δ Cooling Demand (%)"
+  ) +
+  scale_fill_colorblind() +
+  scale_colour_colorblind()
+```
+
+### Coating
+
+Reflective or cool materials are considered an effective method for decreasing building thermal loads (source coating). Light color coatings, for example, can be applied to any building surface to increase albedo, the fraction of sunlight reflected by a surface. (Add mechanism sentence)
+
+To implement cool coatings in the models, the solar absorptance of the exterior walls and roof materials were varied from a range of dark to cool, including values: 0.7, 0.5, 0.4, 0.3, and 0.2. The coatings were applied systemiatically, to identify if any facade wall had a larger response. The general methodology in EnergyPlus was as follows: a new material was created with the desired solar absorptance, followed by a new construction of the exterior wall and/or roof, and finally, the new construction was applied to the desired facade.
+
+@fig-coolwall shows the results for parametric analysis of cool coatings on each facade wall. The results indicate that as solar absorptance decreases, the percent change in cooling demand increases. Thus, for the remaining retrofit scenarios, a solar absorptance of 0.2 will be used. Additionally, the facade walls all demonstrate a similar, limited, response with less than a 1% change in cooling demand. Indicating that no facade wall, alone, yields a more beneficial response.
+
+```{r}
+#| echo: false
+#| label: fig-coolwall
+#| fig-cap: Cool coating on walls
+library(here)
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(ggthemes)
+
+all_blks_results <- read_csv(here("data", "results", "all_blks_results")) |> 
+  filter(facade != "All")
+all_blks_results$facade <- factor(all_blks_results$facade,
+                                 levels = c("North", "South", "East", "West"))
+all_blks_results$block <- factor(all_blks_results$block,
+                                 levels = c("Blk2", "Blk7", "Blk5"))
+all_blks_results$case <- factor(all_blks_results$case,
+                                levels = c("Cool", "Med-Cool", "Medium", "Med-Dark", "Dark"))
+
+all_blks_results |> 
+  filter(scenario_type == "Coating") |> 
+  ggplot(aes(x = block,
+             y = pct_change,
+             fill = case,
+             color = case)) +
+  geom_point(shape = 21, size = 3)+
+  ylim(-1,0.25) +
+  geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
+  facet_wrap(~facade) +
+  theme_minimal(base_size = 14)+
+  labs(
+    title = "Cool Walls: Percent Change in Cooling Demand",
+    x = NULL,
+    y = "Δ Cooling Demand (%)"
+  ) +
+  scale_fill_colorblind() +
+  scale_colour_colorblind()
+```
+
+Next, the application of coating on all facade walls was compared to coating on the roof, displayed in @fig-coolroof.
+
+```{r}
+#| echo: false
+#| label: fig-coolroof
+#| fig-cap: Cool coating on roof
+library(here)
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(ggthemes)
+
+cb <- colorblind_pal()(8)
+
+coolroof <- read_csv(here("data", "results", "coolroof")) |> 
+  filter(case == "Cool")
+coolroof$scenario_type <- "Roof"
+all_blks_results <- read_csv(here("data", "results", "all_blks_results")) |> 
+  filter(facade == "All",
+         case == "Cool")
+all_blks_results$scenario_type <- "Walls"
+together <- bind_rows(coolroof, all_blks_results)
+
+together$block <- factor(together$block,
+                                levels = c("Blk2", "Blk7", "Blk5"))
+together$case <- factor(together$case,
+                                levels = c("Cool", "Med-Cool", "Medium", "Med-Dark", "Dark"))
+
+together |> 
+  ggplot(aes(x = scenario_type,
+             y = pct_change,
+             fill = scenario_type)) +
+  geom_col() +
+  ylim(-10,0.25) +
+  geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
+  theme_minimal(base_size = 14)+
+  facet_wrap(~block)+
+  labs(
+    title = "Cool Roof vs Cool Walls",
+    x = NULL,
+    y = "Δ Cooling Demand (%)"
+  ) +
+  scale_fill_manual(
+    values = c(
+      "Roof" = cb[7],
+      "Walls" = cb[8]
+    ))
+```
+
+The data shows that coatings on the roof have a much larger impact than coatings on the exterior walls. Best case scenarios for rooptop and wall savings are 8.75% and 2.06%, respectively. This is as expected, since the roof is far more sun exposed due to Singapore's sun path. It is interesting to note that block 7, the central building, outperformed both surrounding buildings, which had similar cooling demand savings. The cool coating on block 7 more than doubled the savings of blocks 2 and 5.
+
+### Green roof
+
+Green roofs (GRs) are a form of urban greenery that is beneficial in reducing a building's heat gain and energy consumption (and mitigating the Urban Heat Island effect) [@zotero-item-221]. They can help provide thermal insulation to the interior spaces below it, maximizing indoor thermal comfort and minimizing cooling needs [@ZHAO2023113668]. The benefits of GRs can be explained through four main mechanisms including: insulation, evapotranspiration, shading, and wind barrier effect [@dahanayakeComparingReductionBuilding2018].
+
+EnergyPlus utilizes a built-in module to simulate GRs, based on a heat balance principle between the soil layer and vegetation layer [@SAILOR20081466]. The module accounts for sensible heat flux, latent heat flux, and long- and short-wave radiation.
+
+To add a GR to the baseline model, a new vegetation material was created, followed by a new construction. The new construction was then applied to the exterior roof, following a similar setup to the cool coatings. Two cases of GRs were simulated with details presented in @tbl-details. For this study, only the leaf area index and plant height were varied between cases. All other parameters related to the vegetation material, such as substrate thickness and soil conductivity, were set to the default EnergyPlus values. The two cases represent a green roof with grass, which covers the roof more extensively (higher LAI) but has a shorter plant height, and shrubs, which cover less of the roof area (lower LAI) and have a higher plant height.
+
+```{r}
+#| echo: false
+#| label: tbl-details
+#| tbl-cap: Details of green roof
+
+library(gt)
+library(tidyverse)
+
+details_df <- tibble(
+  Parameter = c(
+    "Height of plants (m)",
+    "Leaf area index (LAI)",
+    "Leaf reflectivity",
+    "Leaf emissivity",
+    "Minimum stomatal resistance (s/m)",
+    "Substrate thickness (m)",
+    "Conductivity of dry soil (W/m·K)",
+    "Thermal absorptance"
+  ),
+  `Grass` = c(0.15, 3, 0.2, 0.95, 180, 0.1, 0.35, 0.9),
+  `Shrubs` = c(1.0, 1.5, 0.2, 0.95, 180, 0.1, 0.35, 0.9),
+  `Source` = c("Parametric variable", "Parametric variable", "Default", "Default", "Default", "Default", "Default", "Default")
+)
+
+details_df |> 
+  gt() |> 
+  cols_align("left", everything()) |> 
+  tab_style(
+    style = list(
+      cell_text(weight = "bold")
+    ),
+    locations = cells_column_labels()
+  )
+
+```
+
+Each green roof was paired with a cool coating on all facade exterior walls for simulation. @fig-comparison shows a comparison between both GRs and complete coating, on all facade exteriors. The GRs on all blocks performed similarly, with grass demonstrating slightly better cooling demand savings. For blocks 2 and 5, the cool coating slightly outperformed the GRs. For block 7, however, the cool coating more than doubled the energy savings of the GRs, which is consistent with the results seen when comparing the coating on the walls vs the roof.
+
+```{r}
+#| echo: false
+#| label: fig-comparison
+#| fig-cap: Comparision between green roof with wall coatings and complete coating
+library(here)
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(ggthemes)
+
+cb <- colorblind_pal()(8)
+
+complete_coating <- read_csv(here("data", "results", "complete_coating"))
+all_blks_greenroof <- read_csv(here("data", "results", "all_blks_greenroof")) |> 
+  filter(scenario_type == "Coating + Green Roof")
+
+complete_coating$case <- "coating"
+all_blks_greenroof <- rename(all_blks_greenroof,
+                             energy_ac = e_ac)
+comparison <- bind_rows(complete_coating, all_blks_greenroof)
+
+comparison$block <- factor(comparison$block,
+                           levels = c("Blk2", "Blk7", "Blk5"))
+
+comparison |> 
+  ggplot(aes(x = case,
+             y = pct_change,
+             fill = case)) +
+  facet_wrap(~block) +
+  geom_col() +
+  ylim(-11,0.25) +
+  theme_minimal(base_size = 14) +
+  geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
+  labs(
+    title = "Coating + Green Roof vs Complete Coating",
+    x = NULL,
+    y = "Δ Cooling Demand (%)"
+  )+
+  scale_fill_manual(
+    values = c(
+      "coating" = cb[7],
+      "grass" = cb[8],   
+      "shrubs" = cb[6]
+    ))
+#  scale_fill_colorblind()
+```
+
+### Evaluation
+
+Each ERM tested, with the corresponding block, is categorized in @tbl-eval based on their energy rating. The energy rating is a function of $p$, the percentage reduction in cooling energy demand which is calculated using @eq-percentage.
+
+$$
+p = \frac{E_{retrofit} - E_{baseline}}{E_{baseline}} * 100
+$$ {#eq-percentage}
+
+```{r}
+#| echo: false
+#| label: tbl-eval
+#| tbl-cap: Energy retrofit measures evaluation
+
+library(gt)
+library(tidyverse)
+
+percentages <- c("5 < p ≤ 10", "2 < p ≤ 5", "p ≤ 2")
+rating <- c("High", "Moderate", "Low")
+erms <- c("CR (7), CR+CW (7)", 
+          "CR (2,5), CR+CW (2,5), GR+CW (2,7,5)", 
+          "CW (2,7,5), GR (2,7,5), S (2,7,5)")
+energy_df <- tibble(
+  `Monthly Energy Saving (%)` = percentages,
+  `Energy Rating` = rating,
+  `ERMs (block)` = erms
+)
+energy_df |> 
+  gt()|> 
+  tab_style(
+    style = list(
+      cell_text(weight = "bold")
+    ),
+    locations = cells_column_labels()
+  )
+```
+
+## Conclusion
+
+bla bla bla
+
+## References

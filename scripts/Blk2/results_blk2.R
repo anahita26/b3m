@@ -19,26 +19,14 @@ results <- bind_rows(
   read_csv(here("data", "results", "coating_south_blk2")) %>%
     mutate(scenario_type = "Coating", facade = "South"),
   
-  read_csv(here("data", "results", "coating_both_blk2")) %>%
-    mutate(scenario_type = "Coating", facade = "Both"),
+  read_csv(here("data", "results", "coating_east_blk2")) %>%
+    mutate(scenario_type = "Coating", facade = "East"),
   
-  read_csv(here("data", "results", "shading0.5_coating_north_blk2")) %>%
-    mutate(
-      scenario_type = "Combined",
-      facade = "North"
-    ),
+  read_csv(here("data", "results", "coating_west_blk2")) %>%
+    mutate(scenario_type = "Coating", facade = "West"),
   
-  read_csv(here("data", "results", "shading0.5_coating_south_blk2")) %>%
-    mutate(
-      scenario_type = "Combined",
-      facade = "South"
-    ),
-  
-  read_csv(here("data", "results", "shading0.5_coating_both_blk2")) %>%
-    mutate(
-      scenario_type = "Combined",
-      facade = "Both"
-    )
+  read_csv(here("data", "results", "coating_all_blk2")) %>%
+    mutate(scenario_type = "Coating", facade = "All")
 )
 
 results <- results |> 
@@ -48,7 +36,6 @@ results <- results |>
     case_id = ...1
   )
 
-results$case[28:42] <- paste0("Shade0.5_", results$case[28:42])
 results$case_id <- 1:nrow(results)
 results <- results |> 
   select(case_id, scenario_type, facade, case, energy_ac)
@@ -80,6 +67,6 @@ results_greenroof <- results_greenroof |>
 
 #results_greenroof <- bind_rows(results_greenroof, new_row)
 
-write_csv(results_greenroof,
-          here("data", "results", "greenroof_data_blk2"))
+#write_csv(results_greenroof,
+#          here("data", "results", "greenroof_data_blk2"))
 
