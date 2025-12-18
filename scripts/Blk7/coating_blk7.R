@@ -21,6 +21,44 @@ all_exterior <- c(north_exterior, south_exterior, east_exterior, west_exterior)
 roof <- get_facade_exterior_roof(model)
 roof <- roof$name
 
+#Get facade areas
+geo <- model$geometry()
+areas <- geo$area()
+north_area <- areas |> 
+  filter(areas$name %in% north_exterior) |> 
+  pull(area) |>
+  sum(na.rm = TRUE)
+south_area <- areas |> 
+  filter(areas$name %in% south_exterior) |> 
+  pull(area) |>
+  sum(na.rm = TRUE)
+east_area <- areas |> 
+  filter(areas$name %in% east_exterior) |> 
+  pull(area) |>
+  sum(na.rm = TRUE)
+west_area <- areas |> 
+  filter(areas$name %in% west_exterior) |> 
+  pull(area) |>
+  sum(na.rm = TRUE)
+roof_area <- areas |> 
+  filter(areas$name %in% roof) |> 
+  pull(area) |>
+  sum(na.rm = TRUE)
+blk7_areas <- tibble(
+  surface = c("North facade", "South facade", "East facade", "West facade", "Roof"),
+  area_m2 = c(
+    north_area,
+    south_area,
+    east_area,
+    west_area,
+    roof_area
+  )
+)
+
+write_csv(
+  blk7_areas,
+  here("data", "results", "blk7_surface_areas.csv")
+)
 # Apply facade specific coating once to have baseline absorptance
 model <- apply_facade_coating(model,
                               facade_walls = all_exterior, #change facade here

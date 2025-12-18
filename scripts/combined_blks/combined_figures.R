@@ -10,9 +10,45 @@ library(gt)
 # Upload data for block 7
 blk7_results <- read_csv(here("data", "results", "all_scenarios_blk7"))
 blk7_baseline <- read_csv( here("data", "results", "blk7_baseline"))
+blk7_areas <- read_csv(here("data", "results", "blk7_surface_areas.csv"))
+
 blk7_baseline <- blk7_baseline$e_ac
 blk7_results$baseline <- blk7_baseline
 blk7_results$diff <- blk7_results$baseline - blk7_results$energy_ac
+
+area_lookup <- setNames(blk7_areas$area_m2, blk7_areas$surface)
+
+northA <- area_lookup[["North facade"]]
+southA <- area_lookup[["South facade"]]
+eastA  <- area_lookup[["East facade"]]
+westA  <- area_lookup[["West facade"]]
+roofA  <- area_lookup[["Roof"]]
+all_facadesA <- northA + southA + eastA + westA
+
+blk7_results <- blk7_results |>
+  mutate(
+    facade_clean = str_to_lower(facade),
+    
+    area_m2 = case_when(
+      str_detect(facade_clean, "north") ~ northA,
+      str_detect(facade_clean, "south") ~ southA,
+      str_detect(facade_clean, "east")  ~ eastA,
+      str_detect(facade_clean, "west")  ~ westA,
+      str_detect(facade_clean, "roof")  ~ roofA,
+      
+      # handle multi-facade cases (tweak keywords to match your data)
+      str_detect(facade_clean, "both") ~ northA + southA,          # if "both" means N+S in your study
+      str_detect(facade_clean, "all")  ~ all_facadesA,             # all vertical facades
+      str_detect(facade_clean, "facades") ~ all_facadesA,
+      
+      TRUE ~ NA_real_
+    ),
+    
+    kwh_per_m2 = diff / area_m2
+  ) |>
+  select(-facade_clean)
+
+
 blk7_results_pct <- blk7_results |> 
   mutate(pct_change = 100 * (blk7_results$energy_ac - blk7_baseline) / blk7_baseline)
 blk7_results_pct$block <- "Blk7"
@@ -25,7 +61,44 @@ blk7_results_greenroof_pct$block <- "Blk7"
 # Upload data for block 5
 blk5_results <- read_csv(here("data", "results", "all_scenarios_blk5"))
 blk5_baseline <- read_csv( here("data", "results", "blk5_baseline"))
+blk5_areas <- read_csv(here("data", "results", "blk5_surface_areas.csv"))
+
 blk5_baseline <- blk5_baseline$e_ac
+blk5_results$baseline <- blk5_baseline
+blk5_results$diff <- blk5_results$baseline - blk5_results$energy_ac
+
+area_lookup <- setNames(blk5_areas$area_m2, blk5_areas$surface)
+
+northA <- area_lookup[["North facade"]]
+southA <- area_lookup[["South facade"]]
+eastA  <- area_lookup[["East facade"]]
+westA  <- area_lookup[["West facade"]]
+roofA  <- area_lookup[["Roof"]]
+all_facadesA <- northA + southA + eastA + westA
+
+blk5_results <- blk5_results |>
+  mutate(
+    facade_clean = str_to_lower(facade),
+    
+    area_m2 = case_when(
+      str_detect(facade_clean, "north") ~ northA,
+      str_detect(facade_clean, "south") ~ southA,
+      str_detect(facade_clean, "east")  ~ eastA,
+      str_detect(facade_clean, "west")  ~ westA,
+      str_detect(facade_clean, "roof")  ~ roofA,
+      
+      # handle multi-facade cases (tweak keywords to match your data)
+      str_detect(facade_clean, "both") ~ northA + southA,          # if "both" means N+S in your study
+      str_detect(facade_clean, "all")  ~ all_facadesA,             # all vertical facades
+      str_detect(facade_clean, "facades") ~ all_facadesA,
+      
+      TRUE ~ NA_real_
+    ),
+    
+    kwh_per_m2 = diff / area_m2
+  ) |>
+  select(-facade_clean)
+
 blk5_results_pct <- blk5_results |> 
   mutate(pct_change = 100 * (blk5_results$energy_ac - blk5_baseline) / blk5_baseline)
 blk5_results_pct$block <- "Blk5"
@@ -38,7 +111,44 @@ blk5_results_greenroof_pct$block <- "Blk5"
 # Upload data for block 2
 blk2_results <- read_csv(here("data", "results", "all_scenarios_blk2"))
 blk2_baseline <- read_csv( here("data", "results", "blk2_baseline"))
+blk2_areas <- read_csv(here("data", "results", "blk2_surface_areas.csv"))
+
 blk2_baseline <- blk2_baseline$e_ac
+blk2_results$baseline <- blk2_baseline
+blk2_results$diff <- blk2_results$baseline - blk2_results$energy_ac
+
+area_lookup <- setNames(blk2_areas$area_m2, blk2_areas$surface)
+
+northA <- area_lookup[["North facade"]]
+southA <- area_lookup[["South facade"]]
+eastA  <- area_lookup[["East facade"]]
+westA  <- area_lookup[["West facade"]]
+roofA  <- area_lookup[["Roof"]]
+all_facadesA <- northA + southA + eastA + westA
+
+blk2_results <- blk2_results |>
+  mutate(
+    facade_clean = str_to_lower(facade),
+    
+    area_m2 = case_when(
+      str_detect(facade_clean, "north") ~ northA,
+      str_detect(facade_clean, "south") ~ southA,
+      str_detect(facade_clean, "east")  ~ eastA,
+      str_detect(facade_clean, "west")  ~ westA,
+      str_detect(facade_clean, "roof")  ~ roofA,
+      
+      # handle multi-facade cases (tweak keywords to match your data)
+      str_detect(facade_clean, "both") ~ northA + southA,          # if "both" means N+S in your study
+      str_detect(facade_clean, "all")  ~ all_facadesA,             # all vertical facades
+      str_detect(facade_clean, "facades") ~ all_facadesA,
+      
+      TRUE ~ NA_real_
+    ),
+    
+    kwh_per_m2 = diff / area_m2
+  ) |>
+  select(-facade_clean)
+
 blk2_results_pct <- blk2_results |> 
   mutate(pct_change = 100 * (blk2_results$energy_ac - blk2_baseline) / blk2_baseline)
 blk2_results_pct$block <- "Blk2"
@@ -85,6 +195,35 @@ blk5_coolroof$block <- "Blk5"
 coolroof <- bind_rows(blk2_coolroof, blk7_coolroof, blk5_coolroof)
 coolroof$block <- factor(coolroof$block,
                                  levels = c("Blk2", "Blk7", "Blk5"))
+
+blk2_roof_area <- blk2_areas |>
+  filter(surface == "Roof") |>
+  transmute(block = "Blk2", roof_area_m2 = area_m2)
+
+blk5_roof_area <- blk5_areas |>
+  filter(surface == "Roof") |>
+  transmute(block = "Blk5", roof_area_m2 = area_m2)
+
+blk7_roof_area <- blk7_areas |>
+  filter(surface == "Roof") |>
+  transmute(block = "Blk7", roof_area_m2 = area_m2)
+
+roof_areas_all <- bind_rows(blk2_roof_area, blk5_roof_area, blk7_roof_area)
+
+coolroof2 <- coolroof |>
+  left_join(roof_areas_all, by = "block")
+
+coolroof2 <- coolroof2 |> 
+  mutate(
+    baseline = case_when(
+      block == "Blk7" ~ blk7_baseline,
+      block == "Blk2" ~ blk2_baseline,
+      block == "Blk5" ~ blk5_baseline,
+      TRUE ~ NA_real_
+    ),
+    kwh_m2_saved = (baseline - energy_ac) / roof_area_m2
+  )
+
 write_csv(coolroof,
           here("data", "results", "coolroof"))
 
@@ -121,7 +260,7 @@ write_csv(complete_coating,
           here("data", "results", "complete_coating"))
 
 
-# Only coating plots
+# Shading figure
 all_blks_results |> 
   filter(scenario_type == "Shading") |> 
   ggplot(aes(x = block,
@@ -141,6 +280,7 @@ all_blks_results |>
   scale_fill_colorblind() +
   scale_colour_colorblind()
 
+#percent change graph
 all_blks_results |> 
   filter(scenario_type == "Coating") |> 
   ggplot(aes(x = block,
@@ -160,6 +300,25 @@ all_blks_results |>
   scale_fill_colorblind() +
   scale_colour_colorblind()
 
+# kwh_m2 graph
+all_blks_results |> 
+  filter(scenario_type == "Coating") |> 
+  ggplot(aes(x = block,
+             y = kwh_per_m2,
+             fill = case,
+             color = case)) +
+  geom_point(shape = 21, size = 3)+
+  #ylim(-2.5,2.5) +
+  geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
+  facet_wrap(~facade) +
+  theme_minimal()+
+  labs(
+    x = "Block",
+    y = "kWh_m2 saved"
+  ) +
+  scale_fill_colorblind() +
+  scale_colour_colorblind()
+
 coolroof |> 
   ggplot(aes(x = block,
              y = pct_change,
@@ -173,6 +332,23 @@ coolroof |>
     title = "Cool Roof: Percent Change in Cooling Demand",
     x = "Block",
     y = "Δ Cooling Demand (%)"
+  ) +
+  scale_fill_colorblind() +
+  scale_colour_colorblind()
+
+#kwh_m2 graph 
+coolroof2 |> 
+  ggplot(aes(x = block,
+             y = kwh_m2_saved,
+             fill = case,
+             color = case)) +
+  geom_point(shape = 21, size = 3) +
+  #ylim(-10,0) +
+  geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
+  theme_minimal()+
+  labs(
+    x = "Block",
+    y = "kWh_m2 saved"
   ) +
   scale_fill_colorblind() +
   scale_colour_colorblind()
