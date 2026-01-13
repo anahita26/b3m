@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Anahita Darvish">
-<meta name="dcterms.date" content="2025-12-18">
+<meta name="dcterms.date" content="2026-01-13">
 
-<title>Evaluating Retrofit Strategies for Urban Heat Resilience: A Singapore Case Study</title>
+<title>Cooling Demand Reduction through Passive Facade Retrofits: A Multi-Building Case Study in Singapore</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -45,17 +45,17 @@ div.csl-indent {
 }</style>
 
 
-<script src="design_doc_files/libs/clipboard/clipboard.min.js"></script>
-<script src="design_doc_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="design_doc_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="design_doc_files/libs/quarto-html/popper.min.js"></script>
-<script src="design_doc_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="design_doc_files/libs/quarto-html/anchor.min.js"></script>
-<link href="design_doc_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="design_doc_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="design_doc_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="design_doc_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="design_doc_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="index_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -105,7 +105,7 @@ window.Quarto = {
   <li><a href="#selection-of-energy-retrofit-measures" id="toc-selection-of-energy-retrofit-measures" class="nav-link" data-scroll-target="#selection-of-energy-retrofit-measures">Selection of energy retrofit measures</a></li>
   <li><a href="#baseline-case-simulation-and-verification" id="toc-baseline-case-simulation-and-verification" class="nav-link" data-scroll-target="#baseline-case-simulation-and-verification">Baseline case simulation and verification</a></li>
   </ul></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">Results and discussion</a>
   <ul class="collapse">
   <li><a href="#shading" id="toc-shading" class="nav-link" data-scroll-target="#shading">Shading</a></li>
   <li><a href="#coating" id="toc-coating" class="nav-link" data-scroll-target="#coating">Coating</a></li>
@@ -121,7 +121,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Evaluating Retrofit Strategies for Urban Heat Resilience: A Singapore Case Study</h1>
+<h1 class="title">Cooling Demand Reduction through Passive Facade Retrofits: A Multi-Building Case Study in Singapore</h1>
 </div>
 
 
@@ -147,7 +147,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 18, 2025</p>
+      <p class="date">January 13, 2026</p>
     </div>
   </div>
   
@@ -161,24 +161,26 @@ window.Quarto = {
 
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>Cooling energy demand in tropical residential buildings presents a growing challenge due to high solar radiation, temperatures, and humidity. Passive energy retrofit measures (ERMs) offer a promising pathway to reduce cooling loads by limiting external heat gains through building design and envelope modifications. This study evaluates the cooling demand reduction potential of three representative passive ERMs—one each from design-based, material-based, and nature-based categories—applied to a multi-building residential complex in Singapore. Using physics-based building energy simulations in EnergyPlus, three high-rise residential blocks were modeled under identical microclimate weather conditions to assess both retrofit effectiveness and robustness across buildings. Results indicate that high-reflectance cool coatings applied to the building envelope provide the greatest cooling demand reduction, followed by roof vegetation, while window overhang shading yields minimal savings due to existing climate-sensitive building design. Although absolute cooling energy savings vary between blocks, the relative performance ranking of the retrofit measures remains consistent, suggesting that observed trends are driven by retrofit strategy effectiveness within the site and climatic context rather than block-specific characteristics. The category-based evaluation framework and multi-building comparison approach presented in this study support scalable and strategic passive retrofit planning for tropical residential developments.</p>
 </section>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The building sector currently comprises about 40% of worldwide energy consumption <span class="citation" data-cites="SARIHI2021102525"><a href="#ref-SARIHI2021102525" role="doc-biblioref">[1]</a></span>. With the rise of urbanization, climate change, and anthropogenic heat emissions, the need to improve energy efficiency and decrease energy consumption in the existing built environment is vital <span class="citation" data-cites="martinezFundamentalsFacadeRetrofit2015"><a href="#ref-martinezFundamentalsFacadeRetrofit2015" role="doc-biblioref">[2]</a></span>. Tropical regions face a challenge in cooling energy demand due to the large amounts of solar radiation, high temperatures, and high humidity <span class="citation" data-cites="al2014passive"><a href="#ref-al2014passive" role="doc-biblioref">[3]</a></span>. Building energy retrofits pose a possible solution and involve upgrades or renovations to existing buildings intended to improve energy performance. Amoung building energy retrofits, passive retrofit measures target reductions in solar and external heat gains to lower cooling loads <span class="citation" data-cites="SUN201835"><a href="#ref-SUN201835" role="doc-biblioref">[4]</a></span>.</p>
-<p>Passive measures, which involve architectural solutions to the building envelope, are a cost-effective first-step in optimizing energy efficiency of commercial and residential buildings <span class="citation" data-cites="zotero-item-231"><a href="#ref-zotero-item-231" role="doc-biblioref">[5]</a></span>. In this study, passive retrofit measures are grouped into (i) design-based (geometry, orientation, shading) <span class="citation" data-cites="su6085354"><a href="#ref-su6085354" role="doc-biblioref">[6]</a></span>, (ii) material-based (envelope properties such as insulation and reflectance <span class="citation" data-cites="9994d833667e4cc99bfbe366f0a780ca"><a href="#ref-9994d833667e4cc99bfbe366f0a780ca" role="doc-biblioref">[7]</a></span> and (iii) nature-based solutions (green roofs/walls and vegetation) <span class="citation" data-cites="MIHALAKAKOU2023113306"><a href="#ref-MIHALAKAKOU2023113306" role="doc-biblioref">[8]</a></span>, reflecting the common framing of passive cooling through design, materials, and natural processes.</p>
-<p>Although passive ERMs have been widely researched, studies often focus on single-building retrofits<span class="citation" data-cites="singEnergyefficientRetrofittingMultistorey2021"><a href="#ref-singEnergyefficientRetrofittingMultistorey2021" role="doc-biblioref">[9]</a></span>, which can limit how well findings transfer to larger scales such as residential complexes. Recent work highlights the need for research in multi-building retrofits to determine strategic approaches for implementing retrofits at larger scales <span class="citation" data-cites="BJELLAND2024114402"><a href="#ref-BJELLAND2024114402" role="doc-biblioref">[10]</a></span>. This research aims to bridge this gap by comparing the effectiveness of passive ERMs across multiple blocks in the same residential complex, under identical conditions. The objectives of this report are as follows:</p>
+<p>The building sector currently comprises about 40% of worldwide energy consumption <span class="citation" data-cites="SARIHI2021102525"><a href="#ref-SARIHI2021102525" role="doc-biblioref">[1]</a></span>. With the rise of urbanization, climate change, and anthropogenic heat emissions, the need to improve energy efficiency and decrease energy consumption in the existing built environment is vital <span class="citation" data-cites="martinezFundamentalsFacadeRetrofit2015"><a href="#ref-martinezFundamentalsFacadeRetrofit2015" role="doc-biblioref">[2]</a></span>. Tropical regions, especially, face a challenge in cooling energy demand due to the large amounts of solar radiation, high temperatures, and high humidity <span class="citation" data-cites="al2014passive"><a href="#ref-al2014passive" role="doc-biblioref">[3]</a></span>. Building energy retrofit measures (ERMs) pose a possible solution and involve upgrades or renovations to existing buildings intended to improve energy performance.</p>
+<p>Among energy retrofit measures, passive measures target reductions in solar and external heat gains through building physics and design to lower cooling loads <span class="citation" data-cites="SUN201835"><a href="#ref-SUN201835" role="doc-biblioref">[4]</a></span>. In this study, passive retrofit measures are grouped into (i) design-based (geometry, orientation, shading) <span class="citation" data-cites="su6085354"><a href="#ref-su6085354" role="doc-biblioref">[5]</a></span>, (ii) material-based (envelope properties such as insulation and reflectance) <span class="citation" data-cites="9994d833667e4cc99bfbe366f0a780ca"><a href="#ref-9994d833667e4cc99bfbe366f0a780ca" role="doc-biblioref">[6]</a></span> and (iii) nature-based solutions (green roofs/walls and vegetation) <span class="citation" data-cites="MIHALAKAKOU2023113306"><a href="#ref-MIHALAKAKOU2023113306" role="doc-biblioref">[7]</a></span>, reflecting the common framing of passive cooling through design, materials, and natural processes.</p>
+<p>This research evaluates one passive ERM from each category to compare their relative effectiveness at the scale of a multi-building residential complex. Although passive ERMs have been widely researched, studies often focus on single-building retrofits<span class="citation" data-cites="singEnergyefficientRetrofittingMultistorey2021"><a href="#ref-singEnergyefficientRetrofittingMultistorey2021" role="doc-biblioref">[8]</a></span>, which can limit how well findings transfer to larger scales such as residential complexes. Recent work highlights the need for research in multi-building retrofits to determine strategic approaches for implementing retrofits at larger scales <span class="citation" data-cites="BJELLAND2024114402"><a href="#ref-BJELLAND2024114402" role="doc-biblioref">[9]</a></span>. This study aims to bridge this gap by comparing the performance of passive ERMs across multiple blocks in the same residential complex using identical modelling conditions, enabling an assessment of both their effectiveness and the robustness of the resulting energy savings. The objectives of this report are as follows:</p>
 <ul>
-<li><p>To compare the impacts on cooling demand due to three passive energy retrofit measures, one from each category.</p></li>
-<li><p>To examine the effectiveness of each retrofit across multiple blocks in the same complex.</p></li>
-<li><p>To assess whether observed energy savings are robust or block-specific.</p></li>
+<li>To compare the cooling energy impacts of representative passive energy retrofit measures from design-, material-, and nature-based categories.</li>
 </ul>
-<p>(older ) Building retrofit has gained lots of traction in recent years due to its potential to increase building energy performance, provide cost savings, and lower environmental emissions. The facade is the primary interface between the indoor and outdoor environments, filtering heat, light, and air before reaching the interior <span class="citation" data-cites="richards2014importance"><a href="#ref-richards2014importance" role="doc-biblioref">[11]</a></span>.</p>
+<!-- -->
+<ul>
+<li>To evaluate the robustness of cooling energy impacts across multiple residential blocks within the same complex.</li>
+</ul>
 </section>
 <section id="methodology" class="level2">
 <h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
 <section id="target-buildings-and-simulation-setup" class="level3">
 <h3 class="anchored" data-anchor-id="target-buildings-and-simulation-setup">Target buildings and simulation setup</h3>
-<p>Everton Park, a typical high-rise, public residential complex in Singapore, was selected for this study. The complex consists of seven, 12-story-high buildings facing north or south, in the configuration shown in <a href="#fig-layout" class="quarto-xref">Figure&nbsp;1</a>.</p>
+<p>Everton Park, a typical high-rise, public residential complex in Singapore, was selected for this study. The complex consists of seven, 12-story-high buildings facing north or south, in the configuration shown in <a href="#fig-layout" class="quarto-xref">Figure&nbsp;1</a>. Buildings of interest in this study are the central building, block 7, and the buildings directly north and south of it, blocks 2 and 5, respectively. In contrast to single-building studies, evaluating multiple blocks allows for a more robust simulation of energy retrofit measures (ERMs), as they will be applied to buildings with different relative positions, solar exposure, and boundary conditions.</p>
 <div id="fig-layout" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-layout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -189,9 +191,8 @@ Figure&nbsp;1: Everton park layout, a typical high-density residential complex i
 </figcaption>
 </figure>
 </div>
-<p>Buildings of interest in this study are the central building, block 7, and the buildings directly north and south of it, blocks 2 and 5, respectively. In contrast to single-building studies, evaluating multiple blocks allows for a more robust simulation of energy retrofit measures (ERMs) (make sure to introduce in intro), as they will be applied to buildings with different relative positions, solar exposure, and boundary conditions.</p>
-<p>Energy consumption in each building was modeled using EnergyPlus, a widely-used physics based building energy modelling (BEM) program <span class="citation" data-cites="singEnergyefficientRetrofittingMultistorey2021"><a href="#ref-singEnergyefficientRetrofittingMultistorey2021" role="doc-biblioref">[9]</a></span>. Baseline building geometries were derived from previously developed 3D models reported by Xu et al.<span class="citation" data-cites="XU2022103775a"><a href="#ref-XU2022103775a" role="doc-biblioref">[12]</a></span>. All parameters relevant to replicating the models, including floor plans, zoning, construction materials, air-conditioning settings, and schedules can be referenced in their work. The weather file used in all simulations was based on the microclimate dataset developed and validated by Xu. et al. <span class="citation" data-cites="XU2022103775c"><a href="#ref-XU2022103775c" role="doc-biblioref">[13]</a></span>, which performed better than historical or measured weather datasets for building energy modelling. It is important to note that all three building models share identical schedules and internal loads and only differ in apartment composition, facade geometry, and relative site placement.</p>
-<p>Energy consumption due to air-conditioning is the main target area for this analysis. To represent this as an output meter in EnergyPlus, Cooling:EnergyTransfer was selected. This output meter represents how much cooling energy the building needs to maintain comfort. It does this by measuring how much heat must be removed from all zones to maintain temperature setpoints. Using this output metric, the percentage reduction in cooling demand <span class="math inline">\(p\)</span> between baseline cases and retrofit cases was calculated using <a href="#eq-percentage" class="quarto-xref">Equation&nbsp;1</a>. The percentage reduction was then categorized based on magnitude. The categories include low (<span class="math inline">\(p\le1\)</span>), moderate (<span class="math inline">\(1&lt;p\le5\)</span>), and high (<span class="math inline">\(p&gt;5\)</span>).</p>
+<p>Energy consumption in each building was modeled using EnergyPlus, a widely-used physics based building energy modelling (BEM) program <span class="citation" data-cites="singEnergyefficientRetrofittingMultistorey2021"><a href="#ref-singEnergyefficientRetrofittingMultistorey2021" role="doc-biblioref">[8]</a></span>. Baseline building geometries were derived from previously developed 3D models reported by Xu et al.<span class="citation" data-cites="XU2022103775a"><a href="#ref-XU2022103775a" role="doc-biblioref">[10]</a></span>. All parameters relevant to replicating the models, including floor plans, zoning, construction materials, air-conditioning settings, and schedules can be referenced in their work. The weather file used in all simulations was based on the microclimate dataset developed and validated by Xu. et al. <span class="citation" data-cites="XU2022103775c"><a href="#ref-XU2022103775c" role="doc-biblioref">[11]</a></span>, which performed better than historical or measured weather datasets for building energy modelling. It is important to note that all three building models share identical schedules and internal loads and only differ in apartment composition, facade geometry, and relative site placement.</p>
+<p>Energy consumption due to air-conditioning is the main target area for this analysis. To represent this as an output meter in EnergyPlus, Cooling:EnergyTransfer was selected. This output meter represents how much cooling energy the building needs to maintain comfort. It does this by measuring how much heat must be removed from all zones to maintain temperature setpoints. Using this output metric, the percentage reduction in cooling demand <span class="math inline">\(p\)</span> between baseline cases and retrofit cases was calculated using <a href="#eq-percentage" class="quarto-xref">Equation&nbsp;1</a>. The percentage reduction was then categorized based on magnitude. The categories include high (<span class="math inline">\(p&gt;5\)</span>), moderate (<span class="math inline">\(3&lt;p\le5\)</span>), low (<span class="math inline">\(1&lt;p\le3\)</span>), and insignificant (<span class="math inline">\(p\le1\)</span>)</p>
 <p><span id="eq-percentage"><span class="math display">\[
 p = \frac{E_{retrofit} - E_{baseline}}{E_{baseline}} * 100
 \tag{1}\]</span></span></p>
@@ -207,23 +208,23 @@ Table&nbsp;1: Energy retrofit measures for simulation
 </figcaption>
 <div aria-describedby="tbl-erms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="ygfgzylxwv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ygfgzylxwv table {
+<div id="oydphijnxi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#oydphijnxi table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ygfgzylxwv thead, #ygfgzylxwv tbody, #ygfgzylxwv tfoot, #ygfgzylxwv tr, #ygfgzylxwv td, #ygfgzylxwv th {
+#oydphijnxi thead, #oydphijnxi tbody, #oydphijnxi tfoot, #oydphijnxi tr, #oydphijnxi td, #oydphijnxi th {
   border-style: none;
 }
 
-#ygfgzylxwv p {
+#oydphijnxi p {
   margin: 0;
   padding: 0;
 }
 
-#ygfgzylxwv .gt_table {
+#oydphijnxi .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -249,12 +250,12 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-left-color: #D3D3D3;
 }
 
-#ygfgzylxwv .gt_caption {
+#oydphijnxi .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ygfgzylxwv .gt_title {
+#oydphijnxi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -266,7 +267,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-bottom-width: 0;
 }
 
-#ygfgzylxwv .gt_subtitle {
+#oydphijnxi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -278,7 +279,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-top-width: 0;
 }
 
-#ygfgzylxwv .gt_heading {
+#oydphijnxi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -290,13 +291,13 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-right-color: #D3D3D3;
 }
 
-#ygfgzylxwv .gt_bottom_border {
+#oydphijnxi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ygfgzylxwv .gt_col_headings {
+#oydphijnxi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -311,7 +312,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-right-color: #D3D3D3;
 }
 
-#ygfgzylxwv .gt_col_heading {
+#oydphijnxi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -331,7 +332,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   overflow-x: hidden;
 }
 
-#ygfgzylxwv .gt_column_spanner_outer {
+#oydphijnxi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -343,15 +344,15 @@ Table&nbsp;1: Energy retrofit measures for simulation
   padding-right: 4px;
 }
 
-#ygfgzylxwv .gt_column_spanner_outer:first-child {
+#oydphijnxi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ygfgzylxwv .gt_column_spanner_outer:last-child {
+#oydphijnxi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ygfgzylxwv .gt_column_spanner {
+#oydphijnxi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -363,11 +364,11 @@ Table&nbsp;1: Energy retrofit measures for simulation
   width: 100%;
 }
 
-#ygfgzylxwv .gt_spanner_row {
+#oydphijnxi .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ygfgzylxwv .gt_group_heading {
+#oydphijnxi .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -393,7 +394,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   text-align: left;
 }
 
-#ygfgzylxwv .gt_empty_group_heading {
+#oydphijnxi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -408,15 +409,15 @@ Table&nbsp;1: Energy retrofit measures for simulation
   vertical-align: middle;
 }
 
-#ygfgzylxwv .gt_from_md > :first-child {
+#oydphijnxi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ygfgzylxwv .gt_from_md > :last-child {
+#oydphijnxi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ygfgzylxwv .gt_row {
+#oydphijnxi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -435,7 +436,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   overflow-x: hidden;
 }
 
-#ygfgzylxwv .gt_stub {
+#oydphijnxi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -448,7 +449,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   padding-right: 5px;
 }
 
-#ygfgzylxwv .gt_stub_row_group {
+#oydphijnxi .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -462,15 +463,15 @@ Table&nbsp;1: Energy retrofit measures for simulation
   vertical-align: top;
 }
 
-#ygfgzylxwv .gt_row_group_first td {
+#oydphijnxi .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ygfgzylxwv .gt_row_group_first th {
+#oydphijnxi .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ygfgzylxwv .gt_summary_row {
+#oydphijnxi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -480,16 +481,16 @@ Table&nbsp;1: Energy retrofit measures for simulation
   padding-right: 5px;
 }
 
-#ygfgzylxwv .gt_first_summary_row {
+#oydphijnxi .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ygfgzylxwv .gt_first_summary_row.thick {
+#oydphijnxi .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ygfgzylxwv .gt_last_summary_row {
+#oydphijnxi .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -499,7 +500,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-bottom-color: #D3D3D3;
 }
 
-#ygfgzylxwv .gt_grand_summary_row {
+#oydphijnxi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -509,7 +510,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   padding-right: 5px;
 }
 
-#ygfgzylxwv .gt_first_grand_summary_row {
+#oydphijnxi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -519,7 +520,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-top-color: #D3D3D3;
 }
 
-#ygfgzylxwv .gt_last_grand_summary_row_top {
+#oydphijnxi .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -529,11 +530,11 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-bottom-color: #D3D3D3;
 }
 
-#ygfgzylxwv .gt_striped {
+#oydphijnxi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ygfgzylxwv .gt_table_body {
+#oydphijnxi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -542,7 +543,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-bottom-color: #D3D3D3;
 }
 
-#ygfgzylxwv .gt_footnotes {
+#oydphijnxi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -556,7 +557,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-right-color: #D3D3D3;
 }
 
-#ygfgzylxwv .gt_footnote {
+#oydphijnxi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -565,7 +566,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   padding-right: 5px;
 }
 
-#ygfgzylxwv .gt_sourcenotes {
+#oydphijnxi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -579,7 +580,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-right-color: #D3D3D3;
 }
 
-#ygfgzylxwv .gt_sourcenote {
+#oydphijnxi .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -587,72 +588,72 @@ Table&nbsp;1: Energy retrofit measures for simulation
   padding-right: 5px;
 }
 
-#ygfgzylxwv .gt_left {
+#oydphijnxi .gt_left {
   text-align: left;
 }
 
-#ygfgzylxwv .gt_center {
+#oydphijnxi .gt_center {
   text-align: center;
 }
 
-#ygfgzylxwv .gt_right {
+#oydphijnxi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ygfgzylxwv .gt_font_normal {
+#oydphijnxi .gt_font_normal {
   font-weight: normal;
 }
 
-#ygfgzylxwv .gt_font_bold {
+#oydphijnxi .gt_font_bold {
   font-weight: bold;
 }
 
-#ygfgzylxwv .gt_font_italic {
+#oydphijnxi .gt_font_italic {
   font-style: italic;
 }
 
-#ygfgzylxwv .gt_super {
+#oydphijnxi .gt_super {
   font-size: 65%;
 }
 
-#ygfgzylxwv .gt_footnote_marks {
+#oydphijnxi .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ygfgzylxwv .gt_asterisk {
+#oydphijnxi .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ygfgzylxwv .gt_indent_1 {
+#oydphijnxi .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ygfgzylxwv .gt_indent_2 {
+#oydphijnxi .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ygfgzylxwv .gt_indent_3 {
+#oydphijnxi .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ygfgzylxwv .gt_indent_4 {
+#oydphijnxi .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ygfgzylxwv .gt_indent_5 {
+#oydphijnxi .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ygfgzylxwv .katex-display {
+#oydphijnxi .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ygfgzylxwv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#oydphijnxi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -698,27 +699,27 @@ Table&nbsp;1: Energy retrofit measures for simulation
 <div id="tbl-parameters" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-parameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Simulation parameters
+Table&nbsp;2: Important simulation parameters
 </figcaption>
 <div aria-describedby="tbl-parameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="fydwetffap" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fydwetffap table {
+<div id="kmfxatomfj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kmfxatomfj table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fydwetffap thead, #fydwetffap tbody, #fydwetffap tfoot, #fydwetffap tr, #fydwetffap td, #fydwetffap th {
+#kmfxatomfj thead, #kmfxatomfj tbody, #kmfxatomfj tfoot, #kmfxatomfj tr, #kmfxatomfj td, #kmfxatomfj th {
   border-style: none;
 }
 
-#fydwetffap p {
+#kmfxatomfj p {
   margin: 0;
   padding: 0;
 }
 
-#fydwetffap .gt_table {
+#kmfxatomfj .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -744,12 +745,12 @@ Table&nbsp;2: Simulation parameters
   border-left-color: #D3D3D3;
 }
 
-#fydwetffap .gt_caption {
+#kmfxatomfj .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fydwetffap .gt_title {
+#kmfxatomfj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -761,7 +762,7 @@ Table&nbsp;2: Simulation parameters
   border-bottom-width: 0;
 }
 
-#fydwetffap .gt_subtitle {
+#kmfxatomfj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -773,7 +774,7 @@ Table&nbsp;2: Simulation parameters
   border-top-width: 0;
 }
 
-#fydwetffap .gt_heading {
+#kmfxatomfj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -785,13 +786,13 @@ Table&nbsp;2: Simulation parameters
   border-right-color: #D3D3D3;
 }
 
-#fydwetffap .gt_bottom_border {
+#kmfxatomfj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fydwetffap .gt_col_headings {
+#kmfxatomfj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -806,7 +807,7 @@ Table&nbsp;2: Simulation parameters
   border-right-color: #D3D3D3;
 }
 
-#fydwetffap .gt_col_heading {
+#kmfxatomfj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -826,7 +827,7 @@ Table&nbsp;2: Simulation parameters
   overflow-x: hidden;
 }
 
-#fydwetffap .gt_column_spanner_outer {
+#kmfxatomfj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -838,15 +839,15 @@ Table&nbsp;2: Simulation parameters
   padding-right: 4px;
 }
 
-#fydwetffap .gt_column_spanner_outer:first-child {
+#kmfxatomfj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fydwetffap .gt_column_spanner_outer:last-child {
+#kmfxatomfj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fydwetffap .gt_column_spanner {
+#kmfxatomfj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -858,11 +859,11 @@ Table&nbsp;2: Simulation parameters
   width: 100%;
 }
 
-#fydwetffap .gt_spanner_row {
+#kmfxatomfj .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fydwetffap .gt_group_heading {
+#kmfxatomfj .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -888,7 +889,7 @@ Table&nbsp;2: Simulation parameters
   text-align: left;
 }
 
-#fydwetffap .gt_empty_group_heading {
+#kmfxatomfj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -903,15 +904,15 @@ Table&nbsp;2: Simulation parameters
   vertical-align: middle;
 }
 
-#fydwetffap .gt_from_md > :first-child {
+#kmfxatomfj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fydwetffap .gt_from_md > :last-child {
+#kmfxatomfj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fydwetffap .gt_row {
+#kmfxatomfj .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -930,7 +931,7 @@ Table&nbsp;2: Simulation parameters
   overflow-x: hidden;
 }
 
-#fydwetffap .gt_stub {
+#kmfxatomfj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -943,7 +944,7 @@ Table&nbsp;2: Simulation parameters
   padding-right: 5px;
 }
 
-#fydwetffap .gt_stub_row_group {
+#kmfxatomfj .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -957,15 +958,15 @@ Table&nbsp;2: Simulation parameters
   vertical-align: top;
 }
 
-#fydwetffap .gt_row_group_first td {
+#kmfxatomfj .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fydwetffap .gt_row_group_first th {
+#kmfxatomfj .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fydwetffap .gt_summary_row {
+#kmfxatomfj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -975,16 +976,16 @@ Table&nbsp;2: Simulation parameters
   padding-right: 5px;
 }
 
-#fydwetffap .gt_first_summary_row {
+#kmfxatomfj .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fydwetffap .gt_first_summary_row.thick {
+#kmfxatomfj .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fydwetffap .gt_last_summary_row {
+#kmfxatomfj .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -994,7 +995,7 @@ Table&nbsp;2: Simulation parameters
   border-bottom-color: #D3D3D3;
 }
 
-#fydwetffap .gt_grand_summary_row {
+#kmfxatomfj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1004,7 +1005,7 @@ Table&nbsp;2: Simulation parameters
   padding-right: 5px;
 }
 
-#fydwetffap .gt_first_grand_summary_row {
+#kmfxatomfj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1014,7 +1015,7 @@ Table&nbsp;2: Simulation parameters
   border-top-color: #D3D3D3;
 }
 
-#fydwetffap .gt_last_grand_summary_row_top {
+#kmfxatomfj .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1024,11 +1025,11 @@ Table&nbsp;2: Simulation parameters
   border-bottom-color: #D3D3D3;
 }
 
-#fydwetffap .gt_striped {
+#kmfxatomfj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fydwetffap .gt_table_body {
+#kmfxatomfj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1037,7 +1038,7 @@ Table&nbsp;2: Simulation parameters
   border-bottom-color: #D3D3D3;
 }
 
-#fydwetffap .gt_footnotes {
+#kmfxatomfj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1051,7 +1052,7 @@ Table&nbsp;2: Simulation parameters
   border-right-color: #D3D3D3;
 }
 
-#fydwetffap .gt_footnote {
+#kmfxatomfj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1060,7 +1061,7 @@ Table&nbsp;2: Simulation parameters
   padding-right: 5px;
 }
 
-#fydwetffap .gt_sourcenotes {
+#kmfxatomfj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1074,7 +1075,7 @@ Table&nbsp;2: Simulation parameters
   border-right-color: #D3D3D3;
 }
 
-#fydwetffap .gt_sourcenote {
+#kmfxatomfj .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1082,72 +1083,72 @@ Table&nbsp;2: Simulation parameters
   padding-right: 5px;
 }
 
-#fydwetffap .gt_left {
+#kmfxatomfj .gt_left {
   text-align: left;
 }
 
-#fydwetffap .gt_center {
+#kmfxatomfj .gt_center {
   text-align: center;
 }
 
-#fydwetffap .gt_right {
+#kmfxatomfj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fydwetffap .gt_font_normal {
+#kmfxatomfj .gt_font_normal {
   font-weight: normal;
 }
 
-#fydwetffap .gt_font_bold {
+#kmfxatomfj .gt_font_bold {
   font-weight: bold;
 }
 
-#fydwetffap .gt_font_italic {
+#kmfxatomfj .gt_font_italic {
   font-style: italic;
 }
 
-#fydwetffap .gt_super {
+#kmfxatomfj .gt_super {
   font-size: 65%;
 }
 
-#fydwetffap .gt_footnote_marks {
+#kmfxatomfj .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fydwetffap .gt_asterisk {
+#kmfxatomfj .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fydwetffap .gt_indent_1 {
+#kmfxatomfj .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fydwetffap .gt_indent_2 {
+#kmfxatomfj .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fydwetffap .gt_indent_3 {
+#kmfxatomfj .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fydwetffap .gt_indent_4 {
+#kmfxatomfj .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fydwetffap .gt_indent_5 {
+#kmfxatomfj .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fydwetffap .katex-display {
+#kmfxatomfj .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fydwetffap div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#kmfxatomfj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1186,8 +1187,8 @@ Table&nbsp;2: Simulation parameters
 </div>
 </div>
 <p>The Cooling:EnergyTransfer output meter returns a thermal energy (heat removed from the zone). To calculate electricity used for cooling, <a href="#eq-cop" class="quarto-xref">Equation&nbsp;2</a> was applied. Where <span class="math inline">\(E_{el}\)</span> represents the electricity input to the AC unit, <span class="math inline">\(Q_{cool}\)</span> is the heat removed from the zone for cooling, and <span class="math inline">\(COP\)</span> is the coefficient of performance. <span id="eq-cop"><span class="math display">\[E_{\mathrm{el}} \;[\mathrm{kWh_{el}}]=\frac{Q_{\mathrm{cool}} \;[\mathrm{kWh_{th}}]}{\mathrm{COP}} \tag{2}\]</span></span></p>
-<p>To verify the validity of the simulated baseline values, published data from the Energy Market Authority in Singapore on public housing monthly electricity consumption was used, based on records from 2018-2019, as these datasets were the closest publicly available data to the 2015 simulation period <span class="citation" data-cites="zotero-item-225"><a href="#ref-zotero-item-225" role="doc-biblioref">[14]</a></span>. To capture variability across planning areas and household behaviors, a range of monthly electricity consumption was selected to encompass both conservative and high electricity use: 250-400 kWh. The percentage of household electricity used for air-conditioning in Singapore was reported to be 24% in 2018 by the National Environment Agency and was also used for verification<span class="citation" data-cites="zotero-item-222"><a href="#ref-zotero-item-222" role="doc-biblioref">[15]</a></span>.</p>
-<p>Using the published data, @eq-ac was employed to calculate upper and lower bounds for the monthly AC electricity consumption of each building. <span class="math inline">\(w\)</span> is the fraction of weekdays in a typical month, accounting for weekday-only occupancy patterns assumed in the simulations. <span class="math inline">\(p_{AC}\)</span> is the percentage of total monthly electricity consumption per household used for cooling, <span class="math inline">\(E_{tot}\)</span> is the total monthly electricity consumption per household, and <span class="math inline">\(N_{flats}\)</span> is the total number of flats in each residential building.</p>
+<p>To verify the validity of the simulated baseline values, published data from the Energy Market Authority in Singapore on public housing monthly electricity consumption was used, based on records from 2018-2019, as these datasets were the closest publicly available data to the 2015 simulation period <span class="citation" data-cites="zotero-item-225"><a href="#ref-zotero-item-225" role="doc-biblioref">[12]</a></span>. To capture variability across planning areas and household behaviors, a range of monthly electricity consumption was selected to encompass both conservative and high electricity use: 250-400 kWh. The percentage of household electricity used for air-conditioning in Singapore was reported to be 24% in 2018 by the National Environment Agency and was also used for verification <span class="citation" data-cites="zotero-item-222"><a href="#ref-zotero-item-222" role="doc-biblioref">[13]</a></span>.</p>
+<p>Using the published data, <a href="#eq-ac" class="quarto-xref">Equation&nbsp;3</a> was applied to calculate upper and lower bounds for the monthly AC electricity consumption of each building. Variables include: <span class="math inline">\(w\)</span> , the fraction of weekdays in a typical month, accounting for weekday-only occupancy patterns assumed in the simulations, <span class="math inline">\(p_{AC}\)</span> , the percentage of total monthly electricity consumption per household used for cooling, <span class="math inline">\(E_{tot}\)</span> , the total monthly electricity consumption per household, and <span class="math inline">\(N_{flats}\)</span> , the total number of flats in each residential building.</p>
 <p><span id="eq-ac"><span class="math display">\[
 \ E_{AC} = w * p_{AC} * E_{tot} * N_{flats}
 \tag{3}\]</span></span></p>
@@ -1197,10 +1198,10 @@ Table&nbsp;2: Simulation parameters
 <div id="fig-reference" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-reference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="design_doc_files/figure-html/fig-reference-1.png" class="img-fluid figure-img" width="672">
+<img src="index_files/figure-html/fig-reference-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-reference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Verification of models using published data on monthly AC electricity consumption in Singapore
+Figure&nbsp;2: Verification of baseline models using published data on monthly AC electricity consumption in Singapore
 </figcaption>
 </figure>
 </div>
@@ -1208,23 +1209,23 @@ Figure&nbsp;2: Verification of models using published data on monthly AC electri
 </div>
 </section>
 </section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="results-and-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="results-and-discussion">Results and discussion</h2>
 <section id="shading" class="level3">
 <h3 class="anchored" data-anchor-id="shading">Shading</h3>
-<p>Solar shading devices play an important role in building energy and thermal behavior. In hot and humid climates like Singapore, shading can prevent excessive solar gain, lowering cooling demand. When implementing solar shading on windows, it is important to consider both solar radiation regulation and satisfactory levels of natural light and visibility to the outdoors <span class="citation" data-cites="su6085354"><a href="#ref-su6085354" role="doc-biblioref">[6]</a></span>. While many residential buildings make use of internal shading devices, external devices are more effective in reducing cooling loads because they can intercept and reduce solar radiation before it reaches the glass panes <span class="citation" data-cites="KIM2012105"><a href="#ref-KIM2012105" role="doc-biblioref">[16]</a></span>. External shading devices, such as overhangs, side fins, and canopies, are therefore good choices for energy retrofit <span class="citation" data-cites="su6085354"><a href="#ref-su6085354" role="doc-biblioref">[6]</a></span>.</p>
-<p>For this study, horizontal overhangs on windows were chosen as the retrofit measure, which corresponds to the EnergyPlus input Shading:Overhang:Projection. Overhang depths were varied as a fraction of the window height including values of: 0.25, 0.50, 0.75, and 1.00. Windows in this model are only on the north and south facing facades. To test differences in response of the north and south facing facades, overhangs were applied on each facade individually then on both. Since overhangs were not a part of the baseline model, a placeholder overhang was created on each window to enable parametric variation.</p>
+<p>Solar shading devices play an important role in building energy and thermal behavior. In hot and humid climates like Singapore, shading can prevent excessive solar gain, lowering cooling demand. When implementing solar shading on windows, it is important to consider both solar radiation regulation and satisfactory levels of natural light and visibility to the outdoors <span class="citation" data-cites="su6085354"><a href="#ref-su6085354" role="doc-biblioref">[5]</a></span>. While many residential buildings make use of internal shading devices, external devices are more effective in reducing cooling loads because they can intercept and reduce solar radiation before it reaches the glass panes <span class="citation" data-cites="KIM2012105"><a href="#ref-KIM2012105" role="doc-biblioref">[14]</a></span>. External shading devices, such as overhangs, side fins, and canopies, are therefore good choices for energy retrofit <span class="citation" data-cites="su6085354"><a href="#ref-su6085354" role="doc-biblioref">[5]</a></span>.</p>
+<p>For this study, horizontal overhangs on windows were chosen as the retrofit measure, which corresponds to the EnergyPlus input Shading:Overhang:Projection. Overhang depths were varied as a fraction of the window height including values of: 0.25, 0.50, 0.75, and 1.00. Windows in this model are only on the north and south facing facades. To test differences in response of the north and south facing facades, overhangs were applied on each facade individually, then on both. Since overhangs were not a part of the baseline model, a placeholder overhang was created on each window to enable parametric variation.</p>
 <p><a href="#fig-shading" class="quarto-xref">Figure&nbsp;3</a> shows the results for the overhang shading parametric analysis for north facing windows, south facing windows, and all windows for each block. The results indicate that as the overhang depth increases, the percent change in cooling demand also increases. However, given the very small magnitude (<span class="math inline">\(\pm\)</span> 0.1%), the observed change falls within the low-impact category and was therefore not included in comparative analysis with other retrofits.</p>
-<p>Shading likely did not have an effect on the overall cooling energy demand due to the climate sensitive design of the buildings. The buildings all have a north-south orientation with no windows on the east and west facing facades, strategies to minimize solar heat gains in Singapore <span class="citation" data-cites="zotero-item-221"><a href="#ref-zotero-item-221" role="doc-biblioref">[17]</a></span>. Since the sun is almost directly overhead during June in Singapore, windows on the north and south facades get very little sun exposure, thus the shading had a limited effect. Also, the baseline models consider both corridor and inter-building shading <span class="citation" data-cites="XU2022103775e"><a href="#ref-XU2022103775e" role="doc-biblioref">[18]</a></span> which may already provide sufficient shading on the north and south facades.</p>
+<p>Shading likely did not have an effect on the overall cooling energy demand due to the climate sensitive design of the buildings. The buildings all have a north-south orientation with no windows on the east and west facing facades, strategies to minimize solar heat gains in Singapore <span class="citation" data-cites="zotero-item-221"><a href="#ref-zotero-item-221" role="doc-biblioref">[15]</a></span>. Since the sun is almost directly overhead during June in Singapore, windows on the north and south facades get very little sun exposure, thus the shading had a limited effect. Also, the baseline models consider both corridor and inter-building shading <span class="citation" data-cites="XU2022103775e"><a href="#ref-XU2022103775e" role="doc-biblioref">[16]</a></span> which may already provide sufficient shading on the north and south facades.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-shading" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-shading-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="design_doc_files/figure-html/fig-shading-1.png" class="img-fluid figure-img" width="672">
+<img src="index_files/figure-html/fig-shading-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shading-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Effects of overhang shading on windows
+Figure&nbsp;3: Varied overhang shading depths on windows by wall orientation
 </figcaption>
 </figure>
 </div>
@@ -1233,18 +1234,18 @@ Figure&nbsp;3: Effects of overhang shading on windows
 </section>
 <section id="coating" class="level3">
 <h3 class="anchored" data-anchor-id="coating">Coating</h3>
-<p>Reflective or cool materials are considered an effective method for decreasing building thermal loads <span class="citation" data-cites="NAZARIAN2019144"><a href="#ref-NAZARIAN2019144" role="doc-biblioref">[19]</a></span>. Light color coatings, for example, can be applied to any building surface to increase albedo, the fraction of sunlight reflected by a surface. Increased solar reflectance of the building envelope reduces solar heat gains, which can reduce cooling demand.</p>
-<p>To implement cool coatings in the models, solar absorptances of the exterior walls and roof materials were varied from a range of dark to cool, including values: 0.7, 0.5, 0.4, 0.3, and 0.2. These values represent typical dark-cool coatings reported in the literature <span class="citation" data-cites="su6085354"><a href="#ref-su6085354" role="doc-biblioref">[6]</a></span>. The coatings were applied to the facade walls systematically, to identify if any wall had a larger response. The general methodology in EnergyPlus was as follows: a new material was created with the desired solar absorptance, followed by a new construction of the exterior wall and/or roof, and finally, the new construction was applied to the desired facade.</p>
+<p>Reflective or cool materials are considered an effective method for decreasing building thermal loads <span class="citation" data-cites="NAZARIAN2019144"><a href="#ref-NAZARIAN2019144" role="doc-biblioref">[17]</a></span>. Light color coatings, for example, can be applied to any building surface to increase albedo, the fraction of sunlight reflected by a surface. Increased solar reflectance of the building envelope reduces solar heat gains, which can reduce cooling demand.</p>
+<p>To implement cool coatings in the models, solar absorptances of the exterior walls and roof materials were varied from a range of dark to cool, including values: 0.7, 0.5, 0.4, 0.3, and 0.2. These values represent typical dark to cool coatings reported in the literature <span class="citation" data-cites="su6085354"><a href="#ref-su6085354" role="doc-biblioref">[5]</a></span>. The coatings were applied to the facade walls systematically, to identify if any wall had a larger response. The general methodology in EnergyPlus was as follows: a new material was created with the desired solar absorptance, followed by a new construction of the exterior wall and/or roof, and finally, the new construction was applied to the desired facade.</p>
 <p><a href="#fig-coolwall" class="quarto-xref">Figure&nbsp;4</a> shows the results for parametric analysis of cool coatings on each facade wall. The results indicate that as solar absorptance decreases, the percent change in cooling demand increases. Thus, for the remaining retrofit scenarios, a solar absorptance of 0.2 was adopted. Additionally, the facade walls all demonstrate a similar, limited, response with less than a 1% change in cooling demand. The low percentage change, while slightly higher than the shading results, can be attributed to similar physical factors: lower incident solar radiation compared to the roof, mutual shading, and building orientation.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-coolwall" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-coolwall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="design_doc_files/figure-html/fig-coolwall-1.png" class="img-fluid figure-img" width="672">
+<img src="index_files/figure-html/fig-coolwall-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-coolwall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Comparison of cool coatings applied on individual facade walls
+Figure&nbsp;4: Varied cool coatings applied on individual facade walls
 </figcaption>
 </figure>
 </div>
@@ -1256,47 +1257,47 @@ Figure&nbsp;4: Comparison of cool coatings applied on individual facade walls
 <div id="fig-coolroof" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-coolroof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="design_doc_files/figure-html/fig-coolroof-1.png" class="img-fluid figure-img" width="672">
+<img src="index_files/figure-html/fig-coolroof-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-coolroof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Comparion of cool coating on all facade walls and rooftop
+Figure&nbsp;5: Comparison of cool coating on all facade walls vs.&nbsp;rooftop
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The data shows that coatings on the roof have a much larger impact than coatings on the exterior walls. Best case scenarios for rooftop and wall savings are 8.75% (high-impact) and 2.06% (moderate-impact), respectively. In both cases, blocks 2 and 5 demonstrate a similar percentage cooling savings, and block 7 performs best. This difference is magnified in the roof-only coating, where block 7 more than doubles the savings of blocks 2 and 5. It is expected that the roof coating outperforms the wall coating across all blocks because the roof is far more sun exposed due to Singapore’s sun path. However, the underlying cause of block 7’s enhanced response is unknown. The higher percentage cooling savings may be attributable to….</p>
+<p>The data shows that coatings on the roof have a much larger impact than coatings on the exterior walls. This is expected as the roof is far more sun exposed due to Singapore’s sun path, thus the cool coatings have a larger effect. In both cases, blocks 2 and 5 demonstrate a similar percentage cooling savings, while block 7 performs best. Since the simulations were run under identical climatic and modelling conditions, this difference in response is likely due to building geometry. A more in depth analysis is needed to verify the cause of block 7’s higher cooling energy savings.</p>
 </section>
 <section id="green-roof" class="level3">
 <h3 class="anchored" data-anchor-id="green-roof">Green roof</h3>
-<p>Green roofs (GRs) are a form of urban greenery that is beneficial in reducing a building’s heat gain and energy consumption <span class="citation" data-cites="zotero-item-221"><a href="#ref-zotero-item-221" role="doc-biblioref">[17]</a></span>. They can help provide thermal insulation to the interior spaces below it, maximizing indoor thermal comfort and minimizing cooling needs <span class="citation" data-cites="ZHAO2023113668"><a href="#ref-ZHAO2023113668" role="doc-biblioref">[20]</a></span>. The benefits of GRs can be explained through four main mechanisms including: insulation, evapotranspiration, shading, and wind barrier effect <span class="citation" data-cites="dahanayakeComparingReductionBuilding2018"><a href="#ref-dahanayakeComparingReductionBuilding2018" role="doc-biblioref">[21]</a></span>.</p>
-<p>EnergyPlus utilizes a built-in module to simulate GRs, based on a heat balance principle between the soil layer and vegetation layer <span class="citation" data-cites="SAILOR20081466"><a href="#ref-SAILOR20081466" role="doc-biblioref">[22]</a></span>. The module accounts for sensible heat flux, latent heat flux, and long- and short-wave radiation.</p>
+<p>Green roofs (GRs) are a form of urban greenery that is beneficial in reducing a building’s heat gain and energy consumption <span class="citation" data-cites="zotero-item-221"><a href="#ref-zotero-item-221" role="doc-biblioref">[15]</a></span>. They can help provide thermal insulation to the interior spaces below it, maximizing indoor thermal comfort and minimizing cooling needs <span class="citation" data-cites="ZHAO2023113668"><a href="#ref-ZHAO2023113668" role="doc-biblioref">[18]</a></span>. The benefits of GRs can be explained through four main mechanisms including: insulation, evapotranspiration, shading, and wind barrier effect <span class="citation" data-cites="dahanayakeComparingReductionBuilding2018"><a href="#ref-dahanayakeComparingReductionBuilding2018" role="doc-biblioref">[19]</a></span>.</p>
+<p>EnergyPlus utilizes a built-in module to simulate GRs, based on a heat balance principle between the soil layer and vegetation layer <span class="citation" data-cites="SAILOR20081466"><a href="#ref-SAILOR20081466" role="doc-biblioref">[20]</a></span>. The module accounts for sensible heat flux, latent heat flux, and long- and short-wave radiation.</p>
 <p>To add a GR to the baseline model, a new vegetation material was created, followed by a new construction. The new construction was then applied to the exterior roof, following a similar setup to the cool coatings. Two cases of GRs were simulated with details presented in <a href="#tbl-details" class="quarto-xref">Table&nbsp;3</a>. For this study, only the leaf area index (LAI) and plant height were varied between cases. All other parameters related to the vegetation material, such as substrate thickness and soil conductivity, were set to the default EnergyPlus values. The two cases represent a green roof with grass, which covers the roof more extensively (higher LAI) but has a shorter plant height, and shrubs, which cover less of the roof area (lower LAI) and have a higher plant height.</p>
 <div class="cell">
 <div id="tbl-details" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-details-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: Details of green roof
+Table&nbsp;3: Simulation details of green roof
 </figcaption>
 <div aria-describedby="tbl-details-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="ftvarpqogp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ftvarpqogp table {
+<div id="dbbonqpizy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dbbonqpizy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ftvarpqogp thead, #ftvarpqogp tbody, #ftvarpqogp tfoot, #ftvarpqogp tr, #ftvarpqogp td, #ftvarpqogp th {
+#dbbonqpizy thead, #dbbonqpizy tbody, #dbbonqpizy tfoot, #dbbonqpizy tr, #dbbonqpizy td, #dbbonqpizy th {
   border-style: none;
 }
 
-#ftvarpqogp p {
+#dbbonqpizy p {
   margin: 0;
   padding: 0;
 }
 
-#ftvarpqogp .gt_table {
+#dbbonqpizy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1322,12 +1323,12 @@ Table&nbsp;3: Details of green roof
   border-left-color: #D3D3D3;
 }
 
-#ftvarpqogp .gt_caption {
+#dbbonqpizy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ftvarpqogp .gt_title {
+#dbbonqpizy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1339,7 +1340,7 @@ Table&nbsp;3: Details of green roof
   border-bottom-width: 0;
 }
 
-#ftvarpqogp .gt_subtitle {
+#dbbonqpizy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1351,7 +1352,7 @@ Table&nbsp;3: Details of green roof
   border-top-width: 0;
 }
 
-#ftvarpqogp .gt_heading {
+#dbbonqpizy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1363,13 +1364,13 @@ Table&nbsp;3: Details of green roof
   border-right-color: #D3D3D3;
 }
 
-#ftvarpqogp .gt_bottom_border {
+#dbbonqpizy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ftvarpqogp .gt_col_headings {
+#dbbonqpizy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1384,7 +1385,7 @@ Table&nbsp;3: Details of green roof
   border-right-color: #D3D3D3;
 }
 
-#ftvarpqogp .gt_col_heading {
+#dbbonqpizy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1404,7 +1405,7 @@ Table&nbsp;3: Details of green roof
   overflow-x: hidden;
 }
 
-#ftvarpqogp .gt_column_spanner_outer {
+#dbbonqpizy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1416,15 +1417,15 @@ Table&nbsp;3: Details of green roof
   padding-right: 4px;
 }
 
-#ftvarpqogp .gt_column_spanner_outer:first-child {
+#dbbonqpizy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ftvarpqogp .gt_column_spanner_outer:last-child {
+#dbbonqpizy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ftvarpqogp .gt_column_spanner {
+#dbbonqpizy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1436,11 +1437,11 @@ Table&nbsp;3: Details of green roof
   width: 100%;
 }
 
-#ftvarpqogp .gt_spanner_row {
+#dbbonqpizy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ftvarpqogp .gt_group_heading {
+#dbbonqpizy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1466,7 +1467,7 @@ Table&nbsp;3: Details of green roof
   text-align: left;
 }
 
-#ftvarpqogp .gt_empty_group_heading {
+#dbbonqpizy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1481,15 +1482,15 @@ Table&nbsp;3: Details of green roof
   vertical-align: middle;
 }
 
-#ftvarpqogp .gt_from_md > :first-child {
+#dbbonqpizy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ftvarpqogp .gt_from_md > :last-child {
+#dbbonqpizy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ftvarpqogp .gt_row {
+#dbbonqpizy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1508,7 +1509,7 @@ Table&nbsp;3: Details of green roof
   overflow-x: hidden;
 }
 
-#ftvarpqogp .gt_stub {
+#dbbonqpizy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1521,7 +1522,7 @@ Table&nbsp;3: Details of green roof
   padding-right: 5px;
 }
 
-#ftvarpqogp .gt_stub_row_group {
+#dbbonqpizy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1535,15 +1536,15 @@ Table&nbsp;3: Details of green roof
   vertical-align: top;
 }
 
-#ftvarpqogp .gt_row_group_first td {
+#dbbonqpizy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ftvarpqogp .gt_row_group_first th {
+#dbbonqpizy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ftvarpqogp .gt_summary_row {
+#dbbonqpizy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1553,16 +1554,16 @@ Table&nbsp;3: Details of green roof
   padding-right: 5px;
 }
 
-#ftvarpqogp .gt_first_summary_row {
+#dbbonqpizy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ftvarpqogp .gt_first_summary_row.thick {
+#dbbonqpizy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ftvarpqogp .gt_last_summary_row {
+#dbbonqpizy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1572,7 +1573,7 @@ Table&nbsp;3: Details of green roof
   border-bottom-color: #D3D3D3;
 }
 
-#ftvarpqogp .gt_grand_summary_row {
+#dbbonqpizy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1582,7 +1583,7 @@ Table&nbsp;3: Details of green roof
   padding-right: 5px;
 }
 
-#ftvarpqogp .gt_first_grand_summary_row {
+#dbbonqpizy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1592,7 +1593,7 @@ Table&nbsp;3: Details of green roof
   border-top-color: #D3D3D3;
 }
 
-#ftvarpqogp .gt_last_grand_summary_row_top {
+#dbbonqpizy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1602,11 +1603,11 @@ Table&nbsp;3: Details of green roof
   border-bottom-color: #D3D3D3;
 }
 
-#ftvarpqogp .gt_striped {
+#dbbonqpizy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ftvarpqogp .gt_table_body {
+#dbbonqpizy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1615,7 +1616,7 @@ Table&nbsp;3: Details of green roof
   border-bottom-color: #D3D3D3;
 }
 
-#ftvarpqogp .gt_footnotes {
+#dbbonqpizy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1629,7 +1630,7 @@ Table&nbsp;3: Details of green roof
   border-right-color: #D3D3D3;
 }
 
-#ftvarpqogp .gt_footnote {
+#dbbonqpizy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1638,7 +1639,7 @@ Table&nbsp;3: Details of green roof
   padding-right: 5px;
 }
 
-#ftvarpqogp .gt_sourcenotes {
+#dbbonqpizy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1652,7 +1653,7 @@ Table&nbsp;3: Details of green roof
   border-right-color: #D3D3D3;
 }
 
-#ftvarpqogp .gt_sourcenote {
+#dbbonqpizy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1660,72 +1661,72 @@ Table&nbsp;3: Details of green roof
   padding-right: 5px;
 }
 
-#ftvarpqogp .gt_left {
+#dbbonqpizy .gt_left {
   text-align: left;
 }
 
-#ftvarpqogp .gt_center {
+#dbbonqpizy .gt_center {
   text-align: center;
 }
 
-#ftvarpqogp .gt_right {
+#dbbonqpizy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ftvarpqogp .gt_font_normal {
+#dbbonqpizy .gt_font_normal {
   font-weight: normal;
 }
 
-#ftvarpqogp .gt_font_bold {
+#dbbonqpizy .gt_font_bold {
   font-weight: bold;
 }
 
-#ftvarpqogp .gt_font_italic {
+#dbbonqpizy .gt_font_italic {
   font-style: italic;
 }
 
-#ftvarpqogp .gt_super {
+#dbbonqpizy .gt_super {
   font-size: 65%;
 }
 
-#ftvarpqogp .gt_footnote_marks {
+#dbbonqpizy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ftvarpqogp .gt_asterisk {
+#dbbonqpizy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ftvarpqogp .gt_indent_1 {
+#dbbonqpizy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ftvarpqogp .gt_indent_2 {
+#dbbonqpizy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ftvarpqogp .gt_indent_3 {
+#dbbonqpizy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ftvarpqogp .gt_indent_4 {
+#dbbonqpizy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ftvarpqogp .gt_indent_5 {
+#dbbonqpizy .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ftvarpqogp .katex-display {
+#dbbonqpizy .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ftvarpqogp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dbbonqpizy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1803,10 +1804,10 @@ Table&nbsp;3: Details of green roof
 <div id="fig-comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="design_doc_files/figure-html/fig-comparison-1.png" class="img-fluid figure-img" width="672">
+<img src="index_files/figure-html/fig-comparison-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Comparision between green roof with wall coatings and complete coating
+Figure&nbsp;6: Comparison of roof interventions
 </figcaption>
 </figure>
 </div>
@@ -1815,32 +1816,35 @@ Figure&nbsp;6: Comparision between green roof with wall coatings and complete co
 </section>
 <section id="evaluation" class="level3">
 <h3 class="anchored" data-anchor-id="evaluation">Evaluation</h3>
-<p>Each ERM tested, with the corresponding block, is categorized in <a href="#tbl-eval" class="quarto-xref">Table&nbsp;4</a> based on their percentage cooling demand savings. Across all blocks, the combination of retrofits with the highest percentage savings is cool coating on the entire facade exterior, including walls and roof. This combination yielded cooling demand savings of 4.84% for block 2, 10.77% for block 7, and 4.86% for block 5.</p>
+<p>Each ERM tested, with the corresponding block, is categorized in <a href="#tbl-eval" class="quarto-xref">Table&nbsp;4</a> based on their percentage cooling energy savings. Across all blocks, the combination of retrofits with the highest percentage savings is cool coating on the entire facade exterior, including walls and roof. This combination yielded cooling demand savings of 4.84% for block 2, 10.77% for block 7, and 4.86% for block 5.</p>
+<p>The high reflectance coatings showed high-moderate impact on cooling energy savings mainly due to high roof solar exposure in Singapore. This trend was consistent across all blocks, with block 7 displaying the largest savings. Green roofs showed moderate cooling savings across all blocks but are secondary to reflective coatings. Overhang shading attached to the exterior windows showed limited additional benefit in all blocks given the existing building design. Although the absolute cooling savings varies by block, the relative ranking of ERMs is stable, suggesting that the results are robust across buildings within the same residential complex.</p>
+<p>To translate these results into practice, ERMs with a high impact category are strong candidates for facade retrofit. Moderate impact is potentially worthwhile to implement, while low and insignificant impacts have little standalone value.</p>
+<p>This study only considered electricity used for cooling as a metric for building energy consumption, and did not consider energy used for lighting or other internal loads. Other benefits from the selected ERMs, such as thermal comfort or urban heat island mitigation, were not assessed. The results of this study are building and climate specific, as the baseline models represent typical residential apartment buildings in Singapore and were simulated with microclimate weather data.</p>
 <div class="cell">
 <div id="tbl-eval" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-eval-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4: Energy retrofit measures evaluation
+Table&nbsp;4: Evaluation of energy retrofit measures
 </figcaption>
 <div aria-describedby="tbl-eval-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="vubgaprjli" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vubgaprjli table {
+<div id="fkcixhwsck" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fkcixhwsck table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vubgaprjli thead, #vubgaprjli tbody, #vubgaprjli tfoot, #vubgaprjli tr, #vubgaprjli td, #vubgaprjli th {
+#fkcixhwsck thead, #fkcixhwsck tbody, #fkcixhwsck tfoot, #fkcixhwsck tr, #fkcixhwsck td, #fkcixhwsck th {
   border-style: none;
 }
 
-#vubgaprjli p {
+#fkcixhwsck p {
   margin: 0;
   padding: 0;
 }
 
-#vubgaprjli .gt_table {
+#fkcixhwsck .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1866,12 +1870,12 @@ Table&nbsp;4: Energy retrofit measures evaluation
   border-left-color: #D3D3D3;
 }
 
-#vubgaprjli .gt_caption {
+#fkcixhwsck .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vubgaprjli .gt_title {
+#fkcixhwsck .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1883,7 +1887,7 @@ Table&nbsp;4: Energy retrofit measures evaluation
   border-bottom-width: 0;
 }
 
-#vubgaprjli .gt_subtitle {
+#fkcixhwsck .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1895,7 +1899,7 @@ Table&nbsp;4: Energy retrofit measures evaluation
   border-top-width: 0;
 }
 
-#vubgaprjli .gt_heading {
+#fkcixhwsck .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1907,13 +1911,13 @@ Table&nbsp;4: Energy retrofit measures evaluation
   border-right-color: #D3D3D3;
 }
 
-#vubgaprjli .gt_bottom_border {
+#fkcixhwsck .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vubgaprjli .gt_col_headings {
+#fkcixhwsck .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1928,7 +1932,7 @@ Table&nbsp;4: Energy retrofit measures evaluation
   border-right-color: #D3D3D3;
 }
 
-#vubgaprjli .gt_col_heading {
+#fkcixhwsck .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1948,7 +1952,7 @@ Table&nbsp;4: Energy retrofit measures evaluation
   overflow-x: hidden;
 }
 
-#vubgaprjli .gt_column_spanner_outer {
+#fkcixhwsck .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1960,15 +1964,15 @@ Table&nbsp;4: Energy retrofit measures evaluation
   padding-right: 4px;
 }
 
-#vubgaprjli .gt_column_spanner_outer:first-child {
+#fkcixhwsck .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vubgaprjli .gt_column_spanner_outer:last-child {
+#fkcixhwsck .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vubgaprjli .gt_column_spanner {
+#fkcixhwsck .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1980,11 +1984,11 @@ Table&nbsp;4: Energy retrofit measures evaluation
   width: 100%;
 }
 
-#vubgaprjli .gt_spanner_row {
+#fkcixhwsck .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vubgaprjli .gt_group_heading {
+#fkcixhwsck .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2010,7 +2014,7 @@ Table&nbsp;4: Energy retrofit measures evaluation
   text-align: left;
 }
 
-#vubgaprjli .gt_empty_group_heading {
+#fkcixhwsck .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2025,15 +2029,15 @@ Table&nbsp;4: Energy retrofit measures evaluation
   vertical-align: middle;
 }
 
-#vubgaprjli .gt_from_md > :first-child {
+#fkcixhwsck .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vubgaprjli .gt_from_md > :last-child {
+#fkcixhwsck .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vubgaprjli .gt_row {
+#fkcixhwsck .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2052,7 +2056,7 @@ Table&nbsp;4: Energy retrofit measures evaluation
   overflow-x: hidden;
 }
 
-#vubgaprjli .gt_stub {
+#fkcixhwsck .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2065,7 +2069,7 @@ Table&nbsp;4: Energy retrofit measures evaluation
   padding-right: 5px;
 }
 
-#vubgaprjli .gt_stub_row_group {
+#fkcixhwsck .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2079,15 +2083,15 @@ Table&nbsp;4: Energy retrofit measures evaluation
   vertical-align: top;
 }
 
-#vubgaprjli .gt_row_group_first td {
+#fkcixhwsck .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vubgaprjli .gt_row_group_first th {
+#fkcixhwsck .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vubgaprjli .gt_summary_row {
+#fkcixhwsck .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2097,16 +2101,16 @@ Table&nbsp;4: Energy retrofit measures evaluation
   padding-right: 5px;
 }
 
-#vubgaprjli .gt_first_summary_row {
+#fkcixhwsck .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vubgaprjli .gt_first_summary_row.thick {
+#fkcixhwsck .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vubgaprjli .gt_last_summary_row {
+#fkcixhwsck .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2116,7 +2120,7 @@ Table&nbsp;4: Energy retrofit measures evaluation
   border-bottom-color: #D3D3D3;
 }
 
-#vubgaprjli .gt_grand_summary_row {
+#fkcixhwsck .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2126,7 +2130,7 @@ Table&nbsp;4: Energy retrofit measures evaluation
   padding-right: 5px;
 }
 
-#vubgaprjli .gt_first_grand_summary_row {
+#fkcixhwsck .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2136,7 +2140,7 @@ Table&nbsp;4: Energy retrofit measures evaluation
   border-top-color: #D3D3D3;
 }
 
-#vubgaprjli .gt_last_grand_summary_row_top {
+#fkcixhwsck .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2146,11 +2150,11 @@ Table&nbsp;4: Energy retrofit measures evaluation
   border-bottom-color: #D3D3D3;
 }
 
-#vubgaprjli .gt_striped {
+#fkcixhwsck .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vubgaprjli .gt_table_body {
+#fkcixhwsck .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2159,7 +2163,7 @@ Table&nbsp;4: Energy retrofit measures evaluation
   border-bottom-color: #D3D3D3;
 }
 
-#vubgaprjli .gt_footnotes {
+#fkcixhwsck .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2173,7 +2177,7 @@ Table&nbsp;4: Energy retrofit measures evaluation
   border-right-color: #D3D3D3;
 }
 
-#vubgaprjli .gt_footnote {
+#fkcixhwsck .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2182,7 +2186,7 @@ Table&nbsp;4: Energy retrofit measures evaluation
   padding-right: 5px;
 }
 
-#vubgaprjli .gt_sourcenotes {
+#fkcixhwsck .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2196,7 +2200,7 @@ Table&nbsp;4: Energy retrofit measures evaluation
   border-right-color: #D3D3D3;
 }
 
-#vubgaprjli .gt_sourcenote {
+#fkcixhwsck .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2204,72 +2208,72 @@ Table&nbsp;4: Energy retrofit measures evaluation
   padding-right: 5px;
 }
 
-#vubgaprjli .gt_left {
+#fkcixhwsck .gt_left {
   text-align: left;
 }
 
-#vubgaprjli .gt_center {
+#fkcixhwsck .gt_center {
   text-align: center;
 }
 
-#vubgaprjli .gt_right {
+#fkcixhwsck .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vubgaprjli .gt_font_normal {
+#fkcixhwsck .gt_font_normal {
   font-weight: normal;
 }
 
-#vubgaprjli .gt_font_bold {
+#fkcixhwsck .gt_font_bold {
   font-weight: bold;
 }
 
-#vubgaprjli .gt_font_italic {
+#fkcixhwsck .gt_font_italic {
   font-style: italic;
 }
 
-#vubgaprjli .gt_super {
+#fkcixhwsck .gt_super {
   font-size: 65%;
 }
 
-#vubgaprjli .gt_footnote_marks {
+#fkcixhwsck .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vubgaprjli .gt_asterisk {
+#fkcixhwsck .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vubgaprjli .gt_indent_1 {
+#fkcixhwsck .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vubgaprjli .gt_indent_2 {
+#fkcixhwsck .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vubgaprjli .gt_indent_3 {
+#fkcixhwsck .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vubgaprjli .gt_indent_4 {
+#fkcixhwsck .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vubgaprjli .gt_indent_5 {
+#fkcixhwsck .gt_indent_5 {
   text-indent: 25px;
 }
 
-#vubgaprjli .katex-display {
+#fkcixhwsck .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#vubgaprjli div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#fkcixhwsck div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2286,17 +2290,22 @@ Table&nbsp;4: Energy retrofit measures evaluation
 <tr class="odd">
 <td class="gt_row gt_left" headers="Cooling Energy Savings (%)">p &gt; 5</td>
 <td class="gt_row gt_left" headers="Impact">High</td>
-<td class="gt_row gt_left" headers="ERMs (block)">CR (7), CR+CW (7)</td>
+<td class="gt_row gt_left" headers="ERMs (block)">Cool roof (7), Cool roof + Cool walls (7)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Cooling Energy Savings (%)">1 &lt; p ≤ 5</td>
+<td class="gt_row gt_left" headers="Cooling Energy Savings (%)">3 &lt; p ≤ 5</td>
 <td class="gt_row gt_left" headers="Impact">Moderate</td>
-<td class="gt_row gt_left" headers="ERMs (block)">CR (2,5), CR+CW (2,5), GR+CW (2,7,5)</td>
+<td class="gt_row gt_left" headers="ERMs (block)">Cool roof (2,5), Cool roof + Cool walls (2,5), Green roof + Cool walls (2,7,5)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Cooling Energy Savings (%)">p ≤ 1</td>
+<td class="gt_row gt_left" headers="Cooling Energy Savings (%)">1 &lt; p ≤ 3</td>
 <td class="gt_row gt_left" headers="Impact">Low</td>
-<td class="gt_row gt_left" headers="ERMs (block)">CW (2,7,5), GR (2,7,5), S (2,7,5)</td>
+<td class="gt_row gt_left" headers="ERMs (block)">Cool walls (2,7,5)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Cooling Energy Savings (%)">p ≤ 1</td>
+<td class="gt_row gt_left" headers="Impact">Insignificant</td>
+<td class="gt_row gt_left" headers="ERMs (block)">Shading (2,7,5)</td>
 </tr>
 </tbody>
 </table>
@@ -2311,7 +2320,8 @@ Table&nbsp;4: Energy retrofit measures evaluation
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>bla bla bla</p>
+<p>Building energy retrofit measures have gained significant traction in recent years due to their potential to increase building energy performance, provide cost savings, and lower environmental emissions. The facade, as the interface between the indoor and outdoor environments, is a primary candidate for energy retrofits <span class="citation" data-cites="richards2014importance"><a href="#ref-richards2014importance" role="doc-biblioref">[21]</a></span>. This report evaluated three representative passive energy retrofit measures – each drawn from a distinct category of design-based, material-based, and nature-based strategies – by assesssing their impacts on cooling energy demand across multiple buildings in a residential complex in Singapore. All buildings were simulated using EnergyPlus with the same microclimate weather dataset to enable consistent comparison. The results indicate that high-reflectance cool coatings on the facade exterior are the most effective passive ERM, followed by roof vegetation, while overhang shading yields the smallest cooling demand reductions. Although absolute savings differed between each block, the relative performance ranking of the three ERMs remained consistent, suggesting that the observed trends were driven by the effectiveness of each retrofit strategy within the given site and climatic context, rather than by block-specific effects. The parametric ERM evaluation and multi-building comparison approach can be adapted for application to other climates and existing building typologies.</p>
+<p>Future work could expand on the number of passive ERMs tested. Selecting more ERMs from each category – design-based, material-based, and nature-based solutions – could deepen category-level conclusions in a given climate. In addition, a future study could investigate more blocks in the same residential complex or multiple complexes in the same district. Scaling up multi-building retrofit analyses will support decision making at the neighborhood or district level and improve the generalizability of retrofit performance.</p>
 </section>
 <section id="references" class="level2 unnumbered">
 
@@ -2331,59 +2341,56 @@ Table&nbsp;4: Energy retrofit measures evaluation
 <div id="ref-SUN201835" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[4] </div><div class="csl-right-inline">X. Sun, Z. Gou, and S. S.-Y. Lau, <span>“Cost-effectiveness of active and passive design strategies for existing building retrofits in tropical climate: Case study of a zero energy building,”</span> <em>Journal of Cleaner Production</em>, vol. 183, pp. 35–45, 2018, doi: <a href="https://doi.org/10.1016/j.jclepro.2018.02.137">https://doi.org/10.1016/j.jclepro.2018.02.137</a>.</div>
 </div>
-<div id="ref-zotero-item-231" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[5] </div><div class="csl-right-inline">S. Kimura and L. S.Meng, <span>“Passive design measures,”</span> Jakarta: ERIA Research Project Report, 2021, pp. 9–16. Available: <a href="https://www.eria.org/uploads/media/Research-Project-Report/2021-14-Technical-Guideline-Energy-Efficiency-Commercial-Buildings/9_ch.3-Passive-Design.pdf?utm_source=chatgpt.com">https://www.eria.org/uploads/media/Research-Project-Report/2021-14-Technical-Guideline-Energy-Efficiency-Commercial-Buildings/9_ch.3-Passive-Design.pdf?utm_source=chatgpt.com</a></div>
-</div>
 <div id="ref-su6085354" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[6] </div><div class="csl-right-inline">C. Carletti, F. Sciurpi, and L. Pierangioli, <span>“The energy upgrading of existing buildings: <span>Window</span> and shading device typologies for energy efficiency refurbishment,”</span> <em>Sustainability</em>, vol. 6, no. 8, pp. 5354–5377, 2014, doi: <a href="https://doi.org/10.3390/su6085354">10.3390/su6085354</a>.</div>
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">C. Carletti, F. Sciurpi, and L. Pierangioli, <span>“The energy upgrading of existing buildings: <span>Window</span> and shading device typologies for energy efficiency refurbishment,”</span> <em>Sustainability</em>, vol. 6, no. 8, pp. 5354–5377, 2014, doi: <a href="https://doi.org/10.3390/su6085354">10.3390/su6085354</a>.</div>
 </div>
 <div id="ref-9994d833667e4cc99bfbe366f0a780ca" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[7] </div><div class="csl-right-inline">M. Salonvaara and A. Desjarlais, <span>“The impact of the solar absorption coefficient of roof and wall surfaces on energy use and peak demand,”</span> in <em><span>NSB</span> 2023 - book of technical papers: 13th nordic symposium on building physics</em>, H. Johra, Ed., Department of the Built Environment, Aalborg University, Jun. 2023. doi: <a href="https://doi.org/10.54337/aau541650886">10.54337/aau541650886</a>.</div>
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">M. Salonvaara and A. Desjarlais, <span>“The impact of the solar absorption coefficient of roof and wall surfaces on energy use and peak demand,”</span> in <em><span>NSB</span> 2023 - book of technical papers: 13th nordic symposium on building physics</em>, H. Johra, Ed., Department of the Built Environment, Aalborg University, Jun. 2023. doi: <a href="https://doi.org/10.54337/aau541650886">10.54337/aau541650886</a>.</div>
 </div>
 <div id="ref-MIHALAKAKOU2023113306" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[8] </div><div class="csl-right-inline">G. Mihalakakou <em>et al.</em>, <span>“Green roofs as a nature-based solution for improving urban sustainability: Progress and perspectives,”</span> <em>Renewable and Sustainable Energy Reviews</em>, vol. 180, p. 113306, 2023, doi: <a href="https://doi.org/10.1016/j.rser.2023.113306">https://doi.org/10.1016/j.rser.2023.113306</a>.</div>
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">G. Mihalakakou <em>et al.</em>, <span>“Green roofs as a nature-based solution for improving urban sustainability: Progress and perspectives,”</span> <em>Renewable and Sustainable Energy Reviews</em>, vol. 180, p. 113306, 2023, doi: <a href="https://doi.org/10.1016/j.rser.2023.113306">https://doi.org/10.1016/j.rser.2023.113306</a>.</div>
 </div>
 <div id="ref-singEnergyefficientRetrofittingMultistorey2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[9] </div><div class="csl-right-inline">M. C. P. Sing, V. W. C. Chan, J. H. K. Lai, and J. Matthews, <span>“Energy-efficient retrofitting of multi-storey residential buildings,”</span> <em>Facilities</em>, vol. 39, no. 11–12, pp. 722–736, Jun. 2021, doi: <a href="https://doi.org/10.1108/F-08-2020-0094">10.1108/F-08-2020-0094</a>.</div>
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">M. C. P. Sing, V. W. C. Chan, J. H. K. Lai, and J. Matthews, <span>“Energy-efficient retrofitting of multi-storey residential buildings,”</span> <em>Facilities</em>, vol. 39, no. 11–12, pp. 722–736, Jun. 2021, doi: <a href="https://doi.org/10.1108/F-08-2020-0094">10.1108/F-08-2020-0094</a>.</div>
 </div>
 <div id="ref-BJELLAND2024114402" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[10] </div><div class="csl-right-inline">D. Bjelland, J. Brozovsky, and B. D. Hrynyszyn, <span>“Systematic review: Upscaling energy retrofitting to the multi-building level,”</span> <em>Renewable and Sustainable Energy Reviews</em>, vol. 198, p. 114402, 2024, doi: <a href="https://doi.org/10.1016/j.rser.2024.114402">https://doi.org/10.1016/j.rser.2024.114402</a>.</div>
-</div>
-<div id="ref-richards2014importance" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[11] </div><div class="csl-right-inline">D. Richards, <span>“The importance of fa<span>ç</span>ade design,”</span> <em>Sustainable Retrofitting of Commercial Buildings: Cool Climates</em>, p. 140, 2014.</div>
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">D. Bjelland, J. Brozovsky, and B. D. Hrynyszyn, <span>“Systematic review: Upscaling energy retrofitting to the multi-building level,”</span> <em>Renewable and Sustainable Energy Reviews</em>, vol. 198, p. 114402, 2024, doi: <a href="https://doi.org/10.1016/j.rser.2024.114402">https://doi.org/10.1016/j.rser.2024.114402</a>.</div>
 </div>
 <div id="ref-XU2022103775a" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[12] </div><div class="csl-right-inline">L. Xu <em>et al.</em>, <span>“Better understanding on impact of microclimate information on building energy modelling performance for urban resilience,”</span> <em>Sustainable Cities and Society</em>, vol. 80, p. 103775, 2022, doi: <a href="https://doi.org/10.1016/j.scs.2022.103775">https://doi.org/10.1016/j.scs.2022.103775</a>.</div>
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">L. Xu <em>et al.</em>, <span>“Better understanding on impact of microclimate information on building energy modelling performance for urban resilience,”</span> <em>Sustainable Cities and Society</em>, vol. 80, p. 103775, 2022, doi: <a href="https://doi.org/10.1016/j.scs.2022.103775">https://doi.org/10.1016/j.scs.2022.103775</a>.</div>
 </div>
 <div id="ref-XU2022103775c" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[13] </div><div class="csl-right-inline">L. Xu <em>et al.</em>, <span>“Better understanding on impact of microclimate information on building energy modelling performance for urban resilience,”</span> <em>Sustainable Cities and Society</em>, vol. 80, p. 103775, 2022, doi: <a href="https://doi.org/10.1016/j.scs.2022.103775">https://doi.org/10.1016/j.scs.2022.103775</a>.</div>
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">L. Xu <em>et al.</em>, <span>“Better understanding on impact of microclimate information on building energy modelling performance for urban resilience,”</span> <em>Sustainable Cities and Society</em>, vol. 80, p. 103775, 2022, doi: <a href="https://doi.org/10.1016/j.scs.2022.103775">https://doi.org/10.1016/j.scs.2022.103775</a>.</div>
 </div>
 <div id="ref-zotero-item-225" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[14] </div><div class="csl-right-inline"><span>“Singapore <span>Energy Statistics</span> 2025,”</span> <em>Energy market authority</em>. https://www.ema.gov.sg/resources/singapore-energy-statistics.</div>
+<div class="csl-left-margin">[12] </div><div class="csl-right-inline"><span>“Singapore <span>Energy Statistics</span> 2025,”</span> <em>Energy market authority</em>. https://www.ema.gov.sg/resources/singapore-energy-statistics.</div>
 </div>
 <div id="ref-zotero-item-222" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[15] </div><div class="csl-right-inline"><span>“Four <span>In Five Households Motivated To Save Energy If They Can Save Money</span>: <span>NEA Study</span>,”</span> <em>National Environment Agency</em>, May 2018.</div>
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline"><span>“Four <span>In Five Households Motivated To Save Energy If They Can Save Money</span>: <span>NEA Study</span>,”</span> <em>National Environment Agency</em>, May 2018.</div>
 </div>
 <div id="ref-KIM2012105" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[16] </div><div class="csl-right-inline">G. Kim, H. S. Lim, T. S. Lim, L. Schaefer, and J. T. Kim, <span>“Comparative advantage of an exterior shading device in thermal performance for residential buildings,”</span> <em>Energy and Buildings</em>, vol. 46, pp. 105–111, 2012, doi: <a href="https://doi.org/10.1016/j.enbuild.2011.10.040">10.1016/j.enbuild.2011.10.040</a>.</div>
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">G. Kim, H. S. Lim, T. S. Lim, L. Schaefer, and J. T. Kim, <span>“Comparative advantage of an exterior shading device in thermal performance for residential buildings,”</span> <em>Energy and Buildings</em>, vol. 46, pp. 105–111, 2012, doi: <a href="https://doi.org/10.1016/j.enbuild.2011.10.040">10.1016/j.enbuild.2011.10.040</a>.</div>
 </div>
 <div id="ref-zotero-item-221" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[17] </div><div class="csl-right-inline"><em>Building planning and massing</em>. in Green building platinum. Singapore: <span>Building and Construction Authority</span>, 2010.</div>
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline"><em>Building planning and massing</em>. in Green building platinum. Singapore: <span>Building and Construction Authority</span>, 2010.</div>
 </div>
 <div id="ref-XU2022103775e" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[18] </div><div class="csl-right-inline">L. Xu <em>et al.</em>, <span>“Better understanding on impact of microclimate information on building energy modelling performance for urban resilience,”</span> <em>Sustainable Cities and Society</em>, vol. 80, p. 103775, 2022, doi: <a href="https://doi.org/10.1016/j.scs.2022.103775">https://doi.org/10.1016/j.scs.2022.103775</a>.</div>
+<div class="csl-left-margin">[16] </div><div class="csl-right-inline">L. Xu <em>et al.</em>, <span>“Better understanding on impact of microclimate information on building energy modelling performance for urban resilience,”</span> <em>Sustainable Cities and Society</em>, vol. 80, p. 103775, 2022, doi: <a href="https://doi.org/10.1016/j.scs.2022.103775">https://doi.org/10.1016/j.scs.2022.103775</a>.</div>
 </div>
 <div id="ref-NAZARIAN2019144" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[19] </div><div class="csl-right-inline">N. Nazarian, N. Dumas, J. Kleissl, and L. Norford, <span>“Effectiveness of cool walls on cooling load and urban temperature in a tropical climate,”</span> <em>Energy and Buildings</em>, vol. 187, pp. 144–162, 2019, doi: <a href="https://doi.org/10.1016/j.enbuild.2019.01.022">https://doi.org/10.1016/j.enbuild.2019.01.022</a>.</div>
+<div class="csl-left-margin">[17] </div><div class="csl-right-inline">N. Nazarian, N. Dumas, J. Kleissl, and L. Norford, <span>“Effectiveness of cool walls on cooling load and urban temperature in a tropical climate,”</span> <em>Energy and Buildings</em>, vol. 187, pp. 144–162, 2019, doi: <a href="https://doi.org/10.1016/j.enbuild.2019.01.022">https://doi.org/10.1016/j.enbuild.2019.01.022</a>.</div>
 </div>
 <div id="ref-ZHAO2023113668" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[20] </div><div class="csl-right-inline">Y. Zhao <em>et al.</em>, <span>“Beating urban heat: <span class="nocase">Multimeasure-centric</span> solution sets and a complementary framework for decision-making,”</span> <em>Renewable and Sustainable Energy Reviews</em>, vol. 186, p. 113668, 2023, doi: <a href="https://doi.org/10.1016/j.rser.2023.113668">10.1016/j.rser.2023.113668</a>.</div>
+<div class="csl-left-margin">[18] </div><div class="csl-right-inline">Y. Zhao <em>et al.</em>, <span>“Beating urban heat: <span class="nocase">Multimeasure-centric</span> solution sets and a complementary framework for decision-making,”</span> <em>Renewable and Sustainable Energy Reviews</em>, vol. 186, p. 113668, 2023, doi: <a href="https://doi.org/10.1016/j.rser.2023.113668">10.1016/j.rser.2023.113668</a>.</div>
 </div>
 <div id="ref-dahanayakeComparingReductionBuilding2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[21] </div><div class="csl-right-inline">K. C. Dahanayake and C. L. Chow, <span>“Comparing reduction of building cooling load through green roofs and green walls by <span>EnergyPlus</span> simulations,”</span> <em>Building Simulation</em>, vol. 11, no. 3, pp. 421–434, Jun. 2018, doi: <a href="https://doi.org/10.1007/s12273-017-0415-7">10.1007/s12273-017-0415-7</a>.</div>
+<div class="csl-left-margin">[19] </div><div class="csl-right-inline">K. C. Dahanayake and C. L. Chow, <span>“Comparing reduction of building cooling load through green roofs and green walls by <span>EnergyPlus</span> simulations,”</span> <em>Building Simulation</em>, vol. 11, no. 3, pp. 421–434, Jun. 2018, doi: <a href="https://doi.org/10.1007/s12273-017-0415-7">10.1007/s12273-017-0415-7</a>.</div>
 </div>
 <div id="ref-SAILOR20081466" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[22] </div><div class="csl-right-inline">D. J. Sailor, <span>“A green roof model for building energy simulation programs,”</span> <em>Energy and Buildings</em>, vol. 40, no. 8, pp. 1466–1478, 2008, doi: <a href="https://doi.org/10.1016/j.enbuild.2008.02.001">10.1016/j.enbuild.2008.02.001</a>.</div>
+<div class="csl-left-margin">[20] </div><div class="csl-right-inline">D. J. Sailor, <span>“A green roof model for building energy simulation programs,”</span> <em>Energy and Buildings</em>, vol. 40, no. 8, pp. 1466–1478, 2008, doi: <a href="https://doi.org/10.1016/j.enbuild.2008.02.001">10.1016/j.enbuild.2008.02.001</a>.</div>
+</div>
+<div id="ref-richards2014importance" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[21] </div><div class="csl-right-inline">D. Richards, <span>“The importance of fa<span>ç</span>ade design,”</span> <em>Sustainable Retrofitting of Commercial Buildings: Cool Climates</em>, p. 140, 2014.</div>
 </div>
 </div></section></div></main>
 <!-- /main column -->
