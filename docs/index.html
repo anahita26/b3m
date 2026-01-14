@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Anahita Darvish">
-<meta name="dcterms.date" content="2026-01-13">
+<meta name="dcterms.date" content="2026-01-14">
 
 <title>Cooling Demand Reduction through Passive Facade Retrofits: A Multi-Building Case Study in Singapore</title>
 <style>
@@ -147,7 +147,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 13, 2026</p>
+      <p class="date">January 14, 2026</p>
     </div>
   </div>
   
@@ -161,7 +161,7 @@ window.Quarto = {
 
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>Cooling energy demand in tropical residential buildings presents a growing challenge due to high solar radiation, temperatures, and humidity. Passive energy retrofit measures (ERMs) offer a promising pathway to reduce cooling loads by limiting external heat gains through building design and envelope modifications. This study evaluates the cooling demand reduction potential of three representative passive ERMs—one each from design-based, material-based, and nature-based categories—applied to a multi-building residential complex in Singapore. Using physics-based building energy simulations in EnergyPlus, three high-rise residential blocks were modeled under identical microclimate weather conditions to assess both retrofit effectiveness and robustness across buildings. Results indicate that high-reflectance cool coatings applied to the building envelope provide the greatest cooling demand reduction, followed by roof vegetation, while window overhang shading yields minimal savings due to existing climate-sensitive building design. Although absolute cooling energy savings vary between blocks, the relative performance ranking of the retrofit measures remains consistent, suggesting that observed trends are driven by retrofit strategy effectiveness within the site and climatic context rather than block-specific characteristics. The category-based evaluation framework and multi-building comparison approach presented in this study support scalable and strategic passive retrofit planning for tropical residential developments.</p>
+<p>Cooling energy demand in tropical residential buildings presents a growing challenge due to high solar radiation, temperatures, and humidity. Passive energy retrofit measures (ERMs) offer a promising pathway to reduce cooling loads by limiting external heat gains through building design and envelope modifications. This study evaluates the cooling demand reduction potential of three passive ERMs applied to a multi-building residential complex in Singapore. The passive ERMs chosen each come from one of the following categories: material-based, design-based, and nature-based solutions. Using EnergyPlus, a physics based building modelling software, three high-rise residential blocks were modeled under identical microclimate weather conditions to assess both retrofit effectiveness and robustness across buildings. Results indicate that high-reflectance cool coatings applied to the building envelope provide the greatest cooling demand reduction, followed by roof vegetation, while window overhang shading yields minimal savings due to existing climate-sensitive building design. Although absolute cooling energy savings vary between blocks, the relative performance ranking of the retrofit measures remains consistent, suggesting that observed trends are driven by retrofit strategy effectiveness within the site and climatic context rather than block-specific characteristics. The category-based evaluation framework and multi-building comparison approach presented in this study can be scaled and used in strategic passive retrofit planning for tropical residential developments.</p>
 </section>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
@@ -208,23 +208,23 @@ Table&nbsp;1: Energy retrofit measures for simulation
 </figcaption>
 <div aria-describedby="tbl-erms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="oydphijnxi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#oydphijnxi table {
+<div id="ouzsteevao" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ouzsteevao table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#oydphijnxi thead, #oydphijnxi tbody, #oydphijnxi tfoot, #oydphijnxi tr, #oydphijnxi td, #oydphijnxi th {
+#ouzsteevao thead, #ouzsteevao tbody, #ouzsteevao tfoot, #ouzsteevao tr, #ouzsteevao td, #ouzsteevao th {
   border-style: none;
 }
 
-#oydphijnxi p {
+#ouzsteevao p {
   margin: 0;
   padding: 0;
 }
 
-#oydphijnxi .gt_table {
+#ouzsteevao .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -250,12 +250,12 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-left-color: #D3D3D3;
 }
 
-#oydphijnxi .gt_caption {
+#ouzsteevao .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#oydphijnxi .gt_title {
+#ouzsteevao .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -267,7 +267,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-bottom-width: 0;
 }
 
-#oydphijnxi .gt_subtitle {
+#ouzsteevao .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -279,7 +279,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-top-width: 0;
 }
 
-#oydphijnxi .gt_heading {
+#ouzsteevao .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -291,13 +291,13 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-right-color: #D3D3D3;
 }
 
-#oydphijnxi .gt_bottom_border {
+#ouzsteevao .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#oydphijnxi .gt_col_headings {
+#ouzsteevao .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -312,7 +312,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-right-color: #D3D3D3;
 }
 
-#oydphijnxi .gt_col_heading {
+#ouzsteevao .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -332,7 +332,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   overflow-x: hidden;
 }
 
-#oydphijnxi .gt_column_spanner_outer {
+#ouzsteevao .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -344,15 +344,15 @@ Table&nbsp;1: Energy retrofit measures for simulation
   padding-right: 4px;
 }
 
-#oydphijnxi .gt_column_spanner_outer:first-child {
+#ouzsteevao .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#oydphijnxi .gt_column_spanner_outer:last-child {
+#ouzsteevao .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#oydphijnxi .gt_column_spanner {
+#ouzsteevao .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -364,11 +364,11 @@ Table&nbsp;1: Energy retrofit measures for simulation
   width: 100%;
 }
 
-#oydphijnxi .gt_spanner_row {
+#ouzsteevao .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#oydphijnxi .gt_group_heading {
+#ouzsteevao .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -394,7 +394,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   text-align: left;
 }
 
-#oydphijnxi .gt_empty_group_heading {
+#ouzsteevao .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -409,15 +409,15 @@ Table&nbsp;1: Energy retrofit measures for simulation
   vertical-align: middle;
 }
 
-#oydphijnxi .gt_from_md > :first-child {
+#ouzsteevao .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#oydphijnxi .gt_from_md > :last-child {
+#ouzsteevao .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#oydphijnxi .gt_row {
+#ouzsteevao .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -436,7 +436,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   overflow-x: hidden;
 }
 
-#oydphijnxi .gt_stub {
+#ouzsteevao .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -449,7 +449,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   padding-right: 5px;
 }
 
-#oydphijnxi .gt_stub_row_group {
+#ouzsteevao .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -463,15 +463,15 @@ Table&nbsp;1: Energy retrofit measures for simulation
   vertical-align: top;
 }
 
-#oydphijnxi .gt_row_group_first td {
+#ouzsteevao .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#oydphijnxi .gt_row_group_first th {
+#ouzsteevao .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#oydphijnxi .gt_summary_row {
+#ouzsteevao .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -481,16 +481,16 @@ Table&nbsp;1: Energy retrofit measures for simulation
   padding-right: 5px;
 }
 
-#oydphijnxi .gt_first_summary_row {
+#ouzsteevao .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#oydphijnxi .gt_first_summary_row.thick {
+#ouzsteevao .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#oydphijnxi .gt_last_summary_row {
+#ouzsteevao .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -500,7 +500,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-bottom-color: #D3D3D3;
 }
 
-#oydphijnxi .gt_grand_summary_row {
+#ouzsteevao .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -510,7 +510,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   padding-right: 5px;
 }
 
-#oydphijnxi .gt_first_grand_summary_row {
+#ouzsteevao .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -520,7 +520,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-top-color: #D3D3D3;
 }
 
-#oydphijnxi .gt_last_grand_summary_row_top {
+#ouzsteevao .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -530,11 +530,11 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-bottom-color: #D3D3D3;
 }
 
-#oydphijnxi .gt_striped {
+#ouzsteevao .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#oydphijnxi .gt_table_body {
+#ouzsteevao .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -543,7 +543,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-bottom-color: #D3D3D3;
 }
 
-#oydphijnxi .gt_footnotes {
+#ouzsteevao .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -557,7 +557,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-right-color: #D3D3D3;
 }
 
-#oydphijnxi .gt_footnote {
+#ouzsteevao .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -566,7 +566,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   padding-right: 5px;
 }
 
-#oydphijnxi .gt_sourcenotes {
+#ouzsteevao .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -580,7 +580,7 @@ Table&nbsp;1: Energy retrofit measures for simulation
   border-right-color: #D3D3D3;
 }
 
-#oydphijnxi .gt_sourcenote {
+#ouzsteevao .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -588,72 +588,72 @@ Table&nbsp;1: Energy retrofit measures for simulation
   padding-right: 5px;
 }
 
-#oydphijnxi .gt_left {
+#ouzsteevao .gt_left {
   text-align: left;
 }
 
-#oydphijnxi .gt_center {
+#ouzsteevao .gt_center {
   text-align: center;
 }
 
-#oydphijnxi .gt_right {
+#ouzsteevao .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#oydphijnxi .gt_font_normal {
+#ouzsteevao .gt_font_normal {
   font-weight: normal;
 }
 
-#oydphijnxi .gt_font_bold {
+#ouzsteevao .gt_font_bold {
   font-weight: bold;
 }
 
-#oydphijnxi .gt_font_italic {
+#ouzsteevao .gt_font_italic {
   font-style: italic;
 }
 
-#oydphijnxi .gt_super {
+#ouzsteevao .gt_super {
   font-size: 65%;
 }
 
-#oydphijnxi .gt_footnote_marks {
+#ouzsteevao .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#oydphijnxi .gt_asterisk {
+#ouzsteevao .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#oydphijnxi .gt_indent_1 {
+#ouzsteevao .gt_indent_1 {
   text-indent: 5px;
 }
 
-#oydphijnxi .gt_indent_2 {
+#ouzsteevao .gt_indent_2 {
   text-indent: 10px;
 }
 
-#oydphijnxi .gt_indent_3 {
+#ouzsteevao .gt_indent_3 {
   text-indent: 15px;
 }
 
-#oydphijnxi .gt_indent_4 {
+#ouzsteevao .gt_indent_4 {
   text-indent: 20px;
 }
 
-#oydphijnxi .gt_indent_5 {
+#ouzsteevao .gt_indent_5 {
   text-indent: 25px;
 }
 
-#oydphijnxi .katex-display {
+#ouzsteevao .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#oydphijnxi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ouzsteevao div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -703,23 +703,23 @@ Table&nbsp;2: Important simulation parameters
 </figcaption>
 <div aria-describedby="tbl-parameters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="kmfxatomfj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kmfxatomfj table {
+<div id="wqujgmmqsg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wqujgmmqsg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kmfxatomfj thead, #kmfxatomfj tbody, #kmfxatomfj tfoot, #kmfxatomfj tr, #kmfxatomfj td, #kmfxatomfj th {
+#wqujgmmqsg thead, #wqujgmmqsg tbody, #wqujgmmqsg tfoot, #wqujgmmqsg tr, #wqujgmmqsg td, #wqujgmmqsg th {
   border-style: none;
 }
 
-#kmfxatomfj p {
+#wqujgmmqsg p {
   margin: 0;
   padding: 0;
 }
 
-#kmfxatomfj .gt_table {
+#wqujgmmqsg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -745,12 +745,12 @@ Table&nbsp;2: Important simulation parameters
   border-left-color: #D3D3D3;
 }
 
-#kmfxatomfj .gt_caption {
+#wqujgmmqsg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kmfxatomfj .gt_title {
+#wqujgmmqsg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -762,7 +762,7 @@ Table&nbsp;2: Important simulation parameters
   border-bottom-width: 0;
 }
 
-#kmfxatomfj .gt_subtitle {
+#wqujgmmqsg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -774,7 +774,7 @@ Table&nbsp;2: Important simulation parameters
   border-top-width: 0;
 }
 
-#kmfxatomfj .gt_heading {
+#wqujgmmqsg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -786,13 +786,13 @@ Table&nbsp;2: Important simulation parameters
   border-right-color: #D3D3D3;
 }
 
-#kmfxatomfj .gt_bottom_border {
+#wqujgmmqsg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kmfxatomfj .gt_col_headings {
+#wqujgmmqsg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -807,7 +807,7 @@ Table&nbsp;2: Important simulation parameters
   border-right-color: #D3D3D3;
 }
 
-#kmfxatomfj .gt_col_heading {
+#wqujgmmqsg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -827,7 +827,7 @@ Table&nbsp;2: Important simulation parameters
   overflow-x: hidden;
 }
 
-#kmfxatomfj .gt_column_spanner_outer {
+#wqujgmmqsg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -839,15 +839,15 @@ Table&nbsp;2: Important simulation parameters
   padding-right: 4px;
 }
 
-#kmfxatomfj .gt_column_spanner_outer:first-child {
+#wqujgmmqsg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kmfxatomfj .gt_column_spanner_outer:last-child {
+#wqujgmmqsg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kmfxatomfj .gt_column_spanner {
+#wqujgmmqsg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -859,11 +859,11 @@ Table&nbsp;2: Important simulation parameters
   width: 100%;
 }
 
-#kmfxatomfj .gt_spanner_row {
+#wqujgmmqsg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kmfxatomfj .gt_group_heading {
+#wqujgmmqsg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -889,7 +889,7 @@ Table&nbsp;2: Important simulation parameters
   text-align: left;
 }
 
-#kmfxatomfj .gt_empty_group_heading {
+#wqujgmmqsg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -904,15 +904,15 @@ Table&nbsp;2: Important simulation parameters
   vertical-align: middle;
 }
 
-#kmfxatomfj .gt_from_md > :first-child {
+#wqujgmmqsg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kmfxatomfj .gt_from_md > :last-child {
+#wqujgmmqsg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kmfxatomfj .gt_row {
+#wqujgmmqsg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -931,7 +931,7 @@ Table&nbsp;2: Important simulation parameters
   overflow-x: hidden;
 }
 
-#kmfxatomfj .gt_stub {
+#wqujgmmqsg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -944,7 +944,7 @@ Table&nbsp;2: Important simulation parameters
   padding-right: 5px;
 }
 
-#kmfxatomfj .gt_stub_row_group {
+#wqujgmmqsg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -958,15 +958,15 @@ Table&nbsp;2: Important simulation parameters
   vertical-align: top;
 }
 
-#kmfxatomfj .gt_row_group_first td {
+#wqujgmmqsg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kmfxatomfj .gt_row_group_first th {
+#wqujgmmqsg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kmfxatomfj .gt_summary_row {
+#wqujgmmqsg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -976,16 +976,16 @@ Table&nbsp;2: Important simulation parameters
   padding-right: 5px;
 }
 
-#kmfxatomfj .gt_first_summary_row {
+#wqujgmmqsg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kmfxatomfj .gt_first_summary_row.thick {
+#wqujgmmqsg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kmfxatomfj .gt_last_summary_row {
+#wqujgmmqsg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -995,7 +995,7 @@ Table&nbsp;2: Important simulation parameters
   border-bottom-color: #D3D3D3;
 }
 
-#kmfxatomfj .gt_grand_summary_row {
+#wqujgmmqsg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1005,7 +1005,7 @@ Table&nbsp;2: Important simulation parameters
   padding-right: 5px;
 }
 
-#kmfxatomfj .gt_first_grand_summary_row {
+#wqujgmmqsg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1015,7 +1015,7 @@ Table&nbsp;2: Important simulation parameters
   border-top-color: #D3D3D3;
 }
 
-#kmfxatomfj .gt_last_grand_summary_row_top {
+#wqujgmmqsg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1025,11 +1025,11 @@ Table&nbsp;2: Important simulation parameters
   border-bottom-color: #D3D3D3;
 }
 
-#kmfxatomfj .gt_striped {
+#wqujgmmqsg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kmfxatomfj .gt_table_body {
+#wqujgmmqsg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1038,7 +1038,7 @@ Table&nbsp;2: Important simulation parameters
   border-bottom-color: #D3D3D3;
 }
 
-#kmfxatomfj .gt_footnotes {
+#wqujgmmqsg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1052,7 +1052,7 @@ Table&nbsp;2: Important simulation parameters
   border-right-color: #D3D3D3;
 }
 
-#kmfxatomfj .gt_footnote {
+#wqujgmmqsg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1061,7 +1061,7 @@ Table&nbsp;2: Important simulation parameters
   padding-right: 5px;
 }
 
-#kmfxatomfj .gt_sourcenotes {
+#wqujgmmqsg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1075,7 +1075,7 @@ Table&nbsp;2: Important simulation parameters
   border-right-color: #D3D3D3;
 }
 
-#kmfxatomfj .gt_sourcenote {
+#wqujgmmqsg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1083,72 +1083,72 @@ Table&nbsp;2: Important simulation parameters
   padding-right: 5px;
 }
 
-#kmfxatomfj .gt_left {
+#wqujgmmqsg .gt_left {
   text-align: left;
 }
 
-#kmfxatomfj .gt_center {
+#wqujgmmqsg .gt_center {
   text-align: center;
 }
 
-#kmfxatomfj .gt_right {
+#wqujgmmqsg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kmfxatomfj .gt_font_normal {
+#wqujgmmqsg .gt_font_normal {
   font-weight: normal;
 }
 
-#kmfxatomfj .gt_font_bold {
+#wqujgmmqsg .gt_font_bold {
   font-weight: bold;
 }
 
-#kmfxatomfj .gt_font_italic {
+#wqujgmmqsg .gt_font_italic {
   font-style: italic;
 }
 
-#kmfxatomfj .gt_super {
+#wqujgmmqsg .gt_super {
   font-size: 65%;
 }
 
-#kmfxatomfj .gt_footnote_marks {
+#wqujgmmqsg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kmfxatomfj .gt_asterisk {
+#wqujgmmqsg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kmfxatomfj .gt_indent_1 {
+#wqujgmmqsg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kmfxatomfj .gt_indent_2 {
+#wqujgmmqsg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kmfxatomfj .gt_indent_3 {
+#wqujgmmqsg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kmfxatomfj .gt_indent_4 {
+#wqujgmmqsg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kmfxatomfj .gt_indent_5 {
+#wqujgmmqsg .gt_indent_5 {
   text-indent: 25px;
 }
 
-#kmfxatomfj .katex-display {
+#wqujgmmqsg .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#kmfxatomfj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#wqujgmmqsg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1271,8 +1271,8 @@ Figure&nbsp;5: Comparison of cool coating on all facade walls vs.&nbsp;rooftop
 <section id="green-roof" class="level3">
 <h3 class="anchored" data-anchor-id="green-roof">Green roof</h3>
 <p>Green roofs (GRs) are a form of urban greenery that is beneficial in reducing a building’s heat gain and energy consumption <span class="citation" data-cites="zotero-item-221"><a href="#ref-zotero-item-221" role="doc-biblioref">[15]</a></span>. They can help provide thermal insulation to the interior spaces below it, maximizing indoor thermal comfort and minimizing cooling needs <span class="citation" data-cites="ZHAO2023113668"><a href="#ref-ZHAO2023113668" role="doc-biblioref">[18]</a></span>. The benefits of GRs can be explained through four main mechanisms including: insulation, evapotranspiration, shading, and wind barrier effect <span class="citation" data-cites="dahanayakeComparingReductionBuilding2018"><a href="#ref-dahanayakeComparingReductionBuilding2018" role="doc-biblioref">[19]</a></span>.</p>
-<p>EnergyPlus utilizes a built-in module to simulate GRs, based on a heat balance principle between the soil layer and vegetation layer <span class="citation" data-cites="SAILOR20081466"><a href="#ref-SAILOR20081466" role="doc-biblioref">[20]</a></span>. The module accounts for sensible heat flux, latent heat flux, and long- and short-wave radiation.</p>
-<p>To add a GR to the baseline model, a new vegetation material was created, followed by a new construction. The new construction was then applied to the exterior roof, following a similar setup to the cool coatings. Two cases of GRs were simulated with details presented in <a href="#tbl-details" class="quarto-xref">Table&nbsp;3</a>. For this study, only the leaf area index (LAI) and plant height were varied between cases. All other parameters related to the vegetation material, such as substrate thickness and soil conductivity, were set to the default EnergyPlus values. The two cases represent a green roof with grass, which covers the roof more extensively (higher LAI) but has a shorter plant height, and shrubs, which cover less of the roof area (lower LAI) and have a higher plant height.</p>
+<p>EnergyPlus utilizes a built-in module to simulate GRs, based on a heat balance principle between the soil layer and vegetation layer <span class="citation" data-cites="SAILOR20081466"><a href="#ref-SAILOR20081466" role="doc-biblioref">[20]</a></span>. The module accounts for sensible heat flux, latent heat flux, and long- and short-wave radiation. For simplicity in the simulations, irrigation systems for the GRs were not included. Thus, soil moisture is driven only by precipitation. This likely limits evapotransporation and leads to a conservative estimate for the cooling energy demand reduction via GRs.</p>
+<p>To add a GR to the baseline model, a new vegetation material was created, followed by a new construction. The new construction was then applied to the exterior roof, following a similar setup to the cool coatings. For this study, only the leaf area index (LAI) and plant height were varied between cases. All other parameters related to the vegetation material, such as substrate thickness and soil conductivity, were set to the default EnergyPlus values. Two cases of GRs were simulated with details presented in <a href="#tbl-details" class="quarto-xref">Table&nbsp;3</a>. The two cases represent a green roof with grass, which covers the roof more extensively (higher LAI) but has a shorter plant height, and shrubs, which cover less of the roof area (lower LAI) and have a higher plant height.</p>
 <div class="cell">
 <div id="tbl-details" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -1281,23 +1281,23 @@ Table&nbsp;3: Simulation details of green roof
 </figcaption>
 <div aria-describedby="tbl-details-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="dbbonqpizy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#dbbonqpizy table {
+<div id="qcnbgmootx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qcnbgmootx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#dbbonqpizy thead, #dbbonqpizy tbody, #dbbonqpizy tfoot, #dbbonqpizy tr, #dbbonqpizy td, #dbbonqpizy th {
+#qcnbgmootx thead, #qcnbgmootx tbody, #qcnbgmootx tfoot, #qcnbgmootx tr, #qcnbgmootx td, #qcnbgmootx th {
   border-style: none;
 }
 
-#dbbonqpizy p {
+#qcnbgmootx p {
   margin: 0;
   padding: 0;
 }
 
-#dbbonqpizy .gt_table {
+#qcnbgmootx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1323,12 +1323,12 @@ Table&nbsp;3: Simulation details of green roof
   border-left-color: #D3D3D3;
 }
 
-#dbbonqpizy .gt_caption {
+#qcnbgmootx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#dbbonqpizy .gt_title {
+#qcnbgmootx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1340,7 +1340,7 @@ Table&nbsp;3: Simulation details of green roof
   border-bottom-width: 0;
 }
 
-#dbbonqpizy .gt_subtitle {
+#qcnbgmootx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1352,7 +1352,7 @@ Table&nbsp;3: Simulation details of green roof
   border-top-width: 0;
 }
 
-#dbbonqpizy .gt_heading {
+#qcnbgmootx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1364,13 +1364,13 @@ Table&nbsp;3: Simulation details of green roof
   border-right-color: #D3D3D3;
 }
 
-#dbbonqpizy .gt_bottom_border {
+#qcnbgmootx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#dbbonqpizy .gt_col_headings {
+#qcnbgmootx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1385,7 +1385,7 @@ Table&nbsp;3: Simulation details of green roof
   border-right-color: #D3D3D3;
 }
 
-#dbbonqpizy .gt_col_heading {
+#qcnbgmootx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1405,7 +1405,7 @@ Table&nbsp;3: Simulation details of green roof
   overflow-x: hidden;
 }
 
-#dbbonqpizy .gt_column_spanner_outer {
+#qcnbgmootx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1417,15 +1417,15 @@ Table&nbsp;3: Simulation details of green roof
   padding-right: 4px;
 }
 
-#dbbonqpizy .gt_column_spanner_outer:first-child {
+#qcnbgmootx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#dbbonqpizy .gt_column_spanner_outer:last-child {
+#qcnbgmootx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#dbbonqpizy .gt_column_spanner {
+#qcnbgmootx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1437,11 +1437,11 @@ Table&nbsp;3: Simulation details of green roof
   width: 100%;
 }
 
-#dbbonqpizy .gt_spanner_row {
+#qcnbgmootx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#dbbonqpizy .gt_group_heading {
+#qcnbgmootx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1467,7 +1467,7 @@ Table&nbsp;3: Simulation details of green roof
   text-align: left;
 }
 
-#dbbonqpizy .gt_empty_group_heading {
+#qcnbgmootx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1482,15 +1482,15 @@ Table&nbsp;3: Simulation details of green roof
   vertical-align: middle;
 }
 
-#dbbonqpizy .gt_from_md > :first-child {
+#qcnbgmootx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#dbbonqpizy .gt_from_md > :last-child {
+#qcnbgmootx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#dbbonqpizy .gt_row {
+#qcnbgmootx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1509,7 +1509,7 @@ Table&nbsp;3: Simulation details of green roof
   overflow-x: hidden;
 }
 
-#dbbonqpizy .gt_stub {
+#qcnbgmootx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1522,7 +1522,7 @@ Table&nbsp;3: Simulation details of green roof
   padding-right: 5px;
 }
 
-#dbbonqpizy .gt_stub_row_group {
+#qcnbgmootx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1536,15 +1536,15 @@ Table&nbsp;3: Simulation details of green roof
   vertical-align: top;
 }
 
-#dbbonqpizy .gt_row_group_first td {
+#qcnbgmootx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#dbbonqpizy .gt_row_group_first th {
+#qcnbgmootx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#dbbonqpizy .gt_summary_row {
+#qcnbgmootx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1554,16 +1554,16 @@ Table&nbsp;3: Simulation details of green roof
   padding-right: 5px;
 }
 
-#dbbonqpizy .gt_first_summary_row {
+#qcnbgmootx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#dbbonqpizy .gt_first_summary_row.thick {
+#qcnbgmootx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#dbbonqpizy .gt_last_summary_row {
+#qcnbgmootx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1573,7 +1573,7 @@ Table&nbsp;3: Simulation details of green roof
   border-bottom-color: #D3D3D3;
 }
 
-#dbbonqpizy .gt_grand_summary_row {
+#qcnbgmootx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1583,7 +1583,7 @@ Table&nbsp;3: Simulation details of green roof
   padding-right: 5px;
 }
 
-#dbbonqpizy .gt_first_grand_summary_row {
+#qcnbgmootx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1593,7 +1593,7 @@ Table&nbsp;3: Simulation details of green roof
   border-top-color: #D3D3D3;
 }
 
-#dbbonqpizy .gt_last_grand_summary_row_top {
+#qcnbgmootx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1603,11 +1603,11 @@ Table&nbsp;3: Simulation details of green roof
   border-bottom-color: #D3D3D3;
 }
 
-#dbbonqpizy .gt_striped {
+#qcnbgmootx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#dbbonqpizy .gt_table_body {
+#qcnbgmootx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1616,7 +1616,7 @@ Table&nbsp;3: Simulation details of green roof
   border-bottom-color: #D3D3D3;
 }
 
-#dbbonqpizy .gt_footnotes {
+#qcnbgmootx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1630,7 +1630,7 @@ Table&nbsp;3: Simulation details of green roof
   border-right-color: #D3D3D3;
 }
 
-#dbbonqpizy .gt_footnote {
+#qcnbgmootx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1639,7 +1639,7 @@ Table&nbsp;3: Simulation details of green roof
   padding-right: 5px;
 }
 
-#dbbonqpizy .gt_sourcenotes {
+#qcnbgmootx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1653,7 +1653,7 @@ Table&nbsp;3: Simulation details of green roof
   border-right-color: #D3D3D3;
 }
 
-#dbbonqpizy .gt_sourcenote {
+#qcnbgmootx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1661,72 +1661,72 @@ Table&nbsp;3: Simulation details of green roof
   padding-right: 5px;
 }
 
-#dbbonqpizy .gt_left {
+#qcnbgmootx .gt_left {
   text-align: left;
 }
 
-#dbbonqpizy .gt_center {
+#qcnbgmootx .gt_center {
   text-align: center;
 }
 
-#dbbonqpizy .gt_right {
+#qcnbgmootx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#dbbonqpizy .gt_font_normal {
+#qcnbgmootx .gt_font_normal {
   font-weight: normal;
 }
 
-#dbbonqpizy .gt_font_bold {
+#qcnbgmootx .gt_font_bold {
   font-weight: bold;
 }
 
-#dbbonqpizy .gt_font_italic {
+#qcnbgmootx .gt_font_italic {
   font-style: italic;
 }
 
-#dbbonqpizy .gt_super {
+#qcnbgmootx .gt_super {
   font-size: 65%;
 }
 
-#dbbonqpizy .gt_footnote_marks {
+#qcnbgmootx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#dbbonqpizy .gt_asterisk {
+#qcnbgmootx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#dbbonqpizy .gt_indent_1 {
+#qcnbgmootx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#dbbonqpizy .gt_indent_2 {
+#qcnbgmootx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#dbbonqpizy .gt_indent_3 {
+#qcnbgmootx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#dbbonqpizy .gt_indent_4 {
+#qcnbgmootx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#dbbonqpizy .gt_indent_5 {
+#qcnbgmootx .gt_indent_5 {
   text-indent: 25px;
 }
 
-#dbbonqpizy .katex-display {
+#qcnbgmootx .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#dbbonqpizy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#qcnbgmootx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1798,7 +1798,7 @@ Table&nbsp;3: Simulation details of green roof
 </figure>
 </div>
 </div>
-<p>All green roof cases include coated exterior walls (absorptance 0.2) for simulation. <a href="#fig-comparison" class="quarto-xref">Figure&nbsp;6</a> shows a comparison between the grass roof, shrubs roof, and a coated roof. Both GR cases performed similarly across all blocks, with grass demonstrating slightly better cooling demand savings than shrubs. When comparing the GRs to the coated roof, the coated roof showed more energy savings across all blocks. This suggests that, under Singapore’s hot and humid climate, direct reduction of solar heat absorption through increased reflectance is more effective at lower cooling demand than evapotranspiration-based cooling mechanisms.</p>
+<p>All green roof cases include coated exterior walls (absorptance 0.2) for simulation. <a href="#fig-comparison" class="quarto-xref">Figure&nbsp;6</a> shows a comparison between the grass roof, shrub roof, and coated roof. Both GR cases performed similarly across all blocks, with grass demonstrating slightly better cooling demand savings than shrubs. When comparing the GRs to the coated roof, the coated roof showed more energy savings across all blocks. This suggests that, under Singapore’s hot and humid climate, direct reduction of solar heat absorption through increased reflectance is more effective at lower cooling demand than evapotranspiration-based cooling mechanisms.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1817,7 +1817,7 @@ Figure&nbsp;6: Comparison of roof interventions
 <section id="evaluation" class="level3">
 <h3 class="anchored" data-anchor-id="evaluation">Evaluation</h3>
 <p>Each ERM tested, with the corresponding block, is categorized in <a href="#tbl-eval" class="quarto-xref">Table&nbsp;4</a> based on their percentage cooling energy savings. Across all blocks, the combination of retrofits with the highest percentage savings is cool coating on the entire facade exterior, including walls and roof. This combination yielded cooling demand savings of 4.84% for block 2, 10.77% for block 7, and 4.86% for block 5.</p>
-<p>The high reflectance coatings showed high-moderate impact on cooling energy savings mainly due to high roof solar exposure in Singapore. This trend was consistent across all blocks, with block 7 displaying the largest savings. Green roofs showed moderate cooling savings across all blocks but are secondary to reflective coatings. Overhang shading attached to the exterior windows showed limited additional benefit in all blocks given the existing building design. Although the absolute cooling savings varies by block, the relative ranking of ERMs is stable, suggesting that the results are robust across buildings within the same residential complex.</p>
+<p>The high reflectance coatings showed high-moderate impact on cooling energy savings mainly due to high roof solar exposure in Singapore. This trend was consistent across all blocks, indicating that material-based strategies are most effective in this context. Green roofs showed moderate cooling savings across all blocks but are secondary to reflective coatings. Overhang shading attached to the exterior windows showed limited additional benefit in all blocks given the existing building design. Although the absolute cooling savings varies by block, the relative ranking of ERMs is stable, suggesting that the results are robust across buildings within the same residential complex.</p>
 <p>To translate these results into practice, ERMs with a high impact category are strong candidates for facade retrofit. Moderate impact is potentially worthwhile to implement, while low and insignificant impacts have little standalone value.</p>
 <p>This study only considered electricity used for cooling as a metric for building energy consumption, and did not consider energy used for lighting or other internal loads. Other benefits from the selected ERMs, such as thermal comfort or urban heat island mitigation, were not assessed. The results of this study are building and climate specific, as the baseline models represent typical residential apartment buildings in Singapore and were simulated with microclimate weather data.</p>
 <div class="cell">
@@ -1828,23 +1828,23 @@ Table&nbsp;4: Evaluation of energy retrofit measures
 </figcaption>
 <div aria-describedby="tbl-eval-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="fkcixhwsck" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fkcixhwsck table {
+<div id="rplevexedl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rplevexedl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fkcixhwsck thead, #fkcixhwsck tbody, #fkcixhwsck tfoot, #fkcixhwsck tr, #fkcixhwsck td, #fkcixhwsck th {
+#rplevexedl thead, #rplevexedl tbody, #rplevexedl tfoot, #rplevexedl tr, #rplevexedl td, #rplevexedl th {
   border-style: none;
 }
 
-#fkcixhwsck p {
+#rplevexedl p {
   margin: 0;
   padding: 0;
 }
 
-#fkcixhwsck .gt_table {
+#rplevexedl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1870,12 +1870,12 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   border-left-color: #D3D3D3;
 }
 
-#fkcixhwsck .gt_caption {
+#rplevexedl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fkcixhwsck .gt_title {
+#rplevexedl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1887,7 +1887,7 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   border-bottom-width: 0;
 }
 
-#fkcixhwsck .gt_subtitle {
+#rplevexedl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1899,7 +1899,7 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   border-top-width: 0;
 }
 
-#fkcixhwsck .gt_heading {
+#rplevexedl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1911,13 +1911,13 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   border-right-color: #D3D3D3;
 }
 
-#fkcixhwsck .gt_bottom_border {
+#rplevexedl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fkcixhwsck .gt_col_headings {
+#rplevexedl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1932,7 +1932,7 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   border-right-color: #D3D3D3;
 }
 
-#fkcixhwsck .gt_col_heading {
+#rplevexedl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1952,7 +1952,7 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   overflow-x: hidden;
 }
 
-#fkcixhwsck .gt_column_spanner_outer {
+#rplevexedl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1964,15 +1964,15 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   padding-right: 4px;
 }
 
-#fkcixhwsck .gt_column_spanner_outer:first-child {
+#rplevexedl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fkcixhwsck .gt_column_spanner_outer:last-child {
+#rplevexedl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fkcixhwsck .gt_column_spanner {
+#rplevexedl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1984,11 +1984,11 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   width: 100%;
 }
 
-#fkcixhwsck .gt_spanner_row {
+#rplevexedl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fkcixhwsck .gt_group_heading {
+#rplevexedl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2014,7 +2014,7 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   text-align: left;
 }
 
-#fkcixhwsck .gt_empty_group_heading {
+#rplevexedl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2029,15 +2029,15 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   vertical-align: middle;
 }
 
-#fkcixhwsck .gt_from_md > :first-child {
+#rplevexedl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fkcixhwsck .gt_from_md > :last-child {
+#rplevexedl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fkcixhwsck .gt_row {
+#rplevexedl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2056,7 +2056,7 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   overflow-x: hidden;
 }
 
-#fkcixhwsck .gt_stub {
+#rplevexedl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2069,7 +2069,7 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   padding-right: 5px;
 }
 
-#fkcixhwsck .gt_stub_row_group {
+#rplevexedl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2083,15 +2083,15 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   vertical-align: top;
 }
 
-#fkcixhwsck .gt_row_group_first td {
+#rplevexedl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fkcixhwsck .gt_row_group_first th {
+#rplevexedl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fkcixhwsck .gt_summary_row {
+#rplevexedl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2101,16 +2101,16 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   padding-right: 5px;
 }
 
-#fkcixhwsck .gt_first_summary_row {
+#rplevexedl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fkcixhwsck .gt_first_summary_row.thick {
+#rplevexedl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fkcixhwsck .gt_last_summary_row {
+#rplevexedl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2120,7 +2120,7 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   border-bottom-color: #D3D3D3;
 }
 
-#fkcixhwsck .gt_grand_summary_row {
+#rplevexedl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2130,7 +2130,7 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   padding-right: 5px;
 }
 
-#fkcixhwsck .gt_first_grand_summary_row {
+#rplevexedl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2140,7 +2140,7 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   border-top-color: #D3D3D3;
 }
 
-#fkcixhwsck .gt_last_grand_summary_row_top {
+#rplevexedl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2150,11 +2150,11 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   border-bottom-color: #D3D3D3;
 }
 
-#fkcixhwsck .gt_striped {
+#rplevexedl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fkcixhwsck .gt_table_body {
+#rplevexedl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2163,7 +2163,7 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   border-bottom-color: #D3D3D3;
 }
 
-#fkcixhwsck .gt_footnotes {
+#rplevexedl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2177,7 +2177,7 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   border-right-color: #D3D3D3;
 }
 
-#fkcixhwsck .gt_footnote {
+#rplevexedl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2186,7 +2186,7 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   padding-right: 5px;
 }
 
-#fkcixhwsck .gt_sourcenotes {
+#rplevexedl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2200,7 +2200,7 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   border-right-color: #D3D3D3;
 }
 
-#fkcixhwsck .gt_sourcenote {
+#rplevexedl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2208,72 +2208,72 @@ Table&nbsp;4: Evaluation of energy retrofit measures
   padding-right: 5px;
 }
 
-#fkcixhwsck .gt_left {
+#rplevexedl .gt_left {
   text-align: left;
 }
 
-#fkcixhwsck .gt_center {
+#rplevexedl .gt_center {
   text-align: center;
 }
 
-#fkcixhwsck .gt_right {
+#rplevexedl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fkcixhwsck .gt_font_normal {
+#rplevexedl .gt_font_normal {
   font-weight: normal;
 }
 
-#fkcixhwsck .gt_font_bold {
+#rplevexedl .gt_font_bold {
   font-weight: bold;
 }
 
-#fkcixhwsck .gt_font_italic {
+#rplevexedl .gt_font_italic {
   font-style: italic;
 }
 
-#fkcixhwsck .gt_super {
+#rplevexedl .gt_super {
   font-size: 65%;
 }
 
-#fkcixhwsck .gt_footnote_marks {
+#rplevexedl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fkcixhwsck .gt_asterisk {
+#rplevexedl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fkcixhwsck .gt_indent_1 {
+#rplevexedl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fkcixhwsck .gt_indent_2 {
+#rplevexedl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fkcixhwsck .gt_indent_3 {
+#rplevexedl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fkcixhwsck .gt_indent_4 {
+#rplevexedl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fkcixhwsck .gt_indent_5 {
+#rplevexedl .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fkcixhwsck .katex-display {
+#rplevexedl .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fkcixhwsck div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rplevexedl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
