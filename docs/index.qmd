@@ -25,9 +25,9 @@ Cooling energy demand in tropical residential buildings presents a growing chall
 
 ## Introduction
 
-The building sector currently comprises about 40% of worldwide energy consumption [@SARIHI2021102525]. With the rise of urbanization, climate change, and anthropogenic heat emissions, the need to improve energy efficiency and decrease energy consumption in the existing built environment is vital [@martinezFundamentalsFacadeRetrofit2015]. Tropical regions, especially, face a challenge in cooling energy demand due to the large amounts of solar radiation, high temperatures, and high humidity [@al2014passive]. Building energy retrofit measures (ERMs) pose a possible solution and involve upgrades or renovations to existing buildings intended to improve energy performance.
+The building sector currently comprises about 40% of worldwide energy consumption [@SARIHI2021102525]. With the rise of urbanization, climate change, and anthropogenic heat emissions, the need to improve energy efficiency and decrease energy consumption in the existing built environment is vital [@martinezFundamentalsFacadeRetrofit2015]. Tropical regions, especially, face a challenge in cooling energy demand due to the large amounts of solar radiation, high temperatures, and high humidity [@al2014passive]. Building energy retrofit measures (ERMs) pose a possible solution and involve upgrades or renovations to existing buildings intended to improve energy performance [@SARIHI2021102525]. In tropical climates, building energy retrofit studies have demonstrated monthly energy savings ranging from \~5-12% , supporting ERMs as an effective strategy for cooling-dominated regions [@LEI201757].
 
-Among energy retrofit measures, passive measures target reductions in solar and external heat gains through building physics and design to lower cooling loads [@SUN201835]. In this study, passive retrofit measures are grouped into (i) design-based (geometry, orientation, shading) [@su6085354], (ii) material-based (envelope properties such as insulation and reflectance) [@9994d833667e4cc99bfbe366f0a780ca] and (iii) nature-based solutions (green roofs/walls and vegetation) [@MIHALAKAKOU2023113306], reflecting the common framing of passive cooling through design, materials, and natural processes.
+Among energy retrofit measures, passive measures target reductions in solar and external heat gains through building physics and design to lower cooling loads [@SUN201835]. In this study, passive retrofit measures are grouped into (i) design-based (geometry, orientation, shading) [@su6085354], (ii) material-based (envelope properties such as insulation and reflectance) [@9994d833667e4cc99bfbe366f0a780ca] and (iii) nature-based solutions (green roofs/walls and vegetation) [@MIHALAKAKOU2023113306]. These categories encapsulate the most commonly applied passive restrofit measures [@zotero-item-231] and allow a deeper investigation into which category is the most effective for a given climatic region.
 
 This research evaluates one passive ERM from each category to compare their relative effectiveness at the scale of a multi-building residential complex. Although passive ERMs have been widely researched, studies often focus on single-building retrofits[@singEnergyefficientRetrofittingMultistorey2021], which can limit how well findings transfer to larger scales such as residential complexes. Recent work highlights the need for research in multi-building retrofits to determine strategic approaches for implementing retrofits at larger scales [@BJELLAND2024114402]. This study aims to bridge this gap by comparing the performance of passive ERMs across multiple blocks in the same residential complex using identical modelling conditions, enabling an assessment of both their effectiveness and the robustness of the resulting energy savings. The objectives of this report are as follows:
 
@@ -55,7 +55,7 @@ $$ {#eq-percentage}
 
 ### Selection of energy retrofit measures
 
-Based on common passive retrofit strategies used in literature, an ERM from each category was chosen to expand the breadth of mechanisms including: design, material, and nature based retrofits. @tbl-erms lists the ERMs as well as the building component they correspond to, namely, windows, exterior walls, and exterior roof. ERMs applied to the facade windows and walls were simulated individually by adding and/or adjusting one component in the model. Next, selected window- or wall- based ERMs were combined with a roof ERM to evaluate the maximal possible energy savings for each block.
+@tbl-erms lists the chosen ERMs as well as the building component they correspond to, namely, windows, exterior walls, and exterior roof. ERMs applied to the facade windows and walls were simulated individually by adding and/or adjusting one component in the model. Next, selected window- or wall- based ERMs were combined with a roof ERM to evaluate the maximal possible energy savings for each block.
 
 ```{r}
 #| echo: false
@@ -78,7 +78,7 @@ discipline <- c("Design",
                 "Nature")
 summary_df <- tibble(
   `Discipline` = discipline,
-  `Energy retrofit measures` = retrofits,
+  `Energy retrofit measure` = retrofits,
   `Building component` = component
   
   
@@ -97,7 +97,7 @@ summary_df |>
 
 ### Baseline case simulation and verification
 
-To determine a baseline cooling demand for each block, the existing IDF models were simulated with the developed microclimate weather dataset. All simulation parameters are consistent with those used by Xu. et al., with important parameters presented in [@tbl-parameters; @XU2022103775d].
+To determine a baseline cooling demand for each block, the existing building models were simulated with the developed microclimate weather dataset. All simulation parameters are consistent with those used by Xu. et al., with important parameters presented in [@tbl-parameters; @XU2022103775d].
 
 ```{r}
 #| echo: false
@@ -145,9 +145,9 @@ baseline_df <- tibble(
 )
 ```
 
-To verify the validity of the simulated baseline values, published data from the Energy Market Authority in Singapore on public housing monthly electricity consumption was used, based on records from 2018-2019, as these datasets were the closest publicly available data to the 2015 simulation period [@zotero-item-225]. To capture variability across planning areas and household behaviors, a range of monthly electricity consumption was selected to encompass both conservative and high electricity use: 250-400 kWh. The percentage of household electricity used for air-conditioning in Singapore was reported to be 24% in 2018 by the National Environment Agency and was also used for verification [@zotero-item-222].
+To validate the simulated baseline values, published data from the Energy Market Authority and National Environment Agency in Singapore were used, including public housing monthly electricity consumption [@zotero-item-225]and percentage of household electricity used for air-conditioning [@zotero-item-222]. All data was based on records from 2018-2019, as these datasets were the closest publicly available data to the 2015 simulation period. For monthly electricity consumption, a range was selected to encompass both conservative and high electricity use per household: 250-400 kWh. For percentage of electricity used by AC, 24% was selected.
 
-Using the published data, @eq-ac was applied to calculate upper and lower bounds for the monthly AC electricity consumption of each building. Variables include: $w$ , the fraction of weekdays in a typical month, accounting for weekday-only occupancy patterns assumed in the simulations, $p_{AC}$ , the percentage of total monthly electricity consumption per household used for cooling, $E_{tot}$ , the total monthly electricity consumption per household, and $N_{flats}$ , the total number of flats in each residential building.
+@eq-ac was applied to calculate upper and lower bounds for the monthly AC electricity consumption of each building. Variables include: $w$ , the fraction of weekdays in a typical month, accounting for weekday-only occupancy patterns assumed in the simulations, $p_{AC}$ , the percentage of total monthly electricity consumption per household used for cooling, $E_{tot}$ , the total monthly electricity consumption per household, and $N_{flats}$ , the total number of flats in each residential building.
 
 $$
 \ E_{AC} = w * p_{AC} * E_{tot} * N_{flats}
@@ -205,7 +205,7 @@ ggplot(ref_df, aes(y = block)) +
   color = "black"
   ) +
   labs(
-    x = "AC Electricity Consumption (kWh)",
+    x = "Monthly AC Electricity Consumption (kWh)",
     y = NULL
   ) +
   theme_minimal(base_size = 14)
@@ -229,7 +229,7 @@ ggplot(ref_df, aes(y = block)) +
 
 ```
 
-## Results and discussion
+## Detailed Model Parameters and Results
 
 ### Shading
 
@@ -237,7 +237,7 @@ Solar shading devices play an important role in building energy and thermal beha
 
 For this study, horizontal overhangs on windows were chosen as the retrofit measure, which corresponds to the EnergyPlus input Shading:Overhang:Projection. Overhang depths were varied as a fraction of the window height including values of: 0.25, 0.50, 0.75, and 1.00. Windows in this model are only on the north and south facing facades. To test differences in response of the north and south facing facades, overhangs were applied on each facade individually, then on both. Since overhangs were not a part of the baseline model, a placeholder overhang was created on each window to enable parametric variation.
 
-@fig-shading shows the results for the overhang shading parametric analysis for north facing windows, south facing windows, and all windows for each block. The results indicate that as the overhang depth increases, the percent change in cooling demand also increases. However, given the very small magnitude ($\pm$ 0.1%), the observed change falls within the low-impact category and was therefore not included in comparative analysis with other retrofits.
+@fig-shading shows the results for the overhang shading parametric analysis for north facing windows, south facing windows, and all windows for each block. The results indicate that, in most cases, as the overhang depth increases, the negative percent change in cooling demand also increases. For the case of Block 7 south facing windows, the energy demand increased. However, because the percentage increase is so low (\< 0.05%) the trend can be attributed to noise in the simulation. All other cases show a similar very small magnitude (\< 0.1%), thus the observed changes fall within the low-impact category and were not included in comparative analysis with other retrofits.
 
 Shading likely did not have an effect on the overall cooling energy demand due to the climate sensitive design of the buildings. The buildings all have a north-south orientation with no windows on the east and west facing facades, strategies to minimize solar heat gains in Singapore [@zotero-item-221]. Since the sun is almost directly overhead during June in Singapore, windows on the north and south facades get very little sun exposure, thus the shading had a limited effect. Also, the baseline models consider both corridor and inter-building shading [@XU2022103775e] which may already provide sufficient shading on the north and south facades.
 
@@ -358,7 +358,7 @@ together |>
              y = pct_change,
              fill = scenario_type)) +
   geom_col() +
-  ylim(-10,0.25) +
+  ylim(-11,0.25) +
   geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   theme_minimal(base_size = 14)+
   facet_wrap(~block)+
@@ -467,11 +467,11 @@ comparison |>
 #  scale_fill_colorblind()
 ```
 
-### Evaluation
+### Discussion
 
-Each ERM tested, with the corresponding block, is categorized in @tbl-eval based on their percentage cooling energy savings. Across all blocks, the combination of retrofits with the highest percentage savings is cool coating on the entire facade exterior, including walls and roof. This combination yielded cooling demand savings of 4.84% for block 2, 10.77% for block 7, and 4.86% for block 5.
+Each ERM tested, with the corresponding block, is categorized in @tbl-eval based on their percentage cooling energy savings. Across all blocks, the combination of retrofits with the highest percentage savings is cool coating on the entire facade exterior, including walls and roof. This combination yielded cooling demand savings of 4.84% for block 2, 10.77% for block 7, and 4.86% for block 5. The range of monthly cooling demand savings found in this report match that of similar studies conducted in the tropics, where, for example, facade cool coating strategies in Singapore showed \~5-12% monthly energy savings [@LEI201757].
 
-The high reflectance coatings showed high-moderate impact on cooling energy savings mainly due to high roof solar exposure in Singapore. This trend was consistent across all blocks, indicating that material-based strategies are most effective in this context. Green roofs showed moderate cooling savings across all blocks but are secondary to reflective coatings. Overhang shading attached to the exterior windows showed limited additional benefit in all blocks given the existing building design. Although the absolute cooling savings varies by block, the relative ranking of ERMs is stable, suggesting that the results are robust across buildings within the same residential complex.
+The high reflectance coatings showed high-moderate impact on cooling energy savings mainly due to high roof solar exposure in Singapore. This trend was consistent across all blocks, indicating that material-based strategies are most effective for this site. Green roofs showed moderate cooling savings across all blocks but are secondary to reflective coatings. Overhang shading attached to the exterior windows showed limited additional benefit in all blocks given the existing building design. Although the absolute cooling savings varies by block, the relative ranking of ERMs is stable, suggesting that the results are robust across buildings within the same residential complex. More specifically, block 7 showed a much higher cooling reduction capacity compared to blocks 2 and 5 in all metrics, but for all blocks the cool coating was most effective, with green roofs and overhang shading in second and third place, respectively.
 
 To translate these results into practice, ERMs with a high impact category are strong candidates for facade retrofit. Moderate impact is potentially worthwhile to implement, while low and insignificant impacts have little standalone value.
 
@@ -508,8 +508,8 @@ energy_df |>
 
 ## Conclusion
 
-Building energy retrofit measures have gained significant traction in recent years due to their potential to increase building energy performance, provide cost savings, and lower environmental emissions. The facade, as the interface between the indoor and outdoor environments, is a primary candidate for energy retrofits [@richards2014importance]. This report evaluated three representative passive energy retrofit measures – each drawn from a distinct category of design-based, material-based, and nature-based strategies – by assesssing their impacts on cooling energy demand across multiple buildings in a residential complex in Singapore. All buildings were simulated using EnergyPlus with the same microclimate weather dataset to enable consistent comparison. The results indicate that high-reflectance cool coatings on the facade exterior are the most effective passive ERM, followed by roof vegetation, while overhang shading yields the smallest cooling demand reductions. Although absolute savings differed between each block, the relative performance ranking of the three ERMs remained consistent, suggesting that the observed trends were driven by the effectiveness of each retrofit strategy within the given site and climatic context, rather than by block-specific effects. The parametric ERM evaluation and multi-building comparison approach can be adapted for application to other climates and existing building typologies.
+This report evaluated three representative passive energy retrofit measures – each drawn from a distinct category of design-based, material-based, and nature-based strategies – by assesssing their impacts on cooling energy demand across multiple buildings in a residential complex in Singapore. All buildings were simulated using EnergyPlus with the same microclimate weather dataset to enable consistent comparison. The results indicate that high-reflectance cool coatings on the facade exterior are the most effective passive ERM, followed by roof vegetation, while overhang shading yields the smallest cooling demand reductions. The case of cool coatings on the entire facade exterior showed monthly energy savings of 4.84% for block 2, 10.77% for block 7, and 4.86% for block 5. Although absolute savings differed between each block, the relative performance ranking of the three ERMs remained consistent, suggesting that the observed trends were driven by the effectiveness of each retrofit strategy within the given site and climatic context, rather than by block-specific effects. The parametric ERM evaluation and multi-building comparison approach can be adapted for application to other climates and existing building typologies.
 
-Future work could expand on the number of passive ERMs tested. Selecting more ERMs from each category – design-based, material-based, and nature-based solutions – could deepen category-level conclusions in a given climate. In addition, a future study could investigate more blocks in the same residential complex or multiple complexes in the same district. Scaling up multi-building retrofit analyses will support decision making at the neighborhood or district level and improve the generalizability of retrofit performance.
+Future work could expand on the number of passive ERMs tested. Selecting more ERMs from each category could deepen category-level conclusions in a given climate. In addition, a future study could investigate more blocks in the same residential complex or multiple complexes in the same district. Scaling up multi-building retrofit analyses will support decision making at the neighborhood or district level and improve the generalizability of retrofit performance.
 
 ## References
