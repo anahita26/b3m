@@ -6,8 +6,10 @@ author:
     orcid: 0009-0000-4405-9889
     email: adarvish@student.ethz.ch
     affiliation: 
-      - name: ETH Zurich
-        url: https://ethz.ch/de.html
+      - name: Dept. of Mechanical Engineering, ETH Zurich
+        url: https://mavt.ethz.ch/
+      - name: Urban Climate Design Lab, NUS
+        url: https://cde.nus.edu.sg/arch-ucdl/
 format: html
 toc: true
 execute:
@@ -29,7 +31,7 @@ The building sector currently comprises about 40% of worldwide energy consumptio
 
 Among energy retrofit measures, passive measures target reductions in solar and external heat gains through building physics and design to lower cooling loads [@SUN201835]. In this study, passive retrofit measures are grouped into (i) design-based (geometry, orientation, shading) [@su6085354], (ii) material-based (envelope properties such as insulation and reflectance) [@9994d833667e4cc99bfbe366f0a780ca] and (iii) nature-based solutions (green roofs/walls and vegetation) [@MIHALAKAKOU2023113306]. These categories encapsulate the most commonly applied passive restrofit measures [@zotero-item-231] and allow a deeper investigation into which category is the most effective for a given climatic region.
 
-This research evaluates one passive ERM from each category to compare their relative effectiveness at the scale of a multi-building residential complex. Although passive ERMs have been widely researched, studies often focus on single-building retrofits[@singEnergyefficientRetrofittingMultistorey2021], which can limit how well findings transfer to larger scales such as residential complexes. Recent work highlights the need for research in multi-building retrofits to determine strategic approaches for implementing retrofits at larger scales [@BJELLAND2024114402]. This study aims to bridge this gap by comparing the performance of passive ERMs across multiple blocks in the same residential complex using identical modelling conditions, enabling an assessment of both their effectiveness and the robustness of the resulting energy savings. The objectives of this report are as follows:
+This research evaluates one passive ERM from each category to compare their relative effectiveness at the scale of a multi-building residential complex. Although passive ERMs have been widely researched, studies often focus on single-building retrofits [@singEnergyefficientRetrofittingMultistorey2021], which can limit how well findings transfer to larger scales such as residential complexes. Recent work highlights the need for research in multi-building retrofits to determine strategic approaches for implementing retrofits at larger scales [@BJELLAND2024114402]. This study aims to bridge this gap by comparing the performance of passive ERMs across multiple blocks in the same residential complex using identical modelling conditions, enabling an assessment of both their effectiveness and the robustness of the resulting energy savings. The objectives of this report are as follows:
 
 -   To compare the cooling energy impacts of representative passive energy retrofit measures from design-, material-, and nature-based categories.
 
@@ -45,9 +47,9 @@ Everton Park, a typical high-rise, public residential complex in Singapore, was 
 
 ![Everton park layout, a typical high-density residential complex in Singapore](images/everton_layout-01.png){#fig-layout}
 
-Energy consumption in each building was modeled using EnergyPlus, a widely-used physics based building energy modelling (BEM) program [@singEnergyefficientRetrofittingMultistorey2021]. Baseline building geometries were derived from previously developed 3D models reported by Xu et al.[@XU2022103775a]. All parameters relevant to replicating the models, including floor plans, zoning, construction materials, air-conditioning settings, and schedules can be referenced in their work. The weather file used in all simulations was based on the microclimate dataset developed and validated by Xu. et al. [@XU2022103775c], which performed better than historical or measured weather datasets for building energy modelling. It is important to note that all three building models share identical schedules and internal loads and only differ in apartment composition, facade geometry, and relative site placement.
+Energy consumption in each building was modeled using EnergyPlus, a widely-used physics based building energy modelling program [@singEnergyefficientRetrofittingMultistorey2021]. Baseline building geometries were derived from previously developed 3D models reported by Xu et al. [@XU2022103775]. All parameters relevant to replicating the models, including floor plans, zoning, construction materials, air-conditioning settings, and schedules can be referenced in their work. The weather file used in all simulations was based on the microclimate dataset developed and validated by Xu. et al. [@XU2022103775], which performed better than historical or measured weather datasets for building energy modelling. It is important to note that all three building models share identical schedules and internal loads and only differ in apartment composition, facade geometry, and relative site placement.
 
-Energy consumption due to air-conditioning is the main target area for this analysis. To represent this as an output meter in EnergyPlus, Cooling:EnergyTransfer was selected. This output meter represents how much cooling energy the building needs to maintain comfort. It does this by measuring how much heat must be removed from all zones to maintain temperature setpoints. Using this output metric, the percentage reduction in cooling demand $p$ between baseline cases and retrofit cases was calculated using @eq-percentage. The percentage reduction was then categorized based on magnitude. The categories include high ($p>5$), moderate ($3<p\le5$), low ($0.1<p\le3$), and insignificant ($p\le0.1$)
+Energy consumption due to air-conditioning is the main target area for this analysis. To represent this as an output meter in EnergyPlus, Cooling:EnergyTransfer was selected. This output meter represents how much cooling energy the building needs to maintain comfort. It does this by measuring how much heat must be removed from all zones to maintain temperature setpoints. Using this output metric, the percentage reduction in cooling demand $p$ between baseline cases and retrofit cases was calculated using @eq-percentage. The percentage reduction was then categorized based on magnitude. The categories include high impact ($p>5$), moderate impact ($3<p\le5$), low impact ($0.1<p\le3$), and insignificant ($p\le0.1$)
 
 $$
 p = \frac{E_{retrofit} - E_{baseline}}{E_{baseline}} * 100
@@ -97,7 +99,7 @@ summary_df |>
 
 ### Baseline case simulation and verification
 
-To determine a baseline cooling demand for each block, the existing building models were simulated with the developed microclimate weather dataset. All simulation parameters are consistent with those used by Xu. et al., with important parameters presented in [@tbl-parameters; @XU2022103775d].
+To determine a baseline cooling demand for each block, the existing building models were simulated with the developed microclimate weather dataset. All simulation parameters are consistent with those used by Xu. et al., with important parameters presented in [@tbl-parameters; @XU2022103775].
 
 ```{r}
 #| echo: false
@@ -145,7 +147,7 @@ baseline_df <- tibble(
 )
 ```
 
-To validate the simulated baseline values, published data from the Energy Market Authority and National Environment Agency in Singapore were used, including public housing monthly electricity consumption [@zotero-item-225]and percentage of household electricity used for air-conditioning [@zotero-item-222]. All data was based on records from 2018-2019, as these datasets were the closest publicly available data to the 2015 simulation period. For monthly electricity consumption, a range was selected to encompass both conservative and high electricity use per household: 250-400 kWh. For percentage of electricity used by AC, 24% was selected.
+To validate the simulated baseline values, published data from the Energy Market Authority and National Environment Agency in Singapore were used, including public housing monthly electricity consumption [@zotero-item-225] and percentage of household electricity used for air-conditioning [@zotero-item-222]. All data was based on records from 2018-2019, as these datasets were the closest publicly available data to the 2015 simulation period. For monthly electricity consumption, a range was selected to encompass both conservative and high electricity use per household: 250-400 kWh. For percentage of electricity used by AC, 24% was selected.
 
 @eq-ac was applied to calculate upper and lower bounds for the monthly AC electricity consumption of each building. Variables include: $w$ , the fraction of weekdays in a typical month, accounting for weekday-only occupancy patterns assumed in the simulations, $p_{AC}$ , the percentage of total monthly electricity consumption per household used for cooling, $E_{tot}$ , the total monthly electricity consumption per household, and $N_{flats}$ , the total number of flats in each residential building.
 
@@ -153,7 +155,7 @@ $$
 \ E_{AC} = w * p_{AC} * E_{tot} * N_{flats}
 $$ {#eq-ac}
 
-@fig-reference shows the range of reference values tested and where each baseline model falls within the range. All baseline values were found to fall within benchmark ranges.
+@fig-reference shows the range of reference values calculated and where each baseline model falls within the range. All baseline values were found to fall within benchmark ranges.
 
 ```{r}
 #| echo: false
@@ -237,9 +239,9 @@ Solar shading devices play an important role in building energy and thermal beha
 
 For this study, horizontal overhangs on windows were chosen as the retrofit measure, which corresponds to the EnergyPlus input Shading:Overhang:Projection. Overhang depths were varied as a fraction of the window height including values of: 0.25, 0.50, 0.75, and 1.00. Windows in this model are only on the north and south facing facades. To test differences in response of the north and south facing facades, overhangs were applied on each facade individually, then on both. Since overhangs were not a part of the baseline model, a placeholder overhang was created on each window to enable parametric variation.
 
-@fig-shading shows the results for the overhang shading parametric analysis for north facing windows, south facing windows, and all windows for each block. The results indicate that, in most cases, increasing overhang depth produced a small reduction in cooling electricity (max -0.075%). One outlier (Block 7, south facing windows) showed a marginal increase in (max +0.025%) electricity which can likely be atrributed to sensitivity to timestep resolution or minor shading geometry effects rather than a meaningful physical impact. The results for all overhang shading cases show less than a 0.1% reduction in energy and thus fall within the low-impact category and were not included in comparative analysis with other retrofits.
+@fig-shading shows the results for the overhang shading parametric analysis for north facing windows, south facing windows, and all windows for each block. The results indicate that, in most cases, increasing overhang depth produced a small reduction in cooling electricity (max -0.075%). One outlier (Block 7, south facing windows) showed a marginal increase (max +0.025%) in electricity which can likely be atrributed to sensitivity to timestep resolution or minor shading geometry effects rather than a meaningful physical impact. The results for all overhang shading cases show less than a 0.1% reduction in energy and thus fall within the insignificant category and were not included in comparative analysis with other retrofits.
 
-Shading likely did not have an effect on the overall cooling energy demand due to the climate sensitive design of the buildings. The buildings all have a north-south orientation with no windows on the east and west facing facades, strategies to minimize solar heat gains in Singapore [@zotero-item-221]. Since the sun is almost directly overhead during June in Singapore, windows on the north and south facades get very little sun exposure, thus the shading had a limited effect. Also, the baseline models consider both corridor and inter-building shading [@XU2022103775e] which may already provide sufficient shading on the north and south facades.
+Shading likely did not have an effect on the overall cooling energy demand due to the climate sensitive design of the buildings. The buildings all have a north-south orientation with no windows on the east and west facing facades, strategies to minimize solar heat gains in Singapore [@zotero-item-221]. Since the sun is almost directly overhead during June in Singapore, windows on the north and south facades get very little sun exposure, thus the shading had a limited effect. Also, the baseline models consider both corridor and inter-building shading [@XU2022103775] which may already provide sufficient shading on the north and south facades.
 
 ```{r}
 #| echo: false
@@ -283,9 +285,9 @@ all_blks_results |>
 
 Reflective or cool materials are considered an effective method for decreasing building thermal loads [@NAZARIAN2019144]. Light color coatings, for example, can be applied to any building surface to increase albedo, the fraction of sunlight reflected by a surface. Increased solar reflectance of the building envelope reduces solar heat gains, which can reduce cooling demand.
 
-To implement cool coatings in the models, solar absorptances of the exterior walls and roof materials were varied from a range of dark to cool, including values: 0.7, 0.5, 0.4, 0.3, and 0.2. These values represent typical dark to cool coatings reported in the literature [@su6085354]. The coatings were applied to the facade walls systematically, to identify if any wall had a larger response. The general methodology in EnergyPlus was as follows: a new material was created with the desired solar absorptance, followed by a new construction of the exterior wall and/or roof, and finally, the new construction was applied to the desired facade.
+To implement cool coatings in the models, solar absorptances of the exterior walls and roof materials were varied from a range of dark to cool, including values: 0.7, 0.5, 0.4, 0.3, and 0.2. These values represent typical dark to cool coatings reported in the literature [@NAZARIAN2019144]. The coatings were applied to the facade walls systematically to identify if any wall had a larger response. The general methodology in EnergyPlus was as follows: a new material was created with the desired solar absorptance, followed by a new construction of the exterior wall and/or roof, and finally, the new construction was applied to the desired facade.
 
-@fig-coolwall shows the results for parametric analysis of cool coatings on each facade wall. The results indicate that as solar absorptance decreases, the percent reduction in cooling demand increases, with the maximum around 0.6%. Thus, for the remaining retrofit scenarios, a solar absorptance of 0.2 was adopted. Additionally, the facade walls all demonstrate a similar, limited, response with less than a 1% reduction in cooling demand. The low percentage change, while slightly higher than the shading results, can be attributed to similar physical factors: lower incident solar radiation compared to the roof, mutual shading, and building orientation.
+@fig-coolwall shows the results for parametric analysis of cool coatings on each facade wall. The results indicate that as solar absorptance decreases, the percent reduction in cooling demand increases, with the maximum savings around 0.6%. Additionally, the facade walls all demonstrate a similar, limited, response with less than a 1% reduction in cooling demand. The low percentage change, while slightly higher than the shading results, can be attributed to similar physical factors: lower incident solar radiation compared to the roof, mutual shading, and building orientation. For the remaining retrofit scenarios, a solar absorptance of 0.2 was adopted.
 
 ```{r}
 #| echo: false
@@ -419,12 +421,12 @@ details_df |>
 
 ```
 
-All green roof cases include coated exterior walls (absorptance 0.2) for simulation. @fig-comparison shows a comparison between the grass roof, shrub roof, and coated roof. Both GR cases performed similarly across all blocks, with around 3-4% cooling energy savings, and grass demonstrating slightly better savings than shrubs. When comparing the GRs to the coated roof, the coated roof showed more energy savings across all blocks (\~5-10%). This suggests that, under Singapore's hot and humid climate, direct reduction of solar heat absorption through increased reflectance is more effective at lower cooling demand than evapotranspiration-based cooling mechanisms.
+All green roof cases include coated exterior walls (absorptance 0.2) for simulation. @fig-comparison shows a comparison between the grass roof, shrub roof, and coated roof. Both GR cases performed similarly across all blocks, with around 3-4% cooling energy savings, and grass demonstrating slightly better savings than shrubs. When comparing the GRs to the coated roof, the coated roof showed more energy savings across all blocks (\~5-10%). This suggests that, under Singapore's hot and humid climate, direct reduction of solar heat absorption through increased reflectance is more effective at lowering cooling demand than evapotranspiration-based cooling mechanisms.
 
 ```{r}
 #| echo: false
 #| label: fig-comparison
-#| fig-cap: Comparison of roof interventions
+#| fig-cap: Comparison of green roof cases to cool-coated roof
 library(here)
 library(tidyverse)
 library(ggplot2)
@@ -471,7 +473,7 @@ comparison |>
 
 Each ERM tested, with the corresponding block, is categorized in @tbl-eval based on their percentage cooling energy savings. Across all blocks, the combination of retrofits with the highest percentage savings is cool coating on the entire facade exterior, including walls and roof. This combination yielded cooling demand savings of 4.84% for block 2, 10.77% for block 7, and 4.86% for block 5. The range of monthly cooling demand savings found in this report match that of similar studies conducted in the tropics, where, for example, facade cool coating strategies in Singapore showed \~5-12% monthly energy savings [@LEI201757].
 
-The high reflectance coatings showed high-moderate impact on cooling energy savings mainly due to high roof solar exposure in Singapore. This trend was consistent across all blocks, indicating that material-based strategies are most effective for this site. Green roofs showed moderate cooling savings across all blocks but are secondary to reflective coatings. Overhang shading attached to the exterior windows showed limited additional benefit in all blocks given the existing building design. Although the absolute cooling savings varies by block, the relative ranking of ERMs is stable, suggesting that the results are robust across buildings within the same residential complex. More specifically, block 7 showed a much higher cooling reduction capacity compared to blocks 2 and 5 in all metrics, but for all blocks the cool coating was most effective, with green roofs and overhang shading in second and third place, respectively.
+The high reflectance coatings showed high-moderate impact on cooling energy savings mainly due to high roof solar exposure in Singapore. This trend was consistent across all blocks, indicating that material-based strategies are most effective for this site. Green roofs showed moderate cooling savings across all blocks but are secondary to reflective coatings. Overhang shading attached to the exterior windows showed limited additional benefit in all blocks given the existing building design. Although the absolute cooling savings varies by block, the relative ranking of ERMs is stable, suggesting that the results are robust across buildings within the same residential complex. For example, although block 7 showed a higher cooling reduction capacity in all metrics, cool coating remained the most effective measure for each block, followed by roof vegetation and overhang shading.
 
 To translate these results into practice, ERMs with a high impact category are strong candidates for facade retrofit. Moderate impact is potentially worthwhile to implement, while low and insignificant impacts have little standalone value.
 
@@ -487,8 +489,8 @@ library(tidyverse)
 
 percentages <- c("p > 5", "3 < p ≤ 5", "0.1 < p ≤ 3", "p ≤ 0.1")
 rating <- c("High", "Moderate", "Low", "Insignificant")
-erms <- c("Cool roof (7), Cool roof +  Cool walls (7)", 
-          "Cool roof (2,5), Cool roof +  Cool walls (2,5), Green roof + Cool walls (2,7,5)", 
+erms <- c("Cool roof +  cool walls (7)", 
+          "Cool roof +  cool walls (2,5), Green roof + cool walls (2,7,5)", 
           "Cool walls (2,7,5)",
           "Shading (2,7,5)")
 energy_df <- tibble(
